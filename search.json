@@ -1,0 +1,1242 @@
+[
+  {
+    "objectID": "myblog/about.html",
+    "href": "myblog/about.html",
+    "title": "About",
+    "section": "",
+    "text": "技德系统CTO，计算机科学与技术博士，信创智能终端工作组组长，中国计算机学会理论计算机科学专业委员会执行委员，中国计算机学会高级会员，长沙市军民融合高层次人才。曾任国防科技大学计算机学院副教授、硕士生导师。曾获院校育才奖银奖1项、科技进步奖2项。湖南省教学成果二等奖1项、湖南省教学成果三等奖1项。"
+  },
+  {
+    "objectID": "myblog/about.html#education",
+    "href": "myblog/about.html#education",
+    "title": "About",
+    "section": "Education",
+    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
+  },
+  {
+    "objectID": "myblog/about.html#experience",
+    "href": "myblog/about.html#experience",
+    "title": "About",
+    "section": "Experience",
+    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Spet 2012 - April 2018"
+  },
+  {
+    "objectID": "myblog/posts/welcome/index.html",
+    "href": "myblog/posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "这是jdragon的个人网站.\n记录个人在计算机、人工智能、计算机教育、高等教育等方面的一些思考。\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "AIengineerBook/RAG_advanced.html",
+    "href": "AIengineerBook/RAG_advanced.html",
+    "title": "高级RAG",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n运用RAG高级技能，改进 RAG应用程序的效果\n\n\n\n\n\n观看视频：吴恩达《构建和评估高级的RAG模型应用》|Building and Evaluating Advanced RAG Applications（中英字幕）\n\n视频时长：1.5小时；\n视频内容简介：检索增强生成（RAG）作为大型语言模型（LLM）最受欢迎的应用之一，脱颖而出。该方法有助于将LLM与组织的专有数据集成。 要成功实施RAG，必须改进检索技术以获得连贯的上下文，并采用有效的评估指标。 在本课程中，我们将探讨以下内容：\n\n两种高级检索方法：句子窗口检索和自动合并检索，与基线RAG流程相比，表现更好。\n评估和实验跟踪：一种评估和逐步改进RAG流程性能的方法。\nRAG三要素：上下文相关性、基于事实、回答相关性，这些方法用于评估LLM响应的相关性和真实性。\n\n\n阅读文档：Cheat Sheet and some recipes for building Advanced RAG\n阅读文档：A comprehensive guide on building RAG-based LLM application by AnyScale\n\n\n\n\n\n完成deelplearning.ai上的Building and Evaluating Advanced RAG Applications课程练习\n\n\n\n\n\n使用 LangChain 在 HuggingFace 文档上构建高级 RAG",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "高级RAG"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_advanced.html#学习目标",
+    "href": "AIengineerBook/RAG_advanced.html#学习目标",
+    "title": "高级RAG",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n运用RAG高级技能，改进 RAG应用程序的效果",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "高级RAG"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_advanced.html#学习活动",
+    "href": "AIengineerBook/RAG_advanced.html#学习活动",
+    "title": "高级RAG",
+    "section": "",
+    "text": "观看视频：吴恩达《构建和评估高级的RAG模型应用》|Building and Evaluating Advanced RAG Applications（中英字幕）\n\n视频时长：1.5小时；\n视频内容简介：检索增强生成（RAG）作为大型语言模型（LLM）最受欢迎的应用之一，脱颖而出。该方法有助于将LLM与组织的专有数据集成。 要成功实施RAG，必须改进检索技术以获得连贯的上下文，并采用有效的评估指标。 在本课程中，我们将探讨以下内容：\n\n两种高级检索方法：句子窗口检索和自动合并检索，与基线RAG流程相比，表现更好。\n评估和实验跟踪：一种评估和逐步改进RAG流程性能的方法。\nRAG三要素：上下文相关性、基于事实、回答相关性，这些方法用于评估LLM响应的相关性和真实性。\n\n\n阅读文档：Cheat Sheet and some recipes for building Advanced RAG\n阅读文档：A comprehensive guide on building RAG-based LLM application by AnyScale",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "高级RAG"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_advanced.html#实践",
+    "href": "AIengineerBook/RAG_advanced.html#实践",
+    "title": "高级RAG",
+    "section": "",
+    "text": "完成deelplearning.ai上的Building and Evaluating Advanced RAG Applications课程练习",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "高级RAG"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_advanced.html#补充资料",
+    "href": "AIengineerBook/RAG_advanced.html#补充资料",
+    "title": "高级RAG",
+    "section": "",
+    "text": "使用 LangChain 在 HuggingFace 文档上构建高级 RAG",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "高级RAG"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/deploy_app.html",
+    "href": "AIengineerBook/deploy_app.html",
+    "title": "应用部署",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n使用ollama或LM studio等工具在本地 部署 开源LLM；\n使用vllm或skypilot等工具在云上 部署 LLM。\n\n\n\n\n\nLocal deployment: Running open source LLMs on local machines (LM Studio, Ollama, oobabooga, kobold.cpp, etc.)\nDeploying LLMs at scale on cloud technologies like vLLM and SkyPilot\n阅读文档：Deploying LangChain applications (runnables and chains) as a REST API.",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "应用部署"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/deploy_app.html#学习目标",
+    "href": "AIengineerBook/deploy_app.html#学习目标",
+    "title": "应用部署",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n使用ollama或LM studio等工具在本地 部署 开源LLM；\n使用vllm或skypilot等工具在云上 部署 LLM。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "应用部署"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/deploy_app.html#学习活动",
+    "href": "AIengineerBook/deploy_app.html#学习活动",
+    "title": "应用部署",
+    "section": "",
+    "text": "Local deployment: Running open source LLMs on local machines (LM Studio, Ollama, oobabooga, kobold.cpp, etc.)\nDeploying LLMs at scale on cloud technologies like vLLM and SkyPilot\n阅读文档：Deploying LangChain applications (runnables and chains) as a REST API.",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "应用部署"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/references.html",
+    "href": "AIengineerBook/references.html",
+    "title": "参考文献",
+    "section": "",
+    "text": "参考文献\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "AIengineerBook/eval_benchmark.html",
+    "href": "AIengineerBook/eval_benchmark.html",
+    "title": "评估和benchmark",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n列举 主要的llm benchmark；\n通过open llm leaderboard、HELM、Chatbot Arena 比较 不同LLM的能力；\n能够根据选型目的 使用 对应的评估指标对不同的llm进行评估。\n\n\n\n\n\nLLMs如何评估\nHow to evaluate LLMs with Hugging Face Lighteval\n观看视频：吴恩达《LLMOps的自动化测试|Automated Testing for LLMOps》中英字幕\n\n视频时长：1小时\n视频内容简介：将学习如何创建一个持续集成（CI）工作流程，以便在每次更改时评估您的LLM应用程序，以实现更快、更安全、更高效的应用程序开发。 在使用生成式人工智能构建应用程序时，模型的行为比传统软件更不可预测。这就是为什么系统化测试可以在节省开发时间和成本方面发挥更大的作用。持续集成是LLMOps的一个重要组成部分，它是在开发过程中对软件进行小的更改并进行彻底测试，早期捕捉问题以便更容易修复的实践。通过稳健的自动化测试管道，您将能够在错误累积之前隔离出错误，从而更容易且成本较低地进行修复。自动化测试使您的团队能够专注于构建新功能，以便更快地迭代和发布产品。 完成本课程后，将能够：\n\n编写稳健的LLM评估，以解决常见问题，如幻觉、数据漂移以及有害或冒犯性输出。\n构建一个持续集成（CI）工作流程，以自动评估对应用程序的每次更改。\n协调您的持续集成工作流程，在开发的不同阶段运行特定的评估。\n\n视频来源：Deeplearning.ai课程LLMOps的自动化测试\n\n\n\n\n\n\n\n\n\n评估大型语言模型（LLM）系统：指标、挑战和最佳实践",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "评估和benchmark"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/eval_benchmark.html#学习目标",
+    "href": "AIengineerBook/eval_benchmark.html#学习目标",
+    "title": "评估和benchmark",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n列举 主要的llm benchmark；\n通过open llm leaderboard、HELM、Chatbot Arena 比较 不同LLM的能力；\n能够根据选型目的 使用 对应的评估指标对不同的llm进行评估。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "评估和benchmark"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/eval_benchmark.html#学习活动",
+    "href": "AIengineerBook/eval_benchmark.html#学习活动",
+    "title": "评估和benchmark",
+    "section": "",
+    "text": "LLMs如何评估\nHow to evaluate LLMs with Hugging Face Lighteval\n观看视频：吴恩达《LLMOps的自动化测试|Automated Testing for LLMOps》中英字幕\n\n视频时长：1小时\n视频内容简介：将学习如何创建一个持续集成（CI）工作流程，以便在每次更改时评估您的LLM应用程序，以实现更快、更安全、更高效的应用程序开发。 在使用生成式人工智能构建应用程序时，模型的行为比传统软件更不可预测。这就是为什么系统化测试可以在节省开发时间和成本方面发挥更大的作用。持续集成是LLMOps的一个重要组成部分，它是在开发过程中对软件进行小的更改并进行彻底测试，早期捕捉问题以便更容易修复的实践。通过稳健的自动化测试管道，您将能够在错误累积之前隔离出错误，从而更容易且成本较低地进行修复。自动化测试使您的团队能够专注于构建新功能，以便更快地迭代和发布产品。 完成本课程后，将能够：\n\n编写稳健的LLM评估，以解决常见问题，如幻觉、数据漂移以及有害或冒犯性输出。\n构建一个持续集成（CI）工作流程，以自动评估对应用程序的每次更改。\n协调您的持续集成工作流程，在开发的不同阶段运行特定的评估。\n\n视频来源：Deeplearning.ai课程LLMOps的自动化测试",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "评估和benchmark"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/eval_benchmark.html#补充资料",
+    "href": "AIengineerBook/eval_benchmark.html#补充资料",
+    "title": "评估和benchmark",
+    "section": "",
+    "text": "评估大型语言模型（LLM）系统：指标、挑战和最佳实践",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "评估和benchmark"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/summary.html",
+    "href": "AIengineerBook/summary.html",
+    "title": "总结",
+    "section": "",
+    "text": "总结\n成为一名出色的LLM工程师是一场持久战。保持对新技术、研究动态的关注，勇于尝试，勤于反思，积极参与社区交流，不断拓宽知识边界，是通往卓越的不二法门。\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "总结"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLMops.html",
+    "href": "AIengineerBook/LLMops.html",
+    "title": "LLM ops",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n使用LLMops相关技能 构建 LLMops流水线。\n\n\n\n\n\n观看视频：吴恩达《大语言模型运维|LLMOps》中英字幕\n\n视频时长：1小时20分；\n视频内容简介：你将学习LLMOps管道的预处理训练数据、监督调整和自适应监督调整管道，以训练和部署自定义LLM（Language Model Model）。这对于为特定应用创建LLM工作流程非常有用。例如，创建一个针对Python编码问题提供答案的问答聊天机器人，你将在这门课程中完成这个任务。 在这门课程中，你将学习创建LLMOps管道的关键步骤：\n\n获取和转换用于LLM监督微调的训练数据。\n对数据和微调模型进行版本控制，以跟踪微调实验。\n配置开源的监督调整管道，然后执行该管道以训练和部署经过微调的LLM。\n输出和研究安全评分，以负责任地监控和筛选LLM应用的行为。\n在课堂上亲自尝试经过微调和部署的LLM！\n\n你将使用的工具包括BigQuery数据仓库、开源的Kubeflow Pipelines和Google Cloud。\n\n阅读文档：10分钟搞懂LLMOps\nGPU Inference optimization techniques like FlashAttention and FlashAttention-2\nLLMOps guide by DataBricks\nEfficiently serving LLMs course on DeepLearning.AI\n\n\n\n\n\n\n\n\n20 分钟带你搞懂 LLMOps\n揭秘LLMOps，高效开发大型语言模型",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "LLM ops"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLMops.html#学习目标",
+    "href": "AIengineerBook/LLMops.html#学习目标",
+    "title": "LLM ops",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n使用LLMops相关技能 构建 LLMops流水线。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "LLM ops"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLMops.html#学习活动",
+    "href": "AIengineerBook/LLMops.html#学习活动",
+    "title": "LLM ops",
+    "section": "",
+    "text": "观看视频：吴恩达《大语言模型运维|LLMOps》中英字幕\n\n视频时长：1小时20分；\n视频内容简介：你将学习LLMOps管道的预处理训练数据、监督调整和自适应监督调整管道，以训练和部署自定义LLM（Language Model Model）。这对于为特定应用创建LLM工作流程非常有用。例如，创建一个针对Python编码问题提供答案的问答聊天机器人，你将在这门课程中完成这个任务。 在这门课程中，你将学习创建LLMOps管道的关键步骤：\n\n获取和转换用于LLM监督微调的训练数据。\n对数据和微调模型进行版本控制，以跟踪微调实验。\n配置开源的监督调整管道，然后执行该管道以训练和部署经过微调的LLM。\n输出和研究安全评分，以负责任地监控和筛选LLM应用的行为。\n在课堂上亲自尝试经过微调和部署的LLM！\n\n你将使用的工具包括BigQuery数据仓库、开源的Kubeflow Pipelines和Google Cloud。\n\n阅读文档：10分钟搞懂LLMOps\nGPU Inference optimization techniques like FlashAttention and FlashAttention-2\nLLMOps guide by DataBricks\nEfficiently serving LLMs course on DeepLearning.AI",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "LLM ops"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLMops.html#补充资料",
+    "href": "AIengineerBook/LLMops.html#补充资料",
+    "title": "LLM ops",
+    "section": "",
+    "text": "20 分钟带你搞懂 LLMOps\n揭秘LLMOps，高效开发大型语言模型",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "LLM ops"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/agent.html",
+    "href": "AIengineerBook/agent.html",
+    "title": "构建agent",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n编程 实现以agent为核心的LLM应用，能够创建并管理agent，agent能够具备记忆、规划、工具使用的能力。\n\n\n\n\n\n阅读文档：基于大语言模型的AI Agents—Part 1, 基于大语言模型的AI Agents—Part 2, 基于大语言模型的AI Agents—Part 3\n阅读文档：Quickstart guide by LangChain to build agents to have a sequence of actions taken to do a job or multiple jobs.\n观看视频：吴恩达《使用LangChain的函数、工具和代理》|Functions, Tools and Agents with LangChain（GPT4-中英字幕）\n\n视频时长：1小时；\n视频内容简介：LLM（Language Model，语言模型）和支持它们的库的领域最近几个月发展迅速。本课程旨在使您了解这些变化。 您将探索新的进展，例如ChatGPT的函数调用能力，并使用一种称为LangChain表达语言（LCEL）的新语法构建对话代理，用于标记、提取、工具选择和路由等任务。 完成本课程后，您将学会如何：\n\n使用LLM生成包括函数调用在内的结构化输出；\n使用LCEL简化链式和代理的自定义，构建应用程序；\n将函数调用应用于标记和数据提取等任务；\n通过LangChain工具和LLM函数调用了解工具选择和路由 - 等等。\n\n立即开始应用这些新功能，构建和改进您的应用程序。\n\nAutogen : Framework to develop LLM applications using multiple agents that can converse with each other to solve tasks.\nCrew AI: AI Agents for real use cases.\n\n\n\n\n\n自己构思，实现一个agent应用。\n\n\n\n\n\n深入浅出LangChain与智能Agent：构建下一代AI助手",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "构建agent"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/agent.html#学习目标",
+    "href": "AIengineerBook/agent.html#学习目标",
+    "title": "构建agent",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n编程 实现以agent为核心的LLM应用，能够创建并管理agent，agent能够具备记忆、规划、工具使用的能力。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "构建agent"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/agent.html#学习活动",
+    "href": "AIengineerBook/agent.html#学习活动",
+    "title": "构建agent",
+    "section": "",
+    "text": "阅读文档：基于大语言模型的AI Agents—Part 1, 基于大语言模型的AI Agents—Part 2, 基于大语言模型的AI Agents—Part 3\n阅读文档：Quickstart guide by LangChain to build agents to have a sequence of actions taken to do a job or multiple jobs.\n观看视频：吴恩达《使用LangChain的函数、工具和代理》|Functions, Tools and Agents with LangChain（GPT4-中英字幕）\n\n视频时长：1小时；\n视频内容简介：LLM（Language Model，语言模型）和支持它们的库的领域最近几个月发展迅速。本课程旨在使您了解这些变化。 您将探索新的进展，例如ChatGPT的函数调用能力，并使用一种称为LangChain表达语言（LCEL）的新语法构建对话代理，用于标记、提取、工具选择和路由等任务。 完成本课程后，您将学会如何：\n\n使用LLM生成包括函数调用在内的结构化输出；\n使用LCEL简化链式和代理的自定义，构建应用程序；\n将函数调用应用于标记和数据提取等任务；\n通过LangChain工具和LLM函数调用了解工具选择和路由 - 等等。\n\n立即开始应用这些新功能，构建和改进您的应用程序。\n\nAutogen : Framework to develop LLM applications using multiple agents that can converse with each other to solve tasks.\nCrew AI: AI Agents for real use cases.",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "构建agent"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/agent.html#实践",
+    "href": "AIengineerBook/agent.html#实践",
+    "title": "构建agent",
+    "section": "",
+    "text": "自己构思，实现一个agent应用。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "构建agent"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/agent.html#补充资料",
+    "href": "AIengineerBook/agent.html#补充资料",
+    "title": "构建agent",
+    "section": "",
+    "text": "深入浅出LangChain与智能Agent：构建下一代AI助手",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "构建agent"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/AI_sec.html",
+    "href": "AIengineerBook/AI_sec.html",
+    "title": "LLM安全",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n列举 llm常见的安全威胁；\n应用 llm red teaming方法，识别llm的漏洞并评估。\n\n\n\n\n\n语言模型 (Large Language Model，简称LLM) 安全之攻击面初探\nAI安全：LLM的风险揭示与安全性评估\nRed Teaming LLM Applications\n吴恩达《红队测试LLM应用|Red Teaming LLM Applications》中英字幕\n\n视频时长：1小时；\n视频内容简介：学习如何测试和发现LLM应用程序中的漏洞，以使它们更安全。在本课程中，您将攻击各种聊天机器人应用程序，使用提示注入来查看系统的反应并理解安全失败。LLM失败可能会导致法律责任、声誉损害和昂贵的服务中断。本课程将帮助您积极减轻这些风险。学习业界已验证的红队技术，积极测试、攻击和改进您的LLM应用程序的稳健性。 在本课程中：\n\n探索LLM性能评估的细微差别，了解基准模型和测试LLM应用程序之间的区别。\n概述基本的LLM应用程序漏洞及其如何影响实际部署。\n获得手动和自动LLM红队方法的实践经验。\n见证红队评估的完整演示，并应用课程中涵盖的概念和技术。\n\n学习完本视频后，您将对如何在自己的应用程序上实验LLM漏洞识别和评估有基本的了解。\n\nlearn to identify and evaluate vulnerabilities in LLM apps\nPlanning red teaming for large language models (LLMs) and their applications\nA detailed list of resources on LLM security highlighting all potential risks and vulnerabilities in AI applications.",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "LLM安全"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/AI_sec.html#学习目标",
+    "href": "AIengineerBook/AI_sec.html#学习目标",
+    "title": "LLM安全",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n列举 llm常见的安全威胁；\n应用 llm red teaming方法，识别llm的漏洞并评估。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "LLM安全"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/AI_sec.html#学习活动",
+    "href": "AIengineerBook/AI_sec.html#学习活动",
+    "title": "LLM安全",
+    "section": "",
+    "text": "语言模型 (Large Language Model，简称LLM) 安全之攻击面初探\nAI安全：LLM的风险揭示与安全性评估\nRed Teaming LLM Applications\n吴恩达《红队测试LLM应用|Red Teaming LLM Applications》中英字幕\n\n视频时长：1小时；\n视频内容简介：学习如何测试和发现LLM应用程序中的漏洞，以使它们更安全。在本课程中，您将攻击各种聊天机器人应用程序，使用提示注入来查看系统的反应并理解安全失败。LLM失败可能会导致法律责任、声誉损害和昂贵的服务中断。本课程将帮助您积极减轻这些风险。学习业界已验证的红队技术，积极测试、攻击和改进您的LLM应用程序的稳健性。 在本课程中：\n\n探索LLM性能评估的细微差别，了解基准模型和测试LLM应用程序之间的区别。\n概述基本的LLM应用程序漏洞及其如何影响实际部署。\n获得手动和自动LLM红队方法的实践经验。\n见证红队评估的完整演示，并应用课程中涵盖的概念和技术。\n\n学习完本视频后，您将对如何在自己的应用程序上实验LLM漏洞识别和评估有基本的了解。\n\nlearn to identify and evaluate vulnerabilities in LLM apps\nPlanning red teaming for large language models (LLMs) and their applications\nA detailed list of resources on LLM security highlighting all potential risks and vulnerabilities in AI applications.",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "LLM安全"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/beginer.html",
+    "href": "AIengineerBook/beginer.html",
+    "title": "初级LLM工程师",
+    "section": "",
+    "text": "理解 LLM 的基础知识 - 知道 ChatGPT 在高层次上是如何工作的。\n学习开发者的提示工程。如何编写提示以改善 LLM 的响应。\n学习向 LLM API 提交和接收数据，学习如何使用 JSON 数据。\n学习调用封闭和开源的 LLM 模型，函数调用，传递提示和解析响应。\n学习如何管理对话中的上下文。\n学习创建和自动化一系列操作 - 使用 langchain 的chain。\n使用 Gradio 或 Streamlit 进行基本应用程序开发，用于 POC 和演示。\n部署你的应用程序以使其可访问 - 在 HuggingFace Space 或 Streamlit Cloud 上的基本部署。\n多模态生成 - 使用 HuggingFace transformer 库进行代码、图像、音频生成。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "初级LLM工程师"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/beginer.html#初级技能",
+    "href": "AIengineerBook/beginer.html#初级技能",
+    "title": "初级LLM工程师",
+    "section": "",
+    "text": "理解 LLM 的基础知识 - 知道 ChatGPT 在高层次上是如何工作的。\n学习开发者的提示工程。如何编写提示以改善 LLM 的响应。\n学习向 LLM API 提交和接收数据，学习如何使用 JSON 数据。\n学习调用封闭和开源的 LLM 模型，函数调用，传递提示和解析响应。\n学习如何管理对话中的上下文。\n学习创建和自动化一系列操作 - 使用 langchain 的chain。\n使用 Gradio 或 Streamlit 进行基本应用程序开发，用于 POC 和演示。\n部署你的应用程序以使其可访问 - 在 HuggingFace Space 或 Streamlit Cloud 上的基本部署。\n多模态生成 - 使用 HuggingFace transformer 库进行代码、图像、音频生成。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "初级LLM工程师"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/prompt_advanced.html",
+    "href": "AIengineerBook/prompt_advanced.html",
+    "title": "高级prompt工程",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n编写 符合高级技巧的prompt，包括但不限于零样本提示、少样本提示、思维链(CoT)、ReAct等。\n\n\n\n\n\n阅读文档：Prompt Engineering Guide: Techniques\n\n\n\n\n\n运用高级prompt编写技巧，编写能力更强的prompt，用于解决日常工作中的复杂问题。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "高级prompt工程"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/prompt_advanced.html#学习目标",
+    "href": "AIengineerBook/prompt_advanced.html#学习目标",
+    "title": "高级prompt工程",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n编写 符合高级技巧的prompt，包括但不限于零样本提示、少样本提示、思维链(CoT)、ReAct等。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "高级prompt工程"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/prompt_advanced.html#学习活动",
+    "href": "AIengineerBook/prompt_advanced.html#学习活动",
+    "title": "高级prompt工程",
+    "section": "",
+    "text": "阅读文档：Prompt Engineering Guide: Techniques",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "高级prompt工程"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/prompt_advanced.html#实践",
+    "href": "AIengineerBook/prompt_advanced.html#实践",
+    "title": "高级prompt工程",
+    "section": "",
+    "text": "运用高级prompt编写技巧，编写能力更强的prompt，用于解决日常工作中的复杂问题。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "高级prompt工程"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/advanced_projects.html",
+    "href": "AIengineerBook/advanced_projects.html",
+    "title": "实践项目",
+    "section": "",
+    "text": "实践项目\n\n\n\n\n\n\n\n\nS.No.\nProject Idea\nSkills required / to be developed\n\n\n\n\n\nAdvanced\n\n\n\n8.\nPersonal assistant fine-tuned on domain-specific data. Personal Healthcare, Country’s Law, Finance, etc.\nDataset curation, Data engineering, model evaluation, benchmarking, PEFT, LoRA, QLoRA\n\n\n9.\nAn e2e e-commerce product assistant.\nAdvanced RAG pipeline, LLMOps - Data Engineering, CI/CD, Scaling, Monitoring, Observability\n\n\n10.\nInvestGPT - fine-tuned LLM to classify personal investments based on technical (algorithmic) and fundamental (LLMs) analysis.\nfine tuning, evals and benchmarking, AI Security\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "AIengineerBook/intro.html",
+    "href": "AIengineerBook/intro.html",
+    "title": "引言",
+    "section": "",
+    "text": "对 Python/JS 编程有中级理解。\n最好有至少 2-3 个中等复杂度应用程序的编码经验，比如使用 Flask、Rails 或 Node.js 开发的博客 Web 应用程序。\n能够熟练地阅读中英文技术文档。\n能够在像 VS Code 这样的 IDE 中熟练地编码。\n熟练使用git和GitHub。\n\n\n\n\n\n初学（\\(&lt;=\\) 1 个月）- 构建基本应用程序，学习如何使用大型语言模型（LLM）API，为你的应用程序精心设计提示，并使用开源 LLM。\n中级（约 2 个月）- 深入构建更多上下文感知的高级应用程序，使用检索增强生成（RAG）。了解向量数据库及其工作方式。学习如何使用 LLM 和工具构建智能体。\n高级（约 3 个月）- 在掌握应用程序构建之后，学习如何使用 LLMOps 在生产中部署、优化和管理 LLM 驱动的应用程序。学习如何微调预训练模型，以高效且低成本地适应下游应用程序。\n\n\n\n\n理解 LLM 的基础知识 - 你应该知道 ChatGPT 在高层次上是如何工作的。\n学习开发者的提示工程。如何编写提示以改善 LLM 的响应。\n学习向 LLM API 提交和接收数据，学习如何使用 JSON 数据。\n学习调用封闭和开源的 LLM 模型，函数调用，传递提示和解析响应。\n学习如何管理对话中的上下文。\n学习创建和自动化一系列操作 - 使用 langchain 的chain。\n使用 Gradio 或 Streamlit 进行基本应用程序开发，用于 POC 和演示。\n部署你的应用程序以使其可访问 - 在 HuggingFace Space 或 Streamlit Cloud 上的基本部署。\n多模态生成 - 使用 HuggingFace transformer 库进行代码、图像、音频生成。\n\n\n\n\n\n理解向量嵌入和向量数据库。\n学习如何为你的应用程序使用向量数据库。\n构建检索增强生成（RAG） - 与你的知识库聊天。\n开发高级 RAG 管道，如子问题查询引擎，可以在经过多个数据源后提供响应。\n构建智能体 - 迭代工作流程以完成一个大任务。\n构建多智能体应用程序，多个智能体协同工作以提供更好的解决方案。\n使用多个智能体的自动化 - Autogen 和 Crew AI\n评估 RAGs - RAGAs 框架。\n管理数据库，检索，部署完整应用程序，版本控制，记录和监控模型行为。\n\n\n\n\n\n针对特定领域知识进行预训练 LLM 的微调，以适应特定领域的知识和定制响应，如医学研究、金融研究、法律分析。\n策划数据集并设计（ETL 管道）模型微调的管道。\n评估和基准测试模型性能\nLLMOps - 使用模型注册表、可观测性和自动化测试构建完整的端到端管道。\n构建多模态应用程序 - 文本和图像的混合语义搜索\n构建 SDK、包和自定义解决方案以启用其他开发人员\n使用提示黑客技术和通过检查漏洞和潜在风险纳入防御措施来保护你的 AI 应用程序。\n\n\n\n\n\n\n效率优先：可以首先阅读各章学习目标，根据学习目标确定要学习的内容，并选择阅读的文章或观看的视频，并进行实践。当确认自己具备了学习目标里提到的基本能力后，可以先转入下一章学习，后续再来完善本章内容的更多细节。\n编码实践：每一章都需要通过编码实践来验证自己的学习效果，根据资料搭建运行环境，运行并验证核心功能。\n深入思考：如果有必要以及时间比较宽裕，需要花时间去阅读每一章的补充资料，深入地理解相关技术原理。\n\n\n\n\n\n张长旺 (2024) 提供了一篇完整的路线图描述。\nTyagi (2024) 提供了github上的AI工程师学习路线路和资源列表",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "引言"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/intro.html#学习llm工程技能的先决条件",
+    "href": "AIengineerBook/intro.html#学习llm工程技能的先决条件",
+    "title": "引言",
+    "section": "",
+    "text": "对 Python/JS 编程有中级理解。\n最好有至少 2-3 个中等复杂度应用程序的编码经验，比如使用 Flask、Rails 或 Node.js 开发的博客 Web 应用程序。\n能够熟练地阅读中英文技术文档。\n能够在像 VS Code 这样的 IDE 中熟练地编码。\n熟练使用git和GitHub。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "引言"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/intro.html#ai工程师的3个阶段",
+    "href": "AIengineerBook/intro.html#ai工程师的3个阶段",
+    "title": "引言",
+    "section": "",
+    "text": "初学（\\(&lt;=\\) 1 个月）- 构建基本应用程序，学习如何使用大型语言模型（LLM）API，为你的应用程序精心设计提示，并使用开源 LLM。\n中级（约 2 个月）- 深入构建更多上下文感知的高级应用程序，使用检索增强生成（RAG）。了解向量数据库及其工作方式。学习如何使用 LLM 和工具构建智能体。\n高级（约 3 个月）- 在掌握应用程序构建之后，学习如何使用 LLMOps 在生产中部署、优化和管理 LLM 驱动的应用程序。学习如何微调预训练模型，以高效且低成本地适应下游应用程序。\n\n\n\n\n理解 LLM 的基础知识 - 你应该知道 ChatGPT 在高层次上是如何工作的。\n学习开发者的提示工程。如何编写提示以改善 LLM 的响应。\n学习向 LLM API 提交和接收数据，学习如何使用 JSON 数据。\n学习调用封闭和开源的 LLM 模型，函数调用，传递提示和解析响应。\n学习如何管理对话中的上下文。\n学习创建和自动化一系列操作 - 使用 langchain 的chain。\n使用 Gradio 或 Streamlit 进行基本应用程序开发，用于 POC 和演示。\n部署你的应用程序以使其可访问 - 在 HuggingFace Space 或 Streamlit Cloud 上的基本部署。\n多模态生成 - 使用 HuggingFace transformer 库进行代码、图像、音频生成。\n\n\n\n\n\n理解向量嵌入和向量数据库。\n学习如何为你的应用程序使用向量数据库。\n构建检索增强生成（RAG） - 与你的知识库聊天。\n开发高级 RAG 管道，如子问题查询引擎，可以在经过多个数据源后提供响应。\n构建智能体 - 迭代工作流程以完成一个大任务。\n构建多智能体应用程序，多个智能体协同工作以提供更好的解决方案。\n使用多个智能体的自动化 - Autogen 和 Crew AI\n评估 RAGs - RAGAs 框架。\n管理数据库，检索，部署完整应用程序，版本控制，记录和监控模型行为。\n\n\n\n\n\n针对特定领域知识进行预训练 LLM 的微调，以适应特定领域的知识和定制响应，如医学研究、金融研究、法律分析。\n策划数据集并设计（ETL 管道）模型微调的管道。\n评估和基准测试模型性能\nLLMOps - 使用模型注册表、可观测性和自动化测试构建完整的端到端管道。\n构建多模态应用程序 - 文本和图像的混合语义搜索\n构建 SDK、包和自定义解决方案以启用其他开发人员\n使用提示黑客技术和通过检查漏洞和潜在风险纳入防御措施来保护你的 AI 应用程序。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "引言"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/intro.html#学习方法",
+    "href": "AIengineerBook/intro.html#学习方法",
+    "title": "引言",
+    "section": "",
+    "text": "效率优先：可以首先阅读各章学习目标，根据学习目标确定要学习的内容，并选择阅读的文章或观看的视频，并进行实践。当确认自己具备了学习目标里提到的基本能力后，可以先转入下一章学习，后续再来完善本章内容的更多细节。\n编码实践：每一章都需要通过编码实践来验证自己的学习效果，根据资料搭建运行环境，运行并验证核心功能。\n深入思考：如果有必要以及时间比较宽裕，需要花时间去阅读每一章的补充资料，深入地理解相关技术原理。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "引言"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/intro.html#参考资料",
+    "href": "AIengineerBook/intro.html#参考资料",
+    "title": "引言",
+    "section": "",
+    "text": "张长旺 (2024) 提供了一篇完整的路线图描述。\nTyagi (2024) 提供了github上的AI工程师学习路线路和资源列表",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "引言"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/vectorDB.html",
+    "href": "AIengineerBook/vectorDB.html",
+    "title": "向量嵌入和向量数据库",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n解释向量嵌入和向量数据库的概念；\n编写代码，实现创建向量库、在向量数据库中增删改查向量数据、向量数据相似性比较、数据存储及载入等功能；\n\n\n\n\n\n观看视频：吴恩达《向量数据库：从嵌入到应用》Vector Databases: from Embeddings to Applications中英字幕\n\n视频时长：1小时；\n视频内容简介：向量数据库在各个领域发挥着关键作用，如自然语言处理、图像识别、推荐系统和语义搜索，并随着越来越多的LLM采用而变得更加重要。这些数据库异常有价值，因为它们为LLM提供了实时专有数据的访问权限，从而实现了检索增强生成（RAG）应用程序的开发。在其核心，向量数据库依赖于使用嵌入来捕捉数据的含义，并衡量不同向量对之间的相似度，并筛选广泛的数据集，识别最相似的向量。 学习本视频可以获得有关何时将向量数据库应用于自己所开发的应用程序的知识。将学习以下内容：\n\n如何使用向量数据库和LLM深入了解数据。\n构建实验室，展示如何形成嵌入并使用多种搜索技术查找相似的嵌入。\n探索快速搜索大型数据集的算法，并构建从RAG到多语言搜索的应用程序。\n\n\n文档阅读：What are Vector Embeddings，向量嵌入介绍中文版\n文档阅读：langchain中的嵌入模型, langchain中Ollama支持的嵌入, langchain中Ollama嵌入api\n文档阅读：chromadb, langchain中对chroma的集成\n文档阅读：langchain中关于向量库调用的完整过程\n\n\n\n\n\n完整实践：使用langchain，创建chroma实例，并创建collection，实现对向量数据的增删改查，并比较向量相似性，存储及载入向量数据。\n\n\n\n\n\n文档阅读：SentenceTransformer可以计算句子、文本、图像的嵌入，详见SentenceTransformers。\n文档阅读：Text chunking and splitting by LangChain\n在huggingface上查看头部的嵌入模型， 点此处",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "向量嵌入和向量数据库"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/vectorDB.html#学习目标",
+    "href": "AIengineerBook/vectorDB.html#学习目标",
+    "title": "向量嵌入和向量数据库",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n解释向量嵌入和向量数据库的概念；\n编写代码，实现创建向量库、在向量数据库中增删改查向量数据、向量数据相似性比较、数据存储及载入等功能；",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "向量嵌入和向量数据库"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/vectorDB.html#学习活动",
+    "href": "AIengineerBook/vectorDB.html#学习活动",
+    "title": "向量嵌入和向量数据库",
+    "section": "",
+    "text": "观看视频：吴恩达《向量数据库：从嵌入到应用》Vector Databases: from Embeddings to Applications中英字幕\n\n视频时长：1小时；\n视频内容简介：向量数据库在各个领域发挥着关键作用，如自然语言处理、图像识别、推荐系统和语义搜索，并随着越来越多的LLM采用而变得更加重要。这些数据库异常有价值，因为它们为LLM提供了实时专有数据的访问权限，从而实现了检索增强生成（RAG）应用程序的开发。在其核心，向量数据库依赖于使用嵌入来捕捉数据的含义，并衡量不同向量对之间的相似度，并筛选广泛的数据集，识别最相似的向量。 学习本视频可以获得有关何时将向量数据库应用于自己所开发的应用程序的知识。将学习以下内容：\n\n如何使用向量数据库和LLM深入了解数据。\n构建实验室，展示如何形成嵌入并使用多种搜索技术查找相似的嵌入。\n探索快速搜索大型数据集的算法，并构建从RAG到多语言搜索的应用程序。\n\n\n文档阅读：What are Vector Embeddings，向量嵌入介绍中文版\n文档阅读：langchain中的嵌入模型, langchain中Ollama支持的嵌入, langchain中Ollama嵌入api\n文档阅读：chromadb, langchain中对chroma的集成\n文档阅读：langchain中关于向量库调用的完整过程",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "向量嵌入和向量数据库"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/vectorDB.html#实践",
+    "href": "AIengineerBook/vectorDB.html#实践",
+    "title": "向量嵌入和向量数据库",
+    "section": "",
+    "text": "完整实践：使用langchain，创建chroma实例，并创建collection，实现对向量数据的增删改查，并比较向量相似性，存储及载入向量数据。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "向量嵌入和向量数据库"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/vectorDB.html#补充资料",
+    "href": "AIengineerBook/vectorDB.html#补充资料",
+    "title": "向量嵌入和向量数据库",
+    "section": "",
+    "text": "文档阅读：SentenceTransformer可以计算句子、文本、图像的嵌入，详见SentenceTransformers。\n文档阅读：Text chunking and splitting by LangChain\n在huggingface上查看头部的嵌入模型， 点此处",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "向量嵌入和向量数据库"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/intermediate.html",
+    "href": "AIengineerBook/intermediate.html",
+    "title": "中级LLM工程师",
+    "section": "",
+    "text": "理解向量嵌入和向量数据库。\n学习如何为你的应用程序使用向量数据库。\n构建检索增强生成（RAG） - 与你的知识库聊天。\n开发高级 RAG 管道，如子问题查询引擎，可以在经过多个数据源后提供响应。\n构建智能体 - 迭代工作流程以完成一个大任务。\n构建多智能体应用程序，多个智能体协同工作以提供更好的解决方案。\n使用多个智能体的自动化 - Autogen 和 Crew AI\n评估 RAGs - RAGAs 框架。\n管理数据库，检索，部署完整应用程序，版本控制，记录和监控模型行为。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "中级LLM工程师"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/intermediate.html#中级技能",
+    "href": "AIengineerBook/intermediate.html#中级技能",
+    "title": "中级LLM工程师",
+    "section": "",
+    "text": "理解向量嵌入和向量数据库。\n学习如何为你的应用程序使用向量数据库。\n构建检索增强生成（RAG） - 与你的知识库聊天。\n开发高级 RAG 管道，如子问题查询引擎，可以在经过多个数据源后提供响应。\n构建智能体 - 迭代工作流程以完成一个大任务。\n构建多智能体应用程序，多个智能体协同工作以提供更好的解决方案。\n使用多个智能体的自动化 - Autogen 和 Crew AI\n评估 RAGs - RAGAs 框架。\n管理数据库，检索，部署完整应用程序，版本控制，记录和监控模型行为。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "中级LLM工程师"
+    ]
+  },
+  {
+    "objectID": "mybook/summary.html",
+    "href": "mybook/summary.html",
+    "title": "Summary",
+    "section": "",
+    "text": "Summary\nIn summary, this book has no content whatsoever.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "mybook/intro.html",
+    "href": "mybook/intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Introduction\nThis is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\n\n Back to topReferences\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "mybook/index.html",
+    "href": "mybook/index.html",
+    "title": "待完善",
+    "section": "",
+    "text": "待完善\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Tutorials",
+      "其它",
+      "待完善"
+    ]
+  },
+  {
+    "objectID": "mybook/references.html",
+    "href": "mybook/references.html",
+    "title": "References",
+    "section": "",
+    "text": "References\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "AIengineerBook/LLM_usage.html",
+    "href": "AIengineerBook/LLM_usage.html",
+    "title": "运行并使用LLM",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n安装 ollama，以命令行方式通过ollama下载 某LLM，与该LLM进行对话\n使用 ollama的各项功能，如导入模型、制作modelfile等；\n安装 open webUI，完成配置，与某LLM进行对话。\n使用python 调用 ollama API，完成对话。\n\n\n\n\n\n阅读并操作：ollama安装、使用和学习\n\n阅读：ollama github, ollama部署指南\n操作：在本机上安装ollama，在命令行中通过ollama pull命令拉取模型，通过ollama run命令运行模型。\n扩展体验：\n\n在命令行中运行ollama -h，查看ollama命令的用法，并逐一试验；\n阅读ollama官网，查看可用model列表，并选择部分model阅读其说明；\n阅读ollama文档，学习ollama如何导入模型，如何制作modelfile，如何通过网络访问其API等内容；\n将ollama 资源库clone到本地，学习examples目录下的代码。\n学习langchain调用ollama，使用python调用ollama。\n\n\n阅读并操作：open webUI安装、使用和学习\n\n阅读：open webui github, open webUI quick start, ollama和open webUI运行llama3\n操作：在已安装ollama后，安装或通过docker运行open webUI，体验在open webUI上运行ollama。\n扩展体验\n\n阅读open webUI文档并体验。\n\n\n\n\n\n\n\n构建ollama服务，使用python调用API，传递提示和解析响应。\n\n\n\n\n\n大语言模型下的JSON数据格式交互",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "运行并使用LLM"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLM_usage.html#学习目标",
+    "href": "AIengineerBook/LLM_usage.html#学习目标",
+    "title": "运行并使用LLM",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n安装 ollama，以命令行方式通过ollama下载 某LLM，与该LLM进行对话\n使用 ollama的各项功能，如导入模型、制作modelfile等；\n安装 open webUI，完成配置，与某LLM进行对话。\n使用python 调用 ollama API，完成对话。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "运行并使用LLM"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLM_usage.html#学习",
+    "href": "AIengineerBook/LLM_usage.html#学习",
+    "title": "运行并使用LLM",
+    "section": "",
+    "text": "阅读并操作：ollama安装、使用和学习\n\n阅读：ollama github, ollama部署指南\n操作：在本机上安装ollama，在命令行中通过ollama pull命令拉取模型，通过ollama run命令运行模型。\n扩展体验：\n\n在命令行中运行ollama -h，查看ollama命令的用法，并逐一试验；\n阅读ollama官网，查看可用model列表，并选择部分model阅读其说明；\n阅读ollama文档，学习ollama如何导入模型，如何制作modelfile，如何通过网络访问其API等内容；\n将ollama 资源库clone到本地，学习examples目录下的代码。\n学习langchain调用ollama，使用python调用ollama。\n\n\n阅读并操作：open webUI安装、使用和学习\n\n阅读：open webui github, open webUI quick start, ollama和open webUI运行llama3\n操作：在已安装ollama后，安装或通过docker运行open webUI，体验在open webUI上运行ollama。\n扩展体验\n\n阅读open webUI文档并体验。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "运行并使用LLM"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLM_usage.html#实践",
+    "href": "AIengineerBook/LLM_usage.html#实践",
+    "title": "运行并使用LLM",
+    "section": "",
+    "text": "构建ollama服务，使用python调用API，传递提示和解析响应。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "运行并使用LLM"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLM_usage.html#补充资料",
+    "href": "AIengineerBook/LLM_usage.html#补充资料",
+    "title": "运行并使用LLM",
+    "section": "",
+    "text": "大语言模型下的JSON数据格式交互",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "运行并使用LLM"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/intermediate_projects.html",
+    "href": "AIengineerBook/intermediate_projects.html",
+    "title": "实践项目",
+    "section": "",
+    "text": "实践项目\n\n\n\n\n\n\n\n\nS.No.\nProject Idea\nSkills required / to be developed\n\n\n\n\n\nIntermediate\n\n\n\n5.\nQ&A bot for specific persona / department - Doctor / Lawyer / Engineer, Marketer, Sales etc.\ntext splitting, chunking, indexing, working with vector databases, building RAG pipelines, deploying apps\n\n\n6.\nStackOverflow-like search engine that provides response from multiple data sources - Advanced RAG pipeline to answer complex query using multiple data sources.\nAll above and vector retrieval, summary retrieval, sub-question query engine, deploying apps\n\n\n7.\nAI Interview Buddy - an AI agent that helps in preparing for specific roles in an interactive manner.\nBuilding agents, agentic design, text-to-speech, speech-to-text, deployment\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "AIengineerBook/multimodal.html",
+    "href": "AIengineerBook/multimodal.html",
+    "title": "多模态（制作中.）",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n\n\n\n\nBuilding hybrid search apps with vector databases like Pinecone\n\n\nCookbook for multimodal RAG pipelines"
+  },
+  {
+    "objectID": "AIengineerBook/multimodal.html#学习目标",
+    "href": "AIengineerBook/multimodal.html#学习目标",
+    "title": "多模态（制作中.）",
+    "section": "",
+    "text": "学习完本部分，使学习者能够："
+  },
+  {
+    "objectID": "AIengineerBook/multimodal.html#学习活动",
+    "href": "AIengineerBook/multimodal.html#学习活动",
+    "title": "多模态（制作中.）",
+    "section": "",
+    "text": "Building hybrid search apps with vector databases like Pinecone\n\n\nCookbook for multimodal RAG pipelines"
+  },
+  {
+    "objectID": "AIengineerBook/LLM_basic.html",
+    "href": "AIengineerBook/LLM_basic.html",
+    "title": "大语言模型基础",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n解释 什么是大语言模型；\n阐述 大语言模型的工作原理；\n列举 大语言模型的应用。\n\n\n\n\n\n观看视频：大语言模型简介\n\n视频时长：约5分钟\n视频内容提要：\n\n什么是LLM；\nLLM的工作原理；\nLLM的商业应用。\n\n\n观看视频：google出品的大语言模型简介\n\n视频时长：约15分钟\n视频内容提要：\n\n定义大语言模型；\n描述大语言模型用例；\n解释提示微调；\n描述生成式AI开发工具。\n\n\n\n\n\n\n\n用自己的话，向不具备LLM基础的人介绍大语言模型，并获得反馈。\n\n\n\n\n\n参考：A Practical Introduction to Large Language Models (LLMs) by Shaw Talebi\n参考：Andrej Karpathy一小时交流-大语言模型介绍\n参考：李宏毅生成式AI课程\n参考：微软generative-ai-for-beginners课程\n参考：复旦大学LLM课程\n参考：Large Language Model Cheat Sheet",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "大语言模型基础"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLM_basic.html#学习目标",
+    "href": "AIengineerBook/LLM_basic.html#学习目标",
+    "title": "大语言模型基础",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n解释 什么是大语言模型；\n阐述 大语言模型的工作原理；\n列举 大语言模型的应用。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "大语言模型基础"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLM_basic.html#学习",
+    "href": "AIengineerBook/LLM_basic.html#学习",
+    "title": "大语言模型基础",
+    "section": "",
+    "text": "观看视频：大语言模型简介\n\n视频时长：约5分钟\n视频内容提要：\n\n什么是LLM；\nLLM的工作原理；\nLLM的商业应用。\n\n\n观看视频：google出品的大语言模型简介\n\n视频时长：约15分钟\n视频内容提要：\n\n定义大语言模型；\n描述大语言模型用例；\n解释提示微调；\n描述生成式AI开发工具。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "大语言模型基础"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLM_basic.html#实践",
+    "href": "AIengineerBook/LLM_basic.html#实践",
+    "title": "大语言模型基础",
+    "section": "",
+    "text": "用自己的话，向不具备LLM基础的人介绍大语言模型，并获得反馈。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "大语言模型基础"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/LLM_basic.html#补充资料",
+    "href": "AIengineerBook/LLM_basic.html#补充资料",
+    "title": "大语言模型基础",
+    "section": "",
+    "text": "参考：A Practical Introduction to Large Language Models (LLMs) by Shaw Talebi\n参考：Andrej Karpathy一小时交流-大语言模型介绍\n参考：李宏毅生成式AI课程\n参考：微软generative-ai-for-beginners课程\n参考：复旦大学LLM课程\n参考：Large Language Model Cheat Sheet",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "大语言模型基础"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/beginner_projects.html",
+    "href": "AIengineerBook/beginner_projects.html",
+    "title": "实践项目",
+    "section": "",
+    "text": "实践项目\n\n\n\n\n\n\n\n\nNo.\n项目\n所需技能\n\n\n\n\n\n初级\n\n\n\n1.\nBuilding a chatGPT / Midjourney -like bot for a niche persona / use-case and integrate it with WhatsApp or Slack or Discord or build an app using Streamlit / Gradio.\nLLMs, Prompt Engineering, open-source LLMs, Working with APIs, Python\n\n\n2.\nChrome extension to summarise / ideate / extract takeaways / research with web pages.\nLLM APIs, Prompt Engineering, open-source LLMs, Working with API, JS, HTML,CSS\n\n\n3.\nCreate a news aggregator for a targeted persona (PMs, AI Engg., )\nWeb Parsing, Prompt Engineering, LLMs\n\n\n4.\nMulti-modal generation via Discord.\nAll of above and Multi-modal generation\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "AIengineerBook/langchain_usage.html",
+    "href": "AIengineerBook/langchain_usage.html",
+    "title": "langchain使用",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n使用langchain的主要概念, 包括：模型、chain、memory、prompt等, 编写 基于命令行的简单LLM应用程序。\n\n\n\n\n\n观看文档：langchain初探，langchain中调用ollama作为llm\n观看视频：吴恩达《用于LLM应用程序开发的LangChain》|langchain-for-llm-application-development|中英字幕\n\n视频时长：约1小时\n视频内容简介：学习使用LangChain框架扩展语言模型在应用程序开发中的用例和能力所必需的技能。在本课程中，将学习并获得以下主题的经验：\n\n模型、提示和解析器：调用LLM，提供提示和解析响应\nLLM的记忆：存储对话和管理有限上下文空间的记忆\n链：创建操作序列\n文档中的问答：将LLM应用于您的专有数据和用例要求\n代理：探索LLM作为推理代理的强大新兴开发。\n\n在课程结束时，您将拥有一个可作为扩散模型探索的起点的模型，用于您的应用程序。 这一小时的课程将极大地扩展利用强大的语言模型的可能性，使学习者可以在几个小时内创建非常强大的应用程序。\n视频来源：https://www.deeplearning.ai/short-courses/langchain-for-llm-application-development/\n\n\n\n\n\n\n使用langchain编写一个基于命令行的简单LLM应用，功能自选，比如对话、翻译、生成提纲等。\n\n\n\n\n\n从API到Agent：万字长文洞悉LangChain工程化设计",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "langchain使用"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/langchain_usage.html#学习目标",
+    "href": "AIengineerBook/langchain_usage.html#学习目标",
+    "title": "langchain使用",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n使用langchain的主要概念, 包括：模型、chain、memory、prompt等, 编写 基于命令行的简单LLM应用程序。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "langchain使用"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/langchain_usage.html#学习活动",
+    "href": "AIengineerBook/langchain_usage.html#学习活动",
+    "title": "langchain使用",
+    "section": "",
+    "text": "观看文档：langchain初探，langchain中调用ollama作为llm\n观看视频：吴恩达《用于LLM应用程序开发的LangChain》|langchain-for-llm-application-development|中英字幕\n\n视频时长：约1小时\n视频内容简介：学习使用LangChain框架扩展语言模型在应用程序开发中的用例和能力所必需的技能。在本课程中，将学习并获得以下主题的经验：\n\n模型、提示和解析器：调用LLM，提供提示和解析响应\nLLM的记忆：存储对话和管理有限上下文空间的记忆\n链：创建操作序列\n文档中的问答：将LLM应用于您的专有数据和用例要求\n代理：探索LLM作为推理代理的强大新兴开发。\n\n在课程结束时，您将拥有一个可作为扩散模型探索的起点的模型，用于您的应用程序。 这一小时的课程将极大地扩展利用强大的语言模型的可能性，使学习者可以在几个小时内创建非常强大的应用程序。\n视频来源：https://www.deeplearning.ai/short-courses/langchain-for-llm-application-development/",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "langchain使用"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/langchain_usage.html#实践",
+    "href": "AIengineerBook/langchain_usage.html#实践",
+    "title": "langchain使用",
+    "section": "",
+    "text": "使用langchain编写一个基于命令行的简单LLM应用，功能自选，比如对话、翻译、生成提纲等。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "langchain使用"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/langchain_usage.html#补充资料",
+    "href": "AIengineerBook/langchain_usage.html#补充资料",
+    "title": "langchain使用",
+    "section": "",
+    "text": "从API到Agent：万字长文洞悉LangChain工程化设计",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "langchain使用"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_evaluation.html",
+    "href": "AIengineerBook/RAG_evaluation.html",
+    "title": "RAG评估",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n评估 不同RAG应用的性能。\n\n\n\n\n\nHugging Face Cookbook on How to evaluate RAG system\n阅读文档：Evaluating all components of your RAG pipeline\n阅读文档：RAGAS framework to evaluate RAG pipelines.\n\n\n\n\n\n选择适当的开源或自研RAG应用，评估其性能。\n\n\n\n\n\n如何评估一个RAG（检索增强生成）系统\n一文了解RAG评估方法、工具与指标\n关于 RAG 评估体系的见解",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "RAG评估"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_evaluation.html#学习目标",
+    "href": "AIengineerBook/RAG_evaluation.html#学习目标",
+    "title": "RAG评估",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n评估 不同RAG应用的性能。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "RAG评估"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_evaluation.html#学习活动",
+    "href": "AIengineerBook/RAG_evaluation.html#学习活动",
+    "title": "RAG评估",
+    "section": "",
+    "text": "Hugging Face Cookbook on How to evaluate RAG system\n阅读文档：Evaluating all components of your RAG pipeline\n阅读文档：RAGAS framework to evaluate RAG pipelines.",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "RAG评估"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_evaluation.html#实践",
+    "href": "AIengineerBook/RAG_evaluation.html#实践",
+    "title": "RAG评估",
+    "section": "",
+    "text": "选择适当的开源或自研RAG应用，评估其性能。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "RAG评估"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_evaluation.html#补充资料",
+    "href": "AIengineerBook/RAG_evaluation.html#补充资料",
+    "title": "RAG评估",
+    "section": "",
+    "text": "如何评估一个RAG（检索增强生成）系统\n一文了解RAG评估方法、工具与指标\n关于 RAG 评估体系的见解",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "RAG评估"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/index.html",
+    "href": "AIengineerBook/index.html",
+    "title": "前言",
+    "section": "",
+    "text": "前言\n本教程介绍一个研发工程师（侧重python语言）如何成为一个具备LLM应用开发能力的工程师，也即LLM工程师。\nLLM工程师应当擅长创建LLM驱动的应用程序，专注于最大化模型能力并优化大型语言模型（LLMs）的工作流程。\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "前言"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_app.html",
+    "href": "AIengineerBook/RAG_app.html",
+    "title": "RAG应用开发",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n实现完整的RAG应用程序。\n\n\n\n\n\n阅读文档：RAG简介, 动手做一个最小RAG——TinyRAG, 通过 Llama3 和 ChromaDB 实现精确的文档查询\n观看视频：吴恩达《使用向量数据库构建应用程序|Building Applications with Vector Databases》中英字幕\n\n视频时长：1小时；\n视频内容简介：向量数据库使用嵌入来捕获数据的含义，评估不同向量对之间的相似性，并浏览大型数据集以识别最相似的向量。在大型语言模型的背景下，向量数据库的主要用途是检索增强生成（RAG），其中文本嵌入被存储和检索用于特定查询。 然而，向量数据库的多功能性不仅限于RAG，还可以快速构建各种应用程序，几乎不需要编码。 在这门课程中，您将探讨使用向量数据库实现六个应用程序的方法：\n\n语义搜索：创建一个搜索工具，超越关键词匹配，侧重于内容的含义，以便在用户问答数据集上进行高效的基于文本的搜索。\nRAG：通过合并模型未经过训练的来源的内容（例如使用Wikipedia数据集回答问题）来增强您的LLM应用程序。\n推荐系统：开发一个将语义搜索和RAG结合起来的系统，以推荐主题，并使用新闻文章数据集进行演示。\n混合搜索：构建一个应用程序，使用图像和描述性文本来查找物品，以电子商务数据集为例。\n面部相似性：创建一个应用程序，用于比较面部特征，使用公众人物数据库来确定它们之间的相似性。\n异常检测：了解如何构建一个异常检测应用程序，用于识别网络通信日志中的异常模式。\n您将具备使用任何向量数据库构建应用程序的新想法。\n\n\n阅读文档：用langchain构建RAG应用\n阅读文档：用langchain构建本地RAG应用\n\n\n\n\n\n使用langchain、chromdb完整构造一个RAG应用，能够从文本、网页、pdf等文件形式中读入数据，选择合适的文本分片方式，存入向量数据库，能够选择合适的检索模块，能在对话中检索出相应文本并作答。\n\n\n\n\n\n观看视频：吴恩达最新《大型语言模型与语义搜索》|Large Language Models with Semantic search|中英字幕\n\n视频时长：1小时；\n视频内容简介：本课程教授利用LLM进行搜索所需的技术。 在整个课程中,您将探索密集检索等关键概念,它提升了检索到的信息的相关性,从而导致改进的搜索结果,超越了传统的关键词搜索,以及重新排名,它将LLM的智能注入您的搜索系统,使其更快更有效。 完成课程后,您将:\n\n了解如何实现基本的关键词搜索,这是许多搜索系统在语言模型变得可访问之前的基础。\n使用重新排名方法增强关键词搜索,该方法根据与查询的相关性对最佳响应进行排名。\n通过使用嵌入(一种强大的自然语言处理工具)来实现密集检索,该工具使用文本的实际语义含义来进行搜索,并极大地改进了结果。 通过处理大量数据获得实际操作练习,并克服诸如变化的搜索结果和准确性等挑战。 将基于语言模型的搜索实现到您的网站或项目中。\n\n\n文档阅读：RAG技术全解析\nRAG applications are all about building connections between tools, databases, context lengths, embeddings, memories, etc. You need frameworks like LangChain, LlamaIndex, FastRAG to build these.\nStep-by-step tutorial to build a Q&A RAG pipeline by LangChain\nLangChain’s RAG from Scratch playlist on YouTube is pretty detailed and amazing.",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "RAG应用开发"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_app.html#学习目标",
+    "href": "AIengineerBook/RAG_app.html#学习目标",
+    "title": "RAG应用开发",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n实现完整的RAG应用程序。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "RAG应用开发"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_app.html#学习活动",
+    "href": "AIengineerBook/RAG_app.html#学习活动",
+    "title": "RAG应用开发",
+    "section": "",
+    "text": "阅读文档：RAG简介, 动手做一个最小RAG——TinyRAG, 通过 Llama3 和 ChromaDB 实现精确的文档查询\n观看视频：吴恩达《使用向量数据库构建应用程序|Building Applications with Vector Databases》中英字幕\n\n视频时长：1小时；\n视频内容简介：向量数据库使用嵌入来捕获数据的含义，评估不同向量对之间的相似性，并浏览大型数据集以识别最相似的向量。在大型语言模型的背景下，向量数据库的主要用途是检索增强生成（RAG），其中文本嵌入被存储和检索用于特定查询。 然而，向量数据库的多功能性不仅限于RAG，还可以快速构建各种应用程序，几乎不需要编码。 在这门课程中，您将探讨使用向量数据库实现六个应用程序的方法：\n\n语义搜索：创建一个搜索工具，超越关键词匹配，侧重于内容的含义，以便在用户问答数据集上进行高效的基于文本的搜索。\nRAG：通过合并模型未经过训练的来源的内容（例如使用Wikipedia数据集回答问题）来增强您的LLM应用程序。\n推荐系统：开发一个将语义搜索和RAG结合起来的系统，以推荐主题，并使用新闻文章数据集进行演示。\n混合搜索：构建一个应用程序，使用图像和描述性文本来查找物品，以电子商务数据集为例。\n面部相似性：创建一个应用程序，用于比较面部特征，使用公众人物数据库来确定它们之间的相似性。\n异常检测：了解如何构建一个异常检测应用程序，用于识别网络通信日志中的异常模式。\n您将具备使用任何向量数据库构建应用程序的新想法。\n\n\n阅读文档：用langchain构建RAG应用\n阅读文档：用langchain构建本地RAG应用",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "RAG应用开发"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_app.html#实践",
+    "href": "AIengineerBook/RAG_app.html#实践",
+    "title": "RAG应用开发",
+    "section": "",
+    "text": "使用langchain、chromdb完整构造一个RAG应用，能够从文本、网页、pdf等文件形式中读入数据，选择合适的文本分片方式，存入向量数据库，能够选择合适的检索模块，能在对话中检索出相应文本并作答。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "RAG应用开发"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/RAG_app.html#补充资料",
+    "href": "AIengineerBook/RAG_app.html#补充资料",
+    "title": "RAG应用开发",
+    "section": "",
+    "text": "观看视频：吴恩达最新《大型语言模型与语义搜索》|Large Language Models with Semantic search|中英字幕\n\n视频时长：1小时；\n视频内容简介：本课程教授利用LLM进行搜索所需的技术。 在整个课程中,您将探索密集检索等关键概念,它提升了检索到的信息的相关性,从而导致改进的搜索结果,超越了传统的关键词搜索,以及重新排名,它将LLM的智能注入您的搜索系统,使其更快更有效。 完成课程后,您将:\n\n了解如何实现基本的关键词搜索,这是许多搜索系统在语言模型变得可访问之前的基础。\n使用重新排名方法增强关键词搜索,该方法根据与查询的相关性对最佳响应进行排名。\n通过使用嵌入(一种强大的自然语言处理工具)来实现密集检索,该工具使用文本的实际语义含义来进行搜索,并极大地改进了结果。 通过处理大量数据获得实际操作练习,并克服诸如变化的搜索结果和准确性等挑战。 将基于语言模型的搜索实现到您的网站或项目中。\n\n\n文档阅读：RAG技术全解析\nRAG applications are all about building connections between tools, databases, context lengths, embeddings, memories, etc. You need frameworks like LangChain, LlamaIndex, FastRAG to build these.\nStep-by-step tutorial to build a Q&A RAG pipeline by LangChain\nLangChain’s RAG from Scratch playlist on YouTube is pretty detailed and amazing.",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "中级",
+      "RAG应用开发"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/finetune.html",
+    "href": "AIengineerBook/finetune.html",
+    "title": "微调",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n准备整理微调数据集；\n使用工具对开源llm进行 微调 。\n\n\n\n\n\n观看视频：Andrej在微软Build大会上解析ChatGPT演讲\n观看视频：吴恩达《微调大型语言模型》| Finetuning Large Language Models（中英字幕）\n\n视频时长：1小时\n视频内容简介：完成这门课程后，您将能够：\n\n了解何时在LLM上应用微调\n为微调准备您的数据 在您的数据上训练和评估LLM\n通过微调，您可以使用自己的数据对模型进行训练，并更新LLM中的神经网络权重，从而改变模型与提示工程和检索增强生成等其他方法的差异。细调可以使模型学习风格、形式，并通过更新模型以获取新知识来改善结果。\n\n视频来源：Deeplearing.ai的课程Finetuning Large Language Models\n\n阅读文档：llama factory 使用指南\nA Beginner’s Guide to LLM Fine-Tuning is a detailed guide on finetuning LLMs\nA very detailed and simplified read on how to fine-tune LLMs with Hugging Face by Philipp Schmid\n4-part blog series by Anyscale is a comprehensive guide on fine tuning and serving LLMs.\nFine-Tune Your Own Llama 2 Model in a Colab Notebook\nLLM Datasets for finetuning\n\n\n\n\n\n\n\n\n视频：Andrej Karpathy在微软Build大会上解析ChatGPT演讲\n视频：从零开始训练一个大语言模型30分钟讲座 by Shaw Talebi\n视频：2024大语言模型构建小指南 by Thomas Wolf\n\n视频时长：1小时20分\n视频内容简介：\n\n00:00:00 介绍 00:00:59 大语言模型的工作流程\n第一部分：训练：数据 00:01:17 数据准备 - 介绍和近期数据准备的良好资源 00:05:28 网络规模的预训练语料库 - 目标和挑战 00:11:29 网络规模数据源 - 关注近期数据集 00:18:01 语言和质量过滤 00:24:34 数据去重深入探讨 00:27:40 训练前的数据最终准备 00:31:31 如何大规模评估数据质量 00:36:29 datatrove和lighteval库\n第二部分：训练：建模 00:38:18 大语言模型训练的建模技术介绍 00:39:09 模型过大时：并行处理 00:40:00 数据并行 00:41:18 张量并行 00:44:38 管道并行 00:47:00 序列并行和4D并行的参考资料 00:47:52 同步：GPU-CPU和GPU-GPU的挑战 00:52:14 Flash Attentionv1和v2 00:56:23 稳定训练配方 00:59:12 新架构：专家混合（MoE） 01:03:13 新架构：Mamba 01:04:49 nanotron库\n第三部分：微调：强化学习人类反馈（RLHF）和对齐 01:06:15 2024年的RLHF 01:08:23 PPO、DPO和REINFORCE\n第四部分：快速推理技术 01:11:23 量化、猜测解码和编译：概述和资源\n\n\nnotebook：在单个 GPU 上针对自定义代码微调代码 LLM",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "微调"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/finetune.html#学习目标",
+    "href": "AIengineerBook/finetune.html#学习目标",
+    "title": "微调",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n准备整理微调数据集；\n使用工具对开源llm进行 微调 。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "微调"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/finetune.html#学习活动",
+    "href": "AIengineerBook/finetune.html#学习活动",
+    "title": "微调",
+    "section": "",
+    "text": "观看视频：Andrej在微软Build大会上解析ChatGPT演讲\n观看视频：吴恩达《微调大型语言模型》| Finetuning Large Language Models（中英字幕）\n\n视频时长：1小时\n视频内容简介：完成这门课程后，您将能够：\n\n了解何时在LLM上应用微调\n为微调准备您的数据 在您的数据上训练和评估LLM\n通过微调，您可以使用自己的数据对模型进行训练，并更新LLM中的神经网络权重，从而改变模型与提示工程和检索增强生成等其他方法的差异。细调可以使模型学习风格、形式，并通过更新模型以获取新知识来改善结果。\n\n视频来源：Deeplearing.ai的课程Finetuning Large Language Models\n\n阅读文档：llama factory 使用指南\nA Beginner’s Guide to LLM Fine-Tuning is a detailed guide on finetuning LLMs\nA very detailed and simplified read on how to fine-tune LLMs with Hugging Face by Philipp Schmid\n4-part blog series by Anyscale is a comprehensive guide on fine tuning and serving LLMs.\nFine-Tune Your Own Llama 2 Model in a Colab Notebook\nLLM Datasets for finetuning",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "微调"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/finetune.html#补充资料",
+    "href": "AIengineerBook/finetune.html#补充资料",
+    "title": "微调",
+    "section": "",
+    "text": "视频：Andrej Karpathy在微软Build大会上解析ChatGPT演讲\n视频：从零开始训练一个大语言模型30分钟讲座 by Shaw Talebi\n视频：2024大语言模型构建小指南 by Thomas Wolf\n\n视频时长：1小时20分\n视频内容简介：\n\n00:00:00 介绍 00:00:59 大语言模型的工作流程\n第一部分：训练：数据 00:01:17 数据准备 - 介绍和近期数据准备的良好资源 00:05:28 网络规模的预训练语料库 - 目标和挑战 00:11:29 网络规模数据源 - 关注近期数据集 00:18:01 语言和质量过滤 00:24:34 数据去重深入探讨 00:27:40 训练前的数据最终准备 00:31:31 如何大规模评估数据质量 00:36:29 datatrove和lighteval库\n第二部分：训练：建模 00:38:18 大语言模型训练的建模技术介绍 00:39:09 模型过大时：并行处理 00:40:00 数据并行 00:41:18 张量并行 00:44:38 管道并行 00:47:00 序列并行和4D并行的参考资料 00:47:52 同步：GPU-CPU和GPU-GPU的挑战 00:52:14 Flash Attentionv1和v2 00:56:23 稳定训练配方 00:59:12 新架构：专家混合（MoE） 01:03:13 新架构：Mamba 01:04:49 nanotron库\n第三部分：微调：强化学习人类反馈（RLHF）和对齐 01:06:15 2024年的RLHF 01:08:23 PPO、DPO和REINFORCE\n第四部分：快速推理技术 01:11:23 量化、猜测解码和编译：概述和资源\n\n\nnotebook：在单个 GPU 上针对自定义代码微调代码 LLM",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "微调"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/advanced.html",
+    "href": "AIengineerBook/advanced.html",
+    "title": "高级LLM工程师",
+    "section": "",
+    "text": "针对特定领域知识进行预训练 LLM 的微调，以适应特定领域的知识和定制响应，如医学研究、金融研究、法律分析。\n策划数据集并设计（ETL 管道）模型微调的管道。\n评估和基准测试模型性能\nLLMOps - 使用模型注册表、可观测性和自动化测试构建完整的端到端管道。\n构建多模态应用程序 - 文本和图像的混合语义搜索\n构建 SDK、包和自定义解决方案以启用其他开发人员\n使用提示黑客技术和通过检查漏洞和潜在风险纳入防御措施来保护你的 AI 应用程序。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "高级LLM工程师"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/advanced.html#高级技能",
+    "href": "AIengineerBook/advanced.html#高级技能",
+    "title": "高级LLM工程师",
+    "section": "",
+    "text": "针对特定领域知识进行预训练 LLM 的微调，以适应特定领域的知识和定制响应，如医学研究、金融研究、法律分析。\n策划数据集并设计（ETL 管道）模型微调的管道。\n评估和基准测试模型性能\nLLMOps - 使用模型注册表、可观测性和自动化测试构建完整的端到端管道。\n构建多模态应用程序 - 文本和图像的混合语义搜索\n构建 SDK、包和自定义解决方案以启用其他开发人员\n使用提示黑客技术和通过检查漏洞和潜在风险纳入防御措施来保护你的 AI 应用程序。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "高级",
+      "高级LLM工程师"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/appdev.html",
+    "href": "AIengineerBook/appdev.html",
+    "title": "简单LLM应用开发",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n使用gradio或streamlit，编写 简单的LLM应用程序界面。\n\n\n\n\n\n观看视频：吴恩达《使用Gradio构建生成式人工智能应用程序/Building Generative AI Applications with Gradio》\n\n视频时长：约1小时\n视频内容简介：使用Gradio构建生成式AI应用程序.可以学习到：\n\n使用几行代码创建一个用户友好的应用程序（适用于非编码人员），以输入文本，使用开源的大型语言模型进行摘要，并在应用程序中显示摘要。\n创建一个允许用户上传图像的应用程序，该应用程序使用图像到文本（图像字幕）来描述已上传的图像，并在应用程序中显示图像和字幕。\n创建一个使用扩散模型生成图像的应用程序，然后在应用程序中显示生成的图像。\n结合前两个课程中所学的知识：上传图像，为图像加上字幕，然后使用字幕生成一个新图像。\n创建一个与开源LLM聊天的界面，使用Falcon，这是开源LLM排行榜上排名最高的LLM之一。\n\n在本课程结束时，将获得实用的知识，以快速构建交互式应用程序和演示文稿，以验证自己的项目并更快地发布。\n视频来源：https://www.deeplearning.ai/short-courses/building-generative-ai-applications-with-gradio/\n\n阅读并操作：gradio quick start、streamlit quick start\n\n\n\n\n\n使用gradio（或streamlit）、langchain编写一个基于web界面的简单LLM应用，功能自选，比如对话、翻译、生成提纲等。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "简单LLM应用开发"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/appdev.html#学习目标",
+    "href": "AIengineerBook/appdev.html#学习目标",
+    "title": "简单LLM应用开发",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n使用gradio或streamlit，编写 简单的LLM应用程序界面。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "简单LLM应用开发"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/appdev.html#学习活动",
+    "href": "AIengineerBook/appdev.html#学习活动",
+    "title": "简单LLM应用开发",
+    "section": "",
+    "text": "观看视频：吴恩达《使用Gradio构建生成式人工智能应用程序/Building Generative AI Applications with Gradio》\n\n视频时长：约1小时\n视频内容简介：使用Gradio构建生成式AI应用程序.可以学习到：\n\n使用几行代码创建一个用户友好的应用程序（适用于非编码人员），以输入文本，使用开源的大型语言模型进行摘要，并在应用程序中显示摘要。\n创建一个允许用户上传图像的应用程序，该应用程序使用图像到文本（图像字幕）来描述已上传的图像，并在应用程序中显示图像和字幕。\n创建一个使用扩散模型生成图像的应用程序，然后在应用程序中显示生成的图像。\n结合前两个课程中所学的知识：上传图像，为图像加上字幕，然后使用字幕生成一个新图像。\n创建一个与开源LLM聊天的界面，使用Falcon，这是开源LLM排行榜上排名最高的LLM之一。\n\n在本课程结束时，将获得实用的知识，以快速构建交互式应用程序和演示文稿，以验证自己的项目并更快地发布。\n视频来源：https://www.deeplearning.ai/short-courses/building-generative-ai-applications-with-gradio/\n\n阅读并操作：gradio quick start、streamlit quick start",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "简单LLM应用开发"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/appdev.html#实践",
+    "href": "AIengineerBook/appdev.html#实践",
+    "title": "简单LLM应用开发",
+    "section": "",
+    "text": "使用gradio（或streamlit）、langchain编写一个基于web界面的简单LLM应用，功能自选，比如对话、翻译、生成提纲等。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "简单LLM应用开发"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/aigc_practice.html",
+    "href": "AIengineerBook/aigc_practice.html",
+    "title": "生成代码、图像和音频",
+    "section": "",
+    "text": "吴恩达《Hugging Face的开源模型|Open Source Models with Hugging Face》中英字幕（英文可关）\nCode Gen: Check out these resources on code generation - gpt-engineer, Tabby, gpt-migrate to migrate your codebase from one framework to another or one language to another.\nAudio Gen: text to speech by openAI, resemble.ai, elevenlabs API\nImage Gen: Image generation by Open AI, creating images using Stable Diffusion API"
+  },
+  {
+    "objectID": "AIengineerBook/aigc_practice.html#学习活动",
+    "href": "AIengineerBook/aigc_practice.html#学习活动",
+    "title": "生成代码、图像和音频",
+    "section": "",
+    "text": "吴恩达《Hugging Face的开源模型|Open Source Models with Hugging Face》中英字幕（英文可关）\nCode Gen: Check out these resources on code generation - gpt-engineer, Tabby, gpt-migrate to migrate your codebase from one framework to another or one language to another.\nAudio Gen: text to speech by openAI, resemble.ai, elevenlabs API\nImage Gen: Image generation by Open AI, creating images using Stable Diffusion API"
+  },
+  {
+    "objectID": "AIengineerBook/prompt_basic.html",
+    "href": "AIengineerBook/prompt_basic.html",
+    "title": "prompt工程初步",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n解释 prompt的概念；\n编写 简单的prompt， 完成概括、推断、转换文本等任务；\n应用 编写有效prompt的关键原则，系统化设计好的prompt。\n\n\n\n\n\n观看视频：吴恩达最新《面向开发者的ChatGPT提示工程》|chatgpt-prompt-engineering-for-developers|中英字幕\n\n视频时长：约1小时；\n视频内容简介：介绍LLM的工作原理，提供最佳的提示工程实践，并展示LLM API可用于各种任务的应用程序，包括：\n\n概括（例如，为了简洁而概括用户评论）\n推断（例如，情感分类，主题提取）\n转换文本（例如，翻译，拼写和语法纠正）\n扩展（例如，自动编写电子邮件）\n\n此外，可学习编写有效提示的两个关键原则，如何系统化地设计良好的提示，并学习构建自定义聊天机器人。\n视频来源：https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/\n\n阅读文档：Prompt工程简介\n阅读文档：Prompt Engineering Guide: Introduction\n阅读文档：如何向chatGPT提问以获得高质量答案\n\n\n\n\n\n针对自己的一些日常文字或创意工作，设计对应的实用prompt，并在ollama上使用。\n\n\n\n\n\n一文讲清楚实用Prompt工程\n精选Prompt框架-上, 精选Prompt框架-下\n我是如何赢得GPT-4提示工程大赛冠军的\n总结优秀的prompt案例\n一文掌握大模型提示词技巧：从战略到战术\n人人都是AI大师 - Prompt工程\nPrompt Engineering by Shaw Talebi\nlearnprompting\nlil’log",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "prompt工程初步"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/prompt_basic.html#学习目标",
+    "href": "AIengineerBook/prompt_basic.html#学习目标",
+    "title": "prompt工程初步",
+    "section": "",
+    "text": "学习完本部分，使学习者能够：\n\n解释 prompt的概念；\n编写 简单的prompt， 完成概括、推断、转换文本等任务；\n应用 编写有效prompt的关键原则，系统化设计好的prompt。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "prompt工程初步"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/prompt_basic.html#学习活动",
+    "href": "AIengineerBook/prompt_basic.html#学习活动",
+    "title": "prompt工程初步",
+    "section": "",
+    "text": "观看视频：吴恩达最新《面向开发者的ChatGPT提示工程》|chatgpt-prompt-engineering-for-developers|中英字幕\n\n视频时长：约1小时；\n视频内容简介：介绍LLM的工作原理，提供最佳的提示工程实践，并展示LLM API可用于各种任务的应用程序，包括：\n\n概括（例如，为了简洁而概括用户评论）\n推断（例如，情感分类，主题提取）\n转换文本（例如，翻译，拼写和语法纠正）\n扩展（例如，自动编写电子邮件）\n\n此外，可学习编写有效提示的两个关键原则，如何系统化地设计良好的提示，并学习构建自定义聊天机器人。\n视频来源：https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/\n\n阅读文档：Prompt工程简介\n阅读文档：Prompt Engineering Guide: Introduction\n阅读文档：如何向chatGPT提问以获得高质量答案",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "prompt工程初步"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/prompt_basic.html#实践",
+    "href": "AIengineerBook/prompt_basic.html#实践",
+    "title": "prompt工程初步",
+    "section": "",
+    "text": "针对自己的一些日常文字或创意工作，设计对应的实用prompt，并在ollama上使用。",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "prompt工程初步"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/prompt_basic.html#补充资料",
+    "href": "AIengineerBook/prompt_basic.html#补充资料",
+    "title": "prompt工程初步",
+    "section": "",
+    "text": "一文讲清楚实用Prompt工程\n精选Prompt框架-上, 精选Prompt框架-下\n我是如何赢得GPT-4提示工程大赛冠军的\n总结优秀的prompt案例\n一文掌握大模型提示词技巧：从战略到战术\n人人都是AI大师 - Prompt工程\nPrompt Engineering by Shaw Talebi\nlearnprompting\nlil’log",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "初学",
+      "prompt工程初步"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "数智启思",
+    "section": "",
+    "text": "这是jdragon的个人网站.\n记录个人在计算机、人工智能、计算机教育、高等教育等方面的一些思考。\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "myblog/posts/post-with-code/index.html",
+    "href": "myblog/posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "myblog/index.html",
+    "href": "myblog/index.html",
+    "title": "我的blog",
+    "section": "",
+    "text": "Title\n\n\nAuthor\n\n\nReading Time\n\n\nDate\n\n\n\n\n\n\nPost With Code\n\n\nHarlow Malloc\n\n\n1 min\n\n\nJun 6, 2024\n\n\n\n\nWelcome To My Blog\n\n\nTristan O’Malley\n\n\n1 min\n\n\nJun 3, 2024\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "crumbs": [
+      "我的blog"
+    ]
+  }
+]
