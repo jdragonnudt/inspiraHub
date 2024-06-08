@@ -732,7 +732,7 @@
     "href": "AIengineerBook/LLM_basic.html",
     "title": "大语言模型基础",
     "section": "",
-    "text": "学习完本部分，使学习者能够：\n\n解释 什么是大语言模型；\n阐述 大语言模型的工作原理；\n列举 大语言模型的应用。",
+    "text": "学习完本部分，使学习者能够：\n\n解释 什么是大语言模型；\n阐述 大语言模型的工作原理；\n列举 大语言模型的应用。\n\n\n\n\n\n观看视频：大语言模型简介\n\n视频时长：约5分钟\n视频内容提要：\n\n什么是LLM；\nLLM的工作原理；\nLLM的商业应用。\n\n\n观看视频：google出品的大语言模型简介\n\n视频时长：约15分钟\n视频内容提要：\n\n定义大语言模型；\n描述大语言模型用例；\n解释提示微调；\n描述生成式AI开发工具。\n\n\n\n\n\n\n\n用自己的话，向不具备LLM基础的人介绍大语言模型，并获得反馈。\n\n\n\n\n\n参考：A Practical Introduction to Large Language Models (LLMs) by Shaw Talebi\n参考：Andrej Karpathy一小时交流-大语言模型介绍\n参考：李宏毅生成式AI课程\n参考：微软generative-ai-for-beginners课程\n参考：复旦大学LLM课程\n参考：Large Language Model Cheat Sheet",
     "crumbs": [
       "Tutorials",
       "LLM工程师速成指南",
@@ -757,8 +757,8 @@
     "objectID": "AIengineerBook/LLM_basic.html#学习",
     "href": "AIengineerBook/LLM_basic.html#学习",
     "title": "大语言模型基础",
-    "section": "学习",
-    "text": "学习\n\n观看视频：大语言模型简介\n\n视频时长：约5分钟\n视频内容提要：\n\n什么是LLM；\nLLM的工作原理；\nLLM的商业应用。\n\n\n观看视频：google出品的大语言模型简介\n\n视频时长：约15分钟\n视频内容提要：\n\n定义大语言模型；\n描述大语言模型用例；\n解释提示微调；\n描述生成式AI开发工具。",
+    "section": "",
+    "text": "观看视频：大语言模型简介\n\n视频时长：约5分钟\n视频内容提要：\n\n什么是LLM；\nLLM的工作原理；\nLLM的商业应用。\n\n\n观看视频：google出品的大语言模型简介\n\n视频时长：约15分钟\n视频内容提要：\n\n定义大语言模型；\n描述大语言模型用例；\n解释提示微调；\n描述生成式AI开发工具。",
     "crumbs": [
       "Tutorials",
       "LLM工程师速成指南",
@@ -770,8 +770,8 @@
     "objectID": "AIengineerBook/LLM_basic.html#实践",
     "href": "AIengineerBook/LLM_basic.html#实践",
     "title": "大语言模型基础",
-    "section": "实践",
-    "text": "实践\n\n用自己的话，向不具备LLM基础的人介绍大语言模型，并获得反馈。",
+    "section": "",
+    "text": "用自己的话，向不具备LLM基础的人介绍大语言模型，并获得反馈。",
     "crumbs": [
       "Tutorials",
       "LLM工程师速成指南",
@@ -783,8 +783,8 @@
     "objectID": "AIengineerBook/LLM_basic.html#补充资料",
     "href": "AIengineerBook/LLM_basic.html#补充资料",
     "title": "大语言模型基础",
-    "section": "补充资料",
-    "text": "补充资料\n\n参考：A Practical Introduction to Large Language Models (LLMs) by Shaw Talebi\n参考：Andrej Karpathy一小时交流-大语言模型介绍\n参考：李宏毅生成式AI课程\n参考：微软generative-ai-for-beginners课程\n参考：复旦大学LLM课程\n参考：Large Language Model Cheat Sheet\n\n&lt;script src=\"https://giscus.app/client.js\"\n        data-repo=\"jdragonnudt/inspiraHub\"\n        data-repo-id=\"R_kgDOMGN2Lg\"\n        data-category=\"Announcements\"\n        data-category-id=\"DIC_kwDOMGN2Ls4Cf8Yp\"\n        data-mapping=\"title\"\n        data-strict=\"0\"\n        data-reactions-enabled=\"1\"\n        data-emit-metadata=\"0\"\n        data-input-position=\"bottom\"\n        data-theme=\"preferred_color_scheme\"\n        data-lang=\"zh-CN\"\n        crossorigin=\"anonymous\"\n        async&gt;\n&lt;/script&gt;",
+    "section": "",
+    "text": "参考：A Practical Introduction to Large Language Models (LLMs) by Shaw Talebi\n参考：Andrej Karpathy一小时交流-大语言模型介绍\n参考：李宏毅生成式AI课程\n参考：微软generative-ai-for-beginners课程\n参考：复旦大学LLM课程\n参考：Large Language Model Cheat Sheet",
     "crumbs": [
       "Tutorials",
       "LLM工程师速成指南",
