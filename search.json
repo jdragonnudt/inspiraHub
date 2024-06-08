@@ -455,7 +455,7 @@
     "href": "AIengineerBook/intro.html",
     "title": "引言",
     "section": "",
-    "text": "对 Python/JS 编程有中级理解。\n最好有至少 2-3 个中等复杂度应用程序的编码经验，比如使用 Flask、Rails 或 Node.js 开发的博客 Web 应用程序。\n能够熟练地阅读中英文技术文档。\n能够在像 VS Code 这样的 IDE 中熟练地编码。\n熟练使用git和GitHub。\n\n\n\n\n\n初学（\\(&lt;=\\) 1 个月）- 构建基本应用程序，学习如何使用大型语言模型（LLM）API，为你的应用程序精心设计提示，并使用开源 LLM。\n中级（约 2 个月）- 深入构建更多上下文感知的高级应用程序，使用检索增强生成（RAG）。了解向量数据库及其工作方式。学习如何使用 LLM 和工具构建智能体。\n高级（约 3 个月）- 在掌握应用程序构建之后，学习如何使用 LLMOps 在生产中部署、优化和管理 LLM 驱动的应用程序。学习如何微调预训练模型，以高效且低成本地适应下游应用程序。\n\n\n\n\n理解 LLM 的基础知识 - 你应该知道 ChatGPT 在高层次上是如何工作的。\n学习开发者的提示工程。如何编写提示以改善 LLM 的响应。\n学习向 LLM API 提交和接收数据，学习如何使用 JSON 数据。\n学习调用封闭和开源的 LLM 模型，函数调用，传递提示和解析响应。\n学习如何管理对话中的上下文。\n学习创建和自动化一系列操作 - 使用 langchain 的chain。\n使用 Gradio 或 Streamlit 进行基本应用程序开发，用于 POC 和演示。\n部署你的应用程序以使其可访问 - 在 HuggingFace Space 或 Streamlit Cloud 上的基本部署。\n多模态生成 - 使用 HuggingFace transformer 库进行代码、图像、音频生成。\n\n\n\n\n\n理解向量嵌入和向量数据库。\n学习如何为你的应用程序使用向量数据库。\n构建检索增强生成（RAG） - 与你的知识库聊天。\n开发高级 RAG 管道，如子问题查询引擎，可以在经过多个数据源后提供响应。\n构建智能体 - 迭代工作流程以完成一个大任务。\n构建多智能体应用程序，多个智能体协同工作以提供更好的解决方案。\n使用多个智能体的自动化 - Autogen 和 Crew AI\n评估 RAGs - RAGAs 框架。\n管理数据库，检索，部署完整应用程序，版本控制，记录和监控模型行为。\n\n\n\n\n\n针对特定领域知识进行预训练 LLM 的微调，以适应特定领域的知识和定制响应，如医学研究、金融研究、法律分析。\n策划数据集并设计（ETL 管道）模型微调的管道。\n评估和基准测试模型性能\nLLMOps - 使用模型注册表、可观测性和自动化测试构建完整的端到端管道。\n构建多模态应用程序 - 文本和图像的混合语义搜索\n构建 SDK、包和自定义解决方案以启用其他开发人员\n使用提示黑客技术和通过检查漏洞和潜在风险纳入防御措施来保护你的 AI 应用程序。\n\n\n\n\n\n\n效率优先：可以首先阅读各章学习目标，根据学习目标确定要学习的内容，并选择阅读的文章或观看的视频，并进行实践。当确认自己具备了学习目标里提到的基本能力后，可以先转入下一章学习，后续再来完善本章内容的更多细节。\n编码实践：每一章都需要通过编码实践来验证自己的学习效果，根据资料搭建运行环境，运行并验证核心功能。\n深入思考：如果有必要以及时间比较宽裕，需要花时间去阅读每一章的补充资料，深入地理解相关技术原理。\n\n\n\n\n\n张长旺 (2024) 提供了一篇完整的路线图描述。\nTyagi (2024) 提供了github上的AI工程师学习路线路和资源列表",
+    "text": "对 Python/JS 编程有中级理解。\n最好有至少 2-3 个中等复杂度应用程序的编码经验，比如使用 Flask、Rails 或 Node.js 开发的博客 Web 应用程序。\n能够熟练地阅读中英文技术文档。\n能够在像 VS Code 这样的 IDE 中熟练地编码。\n熟练使用git和GitHub。\n\n\n\n\n\n初学（\\(&lt;=\\) 1 个月）- 构建基本应用程序，学习如何使用大型语言模型（LLM）API，为你的应用程序精心设计提示，并使用开源 LLM。\n中级（约 2 个月）- 深入构建更多上下文感知的高级应用程序，使用检索增强生成（RAG）。了解向量数据库及其工作方式。学习如何使用 LLM 和工具构建智能体。\n高级（约 3 个月）- 在掌握应用程序构建之后，学习如何使用 LLMOps 在生产中部署、优化和管理 LLM 驱动的应用程序。学习如何微调预训练模型，以高效且低成本地适应下游应用程序。\n\n\n\n\n理解 LLM 的基础知识 - 你应该知道 ChatGPT 在高层次上是如何工作的。\n学习开发者的提示工程。如何编写提示以改善 LLM 的响应。\n学习向 LLM API 提交和接收数据，学习如何使用 JSON 数据。\n学习调用封闭和开源的 LLM 模型，函数调用，传递提示和解析响应。\n学习如何管理对话中的上下文。\n学习创建和自动化一系列操作 - 使用 langchain 的chain。\n使用 Gradio 或 Streamlit 进行基本应用程序开发，用于 POC 和演示。\n部署你的应用程序以使其可访问 - 在 HuggingFace Space 或 Streamlit Cloud 上的基本部署。\n多模态生成 - 使用 HuggingFace transformer 库进行代码、图像、音频生成。\n\n\n\n\n\n理解向量嵌入和向量数据库。\n学习如何为你的应用程序使用向量数据库。\n构建检索增强生成（RAG） - 与你的知识库聊天。\n开发高级 RAG 管道，如子问题查询引擎，可以在经过多个数据源后提供响应。\n构建智能体 - 迭代工作流程以完成一个大任务。\n构建多智能体应用程序，多个智能体协同工作以提供更好的解决方案。\n使用多个智能体的自动化 - Autogen 和 Crew AI\n评估 RAGs - RAGAs 框架。\n管理数据库，检索，部署完整应用程序，版本控制，记录和监控模型行为。\n\n\n\n\n\n针对特定领域知识进行预训练 LLM 的微调，以适应特定领域的知识和定制响应，如医学研究、金融研究、法律分析。\n策划数据集并设计（ETL 管道）模型微调的管道。\n评估和基准测试模型性能\nLLMOps - 使用模型注册表、可观测性和自动化测试构建完整的端到端管道。\n构建多模态应用程序 - 文本和图像的混合语义搜索\n构建 SDK、包和自定义解决方案以启用其他开发人员\n使用提示黑客技术和通过检查漏洞和潜在风险纳入防御措施来保护你的 AI 应用程序。\n\n\n\n\n\n\n效率优先：可以首先阅读各章学习目标，根据学习目标确定要学习的内容，并选择阅读的文章或观看的视频，并进行实践。当确认自己具备了学习目标里提到的基本能力后，可以先转入下一章学习，后续再来完善本章内容的更多细节。\n编码实践：每一章都需要通过编码实践来验证自己的学习效果，根据资料搭建运行环境，运行并验证核心功能。\n深入思考：如果有必要以及时间比较宽裕，需要花时间去阅读每一章的补充资料，深入地理解相关技术原理。",
     "crumbs": [
       "Tutorials",
       "LLM工程师速成指南",
@@ -934,7 +934,7 @@
     "href": "AIengineerBook/index.html",
     "title": "前言",
     "section": "",
-    "text": "前言\n本教程介绍一个研发工程师（侧重python语言）如何成为一个具备LLM应用开发能力的工程师，也即LLM工程师。\nLLM工程师应当擅长创建LLM驱动的应用程序，专注于最大化模型能力并优化大型语言模型（LLMs）的工作流程。\n\n\n\n\n\n Back to top",
+    "text": "本教程介绍一个研发工程师（侧重python语言）如何成为一个具备LLM应用开发能力的工程师，也即LLM工程师。\nLLM工程师应当擅长创建LLM驱动的应用程序，专注于最大化模型能力并优化大型语言模型（LLMs）的工作流程。\n\n\n本教程参考了以下资料，并在此基础上补充若干内容成文，在此感谢相关作者。\n\n张长旺 (2024) 提供了一篇完整的路线图描述。\nTyagi (2024) 提供了github上的AI工程师学习路线路和资源列表\n\n\n\n\n引用本教程请注明以下信息。\n@article{lj2024,\n  author = {龙军},\n  title = {LLM工程师速成指南},\n  year = {2024},\n  url = {https://jdragonnudt.github.io/inspiraHub/AIengineerBook/},\n}",
     "crumbs": [
       "Tutorials",
       "LLM工程师速成指南",
@@ -1237,6 +1237,42 @@
     "text": "Title\n\n\nAuthor\n\n\nReading Time\n\n\nDate\n\n\n\n\n\n\nPost With Code\n\n\nHarlow Malloc\n\n\n1 min\n\n\nJun 6, 2024\n\n\n\n\nWelcome To My Blog\n\n\nTristan O’Malley\n\n\n1 min\n\n\nJun 3, 2024\n\n\n\n\n\nNo matching items\n\n Back to top",
     "crumbs": [
       "我的blog"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/index.html#应用信息",
+    "href": "AIengineerBook/index.html#应用信息",
+    "title": "前言",
+    "section": "",
+    "text": "@article{lj2024,\n  author = {龙军},\n  title = {LLM工程师速成指南},\n  year = {2024},\n  url = {https://jdragonnudt.github.io/inspiraHub/AIengineerBook/},\n}",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "前言"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/index.html#引用信息",
+    "href": "AIengineerBook/index.html#引用信息",
+    "title": "前言",
+    "section": "",
+    "text": "引用本教程请注明以下信息。\n@article{lj2024,\n  author = {龙军},\n  title = {LLM工程师速成指南},\n  year = {2024},\n  url = {https://jdragonnudt.github.io/inspiraHub/AIengineerBook/},\n}",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "前言"
+    ]
+  },
+  {
+    "objectID": "AIengineerBook/index.html#致谢",
+    "href": "AIengineerBook/index.html#致谢",
+    "title": "前言",
+    "section": "",
+    "text": "本教程参考了以下资料，并在此基础上补充若干内容成文，在此感谢相关作者。\n\n张长旺 (2024) 提供了一篇完整的路线图描述。\nTyagi (2024) 提供了github上的AI工程师学习路线路和资源列表",
+    "crumbs": [
+      "Tutorials",
+      "LLM工程师速成指南",
+      "前言"
     ]
   }
 ]

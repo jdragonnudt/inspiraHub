@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -327,7 +347,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言">前言</a></li>
+  <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言">前言</a>
+  <ul class="collapse">
+  <li><a href="#致谢" id="toc-致谢" class="nav-link" data-scroll-target="#致谢">致谢</a></li>
+  <li><a href="#引用信息" id="toc-引用信息" class="nav-link" data-scroll-target="#引用信息">引用信息</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -341,12 +365,37 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="unnumbered">前言</h1>
 <p>本教程介绍一个研发工程师（侧重python语言）如何成为一个具备LLM应用开发能力的工程师，也即LLM工程师。</p>
 <p>LLM工程师应当擅长创建LLM驱动的应用程序，专注于最大化模型能力并优化大型语言模型（LLMs）的工作流程。</p>
-<p><img src="cover.png" class="img-fluid"></p>
+<section id="致谢" class="level2">
+<h2 class="anchored" data-anchor-id="致谢">致谢</h2>
+<p>本教程参考了以下资料，并在此基础上补充若干内容成文，在此感谢相关作者。</p>
+<ul>
+<li><span class="citation" data-cites="zhangchangwang2024">张长旺 (<a href="#ref-zhangchangwang2024" role="doc-biblioref">2024</a>)</span> 提供了一篇完整的路线图描述。</li>
+<li><span class="citation" data-cites="dswh2024">Tyagi (<a href="#ref-dswh2024" role="doc-biblioref">2024</a>)</span> 提供了github上的AI工程师学习路线路和资源列表</li>
+</ul>
+</section>
+<section id="引用信息" class="level2">
+<h2 class="anchored" data-anchor-id="引用信息">引用信息</h2>
+<p>引用本教程请注明以下信息。</p>
+<pre><code>@article{lj2024,
+  author = {龙军},
+  title = {LLM工程师速成指南},
+  year = {2024},
+  url = {https://jdragonnudt.github.io/inspiraHub/AIengineerBook/},
+}</code></pre>
+
 
 
 </section>
+</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-dswh2024" class="csl-entry" role="listitem">
+Tyagi, Harshit. 2024. <span>“Ai-Engineer-Roadmap.”</span> <a href="https://github.com/dswh/ai-engineer-roadmap">https://github.com/dswh/ai-engineer-roadmap</a>.
+</div>
+<div id="ref-zhangchangwang2024" class="csl-entry" role="listitem">
+张长旺. 2024. <span>“从码农到ai大师：AI工程师定位与成长全攻略！.”</span> <a href="https://mp.weixin.qq.com/s/bMMdCmbOMTjNuHj7hUiTxQ">https://mp.weixin.qq.com/s/bMMdCmbOMTjNuHj7hUiTxQ</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
