@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="jdragon">
+<meta name="dcterms.date" content="2024-09-28">
+
+<title>数智启思 - 什么是计算学科？</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">数智启思</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../AIengineerBook/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../myblog/index.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/jdragonnudt/inspiraHub" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">什么是计算学科？</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">计算学科</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>jdragon </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 28, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#计算学科的定义与范畴" id="toc-计算学科的定义与范畴" class="nav-link active" data-scroll-target="#计算学科的定义与范畴">计算学科的定义与范畴</a>
+  <ul class="collapse">
+  <li><a href="#一计算学科的形成和发展" id="toc-一计算学科的形成和发展" class="nav-link" data-scroll-target="#一计算学科的形成和发展">(一)计算学科的形成和发展</a>
+  <ul class="collapse">
+  <li><a href="#计算学科的起源和背景" id="toc-计算学科的起源和背景" class="nav-link" data-scroll-target="#计算学科的起源和背景">1.计算学科的起源和背景</a></li>
+  <li><a href="#计算学科的主要分支和研究领域" id="toc-计算学科的主要分支和研究领域" class="nav-link" data-scroll-target="#计算学科的主要分支和研究领域">2.计算学科的主要分支和研究领域</a></li>
+  </ul></li>
+  <li><a href="#二计算学科的核心概念和方法" id="toc-二计算学科的核心概念和方法" class="nav-link" data-scroll-target="#二计算学科的核心概念和方法">(二)计算学科的核心概念和方法</a>
+  <ul class="collapse">
+  <li><a href="#算法设计与分析" id="toc-算法设计与分析" class="nav-link" data-scroll-target="#算法设计与分析">1.算法设计与分析</a></li>
+  <li><a href="#数据结构与数据库技术" id="toc-数据结构与数据库技术" class="nav-link" data-scroll-target="#数据结构与数据库技术">2.数据结构与数据库技术</a></li>
+  <li><a href="#人工智能与机器学习" id="toc-人工智能与机器学习" class="nav-link" data-scroll-target="#人工智能与机器学习">3.人工智能与机器学习</a></li>
+  <li><a href="#网络与分布式计算" id="toc-网络与分布式计算" class="nav-link" data-scroll-target="#网络与分布式计算">4.网络与分布式计算</a></li>
+  <li><a href="#安全与隐私保护" id="toc-安全与隐私保护" class="nav-link" data-scroll-target="#安全与隐私保护">5.安全与隐私保护</a></li>
+  <li><a href="#软件工程与开发方法学" id="toc-软件工程与开发方法学" class="nav-link" data-scroll-target="#软件工程与开发方法学">6.软件工程与开发方法学</a></li>
+  <li><a href="#人机交互与用户体验设计" id="toc-人机交互与用户体验设计" class="nav-link" data-scroll-target="#人机交互与用户体验设计">7.人机交互与用户体验设计</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="计算学科的定义与范畴" class="level1">
+<h1>计算学科的定义与范畴</h1>
+<p>本章介绍了计算学科的形成和发展，包括其主要分支和研究领域，以及核心概念和方法。</p>
+<section id="一计算学科的形成和发展" class="level2">
+<h2 class="anchored" data-anchor-id="一计算学科的形成和发展">(一)计算学科的形成和发展</h2>
+<p>这部分回顾了计算学科的起源和背景，以及其主要分支和研究领域的发展。</p>
+<section id="计算学科的起源和背景" class="level3">
+<h3 class="anchored" data-anchor-id="计算学科的起源和背景">1.计算学科的起源和背景</h3>
+<p>计算学科的起源可以追溯到20世纪中叶，当时计算机技术正处于迅速发展的阶段。在此之前，计算主要依赖于手工计算和机械计算设备，如算盘、差分机等。然而，随着电子技术的发展，计算机逐渐成为了计算的主要工具。</p>
+<p>在计算机技术发展的过程中，图灵机的概念和原理起到了关键的作用。图灵机是一种抽象的计算模型，它通过定义一系列规则来描述计算过程。图灵机对现代计算机科学的影响深远，它为理解计算的本质提供了一个重要的理论基础。</p>
+<p>此外，信息论的基本概念也在计算学科的形成过程中发挥了重要作用。信息论是研究信息的传输、存储和处理的理论，它在计算学科中的应用主要体现在数据的编码、压缩和传输等方面。</p>
+<p>总的来说，计算学科的起源和背景是多元的，它既包含了数学、物理等基础科学的研究成果，也包含了计算机技术、信息论等新兴学科的研究成果。这些成果共同推动了计算学科的形成和发展，使其成为了一门独立的学科。</p>
+</section>
+<section id="计算学科的主要分支和研究领域" class="level3">
+<h3 class="anchored" data-anchor-id="计算学科的主要分支和研究领域">2.计算学科的主要分支和研究领域</h3>
+<p>计算学科是一门综合性强、应用广泛的学科，其核心在于研究如何高效、准确地处理和分析数据。该学科涵盖了从理论到实践的多个分支和研究领域，包括但不限于算法设计与分析、数据结构与数据库技术、人工智能与机器学习等。</p>
+<p>在算法设计与分析领域，研究者致力于开发新的算法或改进现有算法，以提高解决问题的效率和准确性。这涉及到对算法的时间复杂度和空间复杂度的分析，以及算法在不同场景下的性能评估。例如，排序算法如快速排序（QuickSort）和归并排序（MergeSort）是计算机科学中的基础，而图算法如Dijkstra最短路径算法和Kruskal最小生成树算法则广泛应用于网络优化和数据分析等领域。</p>
+<p>数据结构与数据库技术领域关注于数据的组织、存储和管理方式。有效的数据结构可以提高数据处理的速度和效率，而数据库技术则解决了大量数据的存储和检索问题。关系型数据库和非关系型数据库的设计原理及其查询优化技术是这一领域的研究重点。此外，随着大数据时代的到来，分布式数据库系统和云数据库服务也成为了研究的热点。</p>
+<p>人工智能与机器学习则是计算学科中最具活力的研究领域之一。它们模拟人类智能过程，使计算机能够自动学习并做出决策。深度学习、强化学习和自然语言处理等子领域不断推动着技术的边界。例如，卷积神经网络（CNN）在图像识别领域的应用，以及循环神经网络（RNN）在序列数据处理方面的创新，都极大地促进了人工智能技术的发展。</p>
+<p>除了上述主要分支外，计算学科还包括网络与分布式计算、安全与隐私保护、软件工程与开发方法学、人机交互与用户体验设计等多个研究领域。这些领域相互交织，共同构成了计算学科的广阔天地。例如，网络与分布式计算研究如何通过网络连接不同的计算资源，实现资源的共享和协同工作；安全与隐私保护则关注如何在开放的网络环境中保护数据的安全和个人隐私；软件工程与开发方法学探讨如何高效地开发和维护大型软件系统；人机交互与用户体验设计则着眼于如何使计算机系统更加易用和符合用户需求。</p>
+<p>综上所述，计算学科的主要分支和研究领域展现了该学科的多样性和复杂性。每个分支都有其独特的研究对象和方法，但它们之间又存在着紧密的联系。随着技术的不断进步和社会需求的不断变化，计算学科将继续发展新的研究方向，为解决现实世界的问题提供强有力的支持。</p>
+</section>
+</section>
+<section id="二计算学科的核心概念和方法" class="level2">
+<h2 class="anchored" data-anchor-id="二计算学科的核心概念和方法">(二)计算学科的核心概念和方法</h2>
+<p>这部分介绍了计算学科的核心概念和方法，包括算法设计、数据结构、人工智能等方面的内容。</p>
+<section id="算法设计与分析" class="level3">
+<h3 class="anchored" data-anchor-id="算法设计与分析">1.算法设计与分析</h3>
+<p>算法设计与分析是计算学科的核心内容之一，它涉及到如何设计有效的算法来解决特定问题，以及如何分析和评估这些算法的性能。这一领域不仅关注算法的正确性和效率，还涵盖了算法的可读性、可维护性和可扩展性等方面。</p>
+<p>首先，让我们来探讨算法设计的过程。算法设计通常开始于对问题的定义和理解，这包括确定输入输出的格式、问题的约束条件以及期望的结果。接下来，设计者需要构思一个或多个可能的解决方案，并选择最合适的数据结构和控制结构来实现这些解决方案。在这个过程中，迭代和优化是不可或缺的步骤，设计者需要不断测试和调整算法，以确保其满足性能要求。</p>
+<p>在算法分析方面，我们关注的是算法的时间复杂度和空间复杂度。时间复杂度衡量的是算法执行所需时间的增长率与输入规模的关系，而空间复杂度则描述了算法所需内存空间的增长率。通过使用大O符号表示法，我们可以简洁地表达这些复杂度。例如，一个具有线性时间复杂度的算法可以表示为O(n)，其中n是输入的大小。</p>
+<p>除了复杂度分析，算法的稳定性和鲁棒性也是重要的考量因素。稳定性指的是算法对于相同输入的不同顺序是否会产生一致的结果，而鲁棒性则是指算法能够处理异常情况和错误输入的能力。</p>
+<p>在实际应用中，算法设计与分析还需要考虑算法的实际运行环境和特定领域的限制。例如，在嵌入式系统中，算法可能需要在有限的硬件资源下运行；而在金融领域，算法的准确性和可靠性至关重要。</p>
+<p>最后，随着技术的发展，新的算法和优化技术不断涌现。例如，机器学习和人工智能领域的算法正在改变我们处理大数据和复杂系统的方式。因此，持续学习和适应新技术是算法设计与分析领域的重要组成部分。</p>
+<p>综上所述，算法设计与分析是一个多层次、多维度的研究领域，它要求研究者不仅要有深厚的理论基础，还要具备实践能力和创新思维。通过精心设计和严格分析，我们可以开发出高效、可靠的算法来解决各种复杂的计算问题。</p>
+</section>
+<section id="数据结构与数据库技术" class="level3">
+<h3 class="anchored" data-anchor-id="数据结构与数据库技术">2.数据结构与数据库技术</h3>
+<p>数据结构与数据库技术是计算学科中至关重要的组成部分，它们不仅为数据的组织、存储和查询提供了基础，而且对于解决现实世界中的复杂问题具有关键作用。</p>
+<section id="数据结构" class="level4">
+<h4 class="anchored" data-anchor-id="数据结构">数据结构</h4>
+<section id="基本概念" class="level5">
+<h5 class="anchored" data-anchor-id="基本概念">基本概念</h5>
+<p>数据结构是计算机存储、组织数据的方式。它涉及到数据元素之间的关系以及数据在计算机内存中的存储方式。常见的数据结构包括数组、链表、栈、队列、树、图等。每种数据结构都有其特定的用途和操作效率，例如，数组适合快速随机访问，而链表则便于插入和删除操作。</p>
+</section>
+<section id="算法设计与分析-1" class="level5">
+<h5 class="anchored" data-anchor-id="算法设计与分析-1">算法设计与分析</h5>
+<p>数据结构的选择直接影响到算法的设计和性能。例如，使用哈希表可以实现平均时间复杂度为O(1)的查找操作，而使用二叉搜索树可能需要O(log n)的时间复杂度。因此，深入理解不同数据结构的特性和适用场景对于编写高效的程序至关重要。</p>
+</section>
+</section>
+<section id="数据库技术" class="level4">
+<h4 class="anchored" data-anchor-id="数据库技术">数据库技术</h4>
+<section id="数据库系统概述" class="level5">
+<h5 class="anchored" data-anchor-id="数据库系统概述">数据库系统概述</h5>
+<p>数据库技术涉及数据的持久化存储和管理，它允许用户高效地存储、检索、更新和删除大量数据。关系型数据库（如MySQL、PostgreSQL）和非关系型数据库（如MongoDB、Cassandra）是两种主要的数据库类型，它们根据数据模型的不同来组织和存储数据。</p>
+</section>
+<section id="sql语言" class="level5">
+<h5 class="anchored" data-anchor-id="sql语言">SQL语言</h5>
+<p>结构化查询语言（SQL）是关系型数据库中用于与数据库交互的标准语言。通过SQL，用户可以执行创建、读取、更新和删除（CRUD）操作，以及定义复杂的查询来检索特定数据集。SQL的强大之处在于它的声明性特点，即用户只需指定所需的结果，而无需说明如何实现这一结果。</p>
+</section>
+<section id="事务处理与并发控制" class="level5">
+<h5 class="anchored" data-anchor-id="事务处理与并发控制">事务处理与并发控制</h5>
+<p>数据库管理系统必须确保数据的一致性和完整性，即使在多个用户同时访问和修改数据的情况下也是如此。这通常通过事务来实现，事务是一系列操作的集合，这些操作要么全部完成，要么全部不完成。并发控制机制，如锁定和多版本并发控制（MVCC），用于管理多个事务之间的交互，以防止冲突和不一致。</p>
+</section>
+</section>
+<section id="数据结构与数据库技术的融合" class="level4">
+<h4 class="anchored" data-anchor-id="数据结构与数据库技术的融合">数据结构与数据库技术的融合</h4>
+<p>在现代应用中，数据结构与数据库技术常常相互渗透。例如，NoSQL数据库通常采用特定的数据结构来优化特定类型的数据访问模式。此外，许多高级数据库功能，如索引和查询优化，都依赖于对底层数据结构的深入理解。</p>
+<p>综上所述，数据结构与数据库技术是计算学科中不可或缺的部分，它们为处理大量数据提供了基础和方法。无论是在学术研究还是在实际应用中，对这些技术的深入理解和正确应用都是实现高效计算的关键。</p>
+</section>
+</section>
+<section id="人工智能与机器学习" class="level3">
+<h3 class="anchored" data-anchor-id="人工智能与机器学习">3.人工智能与机器学习</h3>
+<p>人工智能（AI）与机器学习是计算学科中最具活力和影响力的领域之一。它们涉及模拟人类智能行为、学习数据模式等方面，旨在使计算机系统能够执行通常需要人类智能的任务，如视觉感知、语言理解、决策制定等。</p>
+<section id="人工智能的定义与发展" class="level4">
+<h4 class="anchored" data-anchor-id="人工智能的定义与发展">人工智能的定义与发展</h4>
+<p>人工智能是一门研究如何使机器实现智能的行为，以拓展人类的智能的学科。自20世纪50年代以来，人工智能的发展经历了多个阶段，包括初期的符号逻辑方法、专家系统的兴起以及近年来基于大数据和深度学习的技术革新。</p>
+</section>
+<section id="机器学习的基本概念" class="level4">
+<h4 class="anchored" data-anchor-id="机器学习的基本概念">机器学习的基本概念</h4>
+<p>机器学习是人工智能的一个重要分支，它通过算法让计算机系统利用样本数据（即“训练数据”）来改善任务执行的性能。与传统的编程方法不同，机器学习通过接收输入数据对模型进行训练，并对新的数据进行预测或决策，而无需显式编程。</p>
+<p>机器学习的主要类型包括：</p>
+<ol type="1">
+<li><p><strong>监督学习</strong>：输入数据由输入特征 X 和输出标签 Y 组成，算法从标注数据中学习模型参数，以进行预测或分类。</p>
+<p>[ X f(X; ) Y ]</p></li>
+<li><p><strong>无监督学习</strong>：仅有输入特征 X 而无输出标签 Y，算法需自动发现数据中的模式和结构。</p></li>
+<li><p><strong>半监督学习</strong>：结合有标签和无标签的数据来进行模型训练，利用少量标注数据与大量未标注数据共同提升模型性能。</p></li>
+<li><p><strong>强化学习</strong>：通过试错的方式来学习策略，以实现从特定状态到目标状态的最优决策过程。</p></li>
+</ol>
+</section>
+<section id="深度学习的崛起" class="level4">
+<h4 class="anchored" data-anchor-id="深度学习的崛起">深度学习的崛起</h4>
+<p>深度学习是机器学习的一个子领域，近年来取得了显著进展。它使用多层神经网络来学习数据的复杂表示，广泛应用于图像识别、自然语言处理等领域。深度学习的成功得益于大规模数据集的可用性以及计算能力的提升。</p>
+</section>
+<section id="人工智能与机器学习的应用" class="level4">
+<h4 class="anchored" data-anchor-id="人工智能与机器学习的应用">人工智能与机器学习的应用</h4>
+<p>人工智能与机器学习在各行各业中得到了广泛应用，包括但不限于：</p>
+<ul>
+<li><strong>医疗领域</strong>：辅助诊断、个性化治疗方案、药物研发等。</li>
+<li><strong>金融领域</strong>：风险评估、欺诈检测、量化交易等。</li>
+<li><strong>自动驾驶</strong>：环境感知、路径规划、决策控制等。</li>
+<li><strong>自然语言处理</strong>：机器翻译、情感分析、语音识别等。</li>
+</ul>
+</section>
+<section id="挑战与未来展望" class="level4">
+<h4 class="anchored" data-anchor-id="挑战与未来展望">挑战与未来展望</h4>
+<p>尽管人工智能与机器学习取得了巨大的进步，但仍面临诸多挑战，如数据隐私与安全、算法偏见、解释性与透明度等。未来的研究将继续探索更加高效、可信和可解释的 AI 算法，推动人工智能技术的进一步发展和应用。</p>
+<p>综上所述，人工智能与机器学习作为计算学科的重要组成部分，正在不断推动科技进步和社会变革。通过深入理解其基本原理和应用前景，我们可以更好地应对未来的挑战，并充分发挥其在各个领域的潜力。</p>
+</section>
+</section>
+<section id="网络与分布式计算" class="level3">
+<h3 class="anchored" data-anchor-id="网络与分布式计算">4.网络与分布式计算</h3>
+<p>网络与分布式计算作为计算学科的重要应用领域，涵盖了互联网技术、并行计算等多个方面。在探讨这一领域时，我们首先需要理解其基本概念和发展历程，进而分析其核心技术、应用场景以及面临的挑战和未来趋势。</p>
+<section id="一网络与分布式计算的基本概念" class="level4">
+<h4 class="anchored" data-anchor-id="一网络与分布式计算的基本概念">一、网络与分布式计算的基本概念</h4>
+<section id="分布式计算的定义" class="level5">
+<h5 class="anchored" data-anchor-id="分布式计算的定义">1. 分布式计算的定义</h5>
+<p>分布式计算是指将一个大型的计算任务分解为多个小型子任务，并通过网络将这些子任务分配给多台计算机进行处理，最后将结果汇总的一种计算模式。这种计算模式能够充分利用网络中各种计算资源，提高计算效率和处理能力。</p>
+</section>
+<section id="网络计算的概念" class="level5">
+<h5 class="anchored" data-anchor-id="网络计算的概念">2. 网络计算的概念</h5>
+<p>网络计算是通过网络连接的计算系统进行协同工作，以实现资源共享和信息处理的一种计算方式。它包括了客户端-服务器模型、对等网络（P2P）等多种体系结构。</p>
+</section>
+</section>
+<section id="二核心技术" class="level4">
+<h4 class="anchored" data-anchor-id="二核心技术">二、核心技术</h4>
+<section id="并行计算" class="level5">
+<h5 class="anchored" data-anchor-id="并行计算">1. 并行计算</h5>
+<p>并行计算是分布式计算的核心之一，它通过将大任务分解为多个小任务并行执行来加速计算过程。并行算法的设计和优化是提高并行计算效率的关键。</p>
+</section>
+<section id="数据一致性和同步" class="level5">
+<h5 class="anchored" data-anchor-id="数据一致性和同步">2. 数据一致性和同步</h5>
+<p>在分布式系统中，保持数据的一致性和同步是一个重要问题。常用的技术包括分布式锁、时间戳排序等方法，以确保在多节点环境下数据的一致性。</p>
+</section>
+<section id="容错性和可靠性" class="level5">
+<h5 class="anchored" data-anchor-id="容错性和可靠性">3. 容错性和可靠性</h5>
+<p>分布式系统通常需要在不可靠的网络环境中运行，因此容错性和可靠性设计至关重要。冗余、备份和故障恢复机制是确保系统稳定运行的重要手段。</p>
+</section>
+</section>
+<section id="三应用场景" class="level4">
+<h4 class="anchored" data-anchor-id="三应用场景">三、应用场景</h4>
+<section id="云计算" class="level5">
+<h5 class="anchored" data-anchor-id="云计算">1. 云计算</h5>
+<p>云计算是一种基于互联网的分布式计算服务模式，它允许用户通过网络按需获取计算资源。云计算的应用已经渗透到IT基础设施、平台服务和软件服务等多个层面。</p>
+</section>
+<section id="大数据处理" class="level5">
+<h5 class="anchored" data-anchor-id="大数据处理">2. 大数据处理</h5>
+<p>随着数据量的爆炸式增长，传统的单机处理方式已无法满足需求。分布式计算在大数据处理领域发挥着重要作用，如Hadoop和Spark等框架已被广泛应用于日志分析、推荐系统等场景。</p>
+</section>
+<section id="物联网" class="level5">
+<h5 class="anchored" data-anchor-id="物联网">3. 物联网</h5>
+<p>物联网设备产生的大量数据需要实时处理和分析，分布式计算提供了一种有效的解决方案。通过边缘计算和云计算的结合，可以实现对物联网数据的快速响应和智能决策。</p>
+</section>
+</section>
+<section id="四挑战与未来趋势" class="level4">
+<h4 class="anchored" data-anchor-id="四挑战与未来趋势">四、挑战与未来趋势</h4>
+<section id="网络安全与隐私保护" class="level5">
+<h5 class="anchored" data-anchor-id="网络安全与隐私保护">1. 网络安全与隐私保护</h5>
+<p>随着分布式计算应用的广泛，数据安全和隐私保护成为重大挑战。加密技术、匿名化处理等方法是保障数据安全的重要手段。</p>
+</section>
+<section id="能效优化" class="level5">
+<h5 class="anchored" data-anchor-id="能效优化">2. 能效优化</h5>
+<p>数据中心的能耗问题是分布式计算面临的一个重要挑战。通过优化算法和硬件设计，提高能效比是未来研究的重要方向。</p>
+</section>
+<section id="人工智能与分布式计算的融合" class="level5">
+<h5 class="anchored" data-anchor-id="人工智能与分布式计算的融合">3. 人工智能与分布式计算的融合</h5>
+<p>随着人工智能技术的发展，如何将AI算法与分布式计算有效结合，提高系统的智能化水平和自适应性，是未来的一个研究热点。</p>
+<p>综上所述，网络与分布式计算作为计算学科的重要分支，不仅在理论上具有深厚的基础，而且在实际应用中展现出强大的生命力。面对新的挑战和机遇，这一领域将持续推动技术创新和应用拓展。</p>
+</section>
+</section>
+</section>
+<section id="安全与隐私保护" class="level3">
+<h3 class="anchored" data-anchor-id="安全与隐私保护">5.安全与隐私保护</h3>
+<p>安全与隐私保护是计算学科中的核心议题，它涵盖了从算法、协议到系统设计等多个方面。在数字化时代，数据的安全和用户隐私的保护成为了社会关注的焦点。本章节将深入探讨加密技术、访问控制机制以及隐私保护策略，旨在为读者提供一个全面而深入的理解。</p>
+<p>加密技术是保障数据传输和存储安全的基石。它通过将明文信息转换为密文，使得非授权用户即使截获了数据也无法解读其内容。对称加密和非对称加密是两种主要的加密方式。对称加密使用相同的密钥进行加密和解密，如AES（高级加密标准）。而非对称加密则采用一对公钥和私钥，RSA算法是一个典型例子。此外，哈希函数如SHA-256在确保数据完整性方面发挥着重要作用。</p>
+<p>访问控制是另一个关键领域，它决定了谁可以访问系统的哪些资源以及如何访问这些资源。常见的访问控制模型包括自主访问控制（DAC）、强制访问控制（MAC）和基于角色的访问控制（RBAC）。DAC允许资源的拥有者自行决定谁可以访问其资源；MAC则由系统强制实施安全策略；RBAC根据用户的角色来赋予权限，简化了权限管理过程。</p>
+<p>隐私保护策略着重于保护个人数据的私密性。这包括匿名化处理、差分隐私等技术。匿名化处理通过去除或替换个人信息中的识别特征来保护用户身份。差分隐私则通过添加噪声到数据集中，以在不泄露任何单个用户信息的前提下提供统计分析。</p>
+<p>随着云计算和物联网的发展，安全与隐私保护面临着新的挑战。例如，如何在分布式环境中确保数据的安全性和隐私性，如何对抗日益复杂的网络攻击等。因此，持续的研究和技术创新对于应对这些挑战至关重要。</p>
+<p>综上所述，安全与隐私保护是计算学科不可或缺的一部分，它要求我们不断探索新的方法和技术来应对不断变化的威胁。通过综合运用加密技术、访问控制和隐私保护策略，我们可以构建更加安全可靠的数字环境。</p>
+</section>
+<section id="软件工程与开发方法学" class="level3">
+<h3 class="anchored" data-anchor-id="软件工程与开发方法学">6.软件工程与开发方法学</h3>
+<p>软件工程与开发方法学，作为计算学科的一个实践领域，专注于软件开发流程的系统化、规范化和高效化。它不仅涉及代码编写的技术层面，更包括需求分析、设计、测试、维护等一系列环节，旨在提高软件的质量和开发效率。</p>
+<p>在需求分析阶段，软件工程师需要与客户进行深入沟通，明确软件的功能需求和非功能需求。这通常涉及到用例图、活动图等UML（统一建模语言）工具的使用，以确保需求的完整性和一致性。设计阶段则将需求转化为具体的软件架构和接口设计，包括数据库设计、类图、序列图等。这一阶段的目标是构建一个稳定、可扩展且易于维护的软件框架。</p>
+<p>编码阶段是软件工程师根据设计文档编写软件代码的过程。为了确保代码的质量和可读性，通常会遵循一定的编程规范和最佳实践。此外，版本控制系统如Git也被广泛应用于代码的版本管理和协作开发中。</p>
+<p>测试阶段是验证软件是否满足需求的重要环节。它包括单元测试、集成测试、系统测试和验收测试等多个层次。通过自动化测试工具和持续集成/持续部署（CI/CD）流程，可以大大提高测试的效率和覆盖率。</p>
+<p>维护阶段则是软件发布后对其进行持续改进和修复缺陷的过程。这包括对软件进行性能优化、安全性增强以及新功能的添加等。为了支持这些活动，软件团队需要建立有效的反馈机制和问题跟踪系统。</p>
+<p>除了上述核心环节外，软件工程还强调项目管理的重要性。敏捷开发方法如Scrum和Kanban被广泛应用于软件开发项目中，以提高团队的协作效率和响应变化的能力。这些方法强调迭代开发、定期回顾和持续改进，以适应不断变化的需求和市场环境。</p>
+<p>总之，软件工程与开发方法学为软件开发提供了一套完整的理论框架和实践指南。通过遵循这些原则和方法，可以有效地提高软件的质量和开发效率，满足日益复杂的业务需求和技术挑战。</p>
+</section>
+<section id="人机交互与用户体验设计" class="level3">
+<h3 class="anchored" data-anchor-id="人机交互与用户体验设计">7.人机交互与用户体验设计</h3>
+<p>人机交互与用户体验设计是计算学科中至关重要的领域，它关注于如何通过计算机系统的设计提高易用性和用户的满意度。这一章节将深入探讨界面设计和交互设计的原则、方法及其在实际应用中的重要性。</p>
+<section id="界面设计的基本原则" class="level4">
+<h4 class="anchored" data-anchor-id="界面设计的基本原则">界面设计的基本原则</h4>
+<p>界面设计（User Interface Design, UI）主要涉及如何布局屏幕上的元素，以便用户能够直观地理解和操作。有效的界面设计应遵循以下原则：</p>
+<ol type="1">
+<li><strong>一致性</strong>：界面元素的风格和行为应保持一致，以减少用户的学习成本。</li>
+<li><strong>简洁性</strong>：避免不必要的复杂性，只展示必要的信息和功能。</li>
+<li><strong>反馈</strong>：系统应对用户的操作提供及时反馈，例如按钮按下时的视觉变化或声音提示。</li>
+<li><strong>可访问性</strong>：确保所有用户，包括那些有残疾的人，都能使用界面。</li>
+</ol>
+</section>
+<section id="交互设计的核心概念" class="level4">
+<h4 class="anchored" data-anchor-id="交互设计的核心概念">交互设计的核心概念</h4>
+<p>交互设计（Interaction Design, IxD）则关注于如何使产品的行为与用户的需求相匹配。其核心概念包括：</p>
+<ol type="1">
+<li><strong>任务分析</strong>：理解用户需要完成的任务，并设计出支持这些任务的交互流程。</li>
+<li><strong>故事板</strong>：通过一系列的画面来描述用户与系统的交互过程，帮助设计师预见可能的问题。</li>
+<li><strong>原型制作</strong>：创建可交互的模型，用于测试和改进设计。</li>
+</ol>
+</section>
+<section id="用户体验的评估" class="level4">
+<h4 class="anchored" data-anchor-id="用户体验的评估">用户体验的评估</h4>
+<p>为了确保设计满足用户需求，必须进行用户体验（User Experience, UX）的评估。常用的评估方法包括：</p>
+<ol type="1">
+<li><strong>用户测试</strong>：观察真实用户使用产品的情况，收集反馈。</li>
+<li><strong>问卷调查</strong>：通过问卷了解用户的满意度和需求。</li>
+<li><strong>眼动追踪</strong>：研究用户视线在界面上的移动模式，以优化布局。</li>
+</ol>
+</section>
+<section id="实际应用案例" class="level4">
+<h4 class="anchored" data-anchor-id="实际应用案例">实际应用案例</h4>
+<p>在实际应用中，人机交互和用户体验设计的成功案例不胜枚举。例如，智能手机的触控界面就是一个典型例子，它通过简化的用户输入方式和直观的图形界面，极大地提高了用户的互动体验。此外，电子商务网站通过优化购物车和结账流程，显著提升了转化率。</p>
+</section>
+<section id="结论" class="level4">
+<h4 class="anchored" data-anchor-id="结论">结论</h4>
+<p>人机交互与用户体验设计是计算学科中不可或缺的一部分，它直接影响到计算机系统的实用性和用户的满意度。通过遵循设计原则和方法，并进行严格的评估，可以创造出既美观又功能强大的用户界面和交互体验。随着技术的不断进步，这一领域将继续发展，带来更多创新的解决方案。</p>
+
+
+</section>
+</section>
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="jdragonnudt/inspiraHub" data-repo-id="R_kgDOMGN2Lg" data-category="General" data-category-id="DIC_kwDOMGN2Ls4Cf8Yq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2024, by jdragon. 本网站所有内容采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA许可，知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
