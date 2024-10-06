@@ -2,6 +2,7 @@
   {
     "listing": "/myblog/index.html",
     "items": [
+      "/myblog/posts/product-manager/index.html",
       "/myblog/posts/new-to-software-engineer/index.html"
     ]
   }
