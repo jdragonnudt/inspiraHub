@@ -155,6 +155,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <h1 class="title">大学毕业生中的编码萌新如何快速成长</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">计算机科学</div>
+                <div class="quarto-category">软件工程师</div>
               </div>
                   </div>
   </div>
@@ -294,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="代码示例" class="level5">
 <h5 class="anchored" data-anchor-id="代码示例">代码示例</h5>
 <p>下面是一段简单的C++代码片段，展示了如何声明和使用各种基本的数据类型：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#</span><span class="er">####include &lt;iostream&gt;</span></span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">using</span> <span class="kw">namespace</span> std<span class="op">;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
@@ -514,7 +515,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>每周使用一个或多个示例代码来实践和验证对集合框架的理解与应用，确保能够灵活地选择合适的工具。</li>
 <li>参加在线课程或阅读相关书籍，以深入理解抽象类、接口及泛型的用法。</li>
 </ol>
-<p>#####总结 通过系统学习Java中的异常处理和集合框架知识，可以极大地提升开发者应对复杂问题的能力。实践是检验真理的重要手段，在后续的学习过程中务必注重实际应用，并不断反思与优化自己的编程技巧。</p>
+</section>
+<section id="总结-4" class="level5">
+<h5 class="anchored" data-anchor-id="总结-4">总结</h5>
+<p>通过系统学习Java中的异常处理和集合框架知识，可以极大地提升开发者应对复杂问题的能力。实践是检验真理的重要手段，在后续的学习过程中务必注重实际应用，并不断反思与优化自己的编程技巧。</p>
 </section>
 </section>
 <section id="熟悉java的多线程和网络编程" class="level4">
@@ -525,8 +529,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="核心要点-5" class="level5">
 <h5 class="anchored" data-anchor-id="核心要点-5">核心要点</h5>
-<p>** Java多线程概念与应用<strong> - </strong>线程生命周期与状态转换<strong>: 了解线程从创建到终止的过程，包括新态（New）、可运行态（Runnable）、阻塞态（Blocked）、等待态（Waiting）等状态。 - </strong>线程同步机制<strong>: 掌握synchronized关键字、ReentrantLock接口及其用法；理解volatile关键字的作用及适用场景。 - </strong>并发容器与工具类**：熟悉ConcurrentHashMap、CopyOnWriteArrayList等高并发集合，以及CountDownLatch、Semaphore等并发控制工具。</p>
-<p>** Java网络编程基础<strong> - </strong>Socket通信<strong>: 学习如何使用ServerSocket和Socket类实现TCP/IP协议下的客户端-服务器模型。 - </strong>NIO（非阻塞I/O）<strong>: 掌握Selector机制及其在处理大量并发连接时的高效性。 - </strong>HTTP与HTTPS**: 理解HTTP/1.1及更高级版本的工作原理，以及如何使用Java API进行简单的HTTP请求和响应操作。</p>
+<ul>
+<li>** Java多线程概念与应用**
+<ul>
+<li><strong>线程生命周期与状态转换</strong>: 了解线程从创建到终止的过程，包括新态（New）、可运行态（Runnable）、阻塞态（Blocked）、等待态（Waiting）等状态。</li>
+<li><strong>线程同步机制</strong>: 掌握synchronized关键字、ReentrantLock接口及其用法；理解volatile关键字的作用及适用场景。</li>
+<li><strong>并发容器与工具类</strong>：熟悉ConcurrentHashMap、CopyOnWriteArrayList等高并发集合，以及CountDownLatch、Semaphore等并发控制工具。</li>
+</ul></li>
+<li>** Java网络编程基础**
+<ul>
+<li><strong>Socket通信</strong>: 学习如何使用ServerSocket和Socket类实现TCP/IP协议下的客户端-服务器模型。</li>
+<li><strong>NIO（非阻塞I/O）</strong>: 掌握Selector机制及其在处理大量并发连接时的高效性。</li>
+<li><strong>HTTP与HTTPS</strong>: 理解HTTP/1.1及更高级版本的工作原理，以及如何使用Java API进行简单的HTTP请求和响应操作。</li>
+</ul></li>
+</ul>
 </section>
 <section id="checklist-5" class="level5">
 <h5 class="anchored" data-anchor-id="checklist-5">Checklist</h5>
@@ -553,8 +569,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>代码审查与优化</strong>：每完成一个项目后，邀请同行或导师进行代码评审，并针对反馈做出改进。</li>
 </ul>
 </section>
-<section id="总结-4" class="level5">
-<h5 class="anchored" data-anchor-id="总结-4">总结</h5>
+<section id="总结-5" class="level5">
+<h5 class="anchored" data-anchor-id="总结-5">总结</h5>
 <p>通过本章节的学习和实践，你不仅能够掌握Java中多线程编程的核心技术，还能够在实际项目中运用这些知识来构建高性能、可靠的网络服务。这不仅是提升个人技术水平的重要步骤，也是成为一名优秀开发者的必备能力之一。</p>
 </section>
 </section>
@@ -624,8 +640,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>每周复盘与反馈</strong>：每周回顾本周学习的内容，并记录遇到的问题及解决方案。通过编写小项目来检验所学知识点的应用能力。</li>
 </ul>
 </section>
-<section id="总结-5" class="level5">
-<h5 class="anchored" data-anchor-id="总结-5">总结</h5>
+<section id="总结-6" class="level5">
+<h5 class="anchored" data-anchor-id="总结-6">总结</h5>
 <p>本章旨在通过系统地学习Python的基本语法和数据结构，为后续深入探索复杂编程问题打下坚实的基础。从简单的数值运算到复杂的对象建模，逐步构建起强大的编程思维模式。希望每位读者都能在实践中不断磨练自己的技能，最终成为真正的开发高手。</p>
 </section>
 </section>
@@ -688,8 +704,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>选择一个开源项目作为参考，分析其代码结构和组织方式。</li>
 </ul>
 </section>
-<section id="总结-6" class="level5">
-<h5 class="anchored" data-anchor-id="总结-6">总结：</h5>
+<section id="总结-7" class="level5">
+<h5 class="anchored" data-anchor-id="总结-7">总结：</h5>
 <p>掌握Python的模块与包不仅能够提高代码复用性和可维护性，还能够促进团队合作和个人技能提升。通过学习标准库、第三方包及其最佳实践，以及创建自定义包，可以有效提高编程效率并完成更具挑战性的项目任务。持续关注行业动态和技术趋势，定期回顾自己的学习过程，不断调整和优化个人的学习计划是保持技术领先的关键。</p>
 </section>
 </section>
@@ -755,11 +771,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="参考资料-2" class="level5">
 <h5 class="anchored" data-anchor-id="参考资料-2">参考资料</h5>
-<ol type="1">
+<ul>
 <li><strong>官方文档</strong> - Python官方文档提供了详细的面向对象编程指南。</li>
 <li><strong>书籍推荐</strong> - “Python 编程：从入门到实践”，埃里克·马瑟斯著。</li>
 <li><strong>在线教程</strong> - Real Python (https://realpython.com) 提供了丰富的Python教程和示例代码。</li>
-</ol>
+</ul>
 </section>
 <section id="行动计划-8" class="level5">
 <h5 class="anchored" data-anchor-id="行动计划-8">行动计划</h5>
@@ -769,8 +785,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>解决《Python 编程：从入门到实践》中有关OOP的练习题，巩固学习成果。</li>
 </ul>
 </section>
-<section id="总结-7" class="level5">
-<h5 class="anchored" data-anchor-id="总结-7">总结</h5>
+<section id="总结-8" class="level5">
+<h5 class="anchored" data-anchor-id="总结-8">总结</h5>
 <p>通过熟悉Python中的面向对象编程范式和掌握类定义、继承以及多态特性，开发者能够编写出结构清晰且易于维护的代码。此外，了解装饰器的概念和使用方法将使代码更加灵活且具有可扩展性。在接下来的学习中，建议结合实际项目实践这些概念，从而更深入地理解并应用它们。</p>
 </section>
 </section>
@@ -817,8 +833,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>参与社区讨论，向他人学习或分享自己的解题思路。</li>
 </ul>
 </section>
-<section id="总结-8" class="level5">
-<h5 class="anchored" data-anchor-id="总结-8">总结</h5>
+<section id="总结-9" class="level5">
+<h5 class="anchored" data-anchor-id="总结-9">总结</h5>
 <p>通过反复解决简单的编程问题，初学者可以有效提高自身的编码技能和逻辑思考能力。这一过程不仅是对知识的巩固，也是对未来更复杂项目开发的重要积累。持续不懈地完成这些练习将为个人技术成长奠定坚实基础。</p>
 </section>
 </section>
@@ -966,8 +982,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>参加官方论坛或社区讨论，与其他开发者交流心得。</li>
 </ul>
 </section>
-<section id="总结-9" class="level5">
-<h5 class="anchored" data-anchor-id="总结-9">总结</h5>
+<section id="总结-10" class="level5">
+<h5 class="anchored" data-anchor-id="总结-10">总结</h5>
 <p>参与在线编程挑战是提升技术能力的有效途径之一。通过持续练习和不断学习，开发者的逻辑思维能力和算法技巧将显著提高。同时，这也是一个增进人际交往、促进知识分享的良好机会。因此，建议每个希望成长为开发高手的程序员积极投身于在线编程挑战中来。</p>
 </section>
 </section>
@@ -1004,8 +1020,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>定期回顾笔记并整理成文档，以便将来参考。</li>
 </ol>
 </section>
-<section id="总结-10" class="level5">
-<h5 class="anchored" data-anchor-id="总结-10">总结</h5>
+<section id="总结-11" class="level5">
+<h5 class="anchored" data-anchor-id="总结-11">总结</h5>
 <p>通过系统地学习如何阅读他人的代码，初学者可以更快地成长为一名熟练的开发者。这一过程不仅有助于提高编程技能，还能培养解决问题的能力和批判性思维。遵循上述步骤，并持之以恒地实践，将有助于你建立坚实的基础，在编程领域取得进步。</p>
 </section>
 </section>
@@ -1045,8 +1061,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>定期回顾学习成果，分享心得体会至社区论坛。</li>
 </ol>
 </section>
-<section id="总结-11" class="level5">
-<h5 class="anchored" data-anchor-id="总结-11">总结</h5>
+<section id="总结-12" class="level5">
+<h5 class="anchored" data-anchor-id="总结-12">总结</h5>
 <p>通过细致地分析开源项目的源代码，不仅可以掌握先进的编程技术和设计模式的应用，还能培养良好的代码习惯和系统思考能力。这不仅为个人技术成长奠定坚实基础，也为日后参与更复杂项目提供了宝贵经验。</p>
 </section>
 </section>
@@ -1099,8 +1115,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>定期回顾自己的贡献，反思学习过程中的得失。</li>
 </ul>
 </section>
-<section id="总结-12" class="level5">
-<h5 class="anchored" data-anchor-id="总结-12">总结</h5>
+<section id="总结-13" class="level5">
+<h5 class="anchored" data-anchor-id="总结-13">总结</h5>
 <p>通过加入开源项目或小团队，不仅可以提升个人的技术水平，还能增强与他人合作的能力。这不仅有助于积累实战经验，还能够拓宽视野，为未来的职业发展奠定坚实的基础。</p>
 </section>
 </section>
@@ -1143,8 +1159,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>每周投入至少5小时的时间来研究新项目并实践编码经验。</li>
 </ul>
 </section>
-<section id="总结-13" class="level5">
-<h5 class="anchored" data-anchor-id="总结-13">总结</h5>
+<section id="总结-14" class="level5">
+<h5 class="anchored" data-anchor-id="总结-14">总结</h5>
 <p>通过参与开源项目的贡献，不仅可以提升个人技术水平，还能增强团队协作能力和沟通技巧。遵循上述步骤和建议，逐步提高自己在开源社区中的影响力，并最终成为有价值的开发者成员。</p>
 </section>
 </section>
@@ -1206,8 +1222,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>加入GitHub上的开源项目，参与贡献代码的过程，在实践中学习更多高级功能。</li>
 </ul>
 </section>
-<section id="总结-14" class="level5">
-<h5 class="anchored" data-anchor-id="总结-14">总结</h5>
+<section id="总结-15" class="level5">
+<h5 class="anchored" data-anchor-id="总结-15">总结</h5>
 <p>掌握版本控制系统如Git不仅能够提升个人的编程效率与质量，也是团队协作的基础。通过系统学习并实践这些技能，开发者能够在面对复杂项目时更加得心应手。同时，这也是向其他开发人员展示专业素养的重要手段之一。</p>
 </section>
 </section>
@@ -1245,8 +1261,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>代码实践</strong>：通过实际编写和调试代码来熟悉所选工具和技术。</li>
 </ol>
 </section>
-<section id="总结-15" class="level5">
-<h5 class="anchored" data-anchor-id="总结-15">总结</h5>
+<section id="总结-16" class="level5">
+<h5 class="anchored" data-anchor-id="总结-16">总结</h5>
 <p>搭建本地开发环境能够极大地提升编程效率与代码质量。通过合理地选择和安装所需的软件包以及配置测试框架，学习者可以更好地专注于编码逻辑本身，而无需担心外部依赖问题或意外错误。这样不仅有利于提高个人的编程能力，也有助于形成良好的工作习惯。</p>
 </section>
 </section>
@@ -1289,8 +1305,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>参与社区讨论</strong>：加入相关技术论坛和群组，与其他开发者分享经验，共同解决问题。</li>
 </ul>
 </section>
-<section id="总结-16" class="level5">
-<h5 class="anchored" data-anchor-id="总结-16">总结</h5>
+<section id="总结-17" class="level5">
+<h5 class="anchored" data-anchor-id="总结-17">总结</h5>
 <p>通过持续地面对和解决开发过程中遇到的问题，不仅能够提高个人的技术水平，还能积累宝贵的经验。积极运用各种调试工具和技术来优化代码，是每个软件工程师不可或缺的能力之一。</p>
 </section>
 </section>
@@ -1328,8 +1344,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>定期回顾和复盘个人项目，反思如何更有效地使用设计模式提升代码质量。</li>
 </ul>
 </section>
-<section id="总结-17" class="level5">
-<h5 class="anchored" data-anchor-id="总结-17">总结</h5>
+<section id="总结-18" class="level5">
+<h5 class="anchored" data-anchor-id="总结-18">总结</h5>
 <p>掌握软件设计模式是成为一名优秀程序员的重要步骤。通过系统学习并不断实践这些模式，不仅可以解决复杂问题、提高编程效率，还能在团队中建立起共同的语言体系。遵循本章提供的建议和行动计划，将有助于读者逐步从一个代码低手成长为开发高手。</p>
 </section>
 </section>
@@ -1379,8 +1395,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>持续跟踪反馈</strong>：定期评估自己的进展，并根据需要调整学习策略。</li>
 </ul>
 </section>
-<section id="总结-18" class="level5">
-<h5 class="anchored" data-anchor-id="总结-18">总结</h5>
+<section id="总结-19" class="level5">
+<h5 class="anchored" data-anchor-id="总结-19">总结</h5>
 <p>深入研究数据结构和算法不仅能够帮助程序员构建更加高效与优雅的解决方案，还能促进个人职业成长。通过本章的学习，读者将掌握如何系统性地分析问题并选择最合适的工具来解决它。持续的努力和实践将使你在编程道路上更进一步。</p>
 </section>
 </section>
@@ -1415,8 +1431,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>加入技术社区和论坛，在线参与讨论相关问题。</li>
 </ul>
 </section>
-<section id="总结-19" class="level5">
-<h5 class="anchored" data-anchor-id="总结-19">总结</h5>
+<section id="总结-20" class="level5">
+<h5 class="anchored" data-anchor-id="总结-20">总结</h5>
 <p>掌握计算机网络和操作系统的知识不仅能够提升开发者的理论水平，还能够在实际工作中解决复杂的系统问题。通过系统地学习这些基础知识，开发者可以更加自信地面对各种挑战，并在职业生涯中不断进步。</p>
 </section>
 </section>
@@ -1463,8 +1479,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>加入技术社群活动</strong>：报名参加相关研讨会或网络会议，积极参与讨论。</li>
 </ul>
 </section>
-<section id="总结-20" class="level5">
-<h5 class="anchored" data-anchor-id="总结-20">总结</h5>
+<section id="总结-21" class="level5">
+<h5 class="anchored" data-anchor-id="总结-21">总结</h5>
 <p>持续关注行业动态和技术趋势不仅能帮助程序员更好地掌握未来的技术方向和需求，还能促进个人职业成长。通过建立良好的信息获取机制，并积极行动起来，每个人都可以在这个快速变化的行业中保持竞争力。</p>
 </section>
 </section>
@@ -1516,8 +1532,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>持续跟踪</strong>：定期回顾所学内容，确保知识的巩固。</li>
 </ul>
 </section>
-<section id="总结-21" class="level5">
-<h5 class="anchored" data-anchor-id="总结-21">总结</h5>
+<section id="总结-22" class="level5">
+<h5 class="anchored" data-anchor-id="总结-22">总结</h5>
 <p>不断学习相关领域的最新技术是程序员成长的关键步骤之一。通过系统地掌握人工智能和大数据的知识，不仅可以提高个人的职业技能水平，还能为未来的技术发展做好充分准备。保持好奇心和求知欲，积极参与实践和交流，将帮助你在技术领域取得长足的进步。</p>
 </section>
 </section>
@@ -1557,8 +1573,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>组织团队活动</strong>：通过共同的非正式活动增强团队间的相互了解与信任。</li>
 </ul>
 </section>
-<section id="总结-22" class="level5">
-<h5 class="anchored" data-anchor-id="总结-22">总结</h5>
+<section id="总结-23" class="level5">
+<h5 class="anchored" data-anchor-id="总结-23">总结</h5>
 <p>提高沟通和团队协作能力不仅能够提升个人的专业素养，还能促进项目的顺利进行。通过积极参与团队合作、主动反馈和持续学习，可以有效地提升这些软技能，从而在软件开发领域中取得更大的成功。</p>
 </section>
 </section>
@@ -1598,8 +1614,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>加入项目团队</strong>：参与开源项目，学习如何在实际工作中应用所学知识。</li>
 </ul>
 </section>
-<section id="总结-23" class="level6">
-<h6 class="anchored" data-anchor-id="总结-23">总结</h6>
+<section id="总结-24" class="level6">
+<h6 class="anchored" data-anchor-id="总结-24">总结</h6>
 <p>掌握高效的时间管理和项目管理技能是每个程序员必备的能力之一。通过系统的训练和实际操作，可以显著提升个人的工作效率与职业竞争力。持续地实践和完善这些技能将使你在职业生涯中更加游刃有余。</p>
 
 
