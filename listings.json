@@ -2,6 +2,9 @@
   {
     "listing": "/myblog/index.html",
     "items": [
+      "/myblog/posts/how-to-be-a-staff-engineer/index.html",
+      "/myblog/posts/coding-promotion-overview/index.html",
+      "/myblog/posts/team-quality/index.html",
       "/myblog/posts/how-to-code-better/index.html",
       "/myblog/posts/new-to-cs-new/index.html",
       "/myblog/posts/product-manager/index.html",
