@@ -2,6 +2,7 @@
   {
     "listing": "/myblog/index.html",
     "items": [
+      "/myblog/posts/opencode-learning-path/index.html",
       "/myblog/posts/how-to-be-a-staff-engineer/index.html",
       "/myblog/posts/coding-promotion-overview/index.html",
       "/myblog/posts/team-quality/index.html",

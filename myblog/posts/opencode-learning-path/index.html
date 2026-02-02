@@ -1,0 +1,2527 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="jdragon">
+<meta name="dcterms.date" content="2026-02-02">
+
+<title>数智启思 - opencode学习路径</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">数智启思</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../AIengineerBook/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../myblog/index.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/jdragonnudt/inspiraHub" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">opencode学习路径</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">软件工程师</div>
+                <div class="quarto-category">AI编程</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>jdragon </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 2, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#opencode-oh-my-opencode-完整学习路径" id="toc-opencode-oh-my-opencode-完整学习路径" class="nav-link active" data-scroll-target="#opencode-oh-my-opencode-完整学习路径">OpenCode + Oh My OpenCode 完整学习路径</a>
+  <ul>
+  <li><a href="#目录" id="toc-目录" class="nav-link" data-scroll-target="#目录">目录</a></li>
+  </ul></li>
+  <li><a href="#序言为什么是-opencode" id="toc-序言为什么是-opencode" class="nav-link" data-scroll-target="#序言为什么是-opencode">序言：为什么是 OpenCode</a>
+  <ul>
+  <li><a href="#什么是-opencode" id="toc-什么是-opencode" class="nav-link" data-scroll-target="#什么是-opencode">什么是 OpenCode</a></li>
+  <li><a href="#使用-opencode-的好处" id="toc-使用-opencode-的好处" class="nav-link" data-scroll-target="#使用-opencode-的好处">使用 OpenCode 的好处</a>
+  <ul class="collapse">
+  <li><a href="#显著提升开发效率" id="toc-显著提升开发效率" class="nav-link" data-scroll-target="#显著提升开发效率">1. 显著提升开发效率</a></li>
+  <li><a href="#降低认知负担" id="toc-降低认知负担" class="nav-link" data-scroll-target="#降低认知负担">2. 降低认知负担</a></li>
+  <li><a href="#提升代码质量" id="toc-提升代码质量" class="nav-link" data-scroll-target="#提升代码质量">3. 提升代码质量</a></li>
+  <li><a href="#支持团队协作" id="toc-支持团队协作" class="nav-link" data-scroll-target="#支持团队协作">4. 支持团队协作</a></li>
+  </ul></li>
+  <li><a href="#opencode-的核心优势" id="toc-opencode-的核心优势" class="nav-link" data-scroll-target="#opencode-的核心优势">OpenCode 的核心优势</a>
+  <ul class="collapse">
+  <li><a href="#多模型支持model-agnostic" id="toc-多模型支持model-agnostic" class="nav-link" data-scroll-target="#多模型支持model-agnostic">1. 多模型支持（Model Agnostic）</a></li>
+  <li><a href="#planbuild-双模式工作流" id="toc-planbuild-双模式工作流" class="nav-link" data-scroll-target="#planbuild-双模式工作流">2. Plan/Build 双模式工作流</a></li>
+  <li><a href="#强大的-agent-系统" id="toc-强大的-agent-系统" class="nav-link" data-scroll-target="#强大的-agent-系统">3. 强大的 Agent 系统</a></li>
+  <li><a href="#oh-my-opencode-增强生态" id="toc-oh-my-opencode-增强生态" class="nav-link" data-scroll-target="#oh-my-opencode-增强生态">4. Oh My OpenCode 增强生态</a></li>
+  <li><a href="#开源与可扩展" id="toc-开源与可扩展" class="nav-link" data-scroll-target="#开源与可扩展">5. 开源与可扩展</a></li>
+  <li><a href="#优秀的国内支持" id="toc-优秀的国内支持" class="nav-link" data-scroll-target="#优秀的国内支持">6. 优秀的国内支持</a></li>
+  </ul></li>
+  <li><a href="#opencode-vs-claude-code如何选择" id="toc-opencode-vs-claude-code如何选择" class="nav-link" data-scroll-target="#opencode-vs-claude-code如何选择">OpenCode vs Claude Code：如何选择</a>
+  <ul class="collapse">
+  <li><a href="#功能对比" id="toc-功能对比" class="nav-link" data-scroll-target="#功能对比">功能对比</a></li>
+  <li><a href="#适用场景建议" id="toc-适用场景建议" class="nav-link" data-scroll-target="#适用场景建议">适用场景建议</a></li>
+  <li><a href="#实际上" id="toc-实际上" class="nav-link" data-scroll-target="#实际上">实际上…</a></li>
+  </ul></li>
+  <li><a href="#谁适合使用-opencode" id="toc-谁适合使用-opencode" class="nav-link" data-scroll-target="#谁适合使用-opencode">谁适合使用 OpenCode</a>
+  <ul class="collapse">
+  <li><a href="#开发者" id="toc-开发者" class="nav-link" data-scroll-target="#开发者">开发者</a></li>
+  <li><a href="#技术管理者" id="toc-技术管理者" class="nav-link" data-scroll-target="#技术管理者">技术管理者</a></li>
+  <li><a href="#其他技术人员" id="toc-其他技术人员" class="nav-link" data-scroll-target="#其他技术人员">其他技术人员</a></li>
+  </ul></li>
+  <li><a href="#学习路径概述" id="toc-学习路径概述" class="nav-link" data-scroll-target="#学习路径概述">学习路径概述</a></li>
+  <li><a href="#开始之前" id="toc-开始之前" class="nav-link" data-scroll-target="#开始之前">开始之前</a></li>
+  </ul></li>
+  <li><a href="#第一部分初级篇" id="toc-第一部分初级篇" class="nav-link" data-scroll-target="#第一部分初级篇">第一部分：初级篇</a>
+  <ul>
+  <li><a href="#第-1-章安装与起步" id="toc-第-1-章安装与起步" class="nav-link" data-scroll-target="#第-1-章安装与起步">第 1 章：安装与起步</a>
+  <ul class="collapse">
+  <li><a href="#学习目标" id="toc-学习目标" class="nav-link" data-scroll-target="#学习目标">学习目标</a></li>
+  <li><a href="#学习内容" id="toc-学习内容" class="nav-link" data-scroll-target="#学习内容">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#opencode-简介" id="toc-opencode-简介" class="nav-link" data-scroll-target="#opencode-简介">1.1 OpenCode 简介</a></li>
+  <li><a href="#安装步骤" id="toc-安装步骤" class="nav-link" data-scroll-target="#安装步骤">1.2 安装步骤</a></li>
+  <li><a href="#网络配置国内用户必读" id="toc-网络配置国内用户必读" class="nav-link" data-scroll-target="#网络配置国内用户必读">1.3 网络配置（国内用户必读）</a></li>
+  <li><a href="#连接模型" id="toc-连接模型" class="nav-link" data-scroll-target="#连接模型">1.4 连接模型</a></li>
+  <li><a href="#第一次对话" id="toc-第一次对话" class="nav-link" data-scroll-target="#第一次对话">1.5 第一次对话</a></li>
+  </ul></li>
+  <li><a href="#练习题目" id="toc-练习题目" class="nav-link" data-scroll-target="#练习题目">练习题目</a></li>
+  <li><a href="#参考资料" id="toc-参考资料" class="nav-link" data-scroll-target="#参考资料">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-2-章基础操作" id="toc-第-2-章基础操作" class="nav-link" data-scroll-target="#第-2-章基础操作">第 2 章：基础操作</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-1" id="toc-学习目标-1" class="nav-link" data-scroll-target="#学习目标-1">学习目标</a></li>
+  <li><a href="#学习内容-1" id="toc-学习内容-1" class="nav-link" data-scroll-target="#学习内容-1">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#tui-界面导览" id="toc-tui-界面导览" class="nav-link" data-scroll-target="#tui-界面导览">2.1 TUI 界面导览</a></li>
+  <li><a href="#核心语法三件套" id="toc-核心语法三件套" class="nav-link" data-scroll-target="#核心语法三件套">2.2 核心语法三件套</a></li>
+  <li><a href="#对话管理" id="toc-对话管理" class="nav-link" data-scroll-target="#对话管理">2.3 对话管理</a></li>
+  <li><a href="#常用快捷键" id="toc-常用快捷键" class="nav-link" data-scroll-target="#常用快捷键">2.4 常用快捷键</a></li>
+  </ul></li>
+  <li><a href="#练习题目-1" id="toc-练习题目-1" class="nav-link" data-scroll-target="#练习题目-1">练习题目</a></li>
+  <li><a href="#参考资料-1" id="toc-参考资料-1" class="nav-link" data-scroll-target="#参考资料-1">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-3-章基础工作流" id="toc-第-3-章基础工作流" class="nav-link" data-scroll-target="#第-3-章基础工作流">第 3 章：基础工作流</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-2" id="toc-学习目标-2" class="nav-link" data-scroll-target="#学习目标-2">学习目标</a></li>
+  <li><a href="#学习内容-2" id="toc-学习内容-2" class="nav-link" data-scroll-target="#学习内容-2">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#plan-vs-build-模式详解" id="toc-plan-vs-build-模式详解" class="nav-link" data-scroll-target="#plan-vs-build-模式详解">3.1 Plan vs Build 模式详解</a></li>
+  <li><a href="#标准开发工作流" id="toc-标准开发工作流" class="nav-link" data-scroll-target="#标准开发工作流">3.2 标准开发工作流</a></li>
+  <li><a href="#项目初始化init" id="toc-项目初始化init" class="nav-link" data-scroll-target="#项目初始化init">3.3 项目初始化（<code>/init</code>）</a></li>
+  <li><a href="#文件操作技巧" id="toc-文件操作技巧" class="nav-link" data-scroll-target="#文件操作技巧">3.4 文件操作技巧</a></li>
+  </ul></li>
+  <li><a href="#练习题目-2" id="toc-练习题目-2" class="nav-link" data-scroll-target="#练习题目-2">练习题目</a></li>
+  <li><a href="#参考资料-2" id="toc-参考资料-2" class="nav-link" data-scroll-target="#参考资料-2">参考资料</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#第二部分进阶篇" id="toc-第二部分进阶篇" class="nav-link" data-scroll-target="#第二部分进阶篇">第二部分：进阶篇</a>
+  <ul>
+  <li><a href="#第-4-章oh-my-opencode-增强插件" id="toc-第-4-章oh-my-opencode-增强插件" class="nav-link" data-scroll-target="#第-4-章oh-my-opencode-增强插件">第 4 章：Oh My OpenCode 增强插件</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-3" id="toc-学习目标-3" class="nav-link" data-scroll-target="#学习目标-3">学习目标</a></li>
+  <li><a href="#学习内容-3" id="toc-学习内容-3" class="nav-link" data-scroll-target="#学习内容-3">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#oh-my-opencode-简介" id="toc-oh-my-opencode-简介" class="nav-link" data-scroll-target="#oh-my-opencode-简介">4.1 Oh My OpenCode 简介</a></li>
+  <li><a href="#安装步骤-1" id="toc-安装步骤-1" class="nav-link" data-scroll-target="#安装步骤-1">4.2 安装步骤</a></li>
+  <li><a href="#核心-agent-介绍" id="toc-核心-agent-介绍" class="nav-link" data-scroll-target="#核心-agent-介绍">4.3 核心 Agent 介绍</a></li>
+  <li><a href="#categories-skills-架构v3.0" id="toc-categories-skills-架构v3.0" class="nav-link" data-scroll-target="#categories-skills-架构v3.0">4.4 Categories + Skills 架构（v3.0+）</a></li>
+  <li><a href="#ultrawork-模式" id="toc-ultrawork-模式" class="nav-link" data-scroll-target="#ultrawork-模式">4.5 Ultrawork 模式</a></li>
+  </ul></li>
+  <li><a href="#练习题目-3" id="toc-练习题目-3" class="nav-link" data-scroll-target="#练习题目-3">练习题目</a></li>
+  <li><a href="#参考资料-3" id="toc-参考资料-3" class="nav-link" data-scroll-target="#参考资料-3">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-5-章ralph-loop-自动闭环" id="toc-第-5-章ralph-loop-自动闭环" class="nav-link" data-scroll-target="#第-5-章ralph-loop-自动闭环">第 5 章：Ralph Loop 自动闭环</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-4" id="toc-学习目标-4" class="nav-link" data-scroll-target="#学习目标-4">学习目标</a></li>
+  <li><a href="#学习内容-4" id="toc-学习内容-4" class="nav-link" data-scroll-target="#学习内容-4">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#ralph-loop-概念" id="toc-ralph-loop-概念" class="nav-link" data-scroll-target="#ralph-loop-概念">5.1 Ralph Loop 概念</a></li>
+  <li><a href="#工作流程" id="toc-工作流程" class="nav-link" data-scroll-target="#工作流程">5.2 工作流程</a></li>
+  <li><a href="#使用方法" id="toc-使用方法" class="nav-link" data-scroll-target="#使用方法">5.3 使用方法</a></li>
+  <li><a href="#prompt-黄金结构" id="toc-prompt-黄金结构" class="nav-link" data-scroll-target="#prompt-黄金结构">5.4 Prompt 黄金结构</a></li>
+  <li><a href="#适用场景" id="toc-适用场景" class="nav-link" data-scroll-target="#适用场景">5.5 适用场景</a></li>
+  </ul></li>
+  <li><a href="#练习题目-4" id="toc-练习题目-4" class="nav-link" data-scroll-target="#练习题目-4">练习题目</a></li>
+  <li><a href="#参考资料-4" id="toc-参考资料-4" class="nav-link" data-scroll-target="#参考资料-4">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-6-章扩展到其他任务" id="toc-第-6-章扩展到其他任务" class="nav-link" data-scroll-target="#第-6-章扩展到其他任务">第 6 章：扩展到其他任务</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-5" id="toc-学习目标-5" class="nav-link" data-scroll-target="#学习目标-5">学习目标</a></li>
+  <li><a href="#学习内容-5" id="toc-学习内容-5" class="nav-link" data-scroll-target="#学习内容-5">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#文档写作工作流" id="toc-文档写作工作流" class="nav-link" data-scroll-target="#文档写作工作流">6.1 文档写作工作流</a></li>
+  <li><a href="#办公效率提升" id="toc-办公效率提升" class="nav-link" data-scroll-target="#办公效率提升">6.2 办公效率提升</a></li>
+  </ul></li>
+  <li><a href="#练习题目-5" id="toc-练习题目-5" class="nav-link" data-scroll-target="#练习题目-5">练习题目</a></li>
+  <li><a href="#参考资料-5" id="toc-参考资料-5" class="nav-link" data-scroll-target="#参考资料-5">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-7-章定制与高级配置" id="toc-第-7-章定制与高级配置" class="nav-link" data-scroll-target="#第-7-章定制与高级配置">第 7 章：定制与高级配置</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-6" id="toc-学习目标-6" class="nav-link" data-scroll-target="#学习目标-6">学习目标</a></li>
+  <li><a href="#学习内容-6" id="toc-学习内容-6" class="nav-link" data-scroll-target="#学习内容-6">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#配置系统" id="toc-配置系统" class="nav-link" data-scroll-target="#配置系统">7.1 配置系统</a></li>
+  <li><a href="#自定义-command" id="toc-自定义-command" class="nav-link" data-scroll-target="#自定义-command">7.2 自定义 Command</a></li>
+  <li><a href="#skill-系统" id="toc-skill-系统" class="nav-link" data-scroll-target="#skill-系统">7.3 Skill 系统</a></li>
+  <li><a href="#全局规则global-rules" id="toc-全局规则global-rules" class="nav-link" data-scroll-target="#全局规则global-rules">7.4 全局规则（Global Rules）</a></li>
+  </ul></li>
+  <li><a href="#练习题目-6" id="toc-练习题目-6" class="nav-link" data-scroll-target="#练习题目-6">练习题目</a></li>
+  <li><a href="#参考资料-6" id="toc-参考资料-6" class="nav-link" data-scroll-target="#参考资料-6">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-8-章进阶工作流与最佳实践" id="toc-第-8-章进阶工作流与最佳实践" class="nav-link" data-scroll-target="#第-8-章进阶工作流与最佳实践">第 8 章：进阶工作流与最佳实践</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-7" id="toc-学习目标-7" class="nav-link" data-scroll-target="#学习目标-7">学习目标</a></li>
+  <li><a href="#学习内容-7" id="toc-学习内容-7" class="nav-link" data-scroll-target="#学习内容-7">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#核心工作流" id="toc-核心工作流" class="nav-link" data-scroll-target="#核心工作流">8.1 核心工作流</a></li>
+  <li><a href="#ulw-ultrawork-触发词" id="toc-ulw-ultrawork-触发词" class="nav-link" data-scroll-target="#ulw-ultrawork-触发词">8.2 ulw / ultrawork 触发词</a></li>
+  <li><a href="#进阶技巧清单" id="toc-进阶技巧清单" class="nav-link" data-scroll-target="#进阶技巧清单">8.3 进阶技巧清单</a></li>
+  <li><a href="#进阶使用总结" id="toc-进阶使用总结" class="nav-link" data-scroll-target="#进阶使用总结">8.4 进阶使用总结</a></li>
+  </ul></li>
+  <li><a href="#练习题目-7" id="toc-练习题目-7" class="nav-link" data-scroll-target="#练习题目-7">练习题目</a></li>
+  <li><a href="#参考资料-7" id="toc-参考资料-7" class="nav-link" data-scroll-target="#参考资料-7">参考资料</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#第三部分高级篇" id="toc-第三部分高级篇" class="nav-link" data-scroll-target="#第三部分高级篇">第三部分：高级篇</a>
+  <ul>
+  <li><a href="#第-9-章高级定制" id="toc-第-9-章高级定制" class="nav-link" data-scroll-target="#第-9-章高级定制">第 9 章：高级定制</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-8" id="toc-学习目标-8" class="nav-link" data-scroll-target="#学习目标-8">学习目标</a></li>
+  <li><a href="#学习内容-8" id="toc-学习内容-8" class="nav-link" data-scroll-target="#学习内容-8">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#agent-系统高级配置" id="toc-agent-系统高级配置" class="nav-link" data-scroll-target="#agent-系统高级配置">9.1 Agent 系统高级配置</a></li>
+  <li><a href="#创建自定义-agent" id="toc-创建自定义-agent" class="nav-link" data-scroll-target="#创建自定义-agent">9.2 创建自定义 Agent</a></li>
+  <li><a href="#skill-高级用法" id="toc-skill-高级用法" class="nav-link" data-scroll-target="#skill-高级用法">9.3 Skill 高级用法</a></li>
+  <li><a href="#权限管控" id="toc-权限管控" class="nav-link" data-scroll-target="#权限管控">9.4 权限管控</a></li>
+  </ul></li>
+  <li><a href="#练习题目-8" id="toc-练习题目-8" class="nav-link" data-scroll-target="#练习题目-8">练习题目</a></li>
+  <li><a href="#参考资料-8" id="toc-参考资料-8" class="nav-link" data-scroll-target="#参考资料-8">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-10-章高级工作流" id="toc-第-10-章高级工作流" class="nav-link" data-scroll-target="#第-10-章高级工作流">第 10 章：高级工作流</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-9" id="toc-学习目标-9" class="nav-link" data-scroll-target="#学习目标-9">学习目标</a></li>
+  <li><a href="#学习内容-9" id="toc-学习内容-9" class="nav-link" data-scroll-target="#学习内容-9">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#claude-code-之父的工作流" id="toc-claude-code-之父的工作流" class="nav-link" data-scroll-target="#claude-code-之父的工作流">10.1 Claude Code 之父的工作流</a></li>
+  <li><a href="#条高级使用技巧" id="toc-条高级使用技巧" class="nav-link" data-scroll-target="#条高级使用技巧">10.2 13 条高级使用技巧</a></li>
+  <li><a href="#黑客松冠军配置方案" id="toc-黑客松冠军配置方案" class="nav-link" data-scroll-target="#黑客松冠军配置方案">10.3 黑客松冠军配置方案</a></li>
+  <li><a href="#可复制的配置方案" id="toc-可复制的配置方案" class="nav-link" data-scroll-target="#可复制的配置方案">10.4 可复制的配置方案</a></li>
+  </ul></li>
+  <li><a href="#练习题目-9" id="toc-练习题目-9" class="nav-link" data-scroll-target="#练习题目-9">练习题目</a></li>
+  <li><a href="#参考资料-9" id="toc-参考资料-9" class="nav-link" data-scroll-target="#参考资料-9">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-11-章团队工作流" id="toc-第-11-章团队工作流" class="nav-link" data-scroll-target="#第-11-章团队工作流">第 11 章：团队工作流</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-10" id="toc-学习目标-10" class="nav-link" data-scroll-target="#学习目标-10">学习目标</a></li>
+  <li><a href="#学习内容-10" id="toc-学习内容-10" class="nav-link" data-scroll-target="#学习内容-10">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#团队配置共享" id="toc-团队配置共享" class="nav-link" data-scroll-target="#团队配置共享">11.1 团队配置共享</a></li>
+  <li><a href="#github-集成" id="toc-github-集成" class="nav-link" data-scroll-target="#github-集成">11.2 GitHub 集成</a></li>
+  <li><a href="#gitlab-集成" id="toc-gitlab-集成" class="nav-link" data-scroll-target="#gitlab-集成">11.3 GitLab 集成</a></li>
+  <li><a href="#会话分享" id="toc-会话分享" class="nav-link" data-scroll-target="#会话分享">11.4 会话分享</a></li>
+  <li><a href="#企业版特性" id="toc-企业版特性" class="nav-link" data-scroll-target="#企业版特性">11.5 企业版特性</a></li>
+  </ul></li>
+  <li><a href="#练习题目-10" id="toc-练习题目-10" class="nav-link" data-scroll-target="#练习题目-10">练习题目</a></li>
+  <li><a href="#参考资料-10" id="toc-参考资料-10" class="nav-link" data-scroll-target="#参考资料-10">参考资料</a></li>
+  </ul></li>
+  <li><a href="#附录" id="toc-附录" class="nav-link" data-scroll-target="#附录">附录</a>
+  <ul class="collapse">
+  <li><a href="#a.-快捷键速查表" id="toc-a.-快捷键速查表" class="nav-link" data-scroll-target="#a.-快捷键速查表">A. 快捷键速查表</a></li>
+  <li><a href="#b.-斜杠命令速查表" id="toc-b.-斜杠命令速查表" class="nav-link" data-scroll-target="#b.-斜杠命令速查表">B. 斜杠命令速查表</a></li>
+  <li><a href="#c.-核心学习资源索引" id="toc-c.-核心学习资源索引" class="nav-link" data-scroll-target="#c.-核心学习资源索引">C. 核心学习资源索引</a></li>
+  </ul></li>
+  <li><a href="#学习路径总结" id="toc-学习路径总结" class="nav-link" data-scroll-target="#学习路径总结">学习路径总结</a></li>
+  <li><a href="#引用信息" id="toc-引用信息" class="nav-link" data-scroll-target="#引用信息">引用信息</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="opencode-oh-my-opencode-完整学习路径" class="level1">
+<h1>OpenCode + Oh My OpenCode 完整学习路径</h1>
+<blockquote class="blockquote">
+<p>从零基础到专家级，系统掌握 AI 编程助手的完整学习指南</p>
+</blockquote>
+<hr>
+<section id="目录" class="level2">
+<h2 class="anchored" data-anchor-id="目录">目录</h2>
+<ul>
+<li><a href="#序言为什么是-opencode">序言：为什么是 OpenCode</a></li>
+<li><a href="#第一部分初级篇">第一部分：初级篇</a> - 快速上手，建立基础</li>
+<li><a href="#第二部分进阶篇">第二部分：进阶篇</a> - 效率提升，工作流优化</li>
+<li><a href="#第三部分高级篇">第三部分：高级篇</a> - 深度定制，团队协作</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="序言为什么是-opencode" class="level1">
+<h1>序言：为什么是 OpenCode</h1>
+<section id="什么是-opencode" class="level2">
+<h2 class="anchored" data-anchor-id="什么是-opencode">什么是 OpenCode</h2>
+<p><strong>OpenCode</strong> 是一款开源的 AI 编程助手（AI Coding Assistant），专为开发者设计，旨在通过自然语言交互提升编程效率。它运行在终端环境中，能够直接读取、理解和修改你的代码文件，执行命令，自动化繁琐的开发任务。</p>
+<p>简单来说，OpenCode 是你终端里的”AI 结对编程伙伴”——你可以用自然语言描述需求，它会帮你分析代码、实现功能、修复 Bug、重构项目，甚至管理你的开发工作流。</p>
+</section>
+<section id="使用-opencode-的好处" class="level2">
+<h2 class="anchored" data-anchor-id="使用-opencode-的好处">使用 OpenCode 的好处</h2>
+<section id="显著提升开发效率" class="level3">
+<h3 class="anchored" data-anchor-id="显著提升开发效率">1. 显著提升开发效率</h3>
+<ul>
+<li><strong>快速理解代码</strong>：面对陌生代码库，几分钟内即可获得结构梳理和逻辑分析</li>
+<li><strong>自动化编码</strong>：自然语言描述需求，AI 自动生成可运行的代码</li>
+<li><strong>智能重构</strong>：安全地重构代码，保持功能不变的同时提升代码质量</li>
+<li><strong>Bug 快速定位</strong>：系统化分析错误原因，提供修复方案</li>
+</ul>
+</section>
+<section id="降低认知负担" class="level3">
+<h3 class="anchored" data-anchor-id="降低认知负担">2. 降低认知负担</h3>
+<ul>
+<li><strong>减少上下文切换</strong>：无需在编辑器、浏览器、文档之间来回切换</li>
+<li><strong>记忆代码细节</strong>：AI 记住项目结构和上下文，无需你反复说明</li>
+<li><strong>统一工作流</strong>：从需求分析到代码实现再到测试，全流程在终端完成</li>
+</ul>
+</section>
+<section id="提升代码质量" class="level3">
+<h3 class="anchored" data-anchor-id="提升代码质量">3. 提升代码质量</h3>
+<ul>
+<li><strong>最佳实践建议</strong>：内置丰富的编码规范和最佳实践</li>
+<li><strong>持续代码审查</strong>：AI 实时审查代码，发现问题并建议改进</li>
+<li><strong>自动生成测试</strong>：根据代码自动生成单元测试和集成测试</li>
+</ul>
+</section>
+<section id="支持团队协作" class="level3">
+<h3 class="anchored" data-anchor-id="支持团队协作">4. 支持团队协作</h3>
+<ul>
+<li><strong>项目知识沉淀</strong>：通过 AGENTS.md 和规则文件固化团队规范</li>
+<li><strong>新人快速上手</strong>：新员工通过 OpenCode 快速理解项目代码</li>
+<li><strong>知识共享</strong>：Skill 系统封装团队专有知识，统一团队工作方式</li>
+</ul>
+</section>
+</section>
+<section id="opencode-的核心优势" class="level2">
+<h2 class="anchored" data-anchor-id="opencode-的核心优势">OpenCode 的核心优势</h2>
+<section id="多模型支持model-agnostic" class="level3">
+<h3 class="anchored" data-anchor-id="多模型支持model-agnostic">1. 多模型支持（Model Agnostic）</h3>
+<p><strong>OpenCode</strong> 不绑定单一模型，支持接入多种 AI 模型：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>模型提供商</th>
+<th>推荐场景</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>智谱 GLM-4.7</strong></td>
+<td>国内用户日常使用</td>
+<td>国内直连，速度快，性价比高</td>
+</tr>
+<tr class="even">
+<td><strong>DeepSeek</strong></td>
+<td>复杂逻辑任务</td>
+<td>推理能力强，适合算法实现</td>
+</tr>
+<tr class="odd">
+<td><strong>Claude</strong></td>
+<td>代码质量和架构设计</td>
+<td>代码理解能力强，输出质量高</td>
+</tr>
+<tr class="even">
+<td><strong>OpenAI GPT/Codex</strong></td>
+<td>通用开发任务</td>
+<td>生态完善，能力均衡</td>
+</tr>
+<tr class="odd">
+<td><strong>本地模型</strong></td>
+<td>隐私敏感场景</td>
+<td>数据不出本地，完全离线</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优势</strong>：根据任务类型选择最适合的模型，既能保证质量又能控制成本。</p>
+</section>
+<section id="planbuild-双模式工作流" class="level3">
+<h3 class="anchored" data-anchor-id="planbuild-双模式工作流">2. Plan/Build 双模式工作流</h3>
+<p>OpenCode 独创的<strong>规划模式（Plan）</strong>和<strong>执行模式（Build）</strong>：</p>
+<ul>
+<li><strong>Plan 模式</strong>：只读分析，适合代码理解、方案设计、架构规划</li>
+<li><strong>Build 模式</strong>：读写执行，适合功能实现、Bug 修复、代码重构</li>
+</ul>
+<p><strong>优势</strong>：避免 AI”一上来就改代码”的问题，先想清楚再动手，大幅降低返工成本。</p>
+</section>
+<section id="强大的-agent-系统" class="level3">
+<h3 class="anchored" data-anchor-id="强大的-agent-系统">3. 强大的 Agent 系统</h3>
+<p>OpenCode 内置了完整的 Agent 系统：</p>
+<ul>
+<li><strong>Primary Agents</strong>：Plan 和 Build，通过 Tab 键快速切换</li>
+<li><strong>Sub Agents</strong>：Oracle（架构专家）、Librarian（图书管理员）、Frontend Engineer（前端专家）等专业 Agent</li>
+<li><strong>自定义 Agent</strong>：根据项目需求创建专属 Agent</li>
+</ul>
+<p><strong>优势</strong>：专业问题交给专业 Agent，如同拥有一个”数字开发团队”。</p>
+</section>
+<section id="oh-my-opencode-增强生态" class="level3">
+<h3 class="anchored" data-anchor-id="oh-my-opencode-增强生态">4. Oh My OpenCode 增强生态</h3>
+<p><strong>Oh My OpenCode</strong> 是 OpenCode 的增强插件层，提供：</p>
+<ul>
+<li><strong>多 Agent 协作框架</strong>：Prometheus（战略规划）、Atlas（执行编排）、Sisyphus（实际执行）</li>
+<li><strong>Categories + Skills 架构</strong>：动态组合最适合当前任务的 Agent</li>
+<li><strong>Ralph Loop 自动闭环</strong>：AI 持续迭代直到任务完成</li>
+<li><strong>Ultrawork 混合模型调度</strong>：智能路由到最优模型组合</li>
+</ul>
+<p><strong>优势</strong>：从”辅助工具”进化为”智能编排系统”。</p>
+</section>
+<section id="开源与可扩展" class="level3">
+<h3 class="anchored" data-anchor-id="开源与可扩展">5. 开源与可扩展</h3>
+<p>OpenCode 完全开源，提供丰富的扩展能力：</p>
+<ul>
+<li><strong>自定义 Command</strong>：将常用命令封装为一键触发</li>
+<li><strong>Skill 系统</strong>：封装复杂指令和工作流</li>
+<li><strong>MCP 扩展</strong>：连接外部服务和数据源</li>
+<li><strong>插件开发</strong>：通过 Hook 机制扩展功能</li>
+</ul>
+<p><strong>优势</strong>：完全掌控工具，根据团队需求深度定制。</p>
+</section>
+<section id="优秀的国内支持" class="level3">
+<h3 class="anchored" data-anchor-id="优秀的国内支持">6. 优秀的国内支持</h3>
+<p>相比其他 AI 编程工具，OpenCode 对国内用户更友好：</p>
+<ul>
+<li><strong>国产模型直连</strong>：智谱、DeepSeek、MiniMax 等国内模型无需翻墙</li>
+<li><strong>OpenCode Zen</strong>：官方提供的免费模型服务</li>
+<li><strong>中文社区</strong>：活跃的中文用户社区和文档</li>
+<li><strong>本地化优化</strong>：针对国内开发环境的特殊优化</li>
+</ul>
+</section>
+</section>
+<section id="opencode-vs-claude-code如何选择" class="level2">
+<h2 class="anchored" data-anchor-id="opencode-vs-claude-code如何选择">OpenCode vs Claude Code：如何选择</h2>
+<p><strong>Claude Code</strong> 是 Anthropic 官方推出的 AI 编程工具，与 OpenCode 有许多相似之处。以下是两者的对比：</p>
+<section id="功能对比" class="level3">
+<h3 class="anchored" data-anchor-id="功能对比">功能对比</h3>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 34%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>特性</th>
+<th>OpenCode</th>
+<th>Claude Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>模型支持</strong></td>
+<td>多模型（Claude、GPT、DeepSeek、GLM 等）</td>
+<td>仅 Claude 系列</td>
+</tr>
+<tr class="even">
+<td><strong>费用</strong></td>
+<td>自主选择模型，灵活控制成本</td>
+<td>绑定 Claude 订阅，费用较高</td>
+</tr>
+<tr class="odd">
+<td><strong>国内访问</strong></td>
+<td>支持国产模型直连，无需翻墙</td>
+<td>需要特定网络环境</td>
+</tr>
+<tr class="even">
+<td><strong>开源</strong></td>
+<td>完全开源，可自由定制</td>
+<td>闭源，无法修改</td>
+</tr>
+<tr class="odd">
+<td><strong>Agent 系统</strong></td>
+<td>丰富的多 Agent 协作（Oh My OpenCode）</td>
+<td>基础 Agent 支持</td>
+</tr>
+<tr class="even">
+<td><strong>Skill 生态</strong></td>
+<td>完善的 Skill 市场（skills.sh）</td>
+<td>Skill 支持较新</td>
+</tr>
+<tr class="odd">
+<td><strong>Ralph Loop</strong></td>
+<td>原生支持自动闭环</td>
+<td>需要额外配置</td>
+</tr>
+<tr class="even">
+<td><strong>社区生态</strong></td>
+<td>活跃的中文社区</td>
+<td>主要面向海外用户</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="适用场景建议" class="level3">
+<h3 class="anchored" data-anchor-id="适用场景建议">适用场景建议</h3>
+<p><strong>选择 OpenCode，如果你：</strong> - 希望使用多种 AI 模型，灵活控制成本 - 需要国产模型直连，不想折腾网络 - 想要深度定制工具，满足团队特殊需求 - 重视开源，希望完全掌控工具 - 是中文用户，希望有中文文档和社区支持 - 想要使用 Oh My OpenCode 的多 Agent 协作和 Ralph Loop 等高级功能</p>
+<p><strong>选择 Claude Code，如果你：</strong> - 只信任 Anthropic 的 Claude 模型 - 已经是 Claude Pro 订阅用户 - 需要官方直接支持和服务保障 - 使用场景简单，不需要复杂定制</p>
+</section>
+<section id="实际上" class="level3">
+<h3 class="anchored" data-anchor-id="实际上">实际上…</h3>
+<p>两者并非完全对立： - <strong>OpenCode 可以接入 Claude 模型</strong>：如果你喜欢 Claude 的能力，但想要 OpenCode 的灵活性和扩展性，可以在 OpenCode 中使用 Claude 模型 - <strong>技能互通</strong>：很多在 Claude Code 中使用的 Skill（如 skills.sh 上的 Skill）也可以在 OpenCode 中使用 - <strong>工作流相似</strong>：两者都支持 Plan/Build 工作流，学习成本可以复用</p>
+</section>
+</section>
+<section id="谁适合使用-opencode" class="level2">
+<h2 class="anchored" data-anchor-id="谁适合使用-opencode">谁适合使用 OpenCode</h2>
+<p>OpenCode 适合以下人群：</p>
+<section id="开发者" class="level3">
+<h3 class="anchored" data-anchor-id="开发者">开发者</h3>
+<ul>
+<li><strong>全栈工程师</strong>：快速实现功能，管理复杂项目</li>
+<li><strong>前端开发者</strong>：UI/UX 开发、组件库维护</li>
+<li><strong>后端工程师</strong>：API 开发、数据库设计、系统架构</li>
+<li><strong>算法工程师</strong>：算法实现、数据分析、模型部署</li>
+</ul>
+</section>
+<section id="技术管理者" class="level3">
+<h3 class="anchored" data-anchor-id="技术管理者">技术管理者</h3>
+<ul>
+<li><strong>架构师</strong>：系统设计、代码审查、技术决策</li>
+<li><strong>技术负责人</strong>：团队规范制定、项目初始化、代码质量管控</li>
+<li><strong>CTO/VP</strong>：技术选型、团队效率提升、知识沉淀</li>
+</ul>
+</section>
+<section id="其他技术人员" class="level3">
+<h3 class="anchored" data-anchor-id="其他技术人员">其他技术人员</h3>
+<ul>
+<li><strong>DevOps 工程师</strong>：CI/CD 流程、自动化脚本、基础设施管理</li>
+<li><strong>数据工程师</strong>：数据处理、ETL 流程、报表生成</li>
+<li><strong>产品经理</strong>：快速原型、需求文档、数据分析</li>
+<li><strong>技术写作者</strong>：文档编写、教程制作、内容管理</li>
+</ul>
+</section>
+</section>
+<section id="学习路径概述" class="level2">
+<h2 class="anchored" data-anchor-id="学习路径概述">学习路径概述</h2>
+<p>本文档分为三个部分，循序渐进地帮助你掌握 OpenCode：</p>
+<p><strong>第一部分：初级篇</strong> - 快速上手 - 安装配置、基础操作、基础工作流 - 目标：能在日常开发中使用 OpenCode 辅助工作</p>
+<p><strong>第二部分：进阶篇</strong> - 效率提升 - Oh My OpenCode、Ralph Loop、扩展任务、定制配置 - 目标：掌握高级工作流，显著提升开发效率</p>
+<p><strong>第三部分：高级篇</strong> - 专家级别 - 高级定制、高级工作流、团队协作 - 目标：深度定制 OpenCode，构建团队级解决方案</p>
+<p>预计学习时间：<strong>2-4 周</strong>（视个人基础和投入时间而定）</p>
+</section>
+<section id="开始之前" class="level2">
+<h2 class="anchored" data-anchor-id="开始之前">开始之前</h2>
+<p>使用 OpenCode 需要： - 基本的终端/命令行操作知识 - 一定的编程基础（至少一种编程语言） - 开放的心态，愿意尝试新的工作方式</p>
+<p><strong>不需要</strong>： - 深厚的 AI 知识（OpenCode 帮你封装了复杂性） - 昂贵的硬件（普通电脑即可运行） - 海外网络（国产模型直连支持）</p>
+<hr>
+<p>准备好了吗？让我们开始这段学习旅程！</p>
+<hr>
+</section>
+</section>
+<section id="第一部分初级篇" class="level1">
+<h1>第一部分：初级篇</h1>
+<blockquote class="blockquote">
+<p><strong>目标</strong>：30 分钟内完成安装并成功对话，掌握基础操作和日常开发流程</p>
+</blockquote>
+<hr>
+<section id="第-1-章安装与起步" class="level2">
+<h2 class="anchored" data-anchor-id="第-1-章安装与起步">第 1 章：安装与起步</h2>
+<section id="学习目标" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标">学习目标</h3>
+<ul>
+<li>理解 OpenCode 是什么以及能做什么</li>
+<li>成功安装 OpenCode 且不报错</li>
+<li>搞定网络连接（国内用户重点）</li>
+<li>完成第一次 “Hello World” 对话</li>
+</ul>
+</section>
+<section id="学习内容" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容">学习内容</h3>
+<section id="opencode-简介" class="level4">
+<h4 class="anchored" data-anchor-id="opencode-简介">1.1 OpenCode 简介</h4>
+<p>OpenCode 是一款 AI 编程助手，能够： - 理解代码并辅助开发 - 自动完成文件操作和代码重构 - 支持多模型接入（Claude、GPT、DeepSeek 等） - 提供 Plan/Build 双模式工作流 - 通过 Agent 系统实现任务编排</p>
+</section>
+<section id="安装步骤" class="level4">
+<h4 class="anchored" data-anchor-id="安装步骤">1.2 安装步骤</h4>
+<p><strong>一键安装（推荐）</strong>：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># macOS/Linux</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-fsSL</span> https://opencode.ai/install.sh <span class="kw">|</span> <span class="fu">sh</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows (PowerShell)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">iwr</span> <span class="at">-useb</span> https://opencode.ai/install.ps1 <span class="kw">|</span> <span class="ex">iex</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>验证安装</strong>：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="网络配置国内用户必读" class="level4">
+<h4 class="anchored" data-anchor-id="网络配置国内用户必读">1.3 网络配置（国内用户必读）</h4>
+<p>国内用户可能遇到连接问题，解决方案：</p>
+<ol type="1">
+<li><strong>使用国产模型</strong>（推荐）：智谱 GLM-4.7、DeepSeek、MiniMax、通义千问等</li>
+<li><strong>配置代理</strong>：在 <code>~/.opencode/config.json</code> 中设置代理</li>
+<li><strong>使用 OpenCode Zen</strong>：官方提供的免费模型服务</li>
+</ol>
+</section>
+<section id="连接模型" class="level4">
+<h4 class="anchored" data-anchor-id="连接模型">1.4 连接模型</h4>
+<p><strong>配置模型提供商</strong>：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"$schema"</span><span class="fu">:</span> <span class="st">"https://opencode.ai/config.json"</span><span class="fu">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"model"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"provider"</span><span class="fu">:</span> <span class="st">"zhipu"</span><span class="fu">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"glm-4.7"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>支持的模型提供商</strong>： - OpenCode Zen（免费） - 智谱 GLM-4.7（推荐，国内直连） - DeepSeek - MiniMax - 通义千问 - Claude（Anthropic） - OpenAI（GPT / Codex） - Ollama（本地部署）</p>
+</section>
+<section id="第一次对话" class="level4">
+<h4 class="anchored" data-anchor-id="第一次对话">1.5 第一次对话</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 进入项目目录</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/my-project</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 启动 OpenCode</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 输入测试</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">你好，请介绍一下你自己</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="练习题目" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目">练习题目</h3>
+<ol type="1">
+<li><strong>安装验证</strong>：在终端运行 <code>opencode --version</code>，确认安装成功</li>
+<li><strong>模型配置</strong>：选择一个国产模型（如智谱 GLM-4.7）并完成配置</li>
+<li><strong>首次对话</strong>：成功发送 “Hello World” 并收到回复</li>
+<li><strong>自动更新</strong>：了解 OpenCode 的自动更新机制</li>
+</ol>
+</section>
+<section id="参考资料" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料">参考资料</h3>
+<ul>
+<li><a href="https://learnopencode.com/1-start/">OpenCode 官方文档 - 快速起步</a></li>
+<li><a href="https://learnopencode.com/1-start/02-install.html">安装：5 分钟搞定</a></li>
+<li><a href="https://learnopencode.com/1-start/03-network.html">网络配置指南</a></li>
+<li><a href="https://learnopencode.com/1-start/04-connect.html">连接模型总览</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-2-章基础操作" class="level2">
+<h2 class="anchored" data-anchor-id="第-2-章基础操作">第 2 章：基础操作</h2>
+<section id="学习目标-1" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-1">学习目标</h3>
+<ul>
+<li>熟悉 OpenCode 的 TUI 界面和核心操作</li>
+<li>掌握 <code>@</code>、<code>!</code>、<code>/</code> 三件套语法</li>
+<li>学会管理对话（新建、切换、撤销、导出）</li>
+<li>了解常用快捷键</li>
+</ul>
+</section>
+<section id="学习内容-1" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-1">学习内容</h3>
+<section id="tui-界面导览" class="level4">
+<h4 class="anchored" data-anchor-id="tui-界面导览">2.1 TUI 界面导览</h4>
+<p>OpenCode 采用终端用户界面（TUI），主要区域： - <strong>对话区域</strong>：显示用户输入和 AI 回复 - <strong>状态栏</strong>：显示当前 Agent、模型、模式 - <strong>输入框</strong>：底部输入命令或问题</p>
+</section>
+<section id="核心语法三件套" class="level4">
+<h4 class="anchored" data-anchor-id="核心语法三件套">2.2 核心语法三件套</h4>
+<p><strong><code>@</code> - 引用文件/代码</strong>：</p>
+<pre><code>@src/main.ts 请分析这个文件
+@src/utils.ts#L10-20 解释这几行代码
+@docs/README.md 总结文档内容</code></pre>
+<p><strong><code>!</code> - 执行命令</strong>：</p>
+<pre><code>!npm install
+!git status
+!python test.py</code></pre>
+<p><strong><code>/</code> - 斜杠命令</strong>：</p>
+<pre><code>/help          # 显示帮助
+/undo          # 撤销上次更改
+/init          # 初始化项目
+/clear         # 清空对话</code></pre>
+</section>
+<section id="对话管理" class="level4">
+<h4 class="anchored" data-anchor-id="对话管理">2.3 对话管理</h4>
+<p><strong>创建新对话</strong>： - <code>Ctrl + n</code> 或输入 <code>/new</code></p>
+<p><strong>切换对话</strong>： - <code>Ctrl + p</code> / <code>Ctrl + n</code> 在历史对话间切换</p>
+<p><strong>撤销更改</strong>： - 输入 <code>/undo</code> 撤销最近一次对话变更（需要 Git 仓库）</p>
+<p><strong>导出对话</strong>： - 对话历史会自动保存，可在配置目录查看</p>
+</section>
+<section id="常用快捷键" class="level4">
+<h4 class="anchored" data-anchor-id="常用快捷键">2.4 常用快捷键</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Tab</code></td>
+<td>切换 Plan/Build 模式</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl + x</code></td>
+<td>Leader 键（组合键前缀）</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl + x, a</code></td>
+<td>显示 Agent 列表</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl + x, m</code></td>
+<td>切换模型</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl + c</code></td>
+<td>取消当前操作</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl + n</code></td>
+<td>新建对话</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="练习题目-1" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-1">练习题目</h3>
+<ol type="1">
+<li><strong>文件引用练习</strong>：使用 <code>@文件名</code> 引用项目中的文件并提问</li>
+<li><strong>命令执行练习</strong>：使用 <code>!命令</code> 执行一个简单的 bash 命令（如 <code>!ls -la</code>）</li>
+<li><strong>斜杠命令练习</strong>：尝试 <code>/help</code> 和 <code>/clear</code> 命令</li>
+<li><strong>对话管理练习</strong>：创建一个新对话，然后切换回之前的对话</li>
+</ol>
+</section>
+<section id="参考资料-1" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-1">参考资料</h3>
+<ul>
+<li><a href="https://learnopencode.com/2-daily/">OpenCode 官方文档 - 日常使用</a></li>
+<li><a href="https://learnopencode.com/2-daily/01-interface.html">界面与基础操作</a></li>
+<li><a href="https://learnopencode.com/2-daily/01b-copy-paste.html">如何复制内容</a></li>
+<li><a href="https://learnopencode.com/2-daily/02-sessions.html">管理对话</a></li>
+<li><a href="https://learnopencode.com/2-daily/03-shortcuts.html">常用快捷键</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-3-章基础工作流" class="level2">
+<h2 class="anchored" data-anchor-id="第-3-章基础工作流">第 3 章：基础工作流</h2>
+<section id="学习目标-2" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-2">学习目标</h3>
+<ul>
+<li>理解 Plan 模式和 Build 模式的区别</li>
+<li>掌握 Plan → Build 的标准开发流程</li>
+<li>学会使用 <code>/init</code> 初始化项目</li>
+<li>能够在日常开发中运用 AI 辅助</li>
+</ul>
+</section>
+<section id="学习内容-2" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-2">学习内容</h3>
+<section id="plan-vs-build-模式详解" class="level4">
+<h4 class="anchored" data-anchor-id="plan-vs-build-模式详解">3.1 Plan vs Build 模式详解</h4>
+<p><strong>Plan Agent（规划模式）</strong>： - <strong>特点</strong>：只读分析，写文件/执行命令前会询问 - <strong>用途</strong>：代码分析、方案设计、架构规划 - <strong>权限</strong>：<code>edit: ask</code>, <code>bash: ask</code></p>
+<p><strong>Build Agent（执行模式）</strong>： - <strong>特点</strong>：读写执行，可直接修改文件和运行命令 - <strong>用途</strong>：功能实现、Bug 修复、代码重构 - <strong>权限</strong>：<code>edit: allow</code>, <code>bash: allow</code></p>
+<p><strong>切换方式</strong>：按 <code>Tab</code> 键切换，状态栏显示当前模式</p>
+</section>
+<section id="标准开发工作流" class="level4">
+<h4 class="anchored" data-anchor-id="标准开发工作流">3.2 标准开发工作流</h4>
+<pre><code>理解代码(Plan) → 制定方案(Plan) → 实现功能(Build) → 验证测试(Build)</code></pre>
+<p><strong>步骤详解</strong>：</p>
+<ol type="1">
+<li><p><strong>理解代码</strong>（Plan 模式）：</p>
+<pre><code>@explore 帮我梳理项目结构
+@src/main.ts 分析这个文件的核心逻辑</code></pre></li>
+<li><p><strong>制定方案</strong>（Plan 模式）：</p>
+<pre><code>我要添加 XX 功能，请帮我分析：
+1. 需要修改哪些文件
+2. 推荐的实现方案
+3. 每种方案的优缺点</code></pre></li>
+<li><p><strong>实现功能</strong>（Build 模式）：</p>
+<pre><code>按照方案一实现功能，第一步先创建 XX 文件</code></pre></li>
+<li><p><strong>验证测试</strong>（Build 模式）：</p>
+<pre><code>!npm test
+!npm run build</code></pre></li>
+</ol>
+</section>
+<section id="项目初始化init" class="level4">
+<h4 class="anchored" data-anchor-id="项目初始化init">3.3 项目初始化（<code>/init</code>）</h4>
+<p>使用 <code>/init</code> 命令让 AI 理解你的项目：</p>
+<pre><code>/init</code></pre>
+<p>AI 会： - 分析项目结构和文件 - 生成 AGENTS.md 规则文件 - 理解项目的技术栈和规范</p>
+</section>
+<section id="文件操作技巧" class="level4">
+<h4 class="anchored" data-anchor-id="文件操作技巧">3.4 文件操作技巧</h4>
+<p><strong>读取文件</strong>：</p>
+<pre><code>@README.md 请总结这个文档</code></pre>
+<p><strong>批量读取</strong>：</p>
+<pre><code>@glob **/*.ts 分析所有 TypeScript 文件</code></pre>
+<p><strong>搜索内容</strong>：</p>
+<pre><code>搜索包含 "auth" 的所有文件</code></pre>
+</section>
+</section>
+<section id="练习题目-2" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-2">练习题目</h3>
+<ol type="1">
+<li><strong>模式切换练习</strong>：在 Plan 和 Build 模式间切换，观察状态栏变化</li>
+<li><strong>项目分析练习</strong>：进入你的一个项目，用 Plan 模式分析项目结构</li>
+<li><strong>功能实现练习</strong>：用 Plan → Build 流程实现一个小功能（如添加一个工具函数）</li>
+<li><strong>初始化练习</strong>：在一个新项目中运行 <code>/init</code>，查看生成的 AGENTS.md</li>
+</ol>
+</section>
+<section id="参考资料-2" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-2">参考资料</h3>
+<ul>
+<li><a href="https://learnopencode.com/3-workflow/">OpenCode 官方文档 - 高效工作流</a></li>
+<li><a href="https://learnopencode.com/3-workflow/01-plan-build.html">Plan vs Build 详解</a></li>
+<li><a href="https://learnopencode.com/3-workflow/02-agents.html">认识 Agent</a></li>
+<li><a href="https://learnopencode.com/3-workflow/03-init.html">项目初始化</a></li>
+<li><a href="https://mp.weixin.qq.com/s/N8MMJ6FzS_ShSeNtlSGiHw">OpenCode 使用技巧（2026年1月）</a></li>
+<li><a href="https://learnopencode.com/4-scenarios/coder-daily.html">开发日常实战</a></li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="第二部分进阶篇" class="level1">
+<h1>第二部分：进阶篇</h1>
+<blockquote class="blockquote">
+<p><strong>目标</strong>：掌握 Oh My OpenCode 增强插件、Ralph Loop 自动闭环、高级定制和工作流优化</p>
+</blockquote>
+<hr>
+<section id="第-4-章oh-my-opencode-增强插件" class="level2">
+<h2 class="anchored" data-anchor-id="第-4-章oh-my-opencode-增强插件">第 4 章：Oh My OpenCode 增强插件</h2>
+<section id="学习目标-3" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-3">学习目标</h3>
+<ul>
+<li>理解 Oh My OpenCode 的核心概念和价值</li>
+<li>完成 Oh My OpenCode 的安装和配置</li>
+<li>掌握多 Agent 协作的使用方法</li>
+<li>了解 Categories + Skills 架构</li>
+</ul>
+</section>
+<section id="学习内容-3" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-3">学习内容</h3>
+<section id="oh-my-opencode-简介" class="level4">
+<h4 class="anchored" data-anchor-id="oh-my-opencode-简介">4.1 Oh My OpenCode 简介</h4>
+<p><strong>是什么</strong>： Oh My OpenCode 是为 OpenCode 量身定制的增强插件层，引入了”多智能体（Multi-Agent）“协作框架。</p>
+<p><strong>核心价值</strong>： - 从”辅助工具”进化为”数字开发团队” - 专业小 Agent（Sub-agents）各司其职 - AST 感知、自动规则 Hooks、会话压缩等高级功能</p>
+</section>
+<section id="安装步骤-1" class="level4">
+<h4 class="anchored" data-anchor-id="安装步骤-1">4.2 安装步骤</h4>
+<p><strong>一键安装</strong>：</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bunx</span> oh-my-opencode install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>配置文件位置</strong>： - 全局级：<code>~/.config/opencode/oh-my-opencode.json</code> - 项目级：<code>项目根目录/.opencode/oh-my-opencode.json</code>（推荐）</p>
+</section>
+<section id="核心-agent-介绍" class="level4">
+<h4 class="anchored" data-anchor-id="核心-agent-介绍">4.3 核心 Agent 介绍</h4>
+<p><strong>Prometheus（普罗米修斯）</strong>： - <strong>角色</strong>：战略规划者 - <strong>职责</strong>：需求澄清、方案设计、计划制定 - <strong>工作流程</strong>：深度访谈 → 草稿计划 → 验证计划 → 定稿计划</p>
+<p><strong>Atlas（阿特拉斯）</strong>： - <strong>角色</strong>：总指挥官 - <strong>职责</strong>：任务分解、资源分配、执行编排、错误恢复 - <strong>核心命令</strong>：<code>/start-work</code> 启动计划执行</p>
+<p><strong>Sisyphus（西西弗斯）</strong>： - <strong>角色</strong>：执行者 - <strong>职责</strong>：实际编码工作，强调”什么该让别人干” - <strong>特点</strong>：更激进的委托策略</p>
+<p><strong>专家 Sub-agents</strong>： - <strong>Oracle（神谕者）</strong>：专注架构审查和顶层设计分析 - <strong>Librarian（图书管理员）</strong>：专注全局文档检索和代码库索引 - <strong>Frontend Engineer（前端工程师）</strong>：专注 UI/UX 相关逻辑</p>
+</section>
+<section id="categories-skills-架构v3.0" class="level4">
+<h4 class="anchored" data-anchor-id="categories-skills-架构v3.0">4.4 Categories + Skills 架构（v3.0+）</h4>
+<p><strong>设计哲学</strong>：组合优于继承</p>
+<p><strong>Categories（模型抽象）</strong>： | Category | 适用场景 | |———-|———-| | <code>visual-engineering</code> | 前端、UI/UX、设计 | | <code>ultrabrain</code> | 复杂逻辑任务 | | <code>deep</code> | 深度研究、复杂问题 | | <code>quick</code> | 简单快速任务 | | <code>writing</code> | 文档、写作任务 |</p>
+<p><strong>Skills（能力注入）</strong>： | Skill | 功能 | |——-|——| | <code>frontend-ui-ux</code> | UI/UX 设计能力 | | <code>git-master</code> | Git 操作专家 | | <code>systematic-debugging</code> | 系统化调试 |</p>
+<p><strong>组合示例</strong>：</p>
+<pre><code>重构 React 组件 = visual-engineering category + frontend-ui-ux skill</code></pre>
+</section>
+<section id="ultrawork-模式" class="level4">
+<h4 class="anchored" data-anchor-id="ultrawork-模式">4.5 Ultrawork 模式</h4>
+<p><strong>混合模型调度</strong>： - 编排协调：Claude 4.5 Sonnet - 日常任务：GLM 4.7（便宜量大） - 复杂逻辑：GPT 5.2 Codex X-High</p>
+<p><strong>成本优化</strong>：智能路由组合比单模型节省 30-50% 成本</p>
+</section>
+</section>
+<section id="练习题目-3" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-3">练习题目</h3>
+<ol type="1">
+<li><strong>安装练习</strong>：完成 Oh My OpenCode 的安装并验证</li>
+<li><strong>配置练习</strong>：创建项目级配置文件，配置至少一个自定义 Agent</li>
+<li><strong>多 Agent 协作练习</strong>：使用 Prometheus 制定计划，然后使用 Atlas 执行</li>
+<li><strong>Category + Skill 练习</strong>：使用 visual-engineering + frontend-ui-ux 完成一个 UI 任务</li>
+</ol>
+</section>
+<section id="参考资料-3" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-3">参考资料</h3>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/6oZoNsOHA4SSYZ7LgyvroA">Oh-My-OpenCode —— 让 OpenCode 真正”起飞”的增强外挂</a></li>
+<li><a href="https://mp.weixin.qq.com/s/60ShkVCVkDn1Ewrk_S4Fgg">Oh My OpenCode 3.0新特性速览</a></li>
+<li><a href="https://mp.weixin.qq.com/s/UVRoZEpWdI6ahq4RW5N8yA">oh-my-opencode 3.0.0 深入解析：从单代理到编排革命的演进</a></li>
+<li><a href="https://github.com/code-yeongyu/oh-my-opencode">官方 GitHub</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-5-章ralph-loop-自动闭环" class="level2">
+<h2 class="anchored" data-anchor-id="第-5-章ralph-loop-自动闭环">第 5 章：Ralph Loop 自动闭环</h2>
+<section id="学习目标-4" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-4">学习目标</h3>
+<ul>
+<li>理解 Ralph Loop 的概念和工作原理</li>
+<li>掌握 Ralph Loop 的使用方法</li>
+<li>能够设计适合 Ralph Loop 的任务</li>
+<li>了解 Ralph Loop 的适用场景和限制</li>
+</ul>
+</section>
+<section id="学习内容-4" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-4">学习内容</h3>
+<section id="ralph-loop-概念" class="level4">
+<h4 class="anchored" data-anchor-id="ralph-loop-概念">5.1 Ralph Loop 概念</h4>
+<p><strong>是什么</strong>： Ralph Loop 是一种让 AI 持续迭代直到真正完成任务的工作范式，解决”AI 能不能坚持把事做完”的问题。</p>
+<p><strong>核心机制</strong>： 1. <strong>无限循环（但有上限）</strong>：AI 反复尝试直到完成 2. <strong>干净上下文</strong>：每一轮都是新对话，避免上下文污染 3. <strong>客观完成条件</strong>：测试是否全绿、字数是否达标等 4. <strong>状态持久化</strong>：通过文件、日志、Git 保存状态</p>
+</section>
+<section id="工作流程" class="level4">
+<h4 class="anchored" data-anchor-id="工作流程">5.2 工作流程</h4>
+<pre><code>读取当前状态 → 做一小步改进 → 写回状态 → 检查完成条件 → 未完成则继续循环</code></pre>
+</section>
+<section id="使用方法" class="level4">
+<h4 class="anchored" data-anchor-id="使用方法">5.3 使用方法</h4>
+<p><strong>方式一：使用 <code>/ralph-loop</code> 命令</strong>：</p>
+<pre><code>/ralph-loop 实现一个用户认证系统，要求：
+1. 支持 JWT 认证
+2. 包含登录/注册接口
+3. 通过所有测试用例</code></pre>
+<p><strong>方式二：配置文件开启</strong>：</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"ralph_loop"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"max_iterations"</span><span class="fu">:</span> <span class="dv">10</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>方式三：使用 opencode-ralph 工具</strong>：</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 安装</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> opencode-ralph</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 使用</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ex">opencode-ralph</span> <span class="at">--prompt</span> <span class="st">"实现功能 X"</span> <span class="at">--max-iterations</span> 5</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="prompt-黄金结构" class="level4">
+<h4 class="anchored" data-anchor-id="prompt-黄金结构">5.4 Prompt 黄金结构</h4>
+<pre><code>## 任务目标
+明确描述要完成什么
+
+## 执行步骤
+一次只做一小步
+
+## 必须读取的文件
+列出需要参考的文件
+
+## 清晰的完成标准
+- 标准 1：可验证的条件
+- 标准 2：可验证的条件</code></pre>
+</section>
+<section id="适用场景" class="level4">
+<h4 class="anchored" data-anchor-id="适用场景">5.5 适用场景</h4>
+<p><strong>适合使用</strong>： - 明确完成标准的任务 - 需要循环迭代才能完成的任务 - Greenfield 项目（从零开始） - 可以自动验证的任务（如测试通过）</p>
+<p><strong>不适合使用</strong>： - 需要人工判断或设计决策的任务 - 一次性操作 - 成功标准不清晰的任务</p>
+</section>
+</section>
+<section id="练习题目-4" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-4">练习题目</h3>
+<ol type="1">
+<li><strong>基础练习</strong>：使用 <code>/ralph-loop</code> 完成一个简单的工具函数编写</li>
+<li><strong>验证条件练习</strong>：设计一个带有明确验证条件的任务（如”实现并通过测试”）</li>
+<li><strong>迭代观察练习</strong>：运行 Ralph Loop 并观察 AI 的迭代过程</li>
+<li><strong>边界条件练习</strong>：尝试在 Ralph Loop 中设置最大迭代次数</li>
+</ol>
+</section>
+<section id="参考资料-4" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-4">参考资料</h3>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/8t2XKsQ69u4lzjtZCibSiA">OpenCode系统性入门 05 | Ralph Loop 自动闭环：让AI自己干完活</a></li>
+<li><a href="https://mp.weixin.qq.com/s/vY0zygtC_5ax88w5t3QPfA">Ralph Agent 详解</a></li>
+<li><a href="https://mp.weixin.qq.com/s/3ta3IEz3B6gD0dUEEZhkuQ">从 Prompt 到 Ralph Loop：一文了解 AI 的循环编程</a></li>
+<li><a href="https://mp.weixin.qq.com/s/XUmiRMhgvvc0TOZCcis1GQ">2026 年最被低估的 AI 工作法：一个 Loop，干完所有脏活</a></li>
+<li><a href="https://www.zidooka.com/archives/3458">How to Use opencode-ralph</a></li>
+<li><a href="https://github.com/rot13maxi/opencode-ralph">opencode-ralph GitHub</a></li>
+<li><a href="https://deepwiki.com/code-yeongyu/oh-my-opencode/8.2-ralph-loop">Ralph Loop 深入解析</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-6-章扩展到其他任务" class="level2">
+<h2 class="anchored" data-anchor-id="第-6-章扩展到其他任务">第 6 章：扩展到其他任务</h2>
+<section id="学习目标-5" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-5">学习目标</h3>
+<ul>
+<li>掌握 AI 辅助写作工作流</li>
+<li>学会使用 OpenCode 进行内容创作</li>
+<li>掌握办公效率提升技巧</li>
+<li>了解文件整理和数据处理方法</li>
+</ul>
+</section>
+<section id="学习内容-5" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-5">学习内容</h3>
+<section id="文档写作工作流" class="level4">
+<h4 class="anchored" data-anchor-id="文档写作工作流">6.1 文档写作工作流</h4>
+<p><strong>核心思路</strong>：</p>
+<pre><code>构思(Plan) → 输出(Build) → 迭代(Build)</code></pre>
+<p><strong>步骤详解</strong>：</p>
+<ol type="1">
+<li><p><strong>构思阶段</strong>（Plan 模式）：</p>
+<pre><code>我想写一篇关于"远程办公的利与弊"的文章，目标读者是职场新人。
+请帮我：
+1. 确定文章结构
+2. 列出每个部分的要点
+3. 建议一个吸引人的标题</code></pre></li>
+<li><p><strong>输出阶段</strong>（Build 模式）：</p>
+<pre><code>按照刚才讨论的大纲，写出完整的文章，保存为 远程办公的利与弊.md</code></pre></li>
+<li><p><strong>迭代阶段</strong>（Build 模式）：</p>
+<pre><code>@远程办公的利与弊.md 开头太平淡了，用一个引人入胜的场景描写开场</code></pre></li>
+</ol>
+<p><strong>Prompt 模板示例</strong>：</p>
+<pre><code>## 角色
+你是资深内容策划师，擅长结构化思考和内容规划。
+
+## 任务
+根据用户提供的主题，生成完整的文章框架和大纲。
+
+## 输入信息
+- 文章主题：【主题】
+- 目标读者：【读者画像】
+- 字数要求：【字数】
+
+## 输出规范
+1. 文章定位（核心观点、目标读者痛点）
+2. 文章结构（开头、中间、结尾）
+3. 每部分要点
+4. 备选标题（3个）</code></pre>
+</section>
+<section id="办公效率提升" class="level4">
+<h4 class="anchored" data-anchor-id="办公效率提升">6.2 办公效率提升</h4>
+<p><strong>文件整理三步法</strong>：</p>
+<pre><code>分析现状 → 制定规则 → 批量执行</code></pre>
+<p><strong>常用工具</strong>： - <code>list</code>：列出目录（树形结构） - <code>glob</code>：按模式查找文件 - <code>grep</code>：搜索文件内容 - <code>bash</code>：执行命令</p>
+<p><strong>批量重命名示例</strong>：</p>
+<pre><code>把这个目录下所有的图片文件按以下规则重命名：
+- 格式：照片_YYYYMMDD_序号.扩展名
+- 日期从文件修改时间获取
+- 序号从 001 开始
+
+要求：
+1. 先只输出"将要修改的文件清单"，不要执行
+2. 我确认后再执行</code></pre>
+<p><strong>分类归档示例</strong>：</p>
+<pre><code>把这个目录下的文件按类型分类到子目录：
+- 图片 → 图片/
+- 文档 → 文档/
+- 视频 → 视频/
+- 其他 → 其他/</code></pre>
+</section>
+</section>
+<section id="练习题目-5" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-5">练习题目</h3>
+<ol type="1">
+<li><strong>写作练习</strong>：用 Plan → Build 流程完成一篇 800 字的文章</li>
+<li><strong>文件整理练习</strong>：整理一个混乱的下载文件夹，批量重命名并分类</li>
+<li><strong>内容搜索练习</strong>：使用 grep 搜索包含特定关键词的文件</li>
+<li><strong>数据处理练习</strong>：用 AI 分析一个 CSV 文件并生成报表</li>
+</ol>
+</section>
+<section id="参考资料-5" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-5">参考资料</h3>
+<ul>
+<li><a href="https://learnopencode.com/4-scenarios/writer-workflow.html">文档写作工作流</a></li>
+<li><a href="https://learnopencode.com/4-scenarios/office-files.html">效率提升 - 文件整理</a></li>
+<li><a href="https://learnopencode.com/appendix/prompts.html">Prompt 模板库</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-7-章定制与高级配置" class="level2">
+<h2 class="anchored" data-anchor-id="第-7-章定制与高级配置">第 7 章：定制与高级配置</h2>
+<section id="学习目标-6" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-6">学习目标</h3>
+<ul>
+<li>掌握 OpenCode 的配置系统</li>
+<li>学会创建自定义 Command</li>
+<li>理解 Skill 的概念和用法</li>
+<li>能够编写自定义 Prompt</li>
+</ul>
+</section>
+<section id="学习内容-6" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-6">学习内容</h3>
+<section id="配置系统" class="level4">
+<h4 class="anchored" data-anchor-id="配置系统">7.1 配置系统</h4>
+<p><strong>配置文件位置</strong>： - 全局配置：<code>~/.opencode/config.json</code> - 项目配置：<code>项目根目录/.opencode/config.json</code></p>
+<p><strong>基础配置示例</strong>：</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"$schema"</span><span class="fu">:</span> <span class="st">"https://opencode.ai/config.json"</span><span class="fu">,</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"model"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"provider"</span><span class="fu">:</span> <span class="st">"zhipu"</span><span class="fu">,</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"glm-4.7"</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"permission"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"edit"</span><span class="fu">:</span> <span class="st">"ask"</span><span class="fu">,</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"bash"</span><span class="fu">:</span> <span class="st">"ask"</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="自定义-command" class="level4">
+<h4 class="anchored" data-anchor-id="自定义-command">7.2 自定义 Command</h4>
+<p><strong>定义 Command</strong>：</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"commands"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"test"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"运行测试"</span><span class="fu">,</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"steps"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"!npm test"</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"lint"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"description"</span><span class="fu">:</span> <span class="st">"运行代码检查"</span><span class="fu">,</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"steps"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"!npm run lint"</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>      <span class="ot">]</span></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>使用 Command</strong>：</p>
+<pre><code>/test
+/lint</code></pre>
+</section>
+<section id="skill-系统" class="level4">
+<h4 class="anchored" data-anchor-id="skill-系统">7.3 Skill 系统</h4>
+<p><strong>什么是 Skill</strong>： Skill 是封装复杂指令的模块，可以注入到 Agent 中增强其能力。它们是”模块化、自包含的包”，通过提供专业领域知识、工作流和工具来扩展 Claude 的能力。可以理解为特定领域的”入职指南”——将 Claude 从通用 Agent 转变为具备领域专业知识的专门 Agent。</p>
+<p><strong>Skill 生态系统</strong>：</p>
+<p>OpenCode 支持丰富的 Skill 生态系统，可以在 <a href="https://skills.sh">skills.sh</a> 发现和安装各种 Skill。这是官方的 Skill 市场和仓库集合，包含了社区贡献的各类专业技能包。</p>
+<p><strong>Skill 能提供的价值</strong>： 1. <strong>专业工作流</strong> - 特定领域的多步骤程序 2. <strong>工具集成</strong> - 与特定文件格式或 API 配合的说明 3. <strong>领域专业知识</strong> - 公司特定的知识、架构、业务逻辑 4. <strong>捆绑资源</strong> - 脚本、参考资料和复杂重复任务的资源</p>
+<p><strong>Skill 结构</strong>：</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># .opencode/skills/my-skill.yaml</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> my-skill</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> 我的自定义技能</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">instructions</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  当执行 XX 任务时：</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>  1. 步骤一</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>  2. 步骤二</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>  3. 步骤三</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>使用 Skill</strong>：</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"agent"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"build"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"skills"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"my-skill"</span><span class="ot">]</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>安装 Skill（通过 skills.sh）</strong>：</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 安装 skill-creator（用于创建 Skill 的工具）</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/anthropics/skills <span class="at">--skill</span> skill-creator</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 安装 remotion-best-practices（Remotion 视频开发最佳实践）</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/remotion-dev/skills <span class="at">--skill</span> remotion-best-practices</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 安装 superpowers 系列 Skill</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/obra/superpowers <span class="at">--skill</span> brainstorming</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/obra/superpowers <span class="at">--skill</span> systematic-debugging</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>著名 Skill 介绍</strong>：</p>
+<p><strong>1. skill-creator</strong>（由 Anthropic 官方提供） - <strong>用途</strong>：指导如何创建有效的 Skill - <strong>核心价值</strong>：提供 Skill 创建的完整流程和最佳实践 - <strong>包含内容</strong>： - Skill 的核心设计原则（简洁、适当的自由度设置） - Skill 的解剖结构（SKILL.md + 可选资源） - Skill 创建六步法（理解、规划、初始化、编辑、打包、迭代） - 渐进式披露设计原则（三级加载系统） - <strong>使用场景</strong>：当你需要创建自定义 Skill 时，先使用此 Skill 学习最佳实践 - <strong>安装</strong>：<code>npx skills add https://github.com/anthropics/skills --skill skill-creator</code></p>
+<p><strong>2. remotion-best-practices</strong>（由 Remotion 团队提供） - <strong>用途</strong>：Remotion（React 视频创作库）开发的最佳实践 - <strong>核心价值</strong>：提供视频/动画开发的专业指导 - <strong>包含内容</strong>： - 3D 内容（Three.js、React Three Fiber） - 动画基础、音频处理、字体加载 - 图片、视频、GIF 嵌入 - 转场效果、时间轴控制 - Lottie 动画、图表可视化 - TailwindCSS 集成、文字动画 - <strong>使用场景</strong>：使用 Remotion 开发视频项目时自动触发 - <strong>安装</strong>：<code>npx skills add https://github.com/remotion-dev/skills --skill remotion-best-practices</code> - <strong>统计数据</strong>：周安装量 58.7K，支持 claude-code、cursor、opencode 等工具</p>
+<p><strong>3. superpowers 系列</strong>（由 obra 提供） 这是一套开发工作流增强 Skill 集合，共 14 个 Skill，总安装量 44.3K：</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 28%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>用途</th>
+<th>安装量</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>brainstorming</code></td>
+<td>创意工作前的头脑风暴，探索用户意图、需求和设计</td>
+<td>6.5K</td>
+</tr>
+<tr class="even">
+<td><code>systematic-debugging</code></td>
+<td>系统化调试，在遇到 Bug 或测试失败时使用</td>
+<td>3.9K</td>
+</tr>
+<tr class="odd">
+<td><code>test-driven-development</code></td>
+<td>测试驱动开发，在写实现代码前使用</td>
+<td>3.6K</td>
+</tr>
+<tr class="even">
+<td><code>writing-plans</code></td>
+<td>编写实施计划，在有需求规格时使用</td>
+<td>3.4K</td>
+</tr>
+<tr class="odd">
+<td><code>executing-plans</code></td>
+<td>执行实施计划，在独立会话中执行计划</td>
+<td>3.2K</td>
+</tr>
+<tr class="even">
+<td><code>subagent-driven-development</code></td>
+<td>子 Agent 驱动开发，在当前会话执行计划</td>
+<td>2.9K</td>
+</tr>
+<tr class="odd">
+<td><code>requesting-code-review</code></td>
+<td>请求代码审查，完成任务或合并前使用</td>
+<td>2.8K</td>
+</tr>
+<tr class="even">
+<td><code>using-superpowers</code></td>
+<td>使用 Skill 的指南，每次对话开始时使用</td>
+<td>2.8K</td>
+</tr>
+<tr class="odd">
+<td><code>verification-before-completion</code></td>
+<td>完成前验证，在声称完成前要求运行验证命令</td>
+<td>2.7K</td>
+</tr>
+<tr class="even">
+<td><code>writing-skills</code></td>
+<td>编写 Skill，创建或编辑 Skill 时使用</td>
+<td>2.7K</td>
+</tr>
+<tr class="odd">
+<td><code>using-git-worktrees</code></td>
+<td>使用 Git Worktrees，功能开发隔离</td>
+<td>2.6K</td>
+</tr>
+<tr class="even">
+<td><code>dispatching-parallel-agents</code></td>
+<td>并行 Agent 调度，2+ 独立任务时</td>
+<td>2.5K</td>
+</tr>
+<tr class="odd">
+<td><code>receiving-code-review</code></td>
+<td>接收代码审查反馈，实施建议前使用</td>
+<td>2.5K</td>
+</tr>
+<tr class="even">
+<td><code>finishing-a-development-branch</code></td>
+<td>完成开发分支，决定如何集成工作</td>
+<td>2.2K</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>安装示例</strong>：<code>npx skills add https://github.com/obra/superpowers --skill brainstorming</code></li>
+</ul>
+<p><strong>4. 其他常用 Skill</strong>：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>用途</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>git-master</code></td>
+<td>Git 操作专家</td>
+<td>OpenCode 内置</td>
+</tr>
+<tr class="even">
+<td><code>frontend-ui-ux</code></td>
+<td>UI/UX 设计能力</td>
+<td>OpenCode 内置</td>
+</tr>
+<tr class="odd">
+<td><code>systematic-debugging</code></td>
+<td>系统化调试</td>
+<td>obra/superpowers</td>
+</tr>
+<tr class="even">
+<td><code>playwright</code></td>
+<td>浏览器自动化测试</td>
+<td>社区贡献</td>
+</tr>
+<tr class="odd">
+<td><code>pdf</code></td>
+<td>PDF 操作</td>
+<td>社区贡献</td>
+</tr>
+<tr class="even">
+<td><code>docx</code></td>
+<td>Word 文档处理</td>
+<td>社区贡献</td>
+</tr>
+<tr class="odd">
+<td><code>pptx</code></td>
+<td>PPT 制作</td>
+<td>社区贡献</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Skill 设计核心原则</strong>：</p>
+<ol type="1">
+<li><strong>简洁是关键</strong>：上下文窗口是公共资源，只添加 Claude 没有的上下文</li>
+<li><strong>设置适当的自由度</strong>：
+<ul>
+<li><strong>高自由度</strong>（文本说明）：多种方法都有效时</li>
+<li><strong>中自由度</strong>（伪代码或参数化脚本）：有首选模式但允许变化时</li>
+<li><strong>低自由度</strong>（特定脚本）：操作易错或必须遵循特定序列时</li>
+</ul></li>
+<li><strong>渐进式披露</strong>：三级加载系统管理上下文
+<ul>
+<li>元数据（name + description）- 始终在上下文</li>
+<li>SKILL.md 正文 - Skill 触发时加载</li>
+<li>捆绑资源 - Claude 按需加载</li>
+</ul></li>
+</ol>
+<p><strong>Skill 创建流程</strong>（使用 skill-creator）：</p>
+<pre><code>1. 理解 Skill（通过具体例子）
+2. 规划可重用内容（脚本、参考资料、资源）
+3. 初始化 Skill（运行 init_skill.py）
+4. 编辑 Skill（实现资源和编写 SKILL.md）
+5. 打包 Skill（运行 package_skill.py）
+6. 根据实际使用迭代</code></pre>
+</section>
+<section id="全局规则global-rules" class="level4">
+<h4 class="anchored" data-anchor-id="全局规则global-rules">7.4 全局规则（Global Rules）</h4>
+<p><strong>创建规则文件</strong>：</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># .opencode/rules.md</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## 编码规范</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>使用 2 空格缩进</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>变量名使用 camelCase</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>函数名使用动词开头</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## 注释规范</span></span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>代码注释使用中文</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>复杂逻辑必须添加注释</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="练习题目-6" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-6">练习题目</h3>
+<ol type="1">
+<li><strong>配置练习</strong>：创建一个项目级配置文件，配置自定义模型和权限</li>
+<li><strong>Command 练习</strong>：创建两个自定义 Command（如 <code>/build</code> 和 <code>/deploy</code>）</li>
+<li><strong>Skill 练习</strong>：创建一个简单的 Skill 并将其应用到 Build Agent</li>
+<li><strong>规则练习</strong>：为项目创建 rules.md，定义编码规范</li>
+</ol>
+</section>
+<section id="参考资料-6" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-6">参考资料</h3>
+<ul>
+<li><a href="https://learnopencode.com/5-advanced/">OpenCode 官方文档 - 进阶手册</a></li>
+<li><a href="https://learnopencode.com/5-advanced/01a-config-basics.html">配置基础</a></li>
+<li><a href="https://learnopencode.com/5-advanced/01b-config-advanced.html">配置进阶</a></li>
+<li><a href="https://learnopencode.com/5-advanced/04-commands.html">快捷命令</a></li>
+<li><a href="https://learnopencode.com/5-advanced/03a-skills-basics.html">Skill 基础</a></li>
+<li><a href="https://learnopencode.com/5-advanced/03b-skills-advanced.html">Skill 进阶</a></li>
+<li><a href="https://learnopencode.com/2-daily/04-global-rules.html">全局提示词</a></li>
+<li><a href="https://mp.weixin.qq.com/s/Fdvb-Kl-7DkAGIKeCJZ9vw">Opencode+Skills</a></li>
+<li><a href="https://mp.weixin.qq.com/s/LUyHgdaByxZuDyCfSxolIA">一文读懂 Skills｜从概念到实操的完整指南</a></li>
+<li><strong>Skill 生态系统</strong>：
+<ul>
+<li><a href="https://skills.sh">skills.sh - Skill 市场和仓库</a></li>
+<li><a href="https://skills.sh/anthropics/skills/skill-creator">skill-creator - 创建 Skill 的官方指南</a></li>
+<li><a href="https://skills.sh/remotion-dev/skills/remotion-best-practices">remotion-best-practices - Remotion 视频开发最佳实践</a></li>
+<li><a href="https://skills.sh/obra/superpowers">superpowers - 开发工作流增强 Skill 集合</a></li>
+</ul></li>
+<li><strong>GitHub 仓库</strong>：
+<ul>
+<li><a href="https://github.com/anthropics/skills">anthropics/skills</a></li>
+<li><a href="https://github.com/remotion-dev/skills">remotion-dev/skills</a></li>
+<li><a href="https://github.com/obra/superpowers">obra/superpowers</a></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-8-章进阶工作流与最佳实践" class="level2">
+<h2 class="anchored" data-anchor-id="第-8-章进阶工作流与最佳实践">第 8 章：进阶工作流与最佳实践</h2>
+<section id="学习目标-7" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-7">学习目标</h3>
+<ul>
+<li>掌握高效的工作流技巧</li>
+<li>了解 OpenCode 最佳实践清单</li>
+<li>学会使用 ulw/ultrawork 触发词</li>
+<li>掌握进阶工作流模式</li>
+</ul>
+</section>
+<section id="学习内容-7" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-7">学习内容</h3>
+<section id="核心工作流" class="level4">
+<h4 class="anchored" data-anchor-id="核心工作流">8.1 核心工作流</h4>
+<p><strong>推荐核心工作流程</strong>：</p>
+<pre><code>进入项目目录 → 执行 /init 初始化 → 切换至 Plan 模式 → 
+添加 ulw 或 ultrawork 触发词 → 审阅方案 → 切换至 Build 模式 → 确认执行</code></pre>
+<p><strong>关键原则</strong>： - 先完成 Plan 阶段确认整体方案 - 再进入 Build 阶段实施 - 主动干预和精确引导可大幅降低返工成本</p>
+</section>
+<section id="ulw-ultrawork-触发词" class="level4">
+<h4 class="anchored" data-anchor-id="ulw-ultrawork-触发词">8.2 ulw / ultrawork 触发词</h4>
+<p><strong>使用场景</strong>： 在需求描述前添加 <code>ulw</code> 或 <code>ultrawork</code>，用于： - 复杂功能开发 - 完整模块实现 - 系统级重构</p>
+<p><strong>示例</strong>：</p>
+<pre><code>ultrawork 重构整个用户认证模块，要求：
+1. 使用 JWT 认证
+2. 支持刷新令牌
+3. 添加 Rate Limiting</code></pre>
+</section>
+<section id="进阶技巧清单" class="level4">
+<h4 class="anchored" data-anchor-id="进阶技巧清单">8.3 进阶技巧清单</h4>
+<p><strong>文件及代码行精准引用</strong>：</p>
+<pre><code>@文件名#L行号-行号
+@src/utils.ts#L10-20</code></pre>
+<p><strong>子 Agent 快速切换</strong>： - <code>Ctrl + x</code> + 方向键</p>
+<p><strong>模型快速切换</strong>： - <code>Ctrl + x</code> + <code>m</code></p>
+<p><strong>直接执行终端命令</strong>：</p>
+<pre><code>!npm run dev
+!git log --oneline -10</code></pre>
+<p><strong>全局规则文件</strong>： - 项目根目录创建 <code>.opencode/rules.md</code></p>
+<p><strong>Ralph Loop 自动迭代</strong>：</p>
+<pre><code>/ralph-loop 实现功能 X，通过所有测试</code></pre>
+<p><strong>编辑器集成模式</strong>： - 安装 OpenCode VSCode/Cursor 扩展</p>
+</section>
+<section id="进阶使用总结" class="level4">
+<h4 class="anchored" data-anchor-id="进阶使用总结">8.4 进阶使用总结</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th>场景</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>需要高质量、完整实现</td>
+<td>始终使用 ulw/ultrawork</td>
+</tr>
+<tr class="even">
+<td>需要控制方向、避免发散</td>
+<td>强制先执行 Plan 阶段</td>
+</tr>
+<tr class="odd">
+<td>需要针对性修改特定代码</td>
+<td>使用 <span class="citation" data-cites="文件">(<a href="#ref-文件" role="doc-biblioref"><strong>文件?</strong></a>)</span> #行号</td>
+</tr>
+<tr class="even">
+<td>处理中大型或多技术栈项目</td>
+<td>部署 Oh My OpenCode</td>
+</tr>
+<tr class="odd">
+<td>对当前模型表现不满意</td>
+<td>使用 Ctrl+x + m 切换模型</td>
+</tr>
+<tr class="even">
+<td>追求代码质量极致</td>
+<td>开启 /ralph_loop 模式</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="练习题目-7" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-7">练习题目</h3>
+<ol type="1">
+<li><strong>核心工作流练习</strong>：完整走一遍推荐的核心工作流程</li>
+<li><strong>ultrawork 练习</strong>：使用 ultrawork 触发词完成一个中等复杂度的任务</li>
+<li><strong>精准引用练习</strong>：使用 <code>@文件#L行号</code> 对特定代码段进行修改</li>
+<li><strong>模型切换练习</strong>：使用快捷键切换不同模型，观察回复差异</li>
+</ol>
+</section>
+<section id="参考资料-7" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-7">参考资料</h3>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/N8MMJ6FzS_ShSeNtlSGiHw">OpenCode 使用技巧（2026年1月）</a></li>
+<li><a href="https://mp.weixin.qq.com/s/xMvW6638Zc-s_t75f8k7xA">OpenCode系统性入门 10 | 效率倍增秘籍：OpenCode 最佳实践清单</a></li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="第三部分高级篇" class="level1">
+<h1>第三部分：高级篇</h1>
+<blockquote class="blockquote">
+<p><strong>目标</strong>：深度定制 OpenCode，构建个人专属工作流，实现团队协作</p>
+</blockquote>
+<hr>
+<section id="第-9-章高级定制" class="level2">
+<h2 class="anchored" data-anchor-id="第-9-章高级定制">第 9 章：高级定制</h2>
+<section id="学习目标-8" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-8">学习目标</h3>
+<ul>
+<li>掌握 Agent 系统的高级配置</li>
+<li>能够创建自定义 Agent</li>
+<li>掌握 Skill 的高级用法</li>
+<li>了解权限管控和安全配置</li>
+</ul>
+</section>
+<section id="学习内容-8" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-8">学习内容</h3>
+<section id="agent-系统高级配置" class="level4">
+<h4 class="anchored" data-anchor-id="agent-系统高级配置">9.1 Agent 系统高级配置</h4>
+<p><strong>Agent 配置结构</strong>：</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"agent"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"build"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"primary"</span><span class="fu">,</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"anthropic/claude-opus-4-5-thinking"</span><span class="fu">,</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"temperature"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">3</span><span class="fu">,</span></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"permission"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"edit"</span><span class="fu">:</span> <span class="st">"allow"</span><span class="fu">,</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"bash"</span><span class="fu">:</span> <span class="st">"allow"</span></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">},</span></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"maxSteps"</span><span class="fu">:</span> <span class="dv">50</span></span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">},</span></span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"plan"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"primary"</span><span class="fu">,</span></span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"anthropic/claude-opus-4-5-thinking"</span><span class="fu">,</span></span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"temperature"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"permission"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"edit"</span><span class="fu">:</span> <span class="st">"ask"</span><span class="fu">,</span></span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a>        <span class="dt">"bash"</span><span class="fu">:</span> <span class="st">"ask"</span></span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">}</span></span>
+<span id="cb45-21"><a href="#cb45-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb45-22"><a href="#cb45-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb45-23"><a href="#cb45-23" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>配置项说明</strong>： - <code>mode</code>：primary（主 Agent）或 sub（子 Agent） - <code>model</code>：模型格式 <code>provider/model-id</code> - <code>temperature</code>：随机性控制（0-1），越低越专注 - <code>permission.edit</code>：文件编辑权限（ask/allow/deny） - <code>permission.bash</code>：命令执行权限（ask/allow/deny） - <code>maxSteps</code>：最大工具调用次数</p>
+</section>
+<section id="创建自定义-agent" class="level4">
+<h4 class="anchored" data-anchor-id="创建自定义-agent">9.2 创建自定义 Agent</h4>
+<p><strong>步骤</strong>：</p>
+<ol type="1">
+<li><strong>定义 Agent</strong>：</li>
+</ol>
+<div class="sourceCode" id="cb46"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"agent"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"my-agent"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"mode"</span><span class="fu">:</span> <span class="st">"sub"</span><span class="fu">,</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"model"</span><span class="fu">:</span> <span class="st">"zhipu/glm-4.7"</span><span class="fu">,</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"temperature"</span><span class="fu">:</span> <span class="dv">0</span><span class="er">.</span><span class="dv">2</span><span class="fu">,</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"systemPrompt"</span><span class="fu">:</span> <span class="st">"你是前端开发专家，专注于 React 和 TypeScript..."</span><span class="fu">,</span></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>      <span class="dt">"skills"</span><span class="fu">:</span> <span class="ot">[</span><span class="st">"frontend-ui-ux"</span><span class="ot">,</span> <span class="st">"react-patterns"</span><span class="ot">]</span></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li><strong>调用 Agent</strong>：</li>
+</ol>
+<pre><code>@my-agent 请帮我分析这个组件的性能问题</code></pre>
+</section>
+<section id="skill-高级用法" class="level4">
+<h4 class="anchored" data-anchor-id="skill-高级用法">9.3 Skill 高级用法</h4>
+<p><strong>创建复杂 Skill</strong>：</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># .opencode/skills/code-review.yaml</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> code-review</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> 代码审查专家</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="fu">instructions</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>  当审查代码时，请按以下步骤：</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>  1. **理解代码**</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>     - 阅读代码，理解其功能和意图</span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>     - 识别使用的编程语言和框架</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a>  2. **检查问题**</span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a>     - [ ] 代码风格是否一致</span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a>     - [ ] 是否有潜在 Bug</span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>     - [ ] 是否有性能问题</span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a>     - [ ] 是否缺少错误处理</span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a>     - [ ] 是否缺少测试</span>
+<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a>  3. **输出审查报告**</span>
+<span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a>     - 严重问题（必须修复）</span>
+<span id="cb48-20"><a href="#cb48-20" aria-hidden="true" tabindex="-1"></a>     - 建议改进（可选）</span>
+<span id="cb48-21"><a href="#cb48-21" aria-hidden="true" tabindex="-1"></a>     - 正面反馈（做得好的地方）</span>
+<span id="cb48-22"><a href="#cb48-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-23"><a href="#cb48-23" aria-hidden="true" tabindex="-1"></a><span class="fu">examples</span><span class="kw">:</span></span>
+<span id="cb48-24"><a href="#cb48-24" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">input</span><span class="kw">:</span><span class="at"> </span><span class="st">"请审查这个函数"</span></span>
+<span id="cb48-25"><a href="#cb48-25" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">output</span><span class="kw">:</span><span class="at"> </span><span class="st">"审查报告..."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Skill 注入点</strong>： - Agent 级别：特定 Agent 使用 - 全局级别：所有 Agent 使用 - 任务级别：单次对话使用</p>
+</section>
+<section id="权限管控" class="level4">
+<h4 class="anchored" data-anchor-id="权限管控">9.4 权限管控</h4>
+<p><strong>权限配置</strong>：</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"permission"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"edit"</span><span class="fu">:</span> <span class="st">"ask"</span><span class="fu">,</span>    <span class="er">//</span> <span class="er">写文件前询问</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"bash"</span><span class="fu">:</span> <span class="st">"ask"</span><span class="fu">,</span>    <span class="er">//</span> <span class="er">执行命令前询问</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"read"</span><span class="fu">:</span> <span class="st">"allow"</span><span class="fu">,</span>  <span class="er">//</span> <span class="er">读取文件允许</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"webfetch"</span><span class="fu">:</span> <span class="st">"ask"</span> <span class="er">//</span> <span class="er">获取网页前询问</span></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>安全最佳实践</strong>： - 对敏感操作使用 <code>ask</code> 模式 - 为不同项目设置不同的权限级别 - 定期审查和更新权限配置</p>
+</section>
+</section>
+<section id="练习题目-8" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-8">练习题目</h3>
+<ol type="1">
+<li><strong>Agent 配置练习</strong>：创建一个自定义子 Agent，配置特定的 systemPrompt 和 skills</li>
+<li><strong>复杂 Skill 练习</strong>：创建一个包含 checklist 的代码审查 Skill</li>
+<li><strong>权限配置练习</strong>：为项目配置分层权限（敏感操作为 ask，普通操作为 allow）</li>
+<li><strong>组合练习</strong>：创建一套完整的自定义 Agent + Skill + 权限配置</li>
+</ol>
+</section>
+<section id="参考资料-8" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-8">参考资料</h3>
+<ul>
+<li><a href="https://learnopencode.com/5-advanced/02a-agent-quickstart.html">OpenCode 官方文档 - Agent 系统</a></li>
+<li><a href="https://learnopencode.com/5-advanced/02b-agent-patterns.html">Agent 设计模式</a></li>
+<li><a href="https://learnopencode.com/5-advanced/02c-agent-permissions.html">Agent 权限与安全</a></li>
+<li><a href="https://learnopencode.com/5-advanced/02d-agent-advanced.html">Agent 高级技巧</a></li>
+<li><a href="https://learnopencode.com/5-advanced/05-permissions.html">权限管控</a></li>
+<li><a href="https://github.com/vercel-labs/add-skill">add-skill GitHub</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-10-章高级工作流" class="level2">
+<h2 class="anchored" data-anchor-id="第-10-章高级工作流">第 10 章：高级工作流</h2>
+<section id="学习目标-9" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-9">学习目标</h3>
+<ul>
+<li>了解 Claude Code 之父的工作流</li>
+<li>掌握 13 条高级使用技巧</li>
+<li>学习黑客松冠军的配置方案</li>
+<li>能够构建可复制的 Claude Code 配置</li>
+</ul>
+</section>
+<section id="学习内容-9" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-9">学习内容</h3>
+<section id="claude-code-之父的工作流" class="level4">
+<h4 class="anchored" data-anchor-id="claude-code-之父的工作流">10.1 Claude Code 之父的工作流</h4>
+<p><strong>核心原则</strong>： 1. <strong>Think first, code later</strong> - 先思考，后编码 2. <strong>Small steps, big wins</strong> - 小步快跑，积小胜为大胜 3. <strong>Trust but verify</strong> - 信任但要验证</p>
+<p><strong>工作流模式</strong>：</p>
+<pre><code>1. 深度理解需求（与 AI 充分沟通）
+2. 制定详细方案（Plan 模式）
+3. 分步实施（Build 模式）
+4. 持续验证（测试和审查）
+5. 迭代优化（Ralph Loop）</code></pre>
+</section>
+<section id="条高级使用技巧" class="level4">
+<h4 class="anchored" data-anchor-id="条高级使用技巧">10.2 13 条高级使用技巧</h4>
+<p><strong>技巧清单</strong>：</p>
+<ol type="1">
+<li><strong>使用 AGENTS.md 固化项目规范</strong>
+<ul>
+<li>在项目根目录创建 AGENTS.md</li>
+<li>包含项目架构、编码规范、常用命令</li>
+</ul></li>
+<li><strong>善用 @ 引用精确代码</strong>
+<ul>
+<li><code>@文件名#L行号</code> 引用特定代码行</li>
+<li><code>@文件名</code> 引用整个文件</li>
+</ul></li>
+<li><strong>活用 ! 执行命令</strong>
+<ul>
+<li>在对话中直接执行命令</li>
+<li>查看命令输出并继续对话</li>
+</ul></li>
+<li><strong>Plan/Build 模式切换</strong>
+<ul>
+<li>复杂任务先用 Plan 分析</li>
+<li>确认方案后切 Build 执行</li>
+</ul></li>
+<li><strong>自定义 Command 加速常用操作</strong>
+<ul>
+<li>将常用命令封装为 /command</li>
+<li>如 <code>/test</code>、<code>/lint</code>、<code>/deploy</code></li>
+</ul></li>
+<li><strong>使用 Skill 封装复杂逻辑</strong>
+<ul>
+<li>将重复性工作封装为 Skill</li>
+<li>在需要时注入 Skill</li>
+</ul></li>
+<li><strong>配置多个模型灵活切换</strong>
+<ul>
+<li>不同任务使用不同模型</li>
+<li>快捷键 <code>Ctrl+x, m</code> 快速切换</li>
+</ul></li>
+<li><strong>利用 Ralph Loop 自动迭代</strong>
+<ul>
+<li>适合有明确完成标准的任务</li>
+<li>设置合理的最大迭代次数</li>
+</ul></li>
+<li><strong>使用 glob/grep 批量处理</strong>
+<ul>
+<li><code>glob **/*.ts</code> 查找所有 TS 文件</li>
+<li><code>grep pattern</code> 搜索代码内容</li>
+</ul></li>
+<li><strong>配置全局规则统一风格</strong>
+<ul>
+<li>使用 .opencode/rules.md</li>
+<li>统一代码风格和规范</li>
+</ul></li>
+<li><strong>活用 undo 回滚错误操作</strong>
+<ul>
+<li><code>/undo</code> 撤销最近一次更改</li>
+<li>需要 Git 仓库支持</li>
+</ul></li>
+<li><strong>使用子 Agent 分工协作</strong>
+<ul>
+<li>不同子 Agent 负责不同领域</li>
+<li><span class="citation" data-cites="agent">(<a href="#ref-agent" role="doc-biblioref"><strong>agent?</strong></a>)</span> 调用特定专家</li>
+</ul></li>
+<li><strong>定期压缩会话保持效率</strong>
+<ul>
+<li>长对话会降低 AI 效率</li>
+<li>使用上下文压缩功能</li>
+</ul></li>
+</ol>
+</section>
+<section id="黑客松冠军配置方案" class="level4">
+<h4 class="anchored" data-anchor-id="黑客松冠军配置方案">10.3 黑客松冠军配置方案</h4>
+<p><strong>CLAUDE.md 模板</strong>：</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># CLAUDE.md</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## 项目概述</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>项目名称：XXX</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>技术栈：React + TypeScript + Node.js</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>架构模式：MVC / 微服务 / 单体</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## 编码规范</span></span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>缩进：2 空格</span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>变量命名：camelCase</span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>函数命名：动词开头</span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>注释语言：中文</span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## 常用命令</span></span>
+<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`npm run dev`</span>：启动开发服务器</span>
+<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`npm test`</span>：运行测试</span>
+<span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`npm run build`</span>：构建项目</span>
+<span id="cb51-18"><a href="#cb51-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-19"><a href="#cb51-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## 目录结构</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Rules.md 模板</strong>：</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Rules</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## 代码风格</span></span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>优先可读性，做最简单的修改</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>禁止使用 <span class="in">`any`</span> 类型</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>删除未使用的代码，不要注释掉</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## 工作流</span></span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>任何非平凡任务，先制定计划再动手</span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>修改代码前必须先阅读相关文件</span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>修改完成后自行运行测试验证</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="可复制的配置方案" class="level4">
+<h4 class="anchored" data-anchor-id="可复制的配置方案">10.4 可复制的配置方案</h4>
+<p><strong>完整配置结构</strong>：</p>
+<pre><code>项目根目录/
+├── .opencode/
+│   ├── config.json       # 项目级配置
+│   ├── rules.md          # 全局规则
+│   ├── AGENTS.md         # 项目文档
+│   └── skills/           # 自定义 Skill
+│       ├── code-review.yaml
+│       └── frontend.yaml
+└── CLAUDE.md             # Claude Code 配置</code></pre>
+</section>
+</section>
+<section id="练习题目-9" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-9">练习题目</h3>
+<ol type="1">
+<li><strong>工作流实践</strong>：完整实施 Claude Code 之父的工作流完成一个任务</li>
+<li><strong>AGENTS.md 练习</strong>：为你的项目创建一份完整的 AGENTS.md</li>
+<li><strong>13 条技巧实践</strong>：选择 5 条技巧在日常工作中实践一周</li>
+<li><strong>完整配置练习</strong>：搭建一套完整的配置方案（CLAUDE.md + Rules + Commands + Skills）</li>
+</ol>
+</section>
+<section id="参考资料-9" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-9">参考资料</h3>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/fSAgfe2V9dUQimAkrPauqQ">Claude Code 之父的工作流</a></li>
+<li><a href="https://mp.weixin.qq.com/s/IkuvTvtwIYL5tTSVZnW9sQ">Claude Code创始人亲授13条使用技巧</a></li>
+<li><a href="https://mp.weixin.qq.com/s/LR_NEQ2Lbuldzp-IhsmHBQ">黑客松冠军开源ClaudeCode配置指南</a></li>
+<li><a href="https://github.com/affaan-m/everything-claude-code">everything-claude-code GitHub</a></li>
+<li><a href="https://mp.weixin.qq.com/s/X8K2z-sEdM9iI3M3F6UHJg">一套可复制的 Claude Code 配置方案：CLAUDE.md、Rules、Commands、Hooks</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-11-章团队工作流" class="level2">
+<h2 class="anchored" data-anchor-id="第-11-章团队工作流">第 11 章：团队工作流</h2>
+<section id="学习目标-10" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-10">学习目标</h3>
+<ul>
+<li>了解团队使用 OpenCode 的最佳实践</li>
+<li>掌握项目级配置共享方法</li>
+<li>学会使用 GitHub/GitLab 集成</li>
+<li>了解企业版特性</li>
+</ul>
+</section>
+<section id="学习内容-10" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-10">学习内容</h3>
+<section id="团队配置共享" class="level4">
+<h4 class="anchored" data-anchor-id="团队配置共享">11.1 团队配置共享</h4>
+<p><strong>版本控制配置</strong>：</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 将 .opencode/ 目录加入版本控制</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .opencode/</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add OpenCode configuration"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>配置分层策略</strong>： - <strong>全局配置</strong>：个人偏好（<code>~/.opencode/config.json</code>） - <strong>项目配置</strong>：团队规范（<code>项目/.opencode/config.json</code>） - <strong>本地覆盖</strong>：个人临时调整（不提交到版本控制）</p>
+</section>
+<section id="github-集成" class="level4">
+<h4 class="anchored" data-anchor-id="github-集成">11.2 GitHub 集成</h4>
+<p><strong>配置 GitHub 集成</strong>：</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"github"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"token"</span><span class="fu">:</span> <span class="st">"ghp_xxxxxxxxxxxx"</span></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>常用功能</strong>： - 查看和创建 Issue - 查看和合并 PR - 查看仓库信息 - 触发 CI/CD 流程</p>
+</section>
+<section id="gitlab-集成" class="level4">
+<h4 class="anchored" data-anchor-id="gitlab-集成">11.3 GitLab 集成</h4>
+<p><strong>配置 GitLab 集成</strong>：</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"gitlab"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"enabled"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"url"</span><span class="fu">:</span> <span class="st">"https://gitlab.com"</span><span class="fu">,</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"token"</span><span class="fu">:</span> <span class="st">"glpat-xxxxxxxxxxxx"</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="会话分享" class="level4">
+<h4 class="anchored" data-anchor-id="会话分享">11.4 会话分享</h4>
+<p><strong>导出对话</strong>：</p>
+<pre><code>/export</code></pre>
+<p><strong>分享对话</strong>： - 导出为 Markdown 格式 - 通过链接分享 - 团队内部分享最佳实践</p>
+</section>
+<section id="企业版特性" class="level4">
+<h4 class="anchored" data-anchor-id="企业版特性">11.5 企业版特性</h4>
+<p><strong>企业版功能</strong>（了解）： - 团队管理 - 集中配置管理 - 审计日志 - SSO 集成 - 高级安全策略</p>
+</section>
+</section>
+<section id="练习题目-10" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-10">练习题目</h3>
+<ol type="1">
+<li><strong>配置共享练习</strong>：创建一个项目级配置并提交到 Git</li>
+<li><strong>GitHub 集成练习</strong>：配置 GitHub 集成，尝试查看 Issues</li>
+<li><strong>会话分享练习</strong>：导出一个有价值的对话并分享给团队成员</li>
+<li><strong>团队协作练习</strong>：与团队成员共同使用 OpenCode 完成一个小功能</li>
+</ol>
+</section>
+<section id="参考资料-10" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-10">参考资料</h3>
+<ul>
+<li><a href="https://learnopencode.com/5-advanced/14-github.html">GitHub 集成</a></li>
+<li><a href="https://learnopencode.com/5-advanced/15-gitlab.html">GitLab 集成</a></li>
+<li><a href="https://learnopencode.com/5-advanced/16-share.html">会话分享</a></li>
+<li><a href="https://learnopencode.com/5-advanced/11-enterprise.html">企业版功能</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="附录" class="level2">
+<h2 class="anchored" data-anchor-id="附录">附录</h2>
+<section id="a.-快捷键速查表" class="level3">
+<h3 class="anchored" data-anchor-id="a.-快捷键速查表">A. 快捷键速查表</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Tab</code></td>
+<td>切换 Plan/Build 模式</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl + x, a</code></td>
+<td>显示 Agent 列表</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl + x, m</code></td>
+<td>切换模型</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl + x, 方向键</code></td>
+<td>切换子会话</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl + n</code></td>
+<td>新建对话</td>
+</tr>
+<tr class="even">
+<td><code>Ctrl + p</code></td>
+<td>上一个对话</td>
+</tr>
+<tr class="odd">
+<td><code>Ctrl + c</code></td>
+<td>取消当前操作</td>
+</tr>
+<tr class="even">
+<td><code>Shift + Tab</code></td>
+<td>反向切换 Agent</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.-斜杠命令速查表" class="level3">
+<h3 class="anchored" data-anchor-id="b.-斜杠命令速查表">B. 斜杠命令速查表</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/help</code></td>
+<td>显示帮助</td>
+</tr>
+<tr class="even">
+<td><code>/init</code></td>
+<td>初始化项目</td>
+</tr>
+<tr class="odd">
+<td><code>/undo</code></td>
+<td>撤销上次更改</td>
+</tr>
+<tr class="even">
+<td><code>/clear</code></td>
+<td>清空对话</td>
+</tr>
+<tr class="odd">
+<td><code>/new</code></td>
+<td>新建对话</td>
+</tr>
+<tr class="even">
+<td><code>/ralph-loop</code></td>
+<td>启动 Ralph Loop</td>
+</tr>
+<tr class="odd">
+<td><code>/export</code></td>
+<td>导出对话</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="c.-核心学习资源索引" class="level3">
+<h3 class="anchored" data-anchor-id="c.-核心学习资源索引">C. 核心学习资源索引</h3>
+<p><strong>官方文档</strong>： - <a href="https://learnopencode.com/">OpenCode 中文教程</a> - <a href="https://learnopencode.com/1-start/">快速起步</a> - <a href="https://learnopencode.com/2-daily/">日常使用</a> - <a href="https://learnopencode.com/3-workflow/">高效工作流</a> - <a href="https://learnopencode.com/4-scenarios/">场景实战</a> - <a href="https://learnopencode.com/5-advanced/">进阶手册</a> - <a href="https://learnopencode.com/appendix/">速查手册</a></p>
+<p><strong>深度文章</strong>： - <a href="https://mp.weixin.qq.com/s/6oZoNsOHA4SSYZ7LgyvroA">Oh-My-OpenCode 增强外挂</a> - <a href="https://mp.weixin.qq.com/s/8t2XKsQ69u4lzjtZCibSiA">Ralph Loop 自动闭环</a> - <a href="https://mp.weixin.qq.com/s/fSAgfe2V9dUQimAkrPauqQ">Claude Code 之父的工作流</a> - <a href="https://mp.weixin.qq.com/s/xMvW6638Zc-s_t75f8k7xA">OpenCode 最佳实践清单</a></p>
+<p><strong>GitHub 资源</strong>： - <a href="https://github.com/code-yeongyu/oh-my-opencode">oh-my-opencode</a> - <a href="https://github.com/rot13maxi/opencode-ralph">opencode-ralph</a> - <a href="https://github.com/vercel-labs/add-skill">add-skill</a> - <a href="https://github.com/affaan-m/everything-claude-code">everything-claude-code</a></p>
+<hr>
+</section>
+</section>
+<section id="学习路径总结" class="level2">
+<h2 class="anchored" data-anchor-id="学习路径总结">学习路径总结</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                         学习路径总览                              │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐          │
+│  │  初级篇     │ →  │  进阶篇     │ →  │  高级篇     │          │
+│  │  (基础)     │    │  (效率)     │    │  (专家)     │          │
+│  └─────────────┘    └─────────────┘    └─────────────┘          │
+│        │                  │                  │                  │
+│   安装与起步          Oh My OpenCode      高级定制              │
+│   基础操作            Ralph Loop          高级工作流            │
+│   基础工作流          扩展任务            团队工作流            │
+│                       定制配置                                  │
+│                       进阶工作流                                │
+│                                                                  │
+│  预计学习时间：2-4 周                                             │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<hr>
+</section>
+<section id="引用信息" class="level2">
+<h2 class="anchored" data-anchor-id="引用信息">引用信息</h2>
+<p>引用本文请注明以下信息。</p>
+<pre><code>@article{lj_opencode2026,
+  author = {龙军},
+  title = {opencode学习路径},
+  year = {2026},
+  url = {https://jdragonnudt.github.io/inspiraHub/myblog/posts/opencode-learning-path/},
+}</code></pre>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="jdragonnudt/inspiraHub" data-repo-id="R_kgDOMGN2Lg" data-category="General" data-category-id="DIC_kwDOMGN2Ls4Cf8Yq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2024, by jdragon. 本网站所有内容采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA许可，知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
