@@ -1,0 +1,2472 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="jdragon">
+<meta name="dcterms.date" content="2026-02-02">
+
+<title>数智启思 - claude code学习路径</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">数智启思</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../AIengineerBook/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../myblog/index.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/jdragonnudt/inspiraHub" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">claude code学习路径</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">软件工程师</div>
+                <div class="quarto-category">AI编程</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>jdragon </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 2, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#claude-code-完整学习路径" id="toc-claude-code-完整学习路径" class="nav-link active" data-scroll-target="#claude-code-完整学习路径">Claude Code 完整学习路径</a>
+  <ul>
+  <li><a href="#目录" id="toc-目录" class="nav-link" data-scroll-target="#目录">目录</a></li>
+  </ul></li>
+  <li><a href="#序言为什么是-claude-code" id="toc-序言为什么是-claude-code" class="nav-link" data-scroll-target="#序言为什么是-claude-code">序言：为什么是 Claude Code</a>
+  <ul>
+  <li><a href="#什么是-claude-code" id="toc-什么是-claude-code" class="nav-link" data-scroll-target="#什么是-claude-code">什么是 Claude Code</a></li>
+  <li><a href="#使用-claude-code-的好处" id="toc-使用-claude-code-的好处" class="nav-link" data-scroll-target="#使用-claude-code-的好处">使用 Claude Code 的好处</a>
+  <ul class="collapse">
+  <li><a href="#显著提升开发效率" id="toc-显著提升开发效率" class="nav-link" data-scroll-target="#显著提升开发效率">1. 显著提升开发效率</a></li>
+  <li><a href="#降低认知负担" id="toc-降低认知负担" class="nav-link" data-scroll-target="#降低认知负担">2. 降低认知负担</a></li>
+  <li><a href="#提升代码质量" id="toc-提升代码质量" class="nav-link" data-scroll-target="#提升代码质量">3. 提升代码质量</a></li>
+  <li><a href="#支持团队协作" id="toc-支持团队协作" class="nav-link" data-scroll-target="#支持团队协作">4. 支持团队协作</a></li>
+  </ul></li>
+  <li><a href="#claude-code-的核心优势" id="toc-claude-code-的核心优势" class="nav-link" data-scroll-target="#claude-code-的核心优势">Claude Code 的核心优势</a>
+  <ul class="collapse">
+  <li><a href="#原生-claude-模型集成" id="toc-原生-claude-模型集成" class="nav-link" data-scroll-target="#原生-claude-模型集成">1. 原生 Claude 模型集成</a></li>
+  <li><a href="#plan-模式工作流" id="toc-plan-模式工作流" class="nav-link" data-scroll-target="#plan-模式工作流">2. Plan 模式工作流</a></li>
+  <li><a href="#深度代码库理解" id="toc-深度代码库理解" class="nav-link" data-scroll-target="#深度代码库理解">3. 深度代码库理解</a></li>
+  <li><a href="#丰富的扩展生态" id="toc-丰富的扩展生态" class="nav-link" data-scroll-target="#丰富的扩展生态">4. 丰富的扩展生态</a></li>
+  <li><a href="#官方品质保障" id="toc-官方品质保障" class="nav-link" data-scroll-target="#官方品质保障">5. 官方品质保障</a></li>
+  <li><a href="#多平台支持" id="toc-多平台支持" class="nav-link" data-scroll-target="#多平台支持">6. 多平台支持</a></li>
+  </ul></li>
+  <li><a href="#claude-code-vs-opencode如何选择" id="toc-claude-code-vs-opencode如何选择" class="nav-link" data-scroll-target="#claude-code-vs-opencode如何选择">Claude Code vs OpenCode：如何选择</a>
+  <ul class="collapse">
+  <li><a href="#功能对比" id="toc-功能对比" class="nav-link" data-scroll-target="#功能对比">功能对比</a></li>
+  <li><a href="#适用场景建议" id="toc-适用场景建议" class="nav-link" data-scroll-target="#适用场景建议">适用场景建议</a></li>
+  <li><a href="#两者并非对立" id="toc-两者并非对立" class="nav-link" data-scroll-target="#两者并非对立">两者并非对立</a></li>
+  </ul></li>
+  <li><a href="#谁适合使用-claude-code" id="toc-谁适合使用-claude-code" class="nav-link" data-scroll-target="#谁适合使用-claude-code">谁适合使用 Claude Code</a>
+  <ul class="collapse">
+  <li><a href="#开发者" id="toc-开发者" class="nav-link" data-scroll-target="#开发者">开发者</a></li>
+  <li><a href="#技术管理者" id="toc-技术管理者" class="nav-link" data-scroll-target="#技术管理者">技术管理者</a></li>
+  <li><a href="#其他技术人员" id="toc-其他技术人员" class="nav-link" data-scroll-target="#其他技术人员">其他技术人员</a></li>
+  </ul></li>
+  <li><a href="#学习路径概述" id="toc-学习路径概述" class="nav-link" data-scroll-target="#学习路径概述">学习路径概述</a></li>
+  <li><a href="#开始之前" id="toc-开始之前" class="nav-link" data-scroll-target="#开始之前">开始之前</a></li>
+  </ul></li>
+  <li><a href="#第一部分初级篇" id="toc-第一部分初级篇" class="nav-link" data-scroll-target="#第一部分初级篇">第一部分：初级篇</a>
+  <ul>
+  <li><a href="#第-1-章安装与起步" id="toc-第-1-章安装与起步" class="nav-link" data-scroll-target="#第-1-章安装与起步">第 1 章：安装与起步</a>
+  <ul class="collapse">
+  <li><a href="#学习目标" id="toc-学习目标" class="nav-link" data-scroll-target="#学习目标">学习目标</a></li>
+  <li><a href="#学习内容" id="toc-学习内容" class="nav-link" data-scroll-target="#学习内容">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#claude-code-简介" id="toc-claude-code-简介" class="nav-link" data-scroll-target="#claude-code-简介">1.1 Claude Code 简介</a></li>
+  <li><a href="#安装步骤" id="toc-安装步骤" class="nav-link" data-scroll-target="#安装步骤">1.2 安装步骤</a></li>
+  <li><a href="#认证配置" id="toc-认证配置" class="nav-link" data-scroll-target="#认证配置">1.3 认证配置</a></li>
+  <li><a href="#第一次对话" id="toc-第一次对话" class="nav-link" data-scroll-target="#第一次对话">1.4 第一次对话</a></li>
+  </ul></li>
+  <li><a href="#练习题目" id="toc-练习题目" class="nav-link" data-scroll-target="#练习题目">练习题目</a></li>
+  <li><a href="#参考资料" id="toc-参考资料" class="nav-link" data-scroll-target="#参考资料">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-2-章基础操作" id="toc-第-2-章基础操作" class="nav-link" data-scroll-target="#第-2-章基础操作">第 2 章：基础操作</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-1" id="toc-学习目标-1" class="nav-link" data-scroll-target="#学习目标-1">学习目标</a></li>
+  <li><a href="#学习内容-1" id="toc-学习内容-1" class="nav-link" data-scroll-target="#学习内容-1">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#界面导览" id="toc-界面导览" class="nav-link" data-scroll-target="#界面导览">2.1 界面导览</a></li>
+  <li><a href="#核心语法" id="toc-核心语法" class="nav-link" data-scroll-target="#核心语法">2.2 核心语法</a></li>
+  <li><a href="#斜杠命令" id="toc-斜杠命令" class="nav-link" data-scroll-target="#斜杠命令">2.3 斜杠命令</a></li>
+  <li><a href="#plan-模式详解" id="toc-plan-模式详解" class="nav-link" data-scroll-target="#plan-模式详解">2.4 Plan 模式详解</a></li>
+  </ul></li>
+  <li><a href="#练习题目-1" id="toc-练习题目-1" class="nav-link" data-scroll-target="#练习题目-1">练习题目</a></li>
+  <li><a href="#参考资料-1" id="toc-参考资料-1" class="nav-link" data-scroll-target="#参考资料-1">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-3-章基础工作流" id="toc-第-3-章基础工作流" class="nav-link" data-scroll-target="#第-3-章基础工作流">第 3 章：基础工作流</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-2" id="toc-学习目标-2" class="nav-link" data-scroll-target="#学习目标-2">学习目标</a></li>
+  <li><a href="#学习内容-2" id="toc-学习内容-2" class="nav-link" data-scroll-target="#学习内容-2">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#plan-模式-vs-工作模式" id="toc-plan-模式-vs-工作模式" class="nav-link" data-scroll-target="#plan-模式-vs-工作模式">3.1 Plan 模式 vs 工作模式</a></li>
+  <li><a href="#标准开发工作流" id="toc-标准开发工作流" class="nav-link" data-scroll-target="#标准开发工作流">3.2 标准开发工作流</a></li>
+  <li><a href="#claude.md-配置" id="toc-claude.md-配置" class="nav-link" data-scroll-target="#claude.md-配置">3.3 CLAUDE.md 配置</a></li>
+  <li><a href="#文件操作技巧" id="toc-文件操作技巧" class="nav-link" data-scroll-target="#文件操作技巧">3.4 文件操作技巧</a></li>
+  </ul></li>
+  <li><a href="#练习题目-2" id="toc-练习题目-2" class="nav-link" data-scroll-target="#练习题目-2">练习题目</a></li>
+  <li><a href="#参考资料-2" id="toc-参考资料-2" class="nav-link" data-scroll-target="#参考资料-2">参考资料</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#第二部分进阶篇" id="toc-第二部分进阶篇" class="nav-link" data-scroll-target="#第二部分进阶篇">第二部分：进阶篇</a>
+  <ul>
+  <li><a href="#第-4-章高级功能与技巧" id="toc-第-4-章高级功能与技巧" class="nav-link" data-scroll-target="#第-4-章高级功能与技巧">第 4 章：高级功能与技巧</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-3" id="toc-学习目标-3" class="nav-link" data-scroll-target="#学习目标-3">学习目标</a></li>
+  <li><a href="#学习内容-3" id="toc-学习内容-3" class="nav-link" data-scroll-target="#学习内容-3">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#高级使用技巧" id="toc-高级使用技巧" class="nav-link" data-scroll-target="#高级使用技巧">4.1 高级使用技巧</a></li>
+  <li><a href="#代码分析与重构" id="toc-代码分析与重构" class="nav-link" data-scroll-target="#代码分析与重构">4.2 代码分析与重构</a></li>
+  <li><a href="#调试技巧" id="toc-调试技巧" class="nav-link" data-scroll-target="#调试技巧">4.3 调试技巧</a></li>
+  <li><a href="#web-版和桌面版" id="toc-web-版和桌面版" class="nav-link" data-scroll-target="#web-版和桌面版">4.4 Web 版和桌面版</a></li>
+  </ul></li>
+  <li><a href="#练习题目-3" id="toc-练习题目-3" class="nav-link" data-scroll-target="#练习题目-3">练习题目</a></li>
+  <li><a href="#参考资料-3" id="toc-参考资料-3" class="nav-link" data-scroll-target="#参考资料-3">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-5-章skills-系统" id="toc-第-5-章skills-系统" class="nav-link" data-scroll-target="#第-5-章skills-系统">第 5 章：Skills 系统</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-4" id="toc-学习目标-4" class="nav-link" data-scroll-target="#学习目标-4">学习目标</a></li>
+  <li><a href="#学习内容-4" id="toc-学习内容-4" class="nav-link" data-scroll-target="#学习内容-4">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#skills-简介" id="toc-skills-简介" class="nav-link" data-scroll-target="#skills-简介">5.1 Skills 简介</a></li>
+  <li><a href="#安装-skills" id="toc-安装-skills" class="nav-link" data-scroll-target="#安装-skills">5.2 安装 Skills</a></li>
+  <li><a href="#常用-skills-介绍" id="toc-常用-skills-介绍" class="nav-link" data-scroll-target="#常用-skills-介绍">5.3 常用 Skills 介绍</a></li>
+  <li><a href="#使用-skills" id="toc-使用-skills" class="nav-link" data-scroll-target="#使用-skills">5.4 使用 Skills</a></li>
+  </ul></li>
+  <li><a href="#练习题目-4" id="toc-练习题目-4" class="nav-link" data-scroll-target="#练习题目-4">练习题目</a></li>
+  <li><a href="#参考资料-4" id="toc-参考资料-4" class="nav-link" data-scroll-target="#参考资料-4">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-6-章自定义-commands" id="toc-第-6-章自定义-commands" class="nav-link" data-scroll-target="#第-6-章自定义-commands">第 6 章：自定义 Commands</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-5" id="toc-学习目标-5" class="nav-link" data-scroll-target="#学习目标-5">学习目标</a></li>
+  <li><a href="#学习内容-5" id="toc-学习内容-5" class="nav-link" data-scroll-target="#学习内容-5">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#什么是自定义-commands" id="toc-什么是自定义-commands" class="nav-link" data-scroll-target="#什么是自定义-commands">6.1 什么是自定义 Commands</a></li>
+  <li><a href="#创建自定义-commands" id="toc-创建自定义-commands" class="nav-link" data-scroll-target="#创建自定义-commands">6.2 创建自定义 Commands</a></li>
+  <li><a href="#常用-commands-示例" id="toc-常用-commands-示例" class="nav-link" data-scroll-target="#常用-commands-示例">6.3 常用 Commands 示例</a></li>
+  <li><a href="#commands-高级用法" id="toc-commands-高级用法" class="nav-link" data-scroll-target="#commands-高级用法">6.4 Commands 高级用法</a></li>
+  </ul></li>
+  <li><a href="#练习题目-5" id="toc-练习题目-5" class="nav-link" data-scroll-target="#练习题目-5">练习题目</a></li>
+  <li><a href="#参考资料-5" id="toc-参考资料-5" class="nav-link" data-scroll-target="#参考资料-5">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-7-章扩展任务与自动化" id="toc-第-7-章扩展任务与自动化" class="nav-link" data-scroll-target="#第-7-章扩展任务与自动化">第 7 章：扩展任务与自动化</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-6" id="toc-学习目标-6" class="nav-link" data-scroll-target="#学习目标-6">学习目标</a></li>
+  <li><a href="#学习内容-6" id="toc-学习内容-6" class="nav-link" data-scroll-target="#学习内容-6">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#文档写作工作流" id="toc-文档写作工作流" class="nav-link" data-scroll-target="#文档写作工作流">7.1 文档写作工作流</a></li>
+  <li><a href="#办公效率提升" id="toc-办公效率提升" class="nav-link" data-scroll-target="#办公效率提升">7.2 办公效率提升</a></li>
+  <li><a href="#自动化工作流" id="toc-自动化工作流" class="nav-link" data-scroll-target="#自动化工作流">7.3 自动化工作流</a></li>
+  </ul></li>
+  <li><a href="#练习题目-6" id="toc-练习题目-6" class="nav-link" data-scroll-target="#练习题目-6">练习题目</a></li>
+  <li><a href="#参考资料-6" id="toc-参考资料-6" class="nav-link" data-scroll-target="#参考资料-6">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-8-章进阶工作流与最佳实践" id="toc-第-8-章进阶工作流与最佳实践" class="nav-link" data-scroll-target="#第-8-章进阶工作流与最佳实践">第 8 章：进阶工作流与最佳实践</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-7" id="toc-学习目标-7" class="nav-link" data-scroll-target="#学习目标-7">学习目标</a></li>
+  <li><a href="#学习内容-7" id="toc-学习内容-7" class="nav-link" data-scroll-target="#学习内容-7">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#核心工作流" id="toc-核心工作流" class="nav-link" data-scroll-target="#核心工作流">8.1 核心工作流</a></li>
+  <li><a href="#条高级使用技巧" id="toc-条高级使用技巧" class="nav-link" data-scroll-target="#条高级使用技巧">8.2 13 条高级使用技巧</a></li>
+  <li><a href="#问题排查" id="toc-问题排查" class="nav-link" data-scroll-target="#问题排查">8.3 问题排查</a></li>
+  </ul></li>
+  <li><a href="#练习题目-7" id="toc-练习题目-7" class="nav-link" data-scroll-target="#练习题目-7">练习题目</a></li>
+  <li><a href="#参考资料-7" id="toc-参考资料-7" class="nav-link" data-scroll-target="#参考资料-7">参考资料</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#第三部分高级篇" id="toc-第三部分高级篇" class="nav-link" data-scroll-target="#第三部分高级篇">第三部分：高级篇</a>
+  <ul>
+  <li><a href="#第-9-章高级定制" id="toc-第-9-章高级定制" class="nav-link" data-scroll-target="#第-9-章高级定制">第 9 章：高级定制</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-8" id="toc-学习目标-8" class="nav-link" data-scroll-target="#学习目标-8">学习目标</a></li>
+  <li><a href="#学习内容-8" id="toc-学习内容-8" class="nav-link" data-scroll-target="#学习内容-8">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#配置系统详解" id="toc-配置系统详解" class="nav-link" data-scroll-target="#配置系统详解">9.1 配置系统详解</a></li>
+  <li><a href="#高级设置" id="toc-高级设置" class="nav-link" data-scroll-target="#高级设置">9.2 高级设置</a></li>
+  <li><a href="#claude.md-高级写法" id="toc-claude.md-高级写法" class="nav-link" data-scroll-target="#claude.md-高级写法">9.3 CLAUDE.md 高级写法</a></li>
+  </ul></li>
+  <li><a href="#练习题目-8" id="toc-练习题目-8" class="nav-link" data-scroll-target="#练习题目-8">练习题目</a></li>
+  <li><a href="#参考资料-8" id="toc-参考资料-8" class="nav-link" data-scroll-target="#参考资料-8">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-10-章高级工作流与团队协作" id="toc-第-10-章高级工作流与团队协作" class="nav-link" data-scroll-target="#第-10-章高级工作流与团队协作">第 10 章：高级工作流与团队协作</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-9" id="toc-学习目标-9" class="nav-link" data-scroll-target="#学习目标-9">学习目标</a></li>
+  <li><a href="#学习内容-9" id="toc-学习内容-9" class="nav-link" data-scroll-target="#学习内容-9">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#claude-code-之父的工作流" id="toc-claude-code-之父的工作流" class="nav-link" data-scroll-target="#claude-code-之父的工作流">10.1 Claude Code 之父的工作流</a></li>
+  <li><a href="#团队配置管理" id="toc-团队配置管理" class="nav-link" data-scroll-target="#团队配置管理">10.2 团队配置管理</a></li>
+  <li><a href="#团队最佳实践" id="toc-团队最佳实践" class="nav-link" data-scroll-target="#团队最佳实践">10.3 团队最佳实践</a></li>
+  <li><a href="#企业版特性" id="toc-企业版特性" class="nav-link" data-scroll-target="#企业版特性">10.4 企业版特性</a></li>
+  </ul></li>
+  <li><a href="#练习题目-9" id="toc-练习题目-9" class="nav-link" data-scroll-target="#练习题目-9">练习题目</a></li>
+  <li><a href="#参考资料-9" id="toc-参考资料-9" class="nav-link" data-scroll-target="#参考资料-9">参考资料</a></li>
+  </ul></li>
+  <li><a href="#第-11-章ide-集成与扩展" id="toc-第-11-章ide-集成与扩展" class="nav-link" data-scroll-target="#第-11-章ide-集成与扩展">第 11 章：IDE 集成与扩展</a>
+  <ul class="collapse">
+  <li><a href="#学习目标-10" id="toc-学习目标-10" class="nav-link" data-scroll-target="#学习目标-10">学习目标</a></li>
+  <li><a href="#学习内容-10" id="toc-学习内容-10" class="nav-link" data-scroll-target="#学习内容-10">学习内容</a>
+  <ul class="collapse">
+  <li><a href="#vs-code-集成" id="toc-vs-code-集成" class="nav-link" data-scroll-target="#vs-code-集成">11.1 VS Code 集成</a></li>
+  <li><a href="#jetbrains-插件" id="toc-jetbrains-插件" class="nav-link" data-scroll-target="#jetbrains-插件">11.2 JetBrains 插件</a></li>
+  <li><a href="#chrome-扩展" id="toc-chrome-扩展" class="nav-link" data-scroll-target="#chrome-扩展">11.3 Chrome 扩展</a></li>
+  <li><a href="#mcp-扩展" id="toc-mcp-扩展" class="nav-link" data-scroll-target="#mcp-扩展">11.4 MCP 扩展</a></li>
+  </ul></li>
+  <li><a href="#练习题目-10" id="toc-练习题目-10" class="nav-link" data-scroll-target="#练习题目-10">练习题目</a></li>
+  <li><a href="#参考资料-10" id="toc-参考资料-10" class="nav-link" data-scroll-target="#参考资料-10">参考资料</a></li>
+  </ul></li>
+  <li><a href="#附录" id="toc-附录" class="nav-link" data-scroll-target="#附录">附录</a>
+  <ul class="collapse">
+  <li><a href="#a.-快捷键速查表" id="toc-a.-快捷键速查表" class="nav-link" data-scroll-target="#a.-快捷键速查表">A. 快捷键速查表</a></li>
+  <li><a href="#b.-斜杠命令速查表" id="toc-b.-斜杠命令速查表" class="nav-link" data-scroll-target="#b.-斜杠命令速查表">B. 斜杠命令速查表</a></li>
+  <li><a href="#c.-核心学习资源索引" id="toc-c.-核心学习资源索引" class="nav-link" data-scroll-target="#c.-核心学习资源索引">C. 核心学习资源索引</a></li>
+  </ul></li>
+  <li><a href="#学习路径总结" id="toc-学习路径总结" class="nav-link" data-scroll-target="#学习路径总结">学习路径总结</a></li>
+  <li><a href="#引用信息" id="toc-引用信息" class="nav-link" data-scroll-target="#引用信息">引用信息</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="claude-code-完整学习路径" class="level1">
+<h1>Claude Code 完整学习路径</h1>
+<blockquote class="blockquote">
+<p>从零基础到专家级，掌握 Anthropic 官方 AI 编程助手的完整指南</p>
+</blockquote>
+<hr>
+<section id="目录" class="level2">
+<h2 class="anchored" data-anchor-id="目录">目录</h2>
+<ul>
+<li><a href="#序言为什么是-claude-code">序言：为什么是 Claude Code</a></li>
+<li><a href="#第一部分初级篇">第一部分：初级篇</a> - 快速上手，建立基础</li>
+<li><a href="#第二部分进阶篇">第二部分：进阶篇</a> - 效率提升，工作流优化</li>
+<li><a href="#第三部分高级篇">第三部分：高级篇</a> - 深度定制，团队协作</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="序言为什么是-claude-code" class="level1">
+<h1>序言：为什么是 Claude Code</h1>
+<section id="什么是-claude-code" class="level2">
+<h2 class="anchored" data-anchor-id="什么是-claude-code">什么是 Claude Code</h2>
+<p><strong>Claude Code</strong> 是 Anthropic 官方推出的 AI 编程助手（AI Coding Assistant），直接在终端中运行，帮助开发者通过自然语言交互完成软件工程任务。它能够理解整个代码库、执行多步骤任务，并在复杂项目中保持上下文连贯性。</p>
+<p>简单来说，Claude Code 是你终端里的「AI 结对编程伙伴」——通过对话就能让它分析代码、实现功能、修复 Bug、重构项目，甚至完成完整的端到端开发任务。</p>
+</section>
+<section id="使用-claude-code-的好处" class="level2">
+<h2 class="anchored" data-anchor-id="使用-claude-code-的好处">使用 Claude Code 的好处</h2>
+<section id="显著提升开发效率" class="level3">
+<h3 class="anchored" data-anchor-id="显著提升开发效率">1. 显著提升开发效率</h3>
+<ul>
+<li><strong>秒懂陌生代码库</strong>：几分钟内理解项目结构和核心逻辑，无需逐行阅读</li>
+<li><strong>自然语言编程</strong>：用日常语言描述需求，AI 自动生成高质量代码</li>
+<li><strong>智能重构</strong>：安全地重构代码，提升可维护性而不破坏功能</li>
+<li><strong>快速 Debug</strong>：系统化定位问题根因，提供修复建议</li>
+</ul>
+</section>
+<section id="降低认知负担" class="level3">
+<h3 class="anchored" data-anchor-id="降低认知负担">2. 降低认知负担</h3>
+<ul>
+<li><strong>一站式开发</strong>：无需在编辑器、文档、搜索引擎间频繁切换</li>
+<li><strong>上下文记忆</strong>：AI 自动记住项目细节，无需重复说明背景</li>
+<li><strong>全流程覆盖</strong>：从需求分析到测试验证，一个界面完成</li>
+</ul>
+</section>
+<section id="提升代码质量" class="level3">
+<h3 class="anchored" data-anchor-id="提升代码质量">3. 提升代码质量</h3>
+<ul>
+<li><strong>实时最佳实践建议</strong>：内置丰富的编码规范和设计模式</li>
+<li><strong>持续代码审查</strong>：AI 即时发现问题并提供改进建议</li>
+<li><strong>自动化测试生成</strong>：根据代码逻辑生成全面的测试用例</li>
+</ul>
+</section>
+<section id="支持团队协作" class="level3">
+<h3 class="anchored" data-anchor-id="支持团队协作">4. 支持团队协作</h3>
+<ul>
+<li><strong>知识沉淀</strong>：通过 CLAUDE.md 固化项目规范和架构知识</li>
+<li><strong>新人快速上手</strong>：新成员通过 Claude Code 快速理解项目</li>
+<li><strong>一致的工作流</strong>：团队共享配置，统一开发方式</li>
+</ul>
+</section>
+</section>
+<section id="claude-code-的核心优势" class="level2">
+<h2 class="anchored" data-anchor-id="claude-code-的核心优势">Claude Code 的核心优势</h2>
+<section id="原生-claude-模型集成" class="level3">
+<h3 class="anchored" data-anchor-id="原生-claude-模型集成">1. 原生 Claude 模型集成</h3>
+<p>Claude Code 深度集成 Anthropic 的 Claude 系列模型：</p>
+<table class="table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 45%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>模型</th>
+<th>推荐场景</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Claude 4 Opus</strong></td>
+<td>复杂架构设计、深度分析</td>
+<td>最强推理能力，适合高难度任务</td>
+</tr>
+<tr class="even">
+<td><strong>Claude 4 Sonnet</strong></td>
+<td>日常开发、代码审查</td>
+<td>平衡性能与成本，响应快速</td>
+</tr>
+<tr class="odd">
+<td><strong>Claude 3.5 Sonnet</strong></td>
+<td>快速原型、简单任务</td>
+<td>高性价比，适合常规开发</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优势</strong>：专为 Claude 模型优化的交互体验，充分发挥模型潜力。</p>
+</section>
+<section id="plan-模式工作流" class="level3">
+<h3 class="anchored" data-anchor-id="plan-模式工作流">2. Plan 模式工作流</h3>
+<p>Claude Code 支持 <strong>Plan Mode（规划模式）</strong>：</p>
+<ul>
+<li><strong>Plan 模式</strong>：只读分析，适合代码理解、方案设计、架构规划</li>
+<li><strong>执行模式</strong>：读写执行，适合功能实现、Bug 修复、代码重构</li>
+</ul>
+<p><strong>优势</strong>：避免 AI 贸然修改代码，先规划再动手，大幅降低返工率。</p>
+</section>
+<section id="深度代码库理解" class="level3">
+<h3 class="anchored" data-anchor-id="深度代码库理解">3. 深度代码库理解</h3>
+<p>Claude Code 能够：</p>
+<ul>
+<li>分析整个项目的架构和依赖关系</li>
+<li>追踪跨文件的函数调用和数据流</li>
+<li>理解复杂的设计模式和业务逻辑</li>
+<li>在大型代码库中保持上下文连贯</li>
+</ul>
+<p><strong>优势</strong>：专业级的代码理解能力，如同资深工程师在指导工作。</p>
+</section>
+<section id="丰富的扩展生态" class="level3">
+<h3 class="anchored" data-anchor-id="丰富的扩展生态">4. 丰富的扩展生态</h3>
+<ul>
+<li><strong>Skills 系统</strong>：从 skills.sh 安装专业领域技能包</li>
+<li><strong>自定义 Commands</strong>：创建一键触发的自定义命令</li>
+<li><strong>MCP 集成</strong>：连接外部工具和服务</li>
+<li><strong>IDE 扩展</strong>：支持 VS Code、JetBrains 等主流编辑器</li>
+</ul>
+<p><strong>优势</strong>：生态丰富，可根据需求灵活扩展功能。</p>
+</section>
+<section id="官方品质保障" class="level3">
+<h3 class="anchored" data-anchor-id="官方品质保障">5. 官方品质保障</h3>
+<p>作为 Anthropic 官方产品：</p>
+<ul>
+<li>与 Claude 模型同步更新，始终使用最新能力</li>
+<li>官方技术支持和服务保障</li>
+<li>企业级安全和隐私保护</li>
+<li>持续迭代和功能增强</li>
+</ul>
+<p><strong>优势</strong>：官方背书，稳定可靠，长期支持有保障。</p>
+</section>
+<section id="多平台支持" class="level3">
+<h3 class="anchored" data-anchor-id="多平台支持">6. 多平台支持</h3>
+<ul>
+<li><strong>终端</strong>：原生 CLI 体验</li>
+<li><strong>Web 版</strong>：浏览器中直接使用</li>
+<li><strong>桌面版</strong>：独立应用程序</li>
+<li><strong>IDE 插件</strong>：VS Code、JetBrains 集成</li>
+</ul>
+<p><strong>优势</strong>：随时随地，选择最适合你的工作方式。</p>
+</section>
+</section>
+<section id="claude-code-vs-opencode如何选择" class="level2">
+<h2 class="anchored" data-anchor-id="claude-code-vs-opencode如何选择">Claude Code vs OpenCode：如何选择</h2>
+<p><strong>OpenCode</strong> 是开源的 AI 编程工具，与 Claude Code 有许多相似之处。以下是两者的对比：</p>
+<section id="功能对比" class="level3">
+<h3 class="anchored" data-anchor-id="功能对比">功能对比</h3>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 44%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>特性</th>
+<th>Claude Code</th>
+<th>OpenCode</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>模型支持</strong></td>
+<td>仅 Claude 系列（深度优化）</td>
+<td>多模型（Claude、GPT、DeepSeek、GLM 等）</td>
+</tr>
+<tr class="even">
+<td><strong>费用</strong></td>
+<td>Claude Pro/API 订阅</td>
+<td>自主选择模型，灵活控制成本</td>
+</tr>
+<tr class="odd">
+<td><strong>国内访问</strong></td>
+<td>需要网络配置</td>
+<td>支持国产模型直连</td>
+</tr>
+<tr class="even">
+<td><strong>开源</strong></td>
+<td>闭源，官方维护</td>
+<td>完全开源，可自由定制</td>
+</tr>
+<tr class="odd">
+<td><strong>官方支持</strong></td>
+<td>Anthropic 官方支持</td>
+<td>社区驱动</td>
+</tr>
+<tr class="even">
+<td><strong>集成深度</strong></td>
+<td>与 Claude 模型深度集成</td>
+<td>通用接口，适配多种模型</td>
+</tr>
+<tr class="odd">
+<td><strong>Skills 生态</strong></td>
+<td>支持 skills.sh 生态</td>
+<td>同样支持 skills.sh</td>
+</tr>
+<tr class="even">
+<td><strong>企业功能</strong></td>
+<td>企业版完善</td>
+<td>社区版本</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="适用场景建议" class="level3">
+<h3 class="anchored" data-anchor-id="适用场景建议">适用场景建议</h3>
+<p><strong>选择 Claude Code，如果你：</strong></p>
+<ul>
+<li>信任 Anthropic 的 Claude 模型能力</li>
+<li>需要官方直接支持和服务保障</li>
+<li>追求与 Claude 模型的最佳集成体验</li>
+<li>企业环境需要合规和安全保障</li>
+<li>愿意为官方品质支付相应费用</li>
+</ul>
+<p><strong>选择 OpenCode，如果你：</strong></p>
+<ul>
+<li>希望灵活切换多种 AI 模型</li>
+<li>需要国产模型直连，不想折腾网络</li>
+<li>重视开源，希望深度定制工具</li>
+<li>希望灵活控制成本和模型选择</li>
+<li>是中文用户，需要本地化支持</li>
+</ul>
+</section>
+<section id="两者并非对立" class="level3">
+<h3 class="anchored" data-anchor-id="两者并非对立">两者并非对立</h3>
+<p>实际上两者可以互补：</p>
+<ul>
+<li><strong>Claude Code 适合</strong>：对代码质量要求高、需要官方支持的场景</li>
+<li><strong>OpenCode 适合</strong>：需要灵活性、多模型对比、深度定制的场景</li>
+<li><strong>技能互通</strong>：skills.sh 上的 Skill 可以在两者中使用</li>
+<li><strong>学习成本复用</strong>：Plan/Build 工作流概念相通</li>
+</ul>
+</section>
+</section>
+<section id="谁适合使用-claude-code" class="level2">
+<h2 class="anchored" data-anchor-id="谁适合使用-claude-code">谁适合使用 Claude Code</h2>
+<section id="开发者" class="level3">
+<h3 class="anchored" data-anchor-id="开发者">开发者</h3>
+<ul>
+<li><strong>全栈工程师</strong>：快速实现功能，端到端开发</li>
+<li><strong>前端开发者</strong>：UI/UX 实现、组件库开发</li>
+<li><strong>后端工程师</strong>：API 开发、数据库设计、系统架构</li>
+<li><strong>算法工程师</strong>：算法实现、数据分析、模型部署</li>
+</ul>
+</section>
+<section id="技术管理者" class="level3">
+<h3 class="anchored" data-anchor-id="技术管理者">技术管理者</h3>
+<ul>
+<li><strong>架构师</strong>：系统设计、技术决策、代码审查</li>
+<li><strong>技术负责人</strong>：团队规范、项目初始化、质量管控</li>
+<li><strong>CTO/VP</strong>：技术选型、团队效率、知识沉淀</li>
+</ul>
+</section>
+<section id="其他技术人员" class="level3">
+<h3 class="anchored" data-anchor-id="其他技术人员">其他技术人员</h3>
+<ul>
+<li><strong>DevOps 工程师</strong>：CI/CD、自动化脚本、基础设施</li>
+<li><strong>数据工程师</strong>：数据处理、ETL、报表生成</li>
+<li><strong>产品经理</strong>：快速原型、需求验证</li>
+<li><strong>技术写作者</strong>：文档编写、教程制作</li>
+</ul>
+</section>
+</section>
+<section id="学习路径概述" class="level2">
+<h2 class="anchored" data-anchor-id="学习路径概述">学习路径概述</h2>
+<p>本文档分为三个部分，循序渐进地帮助你掌握 Claude Code：</p>
+<p><strong>第一部分：初级篇</strong> - 快速上手</p>
+<ul>
+<li>安装配置、基础操作、基础工作流</li>
+<li>目标：能在日常开发中使用 Claude Code 辅助工作</li>
+</ul>
+<p><strong>第二部分：进阶篇</strong> - 效率提升</p>
+<ul>
+<li>高级功能、Skills 系统、自动化工作流、定制配置</li>
+<li>目标：掌握高级工作流，显著提升开发效率</li>
+</ul>
+<p><strong>第三部分：高级篇</strong> - 专家级别</p>
+<ul>
+<li>高级定制、团队配置、企业级工作流</li>
+<li>目标：深度定制 Claude Code，构建团队级解决方案</li>
+</ul>
+<p>预计学习时间：<strong>2-4 周</strong>（视个人基础和投入时间而定）</p>
+</section>
+<section id="开始之前" class="level2">
+<h2 class="anchored" data-anchor-id="开始之前">开始之前</h2>
+<p>使用 Claude Code 需要：</p>
+<ul>
+<li>基本的终端/命令行操作知识</li>
+<li>一定的编程基础（至少一种编程语言）</li>
+<li>Anthropic API Key（或 Claude Pro 订阅）</li>
+<li>开放的心态，愿意尝试新的工作方式</li>
+</ul>
+<p><strong>不需要</strong>：</p>
+<ul>
+<li>深厚的 AI 知识（Claude Code 帮你封装了复杂性）</li>
+<li>昂贵的硬件（普通电脑即可运行）</li>
+<li>复杂的配置（开箱即用）</li>
+</ul>
+<hr>
+<p>准备好了吗？让我们开始这段学习旅程！</p>
+<hr>
+</section>
+</section>
+<section id="第一部分初级篇" class="level1">
+<h1>第一部分：初级篇</h1>
+<blockquote class="blockquote">
+<p><strong>目标</strong>：30 分钟内完成安装并成功对话，掌握基础操作和日常开发流程</p>
+</blockquote>
+<hr>
+<section id="第-1-章安装与起步" class="level2">
+<h2 class="anchored" data-anchor-id="第-1-章安装与起步">第 1 章：安装与起步</h2>
+<section id="学习目标" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标">学习目标</h3>
+<ul>
+<li>理解 Claude Code 是什么以及能做什么</li>
+<li>成功安装 Claude Code 且不报错</li>
+<li>完成 Anthropic 认证配置</li>
+<li>完成第一次 “Hello World” 对话</li>
+</ul>
+</section>
+<section id="学习内容" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容">学习内容</h3>
+<section id="claude-code-简介" class="level4">
+<h4 class="anchored" data-anchor-id="claude-code-简介">1.1 Claude Code 简介</h4>
+<p>Claude Code 是一款 AI 编程助手，能够：</p>
+<ul>
+<li>理解代码并辅助开发</li>
+<li>自动完成文件操作和代码重构</li>
+<li>执行终端命令并分析输出</li>
+<li>提供 Plan 模式进行方案设计</li>
+<li>通过 Skills 扩展专业能力</li>
+</ul>
+</section>
+<section id="安装步骤" class="level4">
+<h4 class="anchored" data-anchor-id="安装步骤">1.2 安装步骤</h4>
+<p><strong>方式一：npm 安装（推荐）</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 全局安装</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @anthropic-ai/claude-code</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 验证安装</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>方式二：Homebrew 安装（macOS）</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 添加 Anthropic tap</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> tap anthropic/claude</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 安装 Claude Code</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install claude-code</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>方式三：下载二进制文件</strong></p>
+<p>访问 <a href="https://github.com/anthropics/claude-code/releases">Claude Code 发布页面</a> 下载对应平台的二进制文件。</p>
+</section>
+<section id="认证配置" class="level4">
+<h4 class="anchored" data-anchor-id="认证配置">1.3 认证配置</h4>
+<p><strong>获取 API Key</strong>：</p>
+<ol type="1">
+<li>访问 <a href="https://console.anthropic.com/">Anthropic Console</a></li>
+<li>注册/登录账户</li>
+<li>创建 API Key</li>
+<li>新用户可获得免费试用额度</li>
+</ol>
+<p><strong>配置认证</strong>：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 方式一：使用登录命令</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> auth login</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 方式二：环境变量</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">ANTHROPIC_API_KEY</span><span class="op">=</span><span class="st">"your-api-key-here"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 方式三：配置文件</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 编辑 ~/.claude/settings.json</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">{</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"anthropicApiKey"</span><span class="ex">:</span> <span class="st">"your-api-key-here"</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="第一次对话" class="level4">
+<h4 class="anchored" data-anchor-id="第一次对话">1.4 第一次对话</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 进入项目目录</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/my-project</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 启动 Claude Code</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 输入测试</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="ex">你好，请介绍一下你自己</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Claude Code 会自动</strong>：</p>
+<ul>
+<li>分析当前目录的项目结构</li>
+<li>识别技术栈和框架</li>
+<li>读取已有的 CLAUDE.md（如果存在）</li>
+</ul>
+</section>
+</section>
+<section id="练习题目" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目">练习题目</h3>
+<ol type="1">
+<li><strong>安装验证</strong>：运行 <code>claude --version</code>，确认安装成功</li>
+<li><strong>认证配置</strong>：完成 API Key 配置并成功认证</li>
+<li><strong>首次对话</strong>：成功发送 “Hello World” 并收到回复</li>
+<li><strong>项目分析</strong>：进入一个项目目录，观察 Claude Code 如何识别项目</li>
+</ol>
+</section>
+<section id="参考资料" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料">参考资料</h3>
+<ul>
+<li><a href="https://code.claude.com/docs">Claude Code 官方文档</a></li>
+<li><a href="https://code.claude.com/docs/en/quickstart">快速起步指南</a></li>
+<li><a href="https://docs.anthropic.com/en/docs/claude-code/getting-started">安装指南</a></li>
+<li><a href="https://codewithmukesh.com/blog/claude-code-for-beginners/">Claude Code for Beginners</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-2-章基础操作" class="level2">
+<h2 class="anchored" data-anchor-id="第-2-章基础操作">第 2 章：基础操作</h2>
+<section id="学习目标-1" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-1">学习目标</h3>
+<ul>
+<li>熟悉 Claude Code 的界面和核心操作</li>
+<li>掌握 <code>@</code>、<code>!</code> 语法</li>
+<li>学会使用斜杠命令</li>
+<li>了解 Plan 模式的切换</li>
+</ul>
+</section>
+<section id="学习内容-1" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-1">学习内容</h3>
+<section id="界面导览" class="level4">
+<h4 class="anchored" data-anchor-id="界面导览">2.1 界面导览</h4>
+<p>Claude Code 采用简洁的终端界面：</p>
+<ul>
+<li><strong>对话区域</strong>：显示用户输入和 Claude 回复</li>
+<li><strong>输入框</strong>：底部输入命令或问题</li>
+<li><strong>状态指示</strong>：显示当前模式、上下文信息</li>
+</ul>
+</section>
+<section id="核心语法" class="level4">
+<h4 class="anchored" data-anchor-id="核心语法">2.2 核心语法</h4>
+<p><strong><code>@</code> - 引用文件/代码</strong>：</p>
+<pre><code>@src/main.ts 请分析这个文件
+@src/utils.ts#L10-20 解释这几行代码
+@README.md 总结文档内容</code></pre>
+<p><strong><code>!</code> - 执行命令</strong>：</p>
+<pre><code>!npm install
+!git status
+!python test.py</code></pre>
+<p><strong>Claude Code 会自动</strong>：</p>
+<ul>
+<li>执行命令并获取输出</li>
+<li>分析命令结果</li>
+<li>根据输出继续对话</li>
+</ul>
+</section>
+<section id="斜杠命令" class="level4">
+<h4 class="anchored" data-anchor-id="斜杠命令">2.3 斜杠命令</h4>
+<p>Claude Code 支持丰富的斜杠命令：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/help</code></td>
+<td>显示帮助信息</td>
+</tr>
+<tr class="even">
+<td><code>/clear</code></td>
+<td>清空对话历史</td>
+</tr>
+<tr class="odd">
+<td><code>/new</code></td>
+<td>新建对话会话</td>
+</tr>
+<tr class="even">
+<td><code>/plan</code></td>
+<td>切换到 Plan 模式</td>
+</tr>
+<tr class="odd">
+<td><code>/exit</code></td>
+<td>退出 Claude Code</td>
+</tr>
+</tbody>
+</table>
+<p><strong>使用示例</strong>：</p>
+<pre><code>/plan 我要添加用户认证功能，请先帮我设计方案</code></pre>
+</section>
+<section id="plan-模式详解" class="level4">
+<h4 class="anchored" data-anchor-id="plan-模式详解">2.4 Plan 模式详解</h4>
+<p><strong>什么是 Plan 模式</strong>：</p>
+<ul>
+<li>只读分析模式，不会修改文件</li>
+<li>适合代码理解、方案设计、架构规划</li>
+<li>避免 AI 贸然修改代码</li>
+</ul>
+<p><strong>如何进入 Plan 模式</strong>：</p>
+<pre><code>/plan</code></pre>
+<p><strong>Plan 模式使用场景</strong>：</p>
+<ul>
+<li>理解陌生代码库</li>
+<li>设计新功能方案</li>
+<li>代码审查和分析</li>
+<li>技术决策讨论</li>
+</ul>
+</section>
+</section>
+<section id="练习题目-1" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-1">练习题目</h3>
+<ol type="1">
+<li><strong>文件引用练习</strong>：使用 <code>@文件名</code> 引用项目中的文件并提问</li>
+<li><strong>命令执行练习</strong>：使用 <code>!命令</code> 执行一个简单的 bash 命令</li>
+<li><strong>Plan 模式练习</strong>：切换到 Plan 模式分析项目结构</li>
+<li><strong>斜杠命令练习</strong>：尝试 <code>/help</code> 和 <code>/clear</code> 命令</li>
+</ol>
+</section>
+<section id="参考资料-1" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-1">参考资料</h3>
+<ul>
+<li><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code 最佳实践</a></li>
+<li><a href="https://code.claude.com/docs/en/how-claude-code-works">Claude Code 工作原理</a></li>
+<li><a href="https://code.claude.com/docs/en/common-workflows">常见工作流</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-3-章基础工作流" class="level2">
+<h2 class="anchored" data-anchor-id="第-3-章基础工作流">第 3 章：基础工作流</h2>
+<section id="学习目标-2" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-2">学习目标</h3>
+<ul>
+<li>理解 Plan 模式和工作模式的区别</li>
+<li>掌握标准开发流程</li>
+<li>学会创建和编辑 CLAUDE.md</li>
+<li>能够在日常开发中运用 Claude Code</li>
+</ul>
+</section>
+<section id="学习内容-2" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-2">学习内容</h3>
+<section id="plan-模式-vs-工作模式" class="level4">
+<h4 class="anchored" data-anchor-id="plan-模式-vs-工作模式">3.1 Plan 模式 vs 工作模式</h4>
+<p><strong>Plan 模式（规划模式）</strong>：</p>
+<ul>
+<li><strong>特点</strong>：只读分析，不会修改文件</li>
+<li><strong>用途</strong>：代码理解、方案设计、架构规划</li>
+<li><strong>触发方式</strong>：输入 <code>/plan</code> 或在提示中明确要求规划</li>
+</ul>
+<p><strong>工作模式（默认）</strong>：</p>
+<ul>
+<li><strong>特点</strong>：可以读写文件、执行命令</li>
+<li><strong>用途</strong>：功能实现、Bug 修复、代码重构</li>
+<li><strong>触发方式</strong>：直接输入需求</li>
+</ul>
+<p><strong>工作流建议</strong>：</p>
+<pre><code>理解代码(Plan) → 制定方案(Plan) → 实现功能(工作模式) → 验证测试</code></pre>
+</section>
+<section id="标准开发工作流" class="level4">
+<h4 class="anchored" data-anchor-id="标准开发工作流">3.2 标准开发工作流</h4>
+<p><strong>步骤详解</strong>：</p>
+<ol type="1">
+<li><p><strong>理解代码</strong>（Plan 模式）：</p>
+<pre><code>/plan 请帮我梳理项目结构，分析主要模块和依赖关系</code></pre></li>
+<li><p><strong>制定方案</strong>（Plan 模式）：</p>
+<pre><code>/plan 我要添加 XX 功能，请帮我分析：
+1. 需要修改哪些文件
+2. 推荐的实现方案
+3. 每种方案的优缺点</code></pre></li>
+<li><p><strong>实现功能</strong>（工作模式）：</p>
+<pre><code>按照方案一实现功能，第一步先创建 XX 文件</code></pre></li>
+<li><p><strong>验证测试</strong>（工作模式）：</p>
+<pre><code>!npm test
+请分析测试结果，如果有失败请修复</code></pre></li>
+</ol>
+</section>
+<section id="claude.md-配置" class="level4">
+<h4 class="anchored" data-anchor-id="claude.md-配置">3.3 CLAUDE.md 配置</h4>
+<p><strong>什么是 CLAUDE.md</strong>：</p>
+<ul>
+<li>项目级的 Claude Code 配置文件</li>
+<li>位于项目根目录</li>
+<li>自动被 Claude Code 读取作为上下文</li>
+</ul>
+<p><strong>创建 CLAUDE.md</strong>：</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># CLAUDE.md</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## 项目概述</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>项目名称：XXX</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>技术栈：React + TypeScript + Node.js</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>项目目标：简短描述</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## 常用命令</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`npm run dev`</span>：启动开发服务器</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`npm test`</span>：运行测试</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`npm run build`</span>：构建项目</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`npm run lint`</span>：代码检查</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## 代码规范</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>使用 2 空格缩进</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>变量使用 camelCase</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>优先使用函数组件</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## 架构说明</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>前端：React + TailwindCSS</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>后端：Express.js</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>数据库：PostgreSQL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>自动生成 CLAUDE.md</strong>：</p>
+<pre><code>请分析这个代码库并创建一个 CLAUDE.md 文件，包含：
+1. 常用命令（构建、测试、开发）
+2. 项目架构和关键概念
+3. 代码规范</code></pre>
+</section>
+<section id="文件操作技巧" class="level4">
+<h4 class="anchored" data-anchor-id="文件操作技巧">3.4 文件操作技巧</h4>
+<p><strong>读取文件</strong>：</p>
+<pre><code>@README.md 请总结这个文档</code></pre>
+<p><strong>分析多个文件</strong>：</p>
+<pre><code>请分析 src/components 目录下的所有组件文件</code></pre>
+<p><strong>搜索内容</strong>：</p>
+<pre><code>搜索包含 "auth" 的所有文件，分析认证逻辑</code></pre>
+</section>
+</section>
+<section id="练习题目-2" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-2">练习题目</h3>
+<ol type="1">
+<li><strong>模式切换练习</strong>：在 Plan 模式和工作模式间切换</li>
+<li><strong>项目分析练习</strong>：用 Plan 模式分析项目结构，理解代码</li>
+<li><strong>功能实现练习</strong>：用 Plan → 工作模式流程实现一个小功能</li>
+<li><strong>CLAUDE.md 练习</strong>：为你的项目创建一份 CLAUDE.md</li>
+</ol>
+</section>
+<section id="参考资料-2" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-2">参考资料</h3>
+<ul>
+<li><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code 最佳实践</a></li>
+<li><a href="https://claude-ai.chat/guides/building-end-to-end-projects-with-claude-code/">构建端到端项目</a></li>
+<li><a href="https://codewithmukesh.com/blog/claude-code-for-beginners/">Claude Code 教程</a></li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="第二部分进阶篇" class="level1">
+<h1>第二部分：进阶篇</h1>
+<blockquote class="blockquote">
+<p><strong>目标</strong>：掌握 Claude Code 高级功能、Skills 系统、自动化工作流和定制配置</p>
+</blockquote>
+<hr>
+<section id="第-4-章高级功能与技巧" class="level2">
+<h2 class="anchored" data-anchor-id="第-4-章高级功能与技巧">第 4 章：高级功能与技巧</h2>
+<section id="学习目标-3" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-3">学习目标</h3>
+<ul>
+<li>掌握 Claude Code 的高级使用技巧</li>
+<li>学会使用 context 和记忆功能</li>
+<li>理解 Claude Code 的代码分析能力</li>
+<li>掌握多文件编辑技巧</li>
+</ul>
+</section>
+<section id="学习内容-3" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-3">学习内容</h3>
+<section id="高级使用技巧" class="level4">
+<h4 class="anchored" data-anchor-id="高级使用技巧">4.1 高级使用技巧</h4>
+<p><strong>精准代码引用</strong>：</p>
+<pre><code>@src/utils.ts#L10-20 请解释这段代码的逻辑</code></pre>
+<p><strong>批量文件分析</strong>：</p>
+<pre><code>分析 src/services 目录下的所有文件，总结服务层架构</code></pre>
+<p><strong>上下文保持</strong>：</p>
+<ul>
+<li>Claude Code 会自动保持对话上下文</li>
+<li>在长对话中定期总结关键信息</li>
+<li>使用 <code>/new</code> 开启新对话重置上下文</li>
+</ul>
+</section>
+<section id="代码分析与重构" class="level4">
+<h4 class="anchored" data-anchor-id="代码分析与重构">4.2 代码分析与重构</h4>
+<p><strong>代码审查</strong>：</p>
+<pre><code>请审查 @src/auth.ts，检查：
+1. 安全性问题
+2. 代码风格
+3. 性能优化建议</code></pre>
+<p><strong>重构建议</strong>：</p>
+<pre><code>请重构 @src/utils.ts：
+1. 提取重复代码
+2. 优化函数命名
+3. 添加类型定义</code></pre>
+</section>
+<section id="调试技巧" class="level4">
+<h4 class="anchored" data-anchor-id="调试技巧">4.3 调试技巧</h4>
+<p><strong>错误分析</strong>：</p>
+<pre><code>运行 !npm test 失败，请分析错误日志并修复问题</code></pre>
+<p><strong>性能分析</strong>：</p>
+<pre><code>分析 @src/database.ts 的数据库查询，找出性能瓶颈</code></pre>
+</section>
+<section id="web-版和桌面版" class="level4">
+<h4 class="anchored" data-anchor-id="web-版和桌面版">4.4 Web 版和桌面版</h4>
+<p><strong>Claude Code Web</strong>：</p>
+<ul>
+<li>访问 claude.ai/code 使用浏览器版本</li>
+<li>无需安装，即开即用</li>
+<li>适合临时使用或无法安装 CLI 的场景</li>
+</ul>
+<p><strong>Claude Code Desktop</strong>：</p>
+<ul>
+<li>独立的桌面应用程序</li>
+<li>更好的性能和体验</li>
+<li>支持语音交互（Voice Mode）</li>
+</ul>
+</section>
+</section>
+<section id="练习题目-3" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-3">练习题目</h3>
+<ol type="1">
+<li><strong>代码审查练习</strong>：对项目中的一个模块进行完整代码审查</li>
+<li><strong>重构练习</strong>：重构一段遗留代码，提升可读性和性能</li>
+<li><strong>调试练习</strong>：故意引入一个 Bug，让 Claude Code 帮你定位和修复</li>
+<li><strong>Web 版体验</strong>：尝试使用 Claude Code Web 版完成简单任务</li>
+</ol>
+</section>
+<section id="参考资料-3" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-3">参考资料</h3>
+<ul>
+<li><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code 最佳实践</a></li>
+<li><a href="https://code.claude.com/docs/en/common-workflows">Claude Code 常见工作流</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-5-章skills-系统" class="level2">
+<h2 class="anchored" data-anchor-id="第-5-章skills-系统">第 5 章：Skills 系统</h2>
+<section id="学习目标-4" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-4">学习目标</h3>
+<ul>
+<li>理解 Skills 的概念和价值</li>
+<li>学会从 skills.sh 安装 Skills</li>
+<li>掌握常用 Skills 的使用</li>
+<li>了解 Skill-creator 工具</li>
+</ul>
+</section>
+<section id="学习内容-4" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-4">学习内容</h3>
+<section id="skills-简介" class="level4">
+<h4 class="anchored" data-anchor-id="skills-简介">5.1 Skills 简介</h4>
+<p><strong>什么是 Skills</strong>：</p>
+<ul>
+<li>Skills 是封装复杂指令的模块</li>
+<li>提供专业领域知识和最佳实践</li>
+<li>扩展 Claude Code 的能力边界</li>
+</ul>
+<p><strong>Skills 生态系统</strong>：</p>
+<ul>
+<li>官方仓库：<a href="https://skills.sh">skills.sh</a></li>
+<li>社区贡献的各类专业技能包</li>
+<li>支持 Claude Code、OpenCode、Cursor 等工具</li>
+</ul>
+</section>
+<section id="安装-skills" class="level4">
+<h4 class="anchored" data-anchor-id="安装-skills">5.2 安装 Skills</h4>
+<p><strong>安装方式</strong>：</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 安装 skill-creator（创建 Skill 的工具）</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/anthropics/skills <span class="at">--skill</span> skill-creator</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 安装 remotion-best-practices（视频开发）</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/remotion-dev/skills <span class="at">--skill</span> remotion-best-practices</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 安装 superpowers 系列</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/obra/superpowers <span class="at">--skill</span> brainstorming</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/obra/superpowers <span class="at">--skill</span> systematic-debugging</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="常用-skills-介绍" class="level4">
+<h4 class="anchored" data-anchor-id="常用-skills-介绍">5.3 常用 Skills 介绍</h4>
+<p><strong>1. skill-creator</strong>（Anthropic 官方）</p>
+<ul>
+<li>指导如何创建有效的 Skills</li>
+<li>包含设计原则和最佳实践</li>
+<li>使用场景：创建自定义 Skill 时</li>
+</ul>
+<p><strong>2. superpowers 系列</strong>（obra）</p>
+<p>14 个开发工作流增强 Skill：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>brainstorming</code></td>
+<td>创意工作前的头脑风暴</td>
+</tr>
+<tr class="even">
+<td><code>systematic-debugging</code></td>
+<td>系统化调试</td>
+</tr>
+<tr class="odd">
+<td><code>test-driven-development</code></td>
+<td>测试驱动开发</td>
+</tr>
+<tr class="even">
+<td><code>writing-plans</code></td>
+<td>编写实施计划</td>
+</tr>
+<tr class="odd">
+<td><code>requesting-code-review</code></td>
+<td>请求代码审查</td>
+</tr>
+<tr class="even">
+<td><code>verification-before-completion</code></td>
+<td>完成前验证</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3. remotion-best-practices</strong>（Remotion 团队）</p>
+<ul>
+<li>React 视频开发的最佳实践</li>
+<li>动画、音频、转场等专业指导</li>
+<li>周安装量 58.7K</li>
+</ul>
+<p><strong>4. 其他常用 Skills</strong>：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>git-master</code></td>
+<td>Git 操作专家</td>
+</tr>
+<tr class="even">
+<td><code>frontend-ui-ux</code></td>
+<td>UI/UX 设计能力</td>
+</tr>
+<tr class="odd">
+<td><code>pdf</code></td>
+<td>PDF 操作</td>
+</tr>
+<tr class="even">
+<td><code>docx</code></td>
+<td>Word 文档处理</td>
+</tr>
+<tr class="odd">
+<td><code>pptx</code></td>
+<td>PPT 制作</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="使用-skills" class="level4">
+<h4 class="anchored" data-anchor-id="使用-skills">5.4 使用 Skills</h4>
+<p><strong>Skill 触发方式</strong>：</p>
+<ul>
+<li>Skills 会根据对话内容自动触发</li>
+<li>也可以在提示中明确引用 Skill</li>
+</ul>
+<p><strong>示例</strong>：</p>
+<pre><code>使用 test-driven-development 的方式，为这个功能编写测试</code></pre>
+</section>
+</section>
+<section id="练习题目-4" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-4">练习题目</h3>
+<ol type="1">
+<li><strong>安装练习</strong>：安装 3 个常用的 Skills</li>
+<li><strong>使用练习</strong>：使用 brainstorming Skill 进行项目设计</li>
+<li><strong>debugging 练习</strong>：使用 systematic-debugging Skill 定位 Bug</li>
+<li><strong>TDD 练习</strong>：使用 test-driven-development Skill 完成 TDD 流程</li>
+</ol>
+</section>
+<section id="参考资料-4" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-4">参考资料</h3>
+<ul>
+<li><a href="https://skills.sh">skills.sh 官网</a></li>
+<li><a href="https://skills.sh/anthropics/skills/skill-creator">skill-creator 指南</a></li>
+<li><a href="https://skills.sh/obra/superpowers">superpowers Skill 集合</a></li>
+<li><a href="https://skills.sh/remotion-dev/skills/remotion-best-practices">remotion-best-practices</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-6-章自定义-commands" class="level2">
+<h2 class="anchored" data-anchor-id="第-6-章自定义-commands">第 6 章：自定义 Commands</h2>
+<section id="学习目标-5" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-5">学习目标</h3>
+<ul>
+<li>理解自定义 Commands 的概念</li>
+<li>学会创建自定义 Commands</li>
+<li>掌握 Commands 的高级用法</li>
+<li>了解 Commands 的管理和分享</li>
+</ul>
+</section>
+<section id="学习内容-5" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-5">学习内容</h3>
+<section id="什么是自定义-commands" class="level4">
+<h4 class="anchored" data-anchor-id="什么是自定义-commands">6.1 什么是自定义 Commands</h4>
+<p><strong>概念</strong>：</p>
+<ul>
+<li>将常用的提示词封装为斜杠命令</li>
+<li>一键触发复杂任务</li>
+<li>提高重复性工作的效率</li>
+</ul>
+<p><strong>存储位置</strong>：</p>
+<pre><code>~/.claude/commands/     # 全局 Commands
+.claude/commands/       # 项目级 Commands</code></pre>
+</section>
+<section id="创建自定义-commands" class="level4">
+<h4 class="anchored" data-anchor-id="创建自定义-commands">6.2 创建自定义 Commands</h4>
+<p><strong>步骤</strong>：</p>
+<ol type="1">
+<li><strong>创建目录</strong>：</li>
+</ol>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/.claude/commands</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li><strong>编写 Command 文件</strong>：</li>
+</ol>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建文件 ~/.claude/commands/security-review.md</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> <span class="op">&gt;</span> ~/.claude/commands/security-review.md <span class="op">&lt;&lt; 'EOF'</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="st">审查这段代码的安全性，重点关注：</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="st">1. SQL 注入风险</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="st">2. XSS 漏洞</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="st">3. 权限控制缺陷</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="st">4. 敏感信息泄露</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="st">输出格式：</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="st">- 严重问题（必须修复）</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="st">- 建议改进（可选）</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="st">- 正面反馈</span></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="op">EOF</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li><strong>使用 Command</strong>：</li>
+</ol>
+<pre><code>/security-review</code></pre>
+</section>
+<section id="常用-commands-示例" class="level4">
+<h4 class="anchored" data-anchor-id="常用-commands-示例">6.3 常用 Commands 示例</h4>
+<p><strong>代码审查 Command</strong>：</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 文件：~/.claude/commands/code-review.md</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>请审查当前代码变更，检查：</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>代码风格一致性</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>潜在 Bug</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>性能问题</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>缺少测试的情况</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>错误处理完整性</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>输出详细的审查报告。</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>提交信息生成 Command</strong>：</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 文件：~/.claude/commands/commit-msg.md</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>根据当前的 git diff，生成符合 Conventional Commits 规范的提交信息。</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>要求：</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>类型准确（feat/fix/docs/style/refactor/test/chore）</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>描述简洁清晰</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>必要时添加 body 说明</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="commands-高级用法" class="level4">
+<h4 class="anchored" data-anchor-id="commands-高级用法">6.4 Commands 高级用法</h4>
+<p><strong>带参数的 Commands</strong>：</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 使用变量</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>分析 {{file}} 的性能，找出优化点</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>项目级 Commands</strong>：</p>
+<ul>
+<li>将 Commands 放在项目目录 <code>.claude/commands/</code></li>
+<li>版本控制 Commands，团队共享</li>
+</ul>
+</section>
+</section>
+<section id="练习题目-5" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-5">练习题目</h3>
+<ol type="1">
+<li><strong>创建练习</strong>：创建 3 个自定义 Commands</li>
+<li><strong>使用练习</strong>：使用自定义 Command 完成代码审查</li>
+<li><strong>项目级练习</strong>：为项目创建项目级 Commands 并提交到 Git</li>
+<li><strong>分享练习</strong>：与团队成员分享你的 Commands</li>
+</ol>
+</section>
+<section id="参考资料-5" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-5">参考资料</h3>
+<ul>
+<li><a href="https://code.claude.com/docs/en/commands">Claude Code Commands 文档</a></li>
+<li><a href="https://github.com/penwyp/ClaudePreference">ClaudePreference Commands 集合</a></li>
+<li><a href="https://github.com/SuperClaude-Org/SuperClaude_Framework">SuperClaude 框架</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-7-章扩展任务与自动化" class="level2">
+<h2 class="anchored" data-anchor-id="第-7-章扩展任务与自动化">第 7 章：扩展任务与自动化</h2>
+<section id="学习目标-6" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-6">学习目标</h3>
+<ul>
+<li>掌握 AI 辅助写作工作流</li>
+<li>学会使用 Claude Code 进行内容创作</li>
+<li>掌握办公效率提升技巧</li>
+<li>了解自动化工作流</li>
+</ul>
+</section>
+<section id="学习内容-6" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-6">学习内容</h3>
+<section id="文档写作工作流" class="level4">
+<h4 class="anchored" data-anchor-id="文档写作工作流">7.1 文档写作工作流</h4>
+<p><strong>核心思路</strong>：</p>
+<pre><code>需求描述 → 大纲生成 → 内容创作 → 迭代优化</code></pre>
+<p><strong>步骤详解</strong>：</p>
+<ol type="1">
+<li><p><strong>生成大纲</strong>：</p>
+<pre><code>我要写一篇关于"微服务架构"的技术文章，目标读者是有 2 年经验的后端开发者。
+请帮我：
+1. 确定文章结构
+2. 列出每个部分的要点
+3. 建议一个吸引人的标题</code></pre></li>
+<li><p><strong>创作内容</strong>：</p>
+<pre><code>按照刚才讨论的大纲，写出完整的文章</code></pre></li>
+<li><p><strong>迭代优化</strong>：</p>
+<pre><code>开头部分可以增加一个实际案例引入吗？
+第三部分的技术细节需要更详细一些</code></pre></li>
+</ol>
+</section>
+<section id="办公效率提升" class="level4">
+<h4 class="anchored" data-anchor-id="办公效率提升">7.2 办公效率提升</h4>
+<p><strong>文件整理</strong>：</p>
+<pre><code>分析当前目录的文件结构，建议整理方案：
+1. 按文件类型分类
+2. 重命名规范化
+3. 删除冗余文件</code></pre>
+<p><strong>数据处理</strong>：</p>
+<pre><code>分析这个 CSV 文件：
+1. 数据统计 summary
+2. 生成可视化建议
+3. 发现异常数据点</code></pre>
+</section>
+<section id="自动化工作流" class="level4">
+<h4 class="anchored" data-anchor-id="自动化工作流">7.3 自动化工作流</h4>
+<p><strong>结合 Git Hooks</strong>：</p>
+<ul>
+<li>在提交前自动运行代码审查</li>
+<li>生成提交信息</li>
+<li>检查代码规范</li>
+</ul>
+<p><strong>结合 CI/CD</strong>：</p>
+<ul>
+<li>GitHub Actions 集成</li>
+<li>GitLab CI 集成</li>
+<li>自动化测试和部署</li>
+</ul>
+</section>
+</section>
+<section id="练习题目-6" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-6">练习题目</h3>
+<ol type="1">
+<li><strong>写作练习</strong>：用 Claude Code 完成一篇技术文章</li>
+<li><strong>数据分析练习</strong>：分析一个数据文件并生成报告</li>
+<li><strong>自动化练习</strong>：设置 Git 钩子，提交前自动审查代码</li>
+<li><strong>CI/CD 练习</strong>：配置 GitHub Actions 调用 Claude Code</li>
+</ol>
+</section>
+<section id="参考资料-6" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-6">参考资料</h3>
+<ul>
+<li><a href="https://code.claude.com/docs/en/github-actions">Claude Code GitHub Actions</a></li>
+<li><a href="https://code.claude.com/docs/en/gitlab-cicd">Claude Code GitLab CI</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-8-章进阶工作流与最佳实践" class="level2">
+<h2 class="anchored" data-anchor-id="第-8-章进阶工作流与最佳实践">第 8 章：进阶工作流与最佳实践</h2>
+<section id="学习目标-7" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-7">学习目标</h3>
+<ul>
+<li>掌握高效的工作流技巧</li>
+<li>了解 Claude Code 最佳实践</li>
+<li>学会使用进阶技巧</li>
+<li>掌握问题排查方法</li>
+</ul>
+</section>
+<section id="学习内容-7" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-7">学习内容</h3>
+<section id="核心工作流" class="level4">
+<h4 class="anchored" data-anchor-id="核心工作流">8.1 核心工作流</h4>
+<p><strong>推荐工作流程</strong>：</p>
+<pre><code>进入项目目录 → Claude 自动读取 CLAUDE.md → 
+明确需求 → 必要时使用 /plan → 审阅方案 → 实施 → 验证</code></pre>
+<p><strong>关键原则</strong>：</p>
+<ul>
+<li>好的 CLAUDE.md 是成功的一半</li>
+<li>复杂任务先用 Plan 模式</li>
+<li>分步骤实施，及时验证</li>
+<li>保持对话聚焦，避免发散</li>
+</ul>
+</section>
+<section id="条高级使用技巧" class="level4">
+<h4 class="anchored" data-anchor-id="条高级使用技巧">8.2 13 条高级使用技巧</h4>
+<p><strong>技巧清单</strong>：</p>
+<ol type="1">
+<li><strong>创建完善的 CLAUDE.md</strong>
+<ul>
+<li>包含项目架构、常用命令、代码规范</li>
+<li>定期更新维护</li>
+</ul></li>
+<li><strong>善用 @ 引用精确代码</strong>
+<ul>
+<li><code>@文件名#L行号</code> 引用特定代码行</li>
+<li><code>@文件名</code> 引用整个文件</li>
+</ul></li>
+<li><strong>活用 ! 执行命令</strong>
+<ul>
+<li>在对话中直接执行命令</li>
+<li>查看输出并继续对话</li>
+</ul></li>
+<li><strong>使用 Plan 模式</strong>
+<ul>
+<li>复杂任务先用 Plan 分析</li>
+<li>确认方案后再实施</li>
+</ul></li>
+<li><strong>创建自定义 Commands</strong>
+<ul>
+<li>封装重复性工作</li>
+<li>团队共享最佳实践</li>
+</ul></li>
+<li><strong>使用 Skills 增强能力</strong>
+<ul>
+<li>从 skills.sh 安装专业 Skills</li>
+<li>针对特定领域任务</li>
+</ul></li>
+<li><strong>保持上下文聚焦</strong>
+<ul>
+<li>一个对话专注一个主题</li>
+<li>使用 <code>/new</code> 开启新话题</li>
+</ul></li>
+<li><strong>定期总结关键信息</strong>
+<ul>
+<li>长对话中确认理解一致</li>
+<li>保存重要结论</li>
+</ul></li>
+<li><strong>利用代码分析能力</strong>
+<ul>
+<li>让 Claude 分析项目架构</li>
+<li>发现潜在问题</li>
+</ul></li>
+<li><strong>配置全局规则</strong>
+<ul>
+<li>在 CLAUDE.md 中定义代码规范</li>
+<li>统一代码风格</li>
+</ul></li>
+<li><strong>结合版本控制</strong>
+<ul>
+<li>重要修改前先 commit</li>
+<li>方便回滚</li>
+</ul></li>
+<li><strong>多平台使用</strong>
+<ul>
+<li>终端、Web、桌面版灵活切换</li>
+<li>选择最适合的场景</li>
+</ul></li>
+<li><strong>持续学习和调整</strong>
+<ul>
+<li>根据实际使用调整工作流</li>
+<li>关注新功能和最佳实践</li>
+</ul></li>
+</ol>
+</section>
+<section id="问题排查" class="level4">
+<h4 class="anchored" data-anchor-id="问题排查">8.3 问题排查</h4>
+<p><strong>常见问题</strong>：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>问题</th>
+<th>解决</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Claude 不理解项目</td>
+<td>完善 CLAUDE.md</td>
+</tr>
+<tr class="even">
+<td>回复不够准确</td>
+<td>提供更具体的上下文</td>
+</tr>
+<tr class="odd">
+<td>修改不符合预期</td>
+<td>使用 Plan 模式先讨论</td>
+</tr>
+<tr class="even">
+<td>对话过长</td>
+<td>使用 <code>/new</code> 开启新对话</td>
+</tr>
+<tr class="odd">
+<td>权限问题</td>
+<td>检查 API Key 和额度</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="练习题目-7" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-7">练习题目</h3>
+<ol type="1">
+<li><strong>工作流实践</strong>：完整走一遍推荐的核心工作流程</li>
+<li><strong>Commands 实践</strong>：创建一套完整的自定义 Commands</li>
+<li><strong>最佳实践检查</strong>：对照 13 条技巧检查自己的工作流</li>
+<li><strong>问题排查练习</strong>：故意制造问题并学会排查</li>
+</ol>
+</section>
+<section id="参考资料-7" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-7">参考资料</h3>
+<ul>
+<li><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Claude Code 最佳实践官方指南</a></li>
+<li><a href="https://mp.weixin.qq.com/s/IkuvTvtwIYL5tTSVZnW9sQ">Claude Code 创始人亲授技巧</a></li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="第三部分高级篇" class="level1">
+<h1>第三部分：高级篇</h1>
+<blockquote class="blockquote">
+<p><strong>目标</strong>：深度定制 Claude Code，构建个人专属工作流，实现团队协作</p>
+</blockquote>
+<hr>
+<section id="第-9-章高级定制" class="level2">
+<h2 class="anchored" data-anchor-id="第-9-章高级定制">第 9 章：高级定制</h2>
+<section id="学习目标-8" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-8">学习目标</h3>
+<ul>
+<li>掌握 Claude Code 的完整配置系统</li>
+<li>能够创建和管理复杂配置</li>
+<li>掌握高级设置和优化</li>
+<li>了解企业级配置</li>
+</ul>
+</section>
+<section id="学习内容-8" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-8">学习内容</h3>
+<section id="配置系统详解" class="level4">
+<h4 class="anchored" data-anchor-id="配置系统详解">9.1 配置系统详解</h4>
+<p><strong>配置文件位置</strong>：</p>
+<pre><code>~/.claude/settings.json       # 全局配置
+.claude/settings.json         # 项目级配置
+CLAUDE.md                     # 项目上下文</code></pre>
+<p><strong>全局配置示例</strong>：</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"anthropicApiKey"</span><span class="fu">:</span> <span class="st">"your-api-key"</span><span class="fu">,</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"defaultModel"</span><span class="fu">:</span> <span class="st">"claude-4-sonnet"</span><span class="fu">,</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"theme"</span><span class="fu">:</span> <span class="st">"dark"</span><span class="fu">,</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"autoExecute"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"contextWindow"</span><span class="fu">:</span> <span class="dv">200000</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="高级设置" class="level4">
+<h4 class="anchored" data-anchor-id="高级设置">9.2 高级设置</h4>
+<p><strong>模型选择</strong>：</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"defaultModel"</span><span class="fu">:</span> <span class="st">"claude-4-opus"</span><span class="fu">,</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"planModel"</span><span class="fu">:</span> <span class="st">"claude-4-opus"</span><span class="fu">,</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"codeModel"</span><span class="fu">:</span> <span class="st">"claude-4-sonnet"</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>权限控制</strong>：</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"autoExecute"</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"confirmDestructive"</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"maxTokens"</span><span class="fu">:</span> <span class="dv">8192</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="claude.md-高级写法" class="level4">
+<h4 class="anchored" data-anchor-id="claude.md-高级写法">9.3 CLAUDE.md 高级写法</h4>
+<p><strong>完整示例</strong>：</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># CLAUDE.md</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>This file provides guidance to Claude Code when working with code in this repository.</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## 项目概述</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>名称：电商后台管理系统</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>技术栈：Next.js + TypeScript + Prisma + PostgreSQL</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>架构：前后端分离，微服务架构</span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## 开发环境</span></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Node.js 18+</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>pnpm 包管理器</span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Docker 运行数据库</span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## 常用命令</span></span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># 开发</span></span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a>pnpm dev          # 启动开发服务器</span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a>pnpm db:migrate   # 运行数据库迁移</span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a>pnpm db:seed      # 填充测试数据</span>
+<span id="cb45-21"><a href="#cb45-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-22"><a href="#cb45-22" aria-hidden="true" tabindex="-1"></a><span class="fu"># 测试</span></span>
+<span id="cb45-23"><a href="#cb45-23" aria-hidden="true" tabindex="-1"></a>pnpm test         # 运行单元测试</span>
+<span id="cb45-24"><a href="#cb45-24" aria-hidden="true" tabindex="-1"></a>pnpm test:e2e     # 运行 E2E 测试</span>
+<span id="cb45-25"><a href="#cb45-25" aria-hidden="true" tabindex="-1"></a>pnpm test:ui      # 启动 Vitest UI</span>
+<span id="cb45-26"><a href="#cb45-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-27"><a href="#cb45-27" aria-hidden="true" tabindex="-1"></a><span class="fu"># 代码质量</span></span>
+<span id="cb45-28"><a href="#cb45-28" aria-hidden="true" tabindex="-1"></a>pnpm lint         # ESLint 检查</span>
+<span id="cb45-29"><a href="#cb45-29" aria-hidden="true" tabindex="-1"></a>pnpm typecheck    # TypeScript 类型检查</span>
+<span id="cb45-30"><a href="#cb45-30" aria-hidden="true" tabindex="-1"></a>pnpm format       # Prettier 格式化</span>
+<span id="cb45-31"><a href="#cb45-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-32"><a href="#cb45-32" aria-hidden="true" tabindex="-1"></a><span class="fu">## 代码规范</span></span>
+<span id="cb45-33"><a href="#cb45-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>使用 TypeScript 严格模式</span>
+<span id="cb45-34"><a href="#cb45-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>组件使用 PascalCase 命名</span>
+<span id="cb45-35"><a href="#cb45-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>工具函数使用 camelCase 命名</span>
+<span id="cb45-36"><a href="#cb45-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>优先使用函数组件和 Hooks</span>
+<span id="cb45-37"><a href="#cb45-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>复杂逻辑必须添加注释</span>
+<span id="cb45-38"><a href="#cb45-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-39"><a href="#cb45-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## 数据库规范</span></span>
+<span id="cb45-40"><a href="#cb45-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>表名使用小写复数形式</span>
+<span id="cb45-41"><a href="#cb45-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>字段使用 camelCase</span>
+<span id="cb45-42"><a href="#cb45-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>外键必须建立索引</span>
+<span id="cb45-43"><a href="#cb45-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>敏感字段加密存储</span>
+<span id="cb45-44"><a href="#cb45-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-45"><a href="#cb45-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## 测试要求</span></span>
+<span id="cb45-46"><a href="#cb45-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>新功能必须包含单元测试</span>
+<span id="cb45-47"><a href="#cb45-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>API 必须包含集成测试</span>
+<span id="cb45-48"><a href="#cb45-48" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>关键流程必须包含 E2E 测试</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="练习题目-8" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-8">练习题目</h3>
+<ol type="1">
+<li><strong>配置练习</strong>：创建完整的全局配置和项目配置</li>
+<li><strong>CLAUDE.md 练习</strong>：为复杂项目编写完善的 CLAUDE.md</li>
+<li><strong>优化练习</strong>：调整配置以优化响应速度和质量</li>
+<li><strong>企业配置练习</strong>：了解企业级配置选项</li>
+</ol>
+</section>
+<section id="参考资料-8" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-8">参考资料</h3>
+<ul>
+<li><a href="https://code.claude.com/docs/en/configuration">Claude Code 配置文档</a></li>
+<li><a href="https://github.com/affaan-m/everything-claude-code">everything-claude-code GitHub</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-10-章高级工作流与团队协作" class="level2">
+<h2 class="anchored" data-anchor-id="第-10-章高级工作流与团队协作">第 10 章：高级工作流与团队协作</h2>
+<section id="学习目标-9" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-9">学习目标</h3>
+<ul>
+<li>了解 Claude Code 之父的工作流</li>
+<li>掌握团队级配置管理</li>
+<li>学会团队最佳实践</li>
+<li>了解企业版特性</li>
+</ul>
+</section>
+<section id="学习内容-9" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-9">学习内容</h3>
+<section id="claude-code-之父的工作流" class="level4">
+<h4 class="anchored" data-anchor-id="claude-code-之父的工作流">10.1 Claude Code 之父的工作流</h4>
+<p><strong>核心原则</strong>：</p>
+<ol type="1">
+<li><strong>Think first, code later</strong> - 先思考，后编码</li>
+<li><strong>Small steps, big wins</strong> - 小步快跑，积小胜为大胜</li>
+<li><strong>Trust but verify</strong> - 信任但要验证</li>
+</ol>
+<p><strong>工作流模式</strong>：</p>
+<pre><code>1. 深度理解需求（与 AI 充分沟通）
+2. 制定详细方案（Plan 模式）
+3. 分步实施（验证每一步）
+4. 持续验证（测试和审查）
+5. 迭代优化（根据反馈调整）</code></pre>
+</section>
+<section id="团队配置管理" class="level4">
+<h4 class="anchored" data-anchor-id="团队配置管理">10.2 团队配置管理</h4>
+<p><strong>版本控制配置</strong>：</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 将 .claude/ 和 CLAUDE.md 加入版本控制</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .claude/ CLAUDE.md</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add Claude Code configuration"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>配置分层策略</strong>：</p>
+<ul>
+<li><strong>全局配置</strong>：个人偏好（<code>~/.claude/settings.json</code>）</li>
+<li><strong>项目配置</strong>：团队规范（<code>项目/CLAUDE.md</code>、<code>.claude/</code>）</li>
+<li><strong>本地覆盖</strong>：个人临时调整（不提交）</li>
+</ul>
+</section>
+<section id="团队最佳实践" class="level4">
+<h4 class="anchored" data-anchor-id="团队最佳实践">10.3 团队最佳实践</h4>
+<p><strong>项目初始化清单</strong>：</p>
+<ol type="1">
+<li>创建完善的 CLAUDE.md</li>
+<li>定义项目级 Commands</li>
+<li>配置推荐的 Skills</li>
+<li>设置代码规范和检查</li>
+<li>文档化团队工作流</li>
+</ol>
+<p><strong>知识共享</strong>：</p>
+<ul>
+<li>定期分享有效的 Commands</li>
+<li>维护团队 Skills 库</li>
+<li>记录常见问题和解决方案</li>
+</ul>
+</section>
+<section id="企业版特性" class="level4">
+<h4 class="anchored" data-anchor-id="企业版特性">10.4 企业版特性</h4>
+<p><strong>企业功能</strong>（了解）：</p>
+<ul>
+<li>集中配置管理</li>
+<li>审计日志</li>
+<li>SSO 集成</li>
+<li>高级安全策略</li>
+<li>团队协作功能</li>
+</ul>
+</section>
+</section>
+<section id="练习题目-9" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-9">练习题目</h3>
+<ol type="1">
+<li><strong>团队配置练习</strong>：为团队创建完整的配置方案</li>
+<li><strong>工作流实践</strong>：完整实施 Claude Code 之父的工作流</li>
+<li><strong>知识共享练习</strong>：创建团队 Commands 库并分享</li>
+<li><strong>企业功能了解</strong>：了解企业版与社区版的区别</li>
+</ol>
+</section>
+<section id="参考资料-9" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-9">参考资料</h3>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/fSAgfe2V9dUQimAkrPauqQ">Claude Code 之父的工作流</a></li>
+<li><a href="https://mp.weixin.qq.com/s/X8K2z-sEdM9iI3M3F6UHJg">一套可复制的 Claude Code 配置方案</a></li>
+<li><a href="https://mp.weixin.qq.com/s/LR_NEQ2Lbuldzp-IhsmHBQ">黑客松冠军配置指南</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="第-11-章ide-集成与扩展" class="level2">
+<h2 class="anchored" data-anchor-id="第-11-章ide-集成与扩展">第 11 章：IDE 集成与扩展</h2>
+<section id="学习目标-10" class="level3">
+<h3 class="anchored" data-anchor-id="学习目标-10">学习目标</h3>
+<ul>
+<li>掌握 VS Code 集成</li>
+<li>了解 JetBrains 插件</li>
+<li>掌握 Chrome 扩展使用</li>
+<li>了解 MCP 扩展</li>
+</ul>
+</section>
+<section id="学习内容-10" class="level3">
+<h3 class="anchored" data-anchor-id="学习内容-10">学习内容</h3>
+<section id="vs-code-集成" class="level4">
+<h4 class="anchored" data-anchor-id="vs-code-集成">11.1 VS Code 集成</h4>
+<p><strong>安装扩展</strong>：</p>
+<ul>
+<li>在 VS Code 扩展商店搜索 “Claude Code”</li>
+<li>安装官方扩展</li>
+</ul>
+<p><strong>使用方法</strong>：</p>
+<ul>
+<li>在编辑器中直接调用 Claude Code</li>
+<li>选中代码右键发送到 Claude</li>
+<li>在侧边栏与 Claude 对话</li>
+</ul>
+</section>
+<section id="jetbrains-插件" class="level4">
+<h4 class="anchored" data-anchor-id="jetbrains-插件">11.2 JetBrains 插件</h4>
+<p><strong>支持的 IDE</strong>：</p>
+<ul>
+<li>IntelliJ IDEA</li>
+<li>PyCharm</li>
+<li>WebStorm</li>
+<li>其他 JetBrains 产品</li>
+</ul>
+<p><strong>安装方法</strong>：</p>
+<ul>
+<li>在插件市场搜索 “Claude Code”</li>
+<li>安装并配置 API Key</li>
+</ul>
+</section>
+<section id="chrome-扩展" class="level4">
+<h4 class="anchored" data-anchor-id="chrome-扩展">11.3 Chrome 扩展</h4>
+<p><strong>功能</strong>：</p>
+<ul>
+<li>在浏览器中与 Claude 对话</li>
+<li>分析网页内容</li>
+<li>辅助阅读技术文档</li>
+</ul>
+</section>
+<section id="mcp-扩展" class="level4">
+<h4 class="anchored" data-anchor-id="mcp-扩展">11.4 MCP 扩展</h4>
+<p><strong>什么是 MCP</strong>：</p>
+<ul>
+<li>Model Context Protocol</li>
+<li>连接外部工具和服务的标准协议</li>
+</ul>
+<p><strong>使用场景</strong>：</p>
+<ul>
+<li>连接数据库</li>
+<li>集成第三方 API</li>
+<li>扩展 Claude Code 的能力边界</li>
+</ul>
+</section>
+</section>
+<section id="练习题目-10" class="level3">
+<h3 class="anchored" data-anchor-id="练习题目-10">练习题目</h3>
+<ol type="1">
+<li><strong>VS Code 集成练习</strong>：安装并配置 VS Code 扩展</li>
+<li><strong>JetBrains 练习</strong>：在 JetBrains IDE 中使用 Claude Code</li>
+<li><strong>Chrome 扩展练习</strong>：使用浏览器扩展辅助开发</li>
+<li><strong>MCP 了解</strong>：了解 MCP 的概念和潜在应用</li>
+</ol>
+</section>
+<section id="参考资料-10" class="level3">
+<h3 class="anchored" data-anchor-id="参考资料-10">参考资料</h3>
+<ul>
+<li><a href="https://code.claude.com/docs/en/vscode">Claude Code VS Code</a></li>
+<li><a href="https://code.claude.com/docs/en/jetbrains">Claude Code JetBrains</a></li>
+<li><a href="https://code.claude.com/docs/en/chrome-extension">Claude Code Chrome 扩展</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="附录" class="level2">
+<h2 class="anchored" data-anchor-id="附录">附录</h2>
+<section id="a.-快捷键速查表" class="level3">
+<h3 class="anchored" data-anchor-id="a.-快捷键速查表">A. 快捷键速查表</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Ctrl + c</code></td>
+<td>取消当前操作</td>
+</tr>
+<tr class="even">
+<td><code>Tab</code></td>
+<td>自动补全</td>
+</tr>
+<tr class="odd">
+<td><code>↑</code> / <code>↓</code></td>
+<td>浏览历史输入</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="b.-斜杠命令速查表" class="level3">
+<h3 class="anchored" data-anchor-id="b.-斜杠命令速查表">B. 斜杠命令速查表</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/help</code></td>
+<td>显示帮助</td>
+</tr>
+<tr class="even">
+<td><code>/plan</code></td>
+<td>进入 Plan 模式</td>
+</tr>
+<tr class="odd">
+<td><code>/clear</code></td>
+<td>清空对话</td>
+</tr>
+<tr class="even">
+<td><code>/new</code></td>
+<td>新建对话</td>
+</tr>
+<tr class="odd">
+<td><code>/exit</code></td>
+<td>退出</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="c.-核心学习资源索引" class="level3">
+<h3 class="anchored" data-anchor-id="c.-核心学习资源索引">C. 核心学习资源索引</h3>
+<p><strong>官方文档</strong>：</p>
+<ul>
+<li><a href="https://code.claude.com/docs">Claude Code 官方文档</a></li>
+<li><a href="https://code.claude.com/docs/en/quickstart">快速起步</a></li>
+<li><a href="https://code.claude.com/docs/en/how-claude-code-works">工作原理</a></li>
+<li><a href="https://www.anthropic.com/engineering/claude-code-best-practices">最佳实践</a></li>
+</ul>
+<p><strong>Skills 生态</strong>：</p>
+<ul>
+<li><a href="https://skills.sh">skills.sh</a></li>
+<li><a href="https://skills.sh/anthropics/skills/skill-creator">skill-creator</a></li>
+<li><a href="https://skills.sh/obra/superpowers">superpowers</a></li>
+</ul>
+<p><strong>深度文章</strong>：</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/fSAgfe2V9dUQimAkrPauqQ">Claude Code 之父的工作流</a></li>
+<li><a href="https://mp.weixin.qq.com/s/IkuvTvtwIYL5tTSVZnW9sQ">Claude Code 创始人亲授技巧</a></li>
+<li><a href="https://codewithmukesh.com/blog/claude-code-for-beginners/">Claude Code 初学者指南</a></li>
+</ul>
+<p><strong>GitHub 资源</strong>：</p>
+<ul>
+<li><a href="https://github.com/affaan-m/everything-claude-code">everything-claude-code</a></li>
+<li><a href="https://github.com/penwyp/ClaudePreference">ClaudePreference</a></li>
+<li><a href="https://github.com/SuperClaude-Org/SuperClaude_Framework">SuperClaude</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="学习路径总结" class="level2">
+<h2 class="anchored" data-anchor-id="学习路径总结">学习路径总结</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────────┐
+│                         学习路径总览                              │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐          │
+│  │  初级篇     │ →  │  进阶篇     │ →  │  高级篇     │          │
+│  │  (基础)     │    │  (效率)     │    │  (专家)     │          │
+│  └─────────────┘    └─────────────┘    └─────────────┘          │
+│        │                  │                  │                  │
+│   安装与起步          高级功能与技巧      高级定制              │
+│   基础操作            Skills 系统         团队协作              │
+│   基础工作流          自定义 Commands     IDE 集成              │
+│                       扩展任务                              │
+│                       进阶工作流                            │
+│                                                                  │
+│  预计学习时间：2-4 周                                             │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘</code></pre>
+<hr>
+</section>
+<section id="引用信息" class="level2">
+<h2 class="anchored" data-anchor-id="引用信息">引用信息</h2>
+<p>引用本文请注明以下信息。</p>
+<pre><code>@article{lj_claudecode2026,
+  author = {龙军},
+  title = {claude code学习路径},
+  year = {2026},
+  url = {https://jdragonnudt.github.io/inspiraHub/myblog/posts/claudecode-learning-path/},
+}</code></pre>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="jdragonnudt/inspiraHub" data-repo-id="R_kgDOMGN2Lg" data-category="General" data-category-id="DIC_kwDOMGN2Ls4Cf8Yq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2024, by jdragon. 本网站所有内容采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA许可，知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
