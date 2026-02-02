@@ -1996,5 +1996,166 @@
     "title": "claude code学习路径",
     "section": "第 10 章：高级工作流与团队协作",
     "text": "第 10 章：高级工作流与团队协作\n\n学习目标\n\n了解 Claude Code 之父的工作流\n掌握团队级配置管理\n学会团队最佳实践\n了解企业版特性\n\n\n\n学习内容\n\n10.1 Claude Code 之父的工作流\n核心原则：\n\nThink first, code later - 先思考，后编码\nSmall steps, big wins - 小步快跑，积小胜为大胜\nTrust but verify - 信任但要验证\n\n工作流模式：\n1. 深度理解需求（与 AI 充分沟通）\n2. 制定详细方案（Plan 模式）\n3. 分步实施（验证每一步）\n4. 持续验证（测试和审查）\n5. 迭代优化（根据反馈调整）\n\n\n10.2 团队配置管理\n版本控制配置：\n# 将 .claude/ 和 CLAUDE.md 加入版本控制\ngit add .claude/ CLAUDE.md\ngit commit -m \"Add Claude Code configuration\"\n配置分层策略：\n\n全局配置：个人偏好（~/.claude/settings.json）\n项目配置：团队规范（项目/CLAUDE.md、.claude/）\n本地覆盖：个人临时调整（不提交）\n\n\n\n10.3 团队最佳实践\n项目初始化清单：\n\n创建完善的 CLAUDE.md\n定义项目级 Commands\n配置推荐的 Skills\n设置代码规范和检查\n文档化团队工作流\n\n知识共享：\n\n定期分享有效的 Commands\n维护团队 Skills 库\n记录常见问题和解决方案\n\n\n\n10.4 企业版特性\n企业功能（了解）：\n\n集中配置管理\n审计日志\nSSO 集成\n高级安全策略\n团队协作功能\n\n\n\n\n练习题目\n\n团队配置练习：为团队创建完整的配置方案\n工作流实践：完整实施 Claude Code 之父的工作流\n知识共享练习：创建团队 Commands 库并分享\n企业功能了解：了解企业版与社区版的区别\n\n\n\n参考资料\n\nClaude Code 之父的工作流\n一套可复制的 Claude Code 配置方案\n黑客松冠军配置指南"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html",
+    "href": "myblog/posts/claudecode-learning-path/index.html",
+    "title": "claude code学习路径",
+    "section": "",
+    "text": "从零基础到专家级，掌握 Anthropic 官方 AI 编程助手的完整指南\n\n\n\n\n\n序言：为什么是 Claude Code\n第一部分：初级篇 - 快速上手，建立基础\n第二部分：进阶篇 - 效率提升，工作流优化\n第三部分：高级篇 - 深度定制，团队协作"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#目录",
+    "href": "myblog/posts/claudecode-learning-path/index.html#目录",
+    "title": "claude code学习路径",
+    "section": "",
+    "text": "序言：为什么是 Claude Code\n第一部分：初级篇 - 快速上手，建立基础\n第二部分：进阶篇 - 效率提升，工作流优化\n第三部分：高级篇 - 深度定制，团队协作"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#什么是-claude-code",
+    "href": "myblog/posts/claudecode-learning-path/index.html#什么是-claude-code",
+    "title": "claude code学习路径",
+    "section": "什么是 Claude Code",
+    "text": "什么是 Claude Code\nClaude Code 是 Anthropic 官方推出的 AI 编程助手（AI Coding Assistant），直接在终端中运行，帮助开发者通过自然语言交互完成软件工程任务。它能够理解整个代码库、执行多步骤任务，并在复杂项目中保持上下文连贯性。\n简单来说，Claude Code 是你终端里的「AI 结对编程伙伴」——通过对话就能让它分析代码、实现功能、修复 Bug、重构项目，甚至完成完整的端到端开发任务。"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#使用-claude-code-的好处",
+    "href": "myblog/posts/claudecode-learning-path/index.html#使用-claude-code-的好处",
+    "title": "claude code学习路径",
+    "section": "使用 Claude Code 的好处",
+    "text": "使用 Claude Code 的好处\n\n1. 显著提升开发效率\n\n秒懂陌生代码库：几分钟内理解项目结构和核心逻辑，无需逐行阅读\n自然语言编程：用日常语言描述需求，AI 自动生成高质量代码\n智能重构：安全地重构代码，提升可维护性而不破坏功能\n快速 Debug：系统化定位问题根因，提供修复建议\n\n\n\n2. 降低认知负担\n\n一站式开发：无需在编辑器、文档、搜索引擎间频繁切换\n上下文记忆：AI 自动记住项目细节，无需重复说明背景\n全流程覆盖：从需求分析到测试验证，一个界面完成\n\n\n\n3. 提升代码质量\n\n实时最佳实践建议：内置丰富的编码规范和设计模式\n持续代码审查：AI 即时发现问题并提供改进建议\n自动化测试生成：根据代码逻辑生成全面的测试用例\n\n\n\n4. 支持团队协作\n\n知识沉淀：通过 CLAUDE.md 固化项目规范和架构知识\n新人快速上手：新成员通过 Claude Code 快速理解项目\n一致的工作流：团队共享配置，统一开发方式"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#claude-code-的核心优势",
+    "href": "myblog/posts/claudecode-learning-path/index.html#claude-code-的核心优势",
+    "title": "claude code学习路径",
+    "section": "Claude Code 的核心优势",
+    "text": "Claude Code 的核心优势\n\n1. 原生 Claude 模型集成\nClaude Code 深度集成 Anthropic 的 Claude 系列模型：\n\n\n\n\n\n\n\n\n模型\n推荐场景\n特点\n\n\n\n\nClaude 4 Opus\n复杂架构设计、深度分析\n最强推理能力，适合高难度任务\n\n\nClaude 4 Sonnet\n日常开发、代码审查\n平衡性能与成本，响应快速\n\n\nClaude 3.5 Sonnet\n快速原型、简单任务\n高性价比，适合常规开发\n\n\n\n优势：专为 Claude 模型优化的交互体验，充分发挥模型潜力。\n\n\n2. Plan 模式工作流\nClaude Code 支持 Plan Mode（规划模式）：\n\nPlan 模式：只读分析，适合代码理解、方案设计、架构规划\n执行模式：读写执行，适合功能实现、Bug 修复、代码重构\n\n优势：避免 AI 贸然修改代码，先规划再动手，大幅降低返工率。\n\n\n3. 深度代码库理解\nClaude Code 能够：\n\n分析整个项目的架构和依赖关系\n追踪跨文件的函数调用和数据流\n理解复杂的设计模式和业务逻辑\n在大型代码库中保持上下文连贯\n\n优势：专业级的代码理解能力，如同资深工程师在指导工作。\n\n\n4. 丰富的扩展生态\n\nSkills 系统：从 skills.sh 安装专业领域技能包\n自定义 Commands：创建一键触发的自定义命令\nMCP 集成：连接外部工具和服务\nIDE 扩展：支持 VS Code、JetBrains 等主流编辑器\n\n优势：生态丰富，可根据需求灵活扩展功能。\n\n\n5. 官方品质保障\n作为 Anthropic 官方产品：\n\n与 Claude 模型同步更新，始终使用最新能力\n官方技术支持和服务保障\n企业级安全和隐私保护\n持续迭代和功能增强\n\n优势：官方背书，稳定可靠，长期支持有保障。\n\n\n6. 多平台支持\n\n终端：原生 CLI 体验\nWeb 版：浏览器中直接使用\n桌面版：独立应用程序\nIDE 插件：VS Code、JetBrains 集成\n\n优势：随时随地，选择最适合你的工作方式。"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#claude-code-vs-opencode如何选择",
+    "href": "myblog/posts/claudecode-learning-path/index.html#claude-code-vs-opencode如何选择",
+    "title": "claude code学习路径",
+    "section": "Claude Code vs OpenCode：如何选择",
+    "text": "Claude Code vs OpenCode：如何选择\nOpenCode 是开源的 AI 编程工具，与 Claude Code 有许多相似之处。以下是两者的对比：\n\n功能对比\n\n\n\n\n\n\n\n\n特性\nClaude Code\nOpenCode\n\n\n\n\n模型支持\n仅 Claude 系列（深度优化）\n多模型（Claude、GPT、DeepSeek、GLM 等）\n\n\n费用\nClaude Pro/API 订阅\n自主选择模型，灵活控制成本\n\n\n国内访问\n需要网络配置\n支持国产模型直连\n\n\n开源\n闭源，官方维护\n完全开源，可自由定制\n\n\n官方支持\nAnthropic 官方支持\n社区驱动\n\n\n集成深度\n与 Claude 模型深度集成\n通用接口，适配多种模型\n\n\nSkills 生态\n支持 skills.sh 生态\n同样支持 skills.sh\n\n\n企业功能\n企业版完善\n社区版本\n\n\n\n\n\n适用场景建议\n选择 Claude Code，如果你：\n\n信任 Anthropic 的 Claude 模型能力\n需要官方直接支持和服务保障\n追求与 Claude 模型的最佳集成体验\n企业环境需要合规和安全保障\n愿意为官方品质支付相应费用\n\n选择 OpenCode，如果你：\n\n希望灵活切换多种 AI 模型\n需要国产模型直连，不想折腾网络\n重视开源，希望深度定制工具\n希望灵活控制成本和模型选择\n是中文用户，需要本地化支持\n\n\n\n两者并非对立\n实际上两者可以互补：\n\nClaude Code 适合：对代码质量要求高、需要官方支持的场景\nOpenCode 适合：需要灵活性、多模型对比、深度定制的场景\n技能互通：skills.sh 上的 Skill 可以在两者中使用\n学习成本复用：Plan/Build 工作流概念相通"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#谁适合使用-claude-code",
+    "href": "myblog/posts/claudecode-learning-path/index.html#谁适合使用-claude-code",
+    "title": "claude code学习路径",
+    "section": "谁适合使用 Claude Code",
+    "text": "谁适合使用 Claude Code\n\n开发者\n\n全栈工程师：快速实现功能，端到端开发\n前端开发者：UI/UX 实现、组件库开发\n后端工程师：API 开发、数据库设计、系统架构\n算法工程师：算法实现、数据分析、模型部署\n\n\n\n技术管理者\n\n架构师：系统设计、技术决策、代码审查\n技术负责人：团队规范、项目初始化、质量管控\nCTO/VP：技术选型、团队效率、知识沉淀\n\n\n\n其他技术人员\n\nDevOps 工程师：CI/CD、自动化脚本、基础设施\n数据工程师：数据处理、ETL、报表生成\n产品经理：快速原型、需求验证\n技术写作者：文档编写、教程制作"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#学习路径概述",
+    "href": "myblog/posts/claudecode-learning-path/index.html#学习路径概述",
+    "title": "claude code学习路径",
+    "section": "学习路径概述",
+    "text": "学习路径概述\n本文档分为三个部分，循序渐进地帮助你掌握 Claude Code：\n第一部分：初级篇 - 快速上手\n\n安装配置、基础操作、基础工作流\n目标：能在日常开发中使用 Claude Code 辅助工作\n\n第二部分：进阶篇 - 效率提升\n\n高级功能、Skills 系统、自动化工作流、定制配置\n目标：掌握高级工作流，显著提升开发效率\n\n第三部分：高级篇 - 专家级别\n\n高级定制、团队配置、企业级工作流\n目标：深度定制 Claude Code，构建团队级解决方案\n\n预计学习时间：2-4 周（视个人基础和投入时间而定）"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#开始之前",
+    "href": "myblog/posts/claudecode-learning-path/index.html#开始之前",
+    "title": "claude code学习路径",
+    "section": "开始之前",
+    "text": "开始之前\n使用 Claude Code 需要：\n\n基本的终端/命令行操作知识\n一定的编程基础（至少一种编程语言）\nAnthropic API Key（或 Claude Pro 订阅）\n开放的心态，愿意尝试新的工作方式\n\n不需要：\n\n深厚的 AI 知识（Claude Code 帮你封装了复杂性）\n昂贵的硬件（普通电脑即可运行）\n复杂的配置（开箱即用）\n\n\n准备好了吗？让我们开始这段学习旅程！"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-1-章安装与起步",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-1-章安装与起步",
+    "title": "claude code学习路径",
+    "section": "第 1 章：安装与起步",
+    "text": "第 1 章：安装与起步\n\n学习目标\n\n理解 Claude Code 是什么以及能做什么\n成功安装 Claude Code 且不报错\n完成 Anthropic 认证配置\n完成第一次 “Hello World” 对话\n\n\n\n学习内容\n\n1.1 Claude Code 简介\nClaude Code 是一款 AI 编程助手，能够：\n\n理解代码并辅助开发\n自动完成文件操作和代码重构\n执行终端命令并分析输出\n提供 Plan 模式进行方案设计\n通过 Skills 扩展专业能力\n\n\n\n1.2 安装步骤\n方式一：npm 安装（推荐）\n# 全局安装\nnpm install -g @anthropic-ai/claude-code\n\n# 验证安装\nclaude --version\n方式二：Homebrew 安装（macOS）\n# 添加 Anthropic tap\nbrew tap anthropic/claude\n\n# 安装 Claude Code\nbrew install claude-code\n方式三：下载二进制文件\n访问 Claude Code 发布页面 下载对应平台的二进制文件。\n\n\n1.3 认证配置\n获取 API Key：\n\n访问 Anthropic Console\n注册/登录账户\n创建 API Key\n新用户可获得免费试用额度\n\n配置认证：\n# 方式一：使用登录命令\nclaude auth login\n\n# 方式二：环境变量\nexport ANTHROPIC_API_KEY=\"your-api-key-here\"\n\n# 方式三：配置文件\n# 编辑 ~/.claude/settings.json\n{\n  \"anthropicApiKey\": \"your-api-key-here\"\n}\n\n\n1.4 第一次对话\n# 进入项目目录\ncd ~/my-project\n\n# 启动 Claude Code\nclaude\n\n# 输入测试\n你好，请介绍一下你自己\nClaude Code 会自动：\n\n分析当前目录的项目结构\n识别技术栈和框架\n读取已有的 CLAUDE.md（如果存在）\n\n\n\n\n练习题目\n\n安装验证：运行 claude --version，确认安装成功\n认证配置：完成 API Key 配置并成功认证\n首次对话：成功发送 “Hello World” 并收到回复\n项目分析：进入一个项目目录，观察 Claude Code 如何识别项目\n\n\n\n参考资料\n\nClaude Code 官方文档\n快速起步指南\n安装指南\nClaude Code for Beginners"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-2-章基础操作",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-2-章基础操作",
+    "title": "claude code学习路径",
+    "section": "第 2 章：基础操作",
+    "text": "第 2 章：基础操作\n\n学习目标\n\n熟悉 Claude Code 的界面和核心操作\n掌握 @、! 语法\n学会使用斜杠命令\n了解 Plan 模式的切换\n\n\n\n学习内容\n\n2.1 界面导览\nClaude Code 采用简洁的终端界面：\n\n对话区域：显示用户输入和 Claude 回复\n输入框：底部输入命令或问题\n状态指示：显示当前模式、上下文信息\n\n\n\n2.2 核心语法\n@ - 引用文件/代码：\n@src/main.ts 请分析这个文件\n@src/utils.ts#L10-20 解释这几行代码\n@README.md 总结文档内容\n! - 执行命令：\n!npm install\n!git status\n!python test.py\nClaude Code 会自动：\n\n执行命令并获取输出\n分析命令结果\n根据输出继续对话\n\n\n\n2.3 斜杠命令\nClaude Code 支持丰富的斜杠命令：\n\n\n\n命令\n功能\n\n\n\n\n/help\n显示帮助信息\n\n\n/clear\n清空对话历史\n\n\n/new\n新建对话会话\n\n\n/plan\n切换到 Plan 模式\n\n\n/exit\n退出 Claude Code\n\n\n\n使用示例：\n/plan 我要添加用户认证功能，请先帮我设计方案\n\n\n2.4 Plan 模式详解\n什么是 Plan 模式：\n\n只读分析模式，不会修改文件\n适合代码理解、方案设计、架构规划\n避免 AI 贸然修改代码\n\n如何进入 Plan 模式：\n/plan\nPlan 模式使用场景：\n\n理解陌生代码库\n设计新功能方案\n代码审查和分析\n技术决策讨论\n\n\n\n\n练习题目\n\n文件引用练习：使用 @文件名 引用项目中的文件并提问\n命令执行练习：使用 !命令 执行一个简单的 bash 命令\nPlan 模式练习：切换到 Plan 模式分析项目结构\n斜杠命令练习：尝试 /help 和 /clear 命令\n\n\n\n参考资料\n\nClaude Code 最佳实践\nClaude Code 工作原理\n常见工作流"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-3-章基础工作流",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-3-章基础工作流",
+    "title": "claude code学习路径",
+    "section": "第 3 章：基础工作流",
+    "text": "第 3 章：基础工作流\n\n学习目标\n\n理解 Plan 模式和工作模式的区别\n掌握标准开发流程\n学会创建和编辑 CLAUDE.md\n能够在日常开发中运用 Claude Code\n\n\n\n学习内容\n\n3.1 Plan 模式 vs 工作模式\nPlan 模式（规划模式）：\n\n特点：只读分析，不会修改文件\n用途：代码理解、方案设计、架构规划\n触发方式：输入 /plan 或在提示中明确要求规划\n\n工作模式（默认）：\n\n特点：可以读写文件、执行命令\n用途：功能实现、Bug 修复、代码重构\n触发方式：直接输入需求\n\n工作流建议：\n理解代码(Plan) → 制定方案(Plan) → 实现功能(工作模式) → 验证测试\n\n\n3.2 标准开发工作流\n步骤详解：\n\n理解代码（Plan 模式）：\n/plan 请帮我梳理项目结构，分析主要模块和依赖关系\n制定方案（Plan 模式）：\n/plan 我要添加 XX 功能，请帮我分析：\n1. 需要修改哪些文件\n2. 推荐的实现方案\n3. 每种方案的优缺点\n实现功能（工作模式）：\n按照方案一实现功能，第一步先创建 XX 文件\n验证测试（工作模式）：\n!npm test\n请分析测试结果，如果有失败请修复\n\n\n\n3.3 CLAUDE.md 配置\n什么是 CLAUDE.md：\n\n项目级的 Claude Code 配置文件\n位于项目根目录\n自动被 Claude Code 读取作为上下文\n\n创建 CLAUDE.md：\n# CLAUDE.md\n\nThis file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n\n## 项目概述\n- 项目名称：XXX\n- 技术栈：React + TypeScript + Node.js\n- 项目目标：简短描述\n\n## 常用命令\n- `npm run dev`：启动开发服务器\n- `npm test`：运行测试\n- `npm run build`：构建项目\n- `npm run lint`：代码检查\n\n## 代码规范\n- 使用 2 空格缩进\n- 变量使用 camelCase\n- 优先使用函数组件\n\n## 架构说明\n- 前端：React + TailwindCSS\n- 后端：Express.js\n- 数据库：PostgreSQL\n自动生成 CLAUDE.md：\n请分析这个代码库并创建一个 CLAUDE.md 文件，包含：\n1. 常用命令（构建、测试、开发）\n2. 项目架构和关键概念\n3. 代码规范\n\n\n3.4 文件操作技巧\n读取文件：\n@README.md 请总结这个文档\n分析多个文件：\n请分析 src/components 目录下的所有组件文件\n搜索内容：\n搜索包含 \"auth\" 的所有文件，分析认证逻辑\n\n\n\n练习题目\n\n模式切换练习：在 Plan 模式和工作模式间切换\n项目分析练习：用 Plan 模式分析项目结构，理解代码\n功能实现练习：用 Plan → 工作模式流程实现一个小功能\nCLAUDE.md 练习：为你的项目创建一份 CLAUDE.md\n\n\n\n参考资料\n\nClaude Code 最佳实践\n构建端到端项目\nClaude Code 教程"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-4-章高级功能与技巧",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-4-章高级功能与技巧",
+    "title": "claude code学习路径",
+    "section": "第 4 章：高级功能与技巧",
+    "text": "第 4 章：高级功能与技巧\n\n学习目标\n\n掌握 Claude Code 的高级使用技巧\n学会使用 context 和记忆功能\n理解 Claude Code 的代码分析能力\n掌握多文件编辑技巧\n\n\n\n学习内容\n\n4.1 高级使用技巧\n精准代码引用：\n@src/utils.ts#L10-20 请解释这段代码的逻辑\n批量文件分析：\n分析 src/services 目录下的所有文件，总结服务层架构\n上下文保持：\n\nClaude Code 会自动保持对话上下文\n在长对话中定期总结关键信息\n使用 /new 开启新对话重置上下文\n\n\n\n4.2 代码分析与重构\n代码审查：\n请审查 @src/auth.ts，检查：\n1. 安全性问题\n2. 代码风格\n3. 性能优化建议\n重构建议：\n请重构 @src/utils.ts：\n1. 提取重复代码\n2. 优化函数命名\n3. 添加类型定义\n\n\n4.3 调试技巧\n错误分析：\n运行 !npm test 失败，请分析错误日志并修复问题\n性能分析：\n分析 @src/database.ts 的数据库查询，找出性能瓶颈\n\n\n4.4 Web 版和桌面版\nClaude Code Web：\n\n访问 claude.ai/code 使用浏览器版本\n无需安装，即开即用\n适合临时使用或无法安装 CLI 的场景\n\nClaude Code Desktop：\n\n独立的桌面应用程序\n更好的性能和体验\n支持语音交互（Voice Mode）\n\n\n\n\n练习题目\n\n代码审查练习：对项目中的一个模块进行完整代码审查\n重构练习：重构一段遗留代码，提升可读性和性能\n调试练习：故意引入一个 Bug，让 Claude Code 帮你定位和修复\nWeb 版体验：尝试使用 Claude Code Web 版完成简单任务\n\n\n\n参考资料\n\nClaude Code 最佳实践\nClaude Code 常见工作流"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-5-章skills-系统",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-5-章skills-系统",
+    "title": "claude code学习路径",
+    "section": "第 5 章：Skills 系统",
+    "text": "第 5 章：Skills 系统\n\n学习目标\n\n理解 Skills 的概念和价值\n学会从 skills.sh 安装 Skills\n掌握常用 Skills 的使用\n了解 Skill-creator 工具\n\n\n\n学习内容\n\n5.1 Skills 简介\n什么是 Skills：\n\nSkills 是封装复杂指令的模块\n提供专业领域知识和最佳实践\n扩展 Claude Code 的能力边界\n\nSkills 生态系统：\n\n官方仓库：skills.sh\n社区贡献的各类专业技能包\n支持 Claude Code、OpenCode、Cursor 等工具\n\n\n\n5.2 安装 Skills\n安装方式：\n# 安装 skill-creator（创建 Skill 的工具）\nnpx skills add https://github.com/anthropics/skills --skill skill-creator\n\n# 安装 remotion-best-practices（视频开发）\nnpx skills add https://github.com/remotion-dev/skills --skill remotion-best-practices\n\n# 安装 superpowers 系列\nnpx skills add https://github.com/obra/superpowers --skill brainstorming\nnpx skills add https://github.com/obra/superpowers --skill systematic-debugging\n\n\n5.3 常用 Skills 介绍\n1. skill-creator（Anthropic 官方）\n\n指导如何创建有效的 Skills\n包含设计原则和最佳实践\n使用场景：创建自定义 Skill 时\n\n2. superpowers 系列（obra）\n14 个开发工作流增强 Skill：\n\n\n\nSkill\n用途\n\n\n\n\nbrainstorming\n创意工作前的头脑风暴\n\n\nsystematic-debugging\n系统化调试\n\n\ntest-driven-development\n测试驱动开发\n\n\nwriting-plans\n编写实施计划\n\n\nrequesting-code-review\n请求代码审查\n\n\nverification-before-completion\n完成前验证\n\n\n\n3. remotion-best-practices（Remotion 团队）\n\nReact 视频开发的最佳实践\n动画、音频、转场等专业指导\n周安装量 58.7K\n\n4. 其他常用 Skills：\n\n\n\nSkill\n用途\n\n\n\n\ngit-master\nGit 操作专家\n\n\nfrontend-ui-ux\nUI/UX 设计能力\n\n\npdf\nPDF 操作\n\n\ndocx\nWord 文档处理\n\n\npptx\nPPT 制作\n\n\n\n\n\n5.4 使用 Skills\nSkill 触发方式：\n\nSkills 会根据对话内容自动触发\n也可以在提示中明确引用 Skill\n\n示例：\n使用 test-driven-development 的方式，为这个功能编写测试\n\n\n\n练习题目\n\n安装练习：安装 3 个常用的 Skills\n使用练习：使用 brainstorming Skill 进行项目设计\ndebugging 练习：使用 systematic-debugging Skill 定位 Bug\nTDD 练习：使用 test-driven-development Skill 完成 TDD 流程\n\n\n\n参考资料\n\nskills.sh 官网\nskill-creator 指南\nsuperpowers Skill 集合\nremotion-best-practices"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-6-章自定义-commands",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-6-章自定义-commands",
+    "title": "claude code学习路径",
+    "section": "第 6 章：自定义 Commands",
+    "text": "第 6 章：自定义 Commands\n\n学习目标\n\n理解自定义 Commands 的概念\n学会创建自定义 Commands\n掌握 Commands 的高级用法\n了解 Commands 的管理和分享\n\n\n\n学习内容\n\n6.1 什么是自定义 Commands\n概念：\n\n将常用的提示词封装为斜杠命令\n一键触发复杂任务\n提高重复性工作的效率\n\n存储位置：\n~/.claude/commands/     # 全局 Commands\n.claude/commands/       # 项目级 Commands\n\n\n6.2 创建自定义 Commands\n步骤：\n\n创建目录：\n\nmkdir -p ~/.claude/commands\n\n编写 Command 文件：\n\n# 创建文件 ~/.claude/commands/security-review.md\ncat &gt; ~/.claude/commands/security-review.md &lt;&lt; 'EOF'\n审查这段代码的安全性，重点关注：\n1. SQL 注入风险\n2. XSS 漏洞\n3. 权限控制缺陷\n4. 敏感信息泄露\n\n输出格式：\n- 严重问题（必须修复）\n- 建议改进（可选）\n- 正面反馈\nEOF\n\n使用 Command：\n\n/security-review\n\n\n6.3 常用 Commands 示例\n代码审查 Command：\n# 文件：~/.claude/commands/code-review.md\n请审查当前代码变更，检查：\n1. 代码风格一致性\n2. 潜在 Bug\n3. 性能问题\n4. 缺少测试的情况\n5. 错误处理完整性\n\n输出详细的审查报告。\n提交信息生成 Command：\n# 文件：~/.claude/commands/commit-msg.md\n根据当前的 git diff，生成符合 Conventional Commits 规范的提交信息。\n\n要求：\n- 类型准确（feat/fix/docs/style/refactor/test/chore）\n- 描述简洁清晰\n- 必要时添加 body 说明\n\n\n6.4 Commands 高级用法\n带参数的 Commands：\n# 使用变量\n分析 {{file}} 的性能，找出优化点\n项目级 Commands：\n\n将 Commands 放在项目目录 .claude/commands/\n版本控制 Commands，团队共享\n\n\n\n\n练习题目\n\n创建练习：创建 3 个自定义 Commands\n使用练习：使用自定义 Command 完成代码审查\n项目级练习：为项目创建项目级 Commands 并提交到 Git\n分享练习：与团队成员分享你的 Commands\n\n\n\n参考资料\n\nClaude Code Commands 文档\nClaudePreference Commands 集合\nSuperClaude 框架"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-7-章扩展任务与自动化",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-7-章扩展任务与自动化",
+    "title": "claude code学习路径",
+    "section": "第 7 章：扩展任务与自动化",
+    "text": "第 7 章：扩展任务与自动化\n\n学习目标\n\n掌握 AI 辅助写作工作流\n学会使用 Claude Code 进行内容创作\n掌握办公效率提升技巧\n了解自动化工作流\n\n\n\n学习内容\n\n7.1 文档写作工作流\n核心思路：\n需求描述 → 大纲生成 → 内容创作 → 迭代优化\n步骤详解：\n\n生成大纲：\n我要写一篇关于\"微服务架构\"的技术文章，目标读者是有 2 年经验的后端开发者。\n请帮我：\n1. 确定文章结构\n2. 列出每个部分的要点\n3. 建议一个吸引人的标题\n创作内容：\n按照刚才讨论的大纲，写出完整的文章\n迭代优化：\n开头部分可以增加一个实际案例引入吗？\n第三部分的技术细节需要更详细一些\n\n\n\n7.2 办公效率提升\n文件整理：\n分析当前目录的文件结构，建议整理方案：\n1. 按文件类型分类\n2. 重命名规范化\n3. 删除冗余文件\n数据处理：\n分析这个 CSV 文件：\n1. 数据统计 summary\n2. 生成可视化建议\n3. 发现异常数据点\n\n\n7.3 自动化工作流\n结合 Git Hooks：\n\n在提交前自动运行代码审查\n生成提交信息\n检查代码规范\n\n结合 CI/CD：\n\nGitHub Actions 集成\nGitLab CI 集成\n自动化测试和部署\n\n\n\n\n练习题目\n\n写作练习：用 Claude Code 完成一篇技术文章\n数据分析练习：分析一个数据文件并生成报告\n自动化练习：设置 Git 钩子，提交前自动审查代码\nCI/CD 练习：配置 GitHub Actions 调用 Claude Code\n\n\n\n参考资料\n\nClaude Code GitHub Actions\nClaude Code GitLab CI"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-8-章进阶工作流与最佳实践",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-8-章进阶工作流与最佳实践",
+    "title": "claude code学习路径",
+    "section": "第 8 章：进阶工作流与最佳实践",
+    "text": "第 8 章：进阶工作流与最佳实践\n\n学习目标\n\n掌握高效的工作流技巧\n了解 Claude Code 最佳实践\n学会使用进阶技巧\n掌握问题排查方法\n\n\n\n学习内容\n\n8.1 核心工作流\n推荐工作流程：\n进入项目目录 → Claude 自动读取 CLAUDE.md → \n明确需求 → 必要时使用 /plan → 审阅方案 → 实施 → 验证\n关键原则：\n\n好的 CLAUDE.md 是成功的一半\n复杂任务先用 Plan 模式\n分步骤实施，及时验证\n保持对话聚焦，避免发散\n\n\n\n8.2 13 条高级使用技巧\n技巧清单：\n\n创建完善的 CLAUDE.md\n\n包含项目架构、常用命令、代码规范\n定期更新维护\n\n善用 @ 引用精确代码\n\n@文件名#L行号 引用特定代码行\n@文件名 引用整个文件\n\n活用 ! 执行命令\n\n在对话中直接执行命令\n查看输出并继续对话\n\n使用 Plan 模式\n\n复杂任务先用 Plan 分析\n确认方案后再实施\n\n创建自定义 Commands\n\n封装重复性工作\n团队共享最佳实践\n\n使用 Skills 增强能力\n\n从 skills.sh 安装专业 Skills\n针对特定领域任务\n\n保持上下文聚焦\n\n一个对话专注一个主题\n使用 /new 开启新话题\n\n定期总结关键信息\n\n长对话中确认理解一致\n保存重要结论\n\n利用代码分析能力\n\n让 Claude 分析项目架构\n发现潜在问题\n\n配置全局规则\n\n在 CLAUDE.md 中定义代码规范\n统一代码风格\n\n结合版本控制\n\n重要修改前先 commit\n方便回滚\n\n多平台使用\n\n终端、Web、桌面版灵活切换\n选择最适合的场景\n\n持续学习和调整\n\n根据实际使用调整工作流\n关注新功能和最佳实践\n\n\n\n\n8.3 问题排查\n常见问题：\n\n\n\n问题\n解决\n\n\n\n\nClaude 不理解项目\n完善 CLAUDE.md\n\n\n回复不够准确\n提供更具体的上下文\n\n\n修改不符合预期\n使用 Plan 模式先讨论\n\n\n对话过长\n使用 /new 开启新对话\n\n\n权限问题\n检查 API Key 和额度\n\n\n\n\n\n\n练习题目\n\n工作流实践：完整走一遍推荐的核心工作流程\nCommands 实践：创建一套完整的自定义 Commands\n最佳实践检查：对照 13 条技巧检查自己的工作流\n问题排查练习：故意制造问题并学会排查\n\n\n\n参考资料\n\nClaude Code 最佳实践官方指南\nClaude Code 创始人亲授技巧"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-9-章高级定制",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-9-章高级定制",
+    "title": "claude code学习路径",
+    "section": "第 9 章：高级定制",
+    "text": "第 9 章：高级定制\n\n学习目标\n\n掌握 Claude Code 的完整配置系统\n能够创建和管理复杂配置\n掌握高级设置和优化\n了解企业级配置\n\n\n\n学习内容\n\n9.1 配置系统详解\n配置文件位置：\n~/.claude/settings.json       # 全局配置\n.claude/settings.json         # 项目级配置\nCLAUDE.md                     # 项目上下文\n全局配置示例：\n{\n  \"anthropicApiKey\": \"your-api-key\",\n  \"defaultModel\": \"claude-4-sonnet\",\n  \"theme\": \"dark\",\n  \"autoExecute\": false,\n  \"contextWindow\": 200000\n}\n\n\n9.2 高级设置\n模型选择：\n{\n  \"defaultModel\": \"claude-4-opus\",\n  \"planModel\": \"claude-4-opus\",\n  \"codeModel\": \"claude-4-sonnet\"\n}\n权限控制：\n{\n  \"autoExecute\": false,\n  \"confirmDestructive\": true,\n  \"maxTokens\": 8192\n}\n\n\n9.3 CLAUDE.md 高级写法\n完整示例：\n# CLAUDE.md\n\nThis file provides guidance to Claude Code when working with code in this repository.\n\n## 项目概述\n- 名称：电商后台管理系统\n- 技术栈：Next.js + TypeScript + Prisma + PostgreSQL\n- 架构：前后端分离，微服务架构\n\n## 开发环境\n- Node.js 18+\n- pnpm 包管理器\n- Docker 运行数据库\n\n## 常用命令\n\n# 开发\npnpm dev          # 启动开发服务器\npnpm db:migrate   # 运行数据库迁移\npnpm db:seed      # 填充测试数据\n\n# 测试\npnpm test         # 运行单元测试\npnpm test:e2e     # 运行 E2E 测试\npnpm test:ui      # 启动 Vitest UI\n\n# 代码质量\npnpm lint         # ESLint 检查\npnpm typecheck    # TypeScript 类型检查\npnpm format       # Prettier 格式化\n\n## 代码规范\n- 使用 TypeScript 严格模式\n- 组件使用 PascalCase 命名\n- 工具函数使用 camelCase 命名\n- 优先使用函数组件和 Hooks\n- 复杂逻辑必须添加注释\n\n## 数据库规范\n- 表名使用小写复数形式\n- 字段使用 camelCase\n- 外键必须建立索引\n- 敏感字段加密存储\n\n## 测试要求\n- 新功能必须包含单元测试\n- API 必须包含集成测试\n- 关键流程必须包含 E2E 测试\n\n\n\n练习题目\n\n配置练习：创建完整的全局配置和项目配置\nCLAUDE.md 练习：为复杂项目编写完善的 CLAUDE.md\n优化练习：调整配置以优化响应速度和质量\n企业配置练习：了解企业级配置选项\n\n\n\n参考资料\n\nClaude Code 配置文档\neverything-claude-code GitHub"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-10-章高级工作流与团队协作",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-10-章高级工作流与团队协作",
+    "title": "claude code学习路径",
+    "section": "第 10 章：高级工作流与团队协作",
+    "text": "第 10 章：高级工作流与团队协作\n\n学习目标\n\n了解 Claude Code 之父的工作流\n掌握团队级配置管理\n学会团队最佳实践\n了解企业版特性\n\n\n\n学习内容\n\n10.1 Claude Code 之父的工作流\n核心原则：\n\nThink first, code later - 先思考，后编码\nSmall steps, big wins - 小步快跑，积小胜为大胜\nTrust but verify - 信任但要验证\n\n工作流模式：\n1. 深度理解需求（与 AI 充分沟通）\n2. 制定详细方案（Plan 模式）\n3. 分步实施（验证每一步）\n4. 持续验证（测试和审查）\n5. 迭代优化（根据反馈调整）\n\n\n10.2 团队配置管理\n版本控制配置：\n# 将 .claude/ 和 CLAUDE.md 加入版本控制\ngit add .claude/ CLAUDE.md\ngit commit -m \"Add Claude Code configuration\"\n配置分层策略：\n\n全局配置：个人偏好（~/.claude/settings.json）\n项目配置：团队规范（项目/CLAUDE.md、.claude/）\n本地覆盖：个人临时调整（不提交）\n\n\n\n10.3 团队最佳实践\n项目初始化清单：\n\n创建完善的 CLAUDE.md\n定义项目级 Commands\n配置推荐的 Skills\n设置代码规范和检查\n文档化团队工作流\n\n知识共享：\n\n定期分享有效的 Commands\n维护团队 Skills 库\n记录常见问题和解决方案\n\n\n\n10.4 企业版特性\n企业功能（了解）：\n\n集中配置管理\n审计日志\nSSO 集成\n高级安全策略\n团队协作功能\n\n\n\n\n练习题目\n\n团队配置练习：为团队创建完整的配置方案\n工作流实践：完整实施 Claude Code 之父的工作流\n知识共享练习：创建团队 Commands 库并分享\n企业功能了解：了解企业版与社区版的区别\n\n\n\n参考资料\n\nClaude Code 之父的工作流\n一套可复制的 Claude Code 配置方案\n黑客松冠军配置指南"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#第-11-章ide-集成与扩展",
+    "href": "myblog/posts/claudecode-learning-path/index.html#第-11-章ide-集成与扩展",
+    "title": "claude code学习路径",
+    "section": "第 11 章：IDE 集成与扩展",
+    "text": "第 11 章：IDE 集成与扩展\n\n学习目标\n\n掌握 VS Code 集成\n了解 JetBrains 插件\n掌握 Chrome 扩展使用\n了解 MCP 扩展\n\n\n\n学习内容\n\n11.1 VS Code 集成\n安装扩展：\n\n在 VS Code 扩展商店搜索 “Claude Code”\n安装官方扩展\n\n使用方法：\n\n在编辑器中直接调用 Claude Code\n选中代码右键发送到 Claude\n在侧边栏与 Claude 对话\n\n\n\n11.2 JetBrains 插件\n支持的 IDE：\n\nIntelliJ IDEA\nPyCharm\nWebStorm\n其他 JetBrains 产品\n\n安装方法：\n\n在插件市场搜索 “Claude Code”\n安装并配置 API Key\n\n\n\n11.3 Chrome 扩展\n功能：\n\n在浏览器中与 Claude 对话\n分析网页内容\n辅助阅读技术文档\n\n\n\n11.4 MCP 扩展\n什么是 MCP：\n\nModel Context Protocol\n连接外部工具和服务的标准协议\n\n使用场景：\n\n连接数据库\n集成第三方 API\n扩展 Claude Code 的能力边界\n\n\n\n\n练习题目\n\nVS Code 集成练习：安装并配置 VS Code 扩展\nJetBrains 练习：在 JetBrains IDE 中使用 Claude Code\nChrome 扩展练习：使用浏览器扩展辅助开发\nMCP 了解：了解 MCP 的概念和潜在应用\n\n\n\n参考资料\n\nClaude Code VS Code\nClaude Code JetBrains\nClaude Code Chrome 扩展"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#附录",
+    "href": "myblog/posts/claudecode-learning-path/index.html#附录",
+    "title": "claude code学习路径",
+    "section": "附录",
+    "text": "附录\n\nA. 快捷键速查表\n\n\n\n快捷键\n功能\n\n\n\n\nCtrl + c\n取消当前操作\n\n\nTab\n自动补全\n\n\n↑ / ↓\n浏览历史输入\n\n\n\n\n\nB. 斜杠命令速查表\n\n\n\n命令\n功能\n\n\n\n\n/help\n显示帮助\n\n\n/plan\n进入 Plan 模式\n\n\n/clear\n清空对话\n\n\n/new\n新建对话\n\n\n/exit\n退出\n\n\n\n\n\nC. 核心学习资源索引\n官方文档：\n\nClaude Code 官方文档\n快速起步\n工作原理\n最佳实践\n\nSkills 生态：\n\nskills.sh\nskill-creator\nsuperpowers\n\n深度文章：\n\nClaude Code 之父的工作流\nClaude Code 创始人亲授技巧\nClaude Code 初学者指南\n\nGitHub 资源：\n\neverything-claude-code\nClaudePreference\nSuperClaude"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#学习路径总结",
+    "href": "myblog/posts/claudecode-learning-path/index.html#学习路径总结",
+    "title": "claude code学习路径",
+    "section": "学习路径总结",
+    "text": "学习路径总结\n┌─────────────────────────────────────────────────────────────────┐\n│                         学习路径总览                              │\n├─────────────────────────────────────────────────────────────────┤\n│                                                                  │\n│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐          │\n│  │  初级篇     │ →  │  进阶篇     │ →  │  高级篇     │          │\n│  │  (基础)     │    │  (效率)     │    │  (专家)     │          │\n│  └─────────────┘    └─────────────┘    └─────────────┘          │\n│        │                  │                  │                  │\n│   安装与起步          高级功能与技巧      高级定制              │\n│   基础操作            Skills 系统         团队协作              │\n│   基础工作流          自定义 Commands     IDE 集成              │\n│                       扩展任务                              │\n│                       进阶工作流                            │\n│                                                                  │\n│  预计学习时间：2-4 周                                             │\n│                                                                  │\n└─────────────────────────────────────────────────────────────────┘"
+  },
+  {
+    "objectID": "myblog/posts/claudecode-learning-path/index.html#引用信息",
+    "href": "myblog/posts/claudecode-learning-path/index.html#引用信息",
+    "title": "claude code学习路径",
+    "section": "引用信息",
+    "text": "引用信息\n引用本文请注明以下信息。\n@article{lj_claudecode2026,\n  author = {龙军},\n  title = {claude code学习路径},\n  year = {2026},\n  url = {https://jdragonnudt.github.io/inspiraHub/myblog/posts/claudecode-learning-path/},\n}"
   }
 ]
