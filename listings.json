@@ -2,6 +2,8 @@
   {
     "listing": "/myblog/index.html",
     "items": [
+      "/myblog/posts/AIcoding_trending_202601/index.html",
+      "/myblog/posts/AIcoding_tool_landscape_202601/index.html",
       "/myblog/posts/opencode-learning-path/index.html",
       "/myblog/posts/claudecode-learning-path/index.html",
       "/myblog/posts/how-to-be-a-staff-engineer/index.html",
