@@ -1,0 +1,2275 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="jdragon">
+<meta name="dcterms.date" content="2026-02-27">
+
+<title>数智启思 - OpenSpec 中文使用指南</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">数智启思</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../AIengineerBook/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../myblog/index.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/jdragonnudt/inspiraHub" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">OpenSpec 中文使用指南</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">软件工程师</div>
+                <div class="quarto-category">AI编程</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>jdragon </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 27, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#简介" id="toc-简介" class="nav-link active" data-scroll-target="#简介">简介</a>
+  <ul>
+  <li><a href="#什么是-openspec" id="toc-什么是-openspec" class="nav-link" data-scroll-target="#什么是-openspec">什么是 OpenSpec？</a></li>
+  <li><a href="#为什么需要-openspec" id="toc-为什么需要-openspec" class="nav-link" data-scroll-target="#为什么需要-openspec">为什么需要 OpenSpec？</a></li>
+  <li><a href="#工作流程概览" id="toc-工作流程概览" class="nav-link" data-scroll-target="#工作流程概览">工作流程概览</a></li>
+  </ul></li>
+  <li><a href="#安装" id="toc-安装" class="nav-link" data-scroll-target="#安装">安装</a>
+  <ul>
+  <li><a href="#环境要求" id="toc-环境要求" class="nav-link" data-scroll-target="#环境要求">环境要求</a></li>
+  <li><a href="#安装方式" id="toc-安装方式" class="nav-link" data-scroll-target="#安装方式">安装方式</a>
+  <ul class="collapse">
+  <li><a href="#npm" id="toc-npm" class="nav-link" data-scroll-target="#npm">npm</a></li>
+  <li><a href="#pnpm" id="toc-pnpm" class="nav-link" data-scroll-target="#pnpm">pnpm</a></li>
+  <li><a href="#yarn" id="toc-yarn" class="nav-link" data-scroll-target="#yarn">yarn</a></li>
+  <li><a href="#bun" id="toc-bun" class="nav-link" data-scroll-target="#bun">bun</a></li>
+  <li><a href="#nix" id="toc-nix" class="nav-link" data-scroll-target="#nix">Nix</a></li>
+  </ul></li>
+  <li><a href="#验证安装" id="toc-验证安装" class="nav-link" data-scroll-target="#验证安装">验证安装</a></li>
+  </ul></li>
+  <li><a href="#快速开始" id="toc-快速开始" class="nav-link" data-scroll-target="#快速开始">快速开始</a>
+  <ul>
+  <li><a href="#第一步初始化" id="toc-第一步初始化" class="nav-link" data-scroll-target="#第一步初始化">第一步：初始化</a></li>
+  <li><a href="#第二步开始使用" id="toc-第二步开始使用" class="nav-link" data-scroll-target="#第二步开始使用">第二步：开始使用</a></li>
+  <li><a href="#第三步实现" id="toc-第三步实现" class="nav-link" data-scroll-target="#第三步实现">第三步：实现</a></li>
+  <li><a href="#第四步归档" id="toc-第四步归档" class="nav-link" data-scroll-target="#第四步归档">第四步：归档</a></li>
+  <li><a href="#openspec-创建的文件结构" id="toc-openspec-创建的文件结构" class="nav-link" data-scroll-target="#openspec-创建的文件结构">OpenSpec 创建的文件结构</a></li>
+  </ul></li>
+  <li><a href="#核心概念" id="toc-核心概念" class="nav-link" data-scroll-target="#核心概念">核心概念</a>
+  <ul>
+  <li><a href="#规范specs" id="toc-规范specs" class="nav-link" data-scroll-target="#规范specs">规范（Specs）</a>
+  <ul class="collapse">
+  <li><a href="#结构" id="toc-结构" class="nav-link" data-scroll-target="#结构">结构</a></li>
+  <li><a href="#规范格式" id="toc-规范格式" class="nav-link" data-scroll-target="#规范格式">规范格式</a></li>
+  </ul></li>
+  <li><a href="#变更changes" id="toc-变更changes" class="nav-link" data-scroll-target="#变更changes">变更（Changes）</a>
+  <ul class="collapse">
+  <li><a href="#变更结构" id="toc-变更结构" class="nav-link" data-scroll-target="#变更结构">变更结构</a></li>
+  </ul></li>
+  <li><a href="#产出物artifacts" id="toc-产出物artifacts" class="nav-link" data-scroll-target="#产出物artifacts">产出物（Artifacts）</a>
+  <ul class="collapse">
+  <li><a href="#产出物流" id="toc-产出物流" class="nav-link" data-scroll-target="#产出物流">产出物流</a></li>
+  <li><a href="#产出物类型" id="toc-产出物类型" class="nav-link" data-scroll-target="#产出物类型">产出物类型</a></li>
+  </ul></li>
+  <li><a href="#增量规范delta-specs" id="toc-增量规范delta-specs" class="nav-link" data-scroll-target="#增量规范delta-specs">增量规范（Delta Specs）</a>
+  <ul class="collapse">
+  <li><a href="#格式" id="toc-格式" class="nav-link" data-scroll-target="#格式">格式</a></li>
+  <li><a href="#增量部分" id="toc-增量部分" class="nav-link" data-scroll-target="#增量部分">增量部分</a></li>
+  <li><a href="#为什么用增量而非完整规范" id="toc-为什么用增量而非完整规范" class="nav-link" data-scroll-target="#为什么用增量而非完整规范">为什么用增量而非完整规范</a></li>
+  </ul></li>
+  <li><a href="#模式schemas" id="toc-模式schemas" class="nav-link" data-scroll-target="#模式schemas">模式（Schemas）</a>
+  <ul class="collapse">
+  <li><a href="#内置模式" id="toc-内置模式" class="nav-link" data-scroll-target="#内置模式">内置模式</a></li>
+  <li><a href="#自定义模式" id="toc-自定义模式" class="nav-link" data-scroll-target="#自定义模式">自定义模式</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#命令参考" id="toc-命令参考" class="nav-link" data-scroll-target="#命令参考">命令参考</a>
+  <ul>
+  <li><a href="#斜杠命令" id="toc-斜杠命令" class="nav-link" data-scroll-target="#斜杠命令">斜杠命令</a>
+  <ul class="collapse">
+  <li><a href="#核心模式命令默认" id="toc-核心模式命令默认" class="nav-link" data-scroll-target="#核心模式命令默认">核心模式命令（默认）</a></li>
+  <li><a href="#扩展模式命令" id="toc-扩展模式命令" class="nav-link" data-scroll-target="#扩展模式命令">扩展模式命令</a></li>
+  <li><a href="#命令详解" id="toc-命令详解" class="nav-link" data-scroll-target="#命令详解">命令详解</a></li>
+  </ul></li>
+  <li><a href="#cli-命令" id="toc-cli-命令" class="nav-link" data-scroll-target="#cli-命令">CLI 命令</a>
+  <ul class="collapse">
+  <li><a href="#设置命令" id="toc-设置命令" class="nav-link" data-scroll-target="#设置命令">设置命令</a></li>
+  <li><a href="#浏览命令" id="toc-浏览命令" class="nav-link" data-scroll-target="#浏览命令">浏览命令</a></li>
+  <li><a href="#验证命令" id="toc-验证命令" class="nav-link" data-scroll-target="#验证命令">验证命令</a></li>
+  <li><a href="#生命周期命令" id="toc-生命周期命令" class="nav-link" data-scroll-target="#生命周期命令">生命周期命令</a></li>
+  <li><a href="#工作流命令" id="toc-工作流命令" class="nav-link" data-scroll-target="#工作流命令">工作流命令</a></li>
+  <li><a href="#模式命令" id="toc-模式命令" class="nav-link" data-scroll-target="#模式命令">模式命令</a></li>
+  <li><a href="#配置命令" id="toc-配置命令" class="nav-link" data-scroll-target="#配置命令">配置命令</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#工作流" id="toc-工作流" class="nav-link" data-scroll-target="#工作流">工作流</a>
+  <ul>
+  <li><a href="#两种模式" id="toc-两种模式" class="nav-link" data-scroll-target="#两种模式">两种模式</a>
+  <ul class="collapse">
+  <li><a href="#默认快速路径core-模式" id="toc-默认快速路径core-模式" class="nav-link" data-scroll-target="#默认快速路径core-模式">默认快速路径（core 模式）</a></li>
+  <li><a href="#扩展完整工作流自定义选择" id="toc-扩展完整工作流自定义选择" class="nav-link" data-scroll-target="#扩展完整工作流自定义选择">扩展/完整工作流（自定义选择）</a></li>
+  </ul></li>
+  <li><a href="#工作流模式" id="toc-工作流模式" class="nav-link" data-scroll-target="#工作流模式">工作流模式</a>
+  <ul class="collapse">
+  <li><a href="#快速功能" id="toc-快速功能" class="nav-link" data-scroll-target="#快速功能">快速功能</a></li>
+  <li><a href="#探索性" id="toc-探索性" class="nav-link" data-scroll-target="#探索性">探索性</a></li>
+  <li><a href="#并行变更" id="toc-并行变更" class="nav-link" data-scroll-target="#并行变更">并行变更</a></li>
+  <li><a href="#完成变更" id="toc-完成变更" class="nav-link" data-scroll-target="#完成变更">完成变更</a></li>
+  </ul></li>
+  <li><a href="#何时使用什么" id="toc-何时使用什么" class="nav-link" data-scroll-target="#何时使用什么">何时使用什么</a>
+  <ul class="collapse">
+  <li><a href="#opsxff-vs-opsxcontinue" id="toc-opsxff-vs-opsxcontinue" class="nav-link" data-scroll-target="#opsxff-vs-opsxcontinue"><code>/opsx:ff</code> vs <code>/opsx:continue</code></a></li>
+  <li><a href="#何时更新-vs-重新开始" id="toc-何时更新-vs-重新开始" class="nav-link" data-scroll-target="#何时更新-vs-重新开始">何时更新 vs 重新开始</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#自定义配置" id="toc-自定义配置" class="nav-link" data-scroll-target="#自定义配置">自定义配置</a>
+  <ul>
+  <li><a href="#项目配置" id="toc-项目配置" class="nav-link" data-scroll-target="#项目配置">项目配置</a>
+  <ul class="collapse">
+  <li><a href="#快速设置" id="toc-快速设置" class="nav-link" data-scroll-target="#快速设置">快速设置</a></li>
+  <li><a href="#工作原理" id="toc-工作原理" class="nav-link" data-scroll-target="#工作原理">工作原理</a></li>
+  <li><a href="#模式解析顺序" id="toc-模式解析顺序" class="nav-link" data-scroll-target="#模式解析顺序">模式解析顺序</a></li>
+  </ul></li>
+  <li><a href="#自定义模式-1" id="toc-自定义模式-1" class="nav-link" data-scroll-target="#自定义模式-1">自定义模式</a>
+  <ul class="collapse">
+  <li><a href="#复制现有模式" id="toc-复制现有模式" class="nav-link" data-scroll-target="#复制现有模式">复制现有模式</a></li>
+  <li><a href="#从头创建模式" id="toc-从头创建模式" class="nav-link" data-scroll-target="#从头创建模式">从头创建模式</a></li>
+  <li><a href="#模式结构" id="toc-模式结构" class="nav-link" data-scroll-target="#模式结构">模式结构</a></li>
+  <li><a href="#模板" id="toc-模板" class="nav-link" data-scroll-target="#模板">模板</a></li>
+  <li><a href="#验证模式" id="toc-验证模式" class="nav-link" data-scroll-target="#验证模式">验证模式</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#多语言支持" id="toc-多语言支持" class="nav-link" data-scroll-target="#多语言支持">多语言支持</a>
+  <ul>
+  <li><a href="#快速设置-1" id="toc-快速设置-1" class="nav-link" data-scroll-target="#快速设置-1">快速设置</a></li>
+  <li><a href="#语言示例" id="toc-语言示例" class="nav-link" data-scroll-target="#语言示例">语言示例</a></li>
+  <li><a href="#技术术语处理" id="toc-技术术语处理" class="nav-link" data-scroll-target="#技术术语处理">技术术语处理</a></li>
+  </ul></li>
+  <li><a href="#支持的工具" id="toc-支持的工具" class="nav-link" data-scroll-target="#支持的工具">支持的工具</a>
+  <ul>
+  <li><a href="#支持的工具列表" id="toc-支持的工具列表" class="nav-link" data-scroll-target="#支持的工具列表">支持的工具列表</a></li>
+  <li><a href="#工具语法差异" id="toc-工具语法差异" class="nav-link" data-scroll-target="#工具语法差异">工具语法差异</a></li>
+  <li><a href="#非交互式设置" id="toc-非交互式设置" class="nav-link" data-scroll-target="#非交互式设置">非交互式设置</a></li>
+  </ul></li>
+  <li><a href="#迁移指南" id="toc-迁移指南" class="nav-link" data-scroll-target="#迁移指南">迁移指南</a>
+  <ul>
+  <li><a href="#发生了什么变化" id="toc-发生了什么变化" class="nav-link" data-scroll-target="#发生了什么变化">发生了什么变化？</a></li>
+  <li><a href="#运行迁移" id="toc-运行迁移" class="nav-link" data-scroll-target="#运行迁移">运行迁移</a></li>
+  <li><a href="#迁移-project.md-到-config.yaml" id="toc-迁移-project.md-到-config.yaml" class="nav-link" data-scroll-target="#迁移-project.md-到-config.yaml">迁移 project.md 到 config.yaml</a></li>
+  <li><a href="#关键差异" id="toc-关键差异" class="nav-link" data-scroll-target="#关键差异">关键差异</a></li>
+  <li><a href="#继续现有变更" id="toc-继续现有变更" class="nav-link" data-scroll-target="#继续现有变更">继续现有变更</a></li>
+  </ul></li>
+  <li><a href="#最佳实践" id="toc-最佳实践" class="nav-link" data-scroll-target="#最佳实践">最佳实践</a>
+  <ul>
+  <li><a href="#保持变更聚焦" id="toc-保持变更聚焦" class="nav-link" data-scroll-target="#保持变更聚焦">保持变更聚焦</a></li>
+  <li><a href="#不清晰需求时使用-opsxexplore" id="toc-不清晰需求时使用-opsxexplore" class="nav-link" data-scroll-target="#不清晰需求时使用-opsxexplore">不清晰需求时使用 <code>/opsx:explore</code></a></li>
+  <li><a href="#归档前验证" id="toc-归档前验证" class="nav-link" data-scroll-target="#归档前验证">归档前验证</a></li>
+  <li><a href="#清晰命名变更" id="toc-清晰命名变更" class="nav-link" data-scroll-target="#清晰命名变更">清晰命名变更</a></li>
+  </ul></li>
+  <li><a href="#获取帮助" id="toc-获取帮助" class="nav-link" data-scroll-target="#获取帮助">获取帮助</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="简介" class="level2">
+<h2 class="anchored" data-anchor-id="简介">简介</h2>
+<section id="什么是-openspec" class="level3">
+<h3 class="anchored" data-anchor-id="什么是-openspec">什么是 OpenSpec？</h3>
+<p>OpenSpec 是一个轻量级的规范框架，帮助你和 AI 编码助手在写代码之前就”要做什么”达成一致。它的核心理念是：</p>
+<pre><code>→ 灵活而非僵化     — 无需阶段门限，按需工作
+→ 迭代而非瀑布     — 边做边学，持续改进
+→ 简单而非复杂     — 轻量设置，最小仪式感
+→ 存量优先         — 支持现有代码库，不只是全新项目</code></pre>
+</section>
+<section id="为什么需要-openspec" class="level3">
+<h3 class="anchored" data-anchor-id="为什么需要-openspec">为什么需要 OpenSpec？</h3>
+<p>AI 编码助手很强大，但当需求只存在于聊天历史中时，结果往往不可预测。OpenSpec 添加了一个轻量级的规范层，让你在写代码之前先达成共识。</p>
+<p><strong>核心优势：</strong></p>
+<ul>
+<li><strong>构建前先达成共识</strong> — 人类和 AI 在写代码前先对齐规范</li>
+<li><strong>保持有序</strong> — 每个变更都有自己的文件夹，包含提案、设计、任务</li>
+<li><strong>灵活工作</strong> — 随时更新任何产出物，无僵化阶段门限</li>
+<li><strong>兼容你的工具</strong> — 通过斜杠命令支持 20+ AI 助手</li>
+</ul>
+</section>
+<section id="工作流程概览" class="level3">
+<h3 class="anchored" data-anchor-id="工作流程概览">工作流程概览</h3>
+<pre><code>     ┌────────────────┐
+     │  1. 开始变更   │  /opsx:propose (核心模式) 或 /opsx:new (扩展模式)
+     └───────┬────────┘
+             │
+             ▼
+     ┌────────────────┐
+     │  2. 创建产出物 │  /opsx:ff 或 /opsx:continue
+     │                │  创建 proposal → specs → design → tasks
+     └───────┬────────┘
+             │
+             ▼
+     ┌────────────────┐
+     │  3. 实现任务   │  /opsx:apply
+     │                │  完成清单任务，打勾标记
+     └───────┬────────┘
+             │
+             ▼
+     ┌────────────────┐
+     │  4. 验证工作    │  /opsx:verify
+     │                │  检查实现是否符合规范
+     └───────┬────────┘
+             │
+             ▼
+     ┌────────────────┐     ┌──────────────────────────────────────┐
+     │  5. 归档变更   │────►│  增量规范合并到主规范                │
+     │                │     │  变更文件夹移至 archive/              │
+     └────────────────┘     │  规范成为新的事实来源                │
+                            └──────────────────────────────────────┘</code></pre>
+<hr>
+</section>
+</section>
+<section id="安装" class="level2">
+<h2 class="anchored" data-anchor-id="安装">安装</h2>
+<section id="环境要求" class="level3">
+<h3 class="anchored" data-anchor-id="环境要求">环境要求</h3>
+<ul>
+<li><strong>Node.js 20.19.0 或更高版本</strong> — 查看版本：<code>node --version</code></li>
+</ul>
+</section>
+<section id="安装方式" class="level3">
+<h3 class="anchored" data-anchor-id="安装方式">安装方式</h3>
+<section id="npm" class="level4">
+<h4 class="anchored" data-anchor-id="npm">npm</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @fission-ai/openspec@latest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="pnpm" class="level4">
+<h4 class="anchored" data-anchor-id="pnpm">pnpm</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pnpm</span> add <span class="at">-g</span> @fission-ai/openspec@latest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="yarn" class="level4">
+<h4 class="anchored" data-anchor-id="yarn">yarn</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yarn</span> global add @fission-ai/openspec@latest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="bun" class="level4">
+<h4 class="anchored" data-anchor-id="bun">bun</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">bun</span> add <span class="at">-g</span> @fission-ai/openspec@latest</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="nix" class="level4">
+<h4 class="anchored" data-anchor-id="nix">Nix</h4>
+<p>直接运行：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nix</span> run github:Fission-AI/OpenSpec <span class="at">--</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>安装到配置：</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nix</span> profile install github:Fission-AI/OpenSpec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>或在 <code>flake.nix</code> 中添加：</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode nix code-with-copy"><code class="sourceCode nix"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="va">inputs</span> <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="va">nixpkgs</span>.<span class="va">url</span> <span class="op">=</span> <span class="st">"github:NixOS/nixpkgs/nixos-unstable"</span><span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="va">openspec</span>.<span class="va">url</span> <span class="op">=</span> <span class="st">"github:Fission-AI/OpenSpec"</span><span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">};</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="va">outputs</span> <span class="op">=</span> <span class="op">{</span> <span class="va">nixpkgs</span><span class="op">,</span> <span class="va">openspec</span><span class="op">,</span> <span class="op">...</span> <span class="op">}</span>: <span class="op">{</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="va">devShells</span>.<span class="va">x86_64-linux</span>.<span class="va">default</span> <span class="op">=</span> nixpkgs.legacyPackages.x86_64<span class="op">-</span>linux.mkShell <span class="op">{</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>      <span class="va">buildInputs</span> <span class="op">=</span> <span class="op">[</span> openspec.packages.x86_64-linux.default <span class="op">];</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">};</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">};</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="验证安装" class="level3">
+<h3 class="anchored" data-anchor-id="验证安装">验证安装</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="快速开始" class="level2">
+<h2 class="anchored" data-anchor-id="快速开始">快速开始</h2>
+<section id="第一步初始化" class="level3">
+<h3 class="anchored" data-anchor-id="第一步初始化">第一步：初始化</h3>
+<p>在项目目录中运行：</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> your-project</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>这会创建一个交互式引导，帮你配置项目。</p>
+</section>
+<section id="第二步开始使用" class="level3">
+<h3 class="anchored" data-anchor-id="第二步开始使用">第二步：开始使用</h3>
+<p>告诉你的 AI：<code>/opsx:propose &lt;你想要构建的功能&gt;</code></p>
+<p><strong>示例：</strong></p>
+<pre><code>你: /opsx:propose add-dark-mode
+
+AI:  Created openspec/changes/add-dark-mode/
+     ✓ proposal.md — 为什么做这个，改变了什么
+     ✓ specs/       — 需求和场景
+     ✓ design.md    — 技术方案
+     ✓ tasks.md     — 实现清单
+     Ready for implementation! Run /opsx:apply.</code></pre>
+</section>
+<section id="第三步实现" class="level3">
+<h3 class="anchored" data-anchor-id="第三步实现">第三步：实现</h3>
+<pre><code>你: /opsx:apply
+
+AI:  Implementing tasks...
+     ✓ 1.1 Add theme context provider
+     ✓ 1.2 Create toggle component
+     ✓ 1.3 Add CSS variables
+     ✓ 1.4 Wire up localStorage
+     All tasks complete!</code></pre>
+</section>
+<section id="第四步归档" class="level3">
+<h3 class="anchored" data-anchor-id="第四步归档">第四步：归档</h3>
+<pre><code>你: /opsx:archive
+
+AI:  Archived to openspec/changes/archive/2025-01-23-add-dark-mode/
+     Specs updated. Ready for the next feature.</code></pre>
+</section>
+<section id="openspec-创建的文件结构" class="level3">
+<h3 class="anchored" data-anchor-id="openspec-创建的文件结构">OpenSpec 创建的文件结构</h3>
+<pre><code>openspec/
+├── specs/              # 事实来源（你的系统行为）
+│   └── &lt;domain&gt;/
+│       └── spec.md
+├── changes/            # 提议的修改（每个变更一个文件夹）
+│   └── &lt;change-name&gt;/
+│       ├── proposal.md
+│       ├── design.md
+│       ├── tasks.md
+│       └── specs/      # 增量规范（改变了什么）
+│           └── &lt;domain&gt;/
+│               └── spec.md
+└── config.yaml         # 项目配置（可选）</code></pre>
+<hr>
+</section>
+</section>
+<section id="核心概念" class="level2">
+<h2 class="anchored" data-anchor-id="核心概念">核心概念</h2>
+<section id="规范specs" class="level3">
+<h3 class="anchored" data-anchor-id="规范specs">规范（Specs）</h3>
+<p>规范描述系统行为，使用结构化的需求和场景。</p>
+<section id="结构" class="level4">
+<h4 class="anchored" data-anchor-id="结构">结构</h4>
+<pre><code>openspec/specs/
+├── auth/
+│   └── spec.md           # 认证行为
+├── payments/
+│   └── spec.md           # 支付处理
+├── notifications/
+│   └── spec.md           # 通知系统
+└── ui/
+    └── spec.md           # UI 行为和主题</code></pre>
+<p>按领域组织规范——对你的系统有意义的逻辑分组。常见模式：</p>
+<ul>
+<li><strong>按功能区域</strong>：<code>auth/</code>、<code>payments/</code>、<code>search/</code></li>
+<li><strong>按组件</strong>：<code>api/</code>、<code>frontend/</code>、<code>workers/</code></li>
+<li><strong>按边界上下文</strong>：<code>ordering/</code>、<code>fulfillment/</code>、<code>inventory/</code></li>
+</ul>
+</section>
+<section id="规范格式" class="level4">
+<h4 class="anchored" data-anchor-id="规范格式">规范格式</h4>
+<p>规范包含需求，每个需求有场景：</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Auth Specification</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Purpose</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>Authentication and session management for the application.</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Requirements</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">### Requirement: User Authentication</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>The system SHALL issue a JWT token upon successful login.</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Scenario: Valid credentials</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GIVEN a user with valid credentials</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WHEN the user submits login form</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>THEN a JWT token is returned</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AND the user is redirected to dashboard</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Scenario: Invalid credentials</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GIVEN invalid credentials</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WHEN the user submits login form</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>THEN an error message is displayed</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AND no token is issued</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="fu">### Requirement: Session Expiration</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>The system MUST expire sessions after 30 minutes of inactivity.</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Scenario: Idle timeout</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GIVEN an authenticated session</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WHEN 30 minutes pass without activity</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>THEN the session is invalidated</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AND the user must re-authenticate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键元素：</strong></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>元素</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>## Purpose</code></td>
+<td>该规范领域的高级描述</td>
+</tr>
+<tr class="even">
+<td><code>### Requirement:</code></td>
+<td>系统必须具备的特定行为</td>
+</tr>
+<tr class="odd">
+<td><code>#### Scenario:</code></td>
+<td>需求的具体示例</td>
+</tr>
+<tr class="even">
+<td>SHALL/MUST/SHOULD</td>
+<td>RFC 2119 关键词，表示需求强度</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="变更changes" class="level3">
+<h3 class="anchored" data-anchor-id="变更changes">变更（Changes）</h3>
+<p>变更是对系统提议的修改，封装在一个文件夹中，包含理解和实现它所需的一切。</p>
+<section id="变更结构" class="level4">
+<h4 class="anchored" data-anchor-id="变更结构">变更结构</h4>
+<pre><code>openspec/changes/add-dark-mode/
+├── proposal.md           # 为什么以及是什么
+├── design.md             # 如何做（技术方案）
+├── tasks.md              # 实现清单
+├── .openspec.yaml        # 变更元数据（可选）
+└── specs/                # 增量规范
+    └── ui/
+        └── spec.md       # ui/spec.md 改变了什么</code></pre>
+<p>每个变更都是自包含的，包含：</p>
+<ul>
+<li><strong>产出物（Artifacts）</strong> — 捕获意图、设计和任务的文档</li>
+<li><strong>增量规范（Delta specs）</strong> — 添加、修改或删除的内容</li>
+<li><strong>元数据（Metadata）</strong> — 此变更的可选配置</li>
+</ul>
+</section>
+</section>
+<section id="产出物artifacts" class="level3">
+<h3 class="anchored" data-anchor-id="产出物artifacts">产出物（Artifacts）</h3>
+<p>产出物是变更中的文档，指导工作。</p>
+<section id="产出物流" class="level4">
+<h4 class="anchored" data-anchor-id="产出物流">产出物流</h4>
+<pre><code>proposal ──────► specs ──────► design ──────► tasks ──────► implement
+    │               │             │              │
+   why            what           how          steps
+ + scope        changes       approach      to take</code></pre>
+<p>产出物相互构建，每个产出物为下一个提供上下文。</p>
+</section>
+<section id="产出物类型" class="level4">
+<h4 class="anchored" data-anchor-id="产出物类型">产出物类型</h4>
+<p><strong>Proposal（proposal.md）</strong></p>
+<p>提案捕获意图、范围和方法。</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Proposal: Add Dark Mode</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Intent</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>Users have requested a dark mode option to reduce eye strain</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>during nighttime usage and match system preferences.</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Scope</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>In scope:</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Theme toggle in settings</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>System preference detection</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Persist preference in localStorage</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>Out of scope:</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Custom color themes (future work)</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Per-page theme overrides</span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Approach</span></span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>Use CSS custom properties for theming with a React context</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a>for state management. Detect system preference on first load,</span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>allow manual override.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Specs（增量规范）</strong></p>
+<p>增量规范描述相对于当前规范的变化。详见下文。</p>
+<p><strong>Design（design.md）</strong></p>
+<p>设计捕获技术方案和架构决策。</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Design: Add Dark Mode</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Technical Approach</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>Theme state managed via React Context to avoid prop drilling.</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>CSS custom properties enable runtime switching without class toggling.</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Architecture Decisions</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### Decision: Context over Redux</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>Using React Context for theme state because:</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Simple binary state (light/dark)</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No complex state transitions</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Avoids adding Redux dependency</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="fu">### Decision: CSS Custom Properties</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>Using CSS variables instead of CSS-in-JS because:</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Works with existing stylesheet</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>No runtime overhead</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Browser-native solution</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## File Changes</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`src/contexts/ThemeContext.tsx`</span> (new)</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`src/components/ThemeToggle.tsx`</span> (new)</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`src/styles/globals.css`</span> (modified)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Tasks（tasks.md）</strong></p>
+<p>任务是实现清单——带复选框的具体步骤。</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Tasks</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## 1. Theme Infrastructure</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 1.1 Create ThemeContext with light/dark state</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 1.2 Add CSS custom properties for colors</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 1.3 Implement localStorage persistence</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 1.4 Add system preference detection</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## 2. UI Components</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 2.1 Create ThemeToggle component</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 2.2 Add toggle to settings page</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 2.3 Update Header to include quick toggle</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Styling</span></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 3.1 Define dark theme color palette</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 3.2 Update components to use CSS variables</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> 3.3 Test contrast ratios for accessibility</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="增量规范delta-specs" class="level3">
+<h3 class="anchored" data-anchor-id="增量规范delta-specs">增量规范（Delta Specs）</h3>
+<p>增量规范是让 OpenSpec 适配存量开发的关键概念。它们描述相对于当前规范的<strong>变化</strong>。</p>
+<section id="格式" class="level4">
+<h4 class="anchored" data-anchor-id="格式">格式</h4>
+<div class="sourceCode" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Delta for Auth</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## ADDED Requirements</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### Requirement: Two-Factor Authentication</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>The system MUST support TOTP-based two-factor authentication.</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Scenario: 2FA enrollment</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GIVEN a user without 2FA enabled</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WHEN the user enables 2FA in settings</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>THEN a QR code is displayed for authenticator app setup</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AND the user must verify with a code before activation</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Scenario: 2FA login</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GIVEN a user with 2FA enabled</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WHEN the user submits valid credentials</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>THEN an OTP challenge is presented</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AND login completes only after valid OTP</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## MODIFIED Requirements</span></span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a><span class="fu">### Requirement: Session Expiration</span></span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>The system MUST expire sessions after 15 minutes of inactivity.</span>
+<span id="cb23-24"><a href="#cb23-24" aria-hidden="true" tabindex="-1"></a>(Previously: 30 minutes)</span>
+<span id="cb23-25"><a href="#cb23-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-26"><a href="#cb23-26" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Scenario: Idle timeout</span></span>
+<span id="cb23-27"><a href="#cb23-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GIVEN an authenticated session</span>
+<span id="cb23-28"><a href="#cb23-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WHEN 15 minutes pass without activity</span>
+<span id="cb23-29"><a href="#cb23-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>THEN the session is invalidated</span>
+<span id="cb23-30"><a href="#cb23-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-31"><a href="#cb23-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## REMOVED Requirements</span></span>
+<span id="cb23-32"><a href="#cb23-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-33"><a href="#cb23-33" aria-hidden="true" tabindex="-1"></a><span class="fu">### Requirement: Remember Me</span></span>
+<span id="cb23-34"><a href="#cb23-34" aria-hidden="true" tabindex="-1"></a>(Deprecated in favor of 2FA. Users should re-authenticate each session.)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="增量部分" class="level4">
+<h4 class="anchored" data-anchor-id="增量部分">增量部分</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th>部分</th>
+<th>含义</th>
+<th>归档时发生什么</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>## ADDED Requirements</code></td>
+<td>新行为</td>
+<td>追加到主规范</td>
+</tr>
+<tr class="even">
+<td><code>## MODIFIED Requirements</code></td>
+<td>更改的行为</td>
+<td>替换现有需求</td>
+</tr>
+<tr class="odd">
+<td><code>## REMOVED Requirements</code></td>
+<td>弃用的行为</td>
+<td>从主规范中删除</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="为什么用增量而非完整规范" class="level4">
+<h4 class="anchored" data-anchor-id="为什么用增量而非完整规范">为什么用增量而非完整规范</h4>
+<ul>
+<li><strong>清晰</strong> — 增量准确显示变化内容</li>
+<li><strong>避免冲突</strong> — 两个变更可以修改同一规范文件的不同需求</li>
+<li><strong>审查效率</strong> — 审查者只看变化</li>
+<li><strong>适配存量</strong> — 大多数工作是修改现有行为</li>
+</ul>
+</section>
+</section>
+<section id="模式schemas" class="level3">
+<h3 class="anchored" data-anchor-id="模式schemas">模式（Schemas）</h3>
+<p>模式定义工作流的产出物类型及其依赖关系。</p>
+<section id="内置模式" class="level4">
+<h4 class="anchored" data-anchor-id="内置模式">内置模式</h4>
+<p><strong>spec-driven（默认）</strong></p>
+<p>标准规范驱动开发工作流：</p>
+<pre><code>proposal → specs → design → tasks → implement</code></pre>
+<p>适用于：大多数需要先同意规范再实现的功能工作。</p>
+</section>
+<section id="自定义模式" class="level4">
+<h4 class="anchored" data-anchor-id="自定义模式">自定义模式</h4>
+<p>创建自定义模式：</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 从头创建</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schema init research-first</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 或复制现有模式</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schema fork spec-driven research-first</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+</section>
+<section id="命令参考" class="level2">
+<h2 class="anchored" data-anchor-id="命令参考">命令参考</h2>
+<section id="斜杠命令" class="level3">
+<h3 class="anchored" data-anchor-id="斜杠命令">斜杠命令</h3>
+<p>在 AI 编码助手的聊天界面中调用（如 Claude Code、Cursor、Windsurf）。</p>
+<section id="核心模式命令默认" class="level4">
+<h4 class="anchored" data-anchor-id="核心模式命令默认">核心模式命令（默认）</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/opsx:propose</code></td>
+<td>创建变更并一步生成所有规划产出物</td>
+</tr>
+<tr class="even">
+<td><code>/opsx:explore</code></td>
+<td>思考想法，调查问题，澄清需求</td>
+</tr>
+<tr class="odd">
+<td><code>/opsx:apply</code></td>
+<td>实现任务</td>
+</tr>
+<tr class="even">
+<td><code>/opsx:archive</code></td>
+<td>归档完成的变更</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="扩展模式命令" class="level4">
+<h4 class="anchored" data-anchor-id="扩展模式命令">扩展模式命令</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th>命令</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/opsx:new</code></td>
+<td>开始新的变更脚手架</td>
+</tr>
+<tr class="even">
+<td><code>/opsx:continue</code></td>
+<td>基于依赖创建下一个产出物</td>
+</tr>
+<tr class="odd">
+<td><code>/opsx:ff</code></td>
+<td>快进：一步创建所有规划产出物</td>
+</tr>
+<tr class="even">
+<td><code>/opsx:verify</code></td>
+<td>验证实现是否符合产出物</td>
+</tr>
+<tr class="odd">
+<td><code>/opsx:sync</code></td>
+<td>将增量规范合并到主规范</td>
+</tr>
+<tr class="even">
+<td><code>/opsx:bulk-archive</code></td>
+<td>批量归档多个变更</td>
+</tr>
+<tr class="odd">
+<td><code>/opsx:onboard</code></td>
+<td>引导式入门教程</td>
+</tr>
+</tbody>
+</table>
+<p>启用扩展命令：</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> config profile</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> update</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="命令详解" class="level4">
+<h4 class="anchored" data-anchor-id="命令详解">命令详解</h4>
+<p><strong><code>/opsx:propose</code></strong></p>
+<p>一步创建变更并生成所有规划产出物。</p>
+<pre><code>/opsx:propose [变更名称或描述]</code></pre>
+<p><strong><code>/opsx:explore</code></strong></p>
+<p>思考想法、调查问题、澄清需求，无需承诺为变更。</p>
+<pre><code>/opsx:explore [主题]</code></pre>
+<p><strong><code>/opsx:new</code></strong></p>
+<p>开始新的变更脚手架。</p>
+<pre><code>/opsx:new [变更名称] [--schema &lt;模式名称&gt;]</code></pre>
+<p><strong><code>/opsx:continue</code></strong></p>
+<p>在依赖链中创建下一个产出物。增量创建。</p>
+<pre><code>/opsx:continue [变更名称]</code></pre>
+<p><strong><code>/opsx:ff</code></strong></p>
+<p>快进创建所有规划产出物。</p>
+<pre><code>/opsx:ff [变更名称]</code></pre>
+<p><strong><code>/opsx:apply</code></strong></p>
+<p>实现任务。执行任务清单，写代码并标记完成。</p>
+<pre><code>/opsx:apply [变更名称]</code></pre>
+<p><strong><code>/opsx:verify</code></strong></p>
+<p>验证实现是否匹配变更产出物。检查三个维度：</p>
+<ul>
+<li><strong>完整性</strong> — 所有任务完成，所有需求实现</li>
+<li><strong>正确性</strong> — 实现符合规范意图，处理边界情况</li>
+<li><strong>一致性</strong> — 设计决策反映在代码中，模式一致</li>
+</ul>
+<pre><code>/opsx:verify [变更名称]</code></pre>
+<p><strong><code>/opsx:sync</code></strong></p>
+<p>将变更的增量规范合并到主规范。</p>
+<pre><code>/opsx:sync [变更名称]</code></pre>
+<p><strong><code>/opsx:archive</code></strong></p>
+<p>归档完成的变更。</p>
+<pre><code>/opsx:archive [变更名称]</code></pre>
+<p><strong><code>/opsx:bulk-archive</code></strong></p>
+<p>批量归档多个已完成的变更。</p>
+<pre><code>/opsx:bulk-archive [变更名称...]</code></pre>
+<p><strong><code>/opsx:onboard</code></strong></p>
+<p>引导式入门教程，交互式使用你的实际代码库。</p>
+<pre><code>/opsx:onboard</code></pre>
+</section>
+</section>
+<section id="cli-命令" class="level3">
+<h3 class="anchored" data-anchor-id="cli-命令">CLI 命令</h3>
+<p>通过终端使用。</p>
+<section id="设置命令" class="level4">
+<h4 class="anchored" data-anchor-id="设置命令">设置命令</h4>
+<p><strong><code>openspec init</code></strong></p>
+<p>在项目中初始化 OpenSpec。</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init <span class="pp">[</span><span class="ss">path</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>选项：</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>--tools &lt;list&gt;</code></td>
+<td>非交互式配置 AI 工具。使用 <code>all</code>、<code>none</code> 或逗号分隔列表</td>
+</tr>
+<tr class="even">
+<td><code>--force</code></td>
+<td>自动清理遗留文件，不提示</td>
+</tr>
+<tr class="odd">
+<td><code>--profile &lt;profile&gt;</code></td>
+<td>覆盖此运行使用的全局模式（<code>core</code> 或 <code>custom</code>）</td>
+</tr>
+</tbody>
+</table>
+<p>示例：</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 交互式初始化</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 在特定目录初始化</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init ./my-project</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 非交互式：为 Claude 和 Cursor 配置</span></span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init <span class="at">--tools</span> claude,cursor</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 配置所有支持的工具</span></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init <span class="at">--tools</span> all</span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a><span class="co"># 覆盖此运行的模式</span></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init <span class="at">--profile</span> core</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><code>openspec update</code></strong></p>
+<p>升级 CLI 后更新 OpenSpec 指令文件。</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> update <span class="pp">[</span><span class="ss">path</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>选项：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>--force</code></td>
+<td>即使文件是最新的也强制更新</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="浏览命令" class="level4">
+<h4 class="anchored" data-anchor-id="浏览命令">浏览命令</h4>
+<p><strong><code>openspec list</code></strong></p>
+<p>列出项目中的变更或规范。</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> list <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>选项：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>--specs</code></td>
+<td>列出规范而非变更</td>
+</tr>
+<tr class="even">
+<td><code>--changes</code></td>
+<td>列出变更（默认）</td>
+</tr>
+<tr class="odd">
+<td><code>--sort &lt;order&gt;</code></td>
+<td>按 <code>recent</code>（默认）或 <code>name</code> 排序</td>
+</tr>
+<tr class="even">
+<td><code>--json</code></td>
+<td>JSON 格式输出</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>openspec view</code></strong></p>
+<p>显示交互式仪表板以浏览规范和变更。</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> view</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><code>openspec show</code></strong></p>
+<p>显示变更或规范的详情。</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> show <span class="pp">[</span><span class="ss">item</span><span class="pp">-</span><span class="ss">name</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>选项：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>--type &lt;type&gt;</code></td>
+<td>指定类型：<code>change</code> 或 <code>spec</code></td>
+</tr>
+<tr class="even">
+<td><code>--json</code></td>
+<td>JSON 格式输出</td>
+</tr>
+<tr class="odd">
+<td><code>--no-interactive</code></td>
+<td>禁用交互式提示</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="验证命令" class="level4">
+<h4 class="anchored" data-anchor-id="验证命令">验证命令</h4>
+<p><strong><code>openspec validate</code></strong></p>
+<p>验证变更和规范的结构问题。</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> validate <span class="pp">[</span><span class="ss">item</span><span class="pp">-</span><span class="ss">name</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>选项：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>--all</code></td>
+<td>验证所有变更和规范</td>
+</tr>
+<tr class="even">
+<td><code>--changes</code></td>
+<td>验证所有变更</td>
+</tr>
+<tr class="odd">
+<td><code>--specs</code></td>
+<td>验证所有规范</td>
+</tr>
+<tr class="even">
+<td><code>--type &lt;type&gt;</code></td>
+<td>当名称模糊时指定类型</td>
+</tr>
+<tr class="odd">
+<td><code>--strict</code></td>
+<td>启用严格验证模式</td>
+</tr>
+<tr class="even">
+<td><code>--json</code></td>
+<td>JSON 格式输出</td>
+</tr>
+<tr class="odd">
+<td><code>--concurrency &lt;n&gt;</code></td>
+<td>最大并行验证数（默认：6）</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="生命周期命令" class="level4">
+<h4 class="anchored" data-anchor-id="生命周期命令">生命周期命令</h4>
+<p><strong><code>openspec archive</code></strong></p>
+<p>归档已完成的变更并将增量规范合并到主规范。</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> archive <span class="pp">[</span><span class="ss">change</span><span class="pp">-</span><span class="ss">name</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>选项：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>-y, --yes</code></td>
+<td>跳过确认提示</td>
+</tr>
+<tr class="even">
+<td><code>--skip-specs</code></td>
+<td>跳过规范更新（适用于基础设施/工具/仅文档变更）</td>
+</tr>
+<tr class="odd">
+<td><code>--no-validate</code></td>
+<td>跳过验证（需要确认）</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="工作流命令" class="level4">
+<h4 class="anchored" data-anchor-id="工作流命令">工作流命令</h4>
+<p><strong><code>openspec status</code></strong></p>
+<p>显示变更的产出物完成状态。</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> status <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>选项：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>选项</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>--change &lt;id&gt;</code></td>
+<td>变更名称</td>
+</tr>
+<tr class="even">
+<td><code>--schema &lt;name&gt;</code></td>
+<td>模式覆盖</td>
+</tr>
+<tr class="odd">
+<td><code>--json</code></td>
+<td>JSON 格式输出</td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>openspec instructions</code></strong></p>
+<p>获取创建产出物或应用任务的丰富指令。</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> instructions <span class="pp">[</span><span class="ss">artifact</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>参数：</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>artifact</code></td>
+<td>产出物 ID：<code>proposal</code>、<code>specs</code>、<code>design</code>、<code>tasks</code> 或 <code>apply</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>openspec templates</code></strong></p>
+<p>显示模式中所有产出物的解析模板路径。</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> templates <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><code>openspec schemas</code></strong></p>
+<p>列出可用的工作流模式。</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schemas <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="模式命令" class="level4">
+<h4 class="anchored" data-anchor-id="模式命令">模式命令</h4>
+<p><strong><code>openspec schema init</code></strong></p>
+<p>创建新的项目本地模式。</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schema init <span class="op">&lt;</span>name<span class="op">&gt;</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><code>openspec schema fork</code></strong></p>
+<p>复制现有模式到项目进行自定义。</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schema fork <span class="op">&lt;</span>source<span class="op">&gt;</span> <span class="pp">[</span><span class="ss">name</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><code>openspec schema validate</code></strong></p>
+<p>验证模式结构和模板。</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schema validate <span class="pp">[</span><span class="ss">name</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong><code>openspec schema which</code></strong></p>
+<p>显示模式从哪里解析（用于调试优先级）。</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schema which <span class="pp">[</span><span class="ss">name</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="配置命令" class="level4">
+<h4 class="anchored" data-anchor-id="配置命令">配置命令</h4>
+<p><strong><code>openspec config</code></strong></p>
+<p>查看和修改全局 OpenSpec 配置。</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> config <span class="op">&lt;</span>subcommand<span class="op">&gt;</span> <span class="pp">[</span><span class="ss">options</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>子命令：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>子命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>path</code></td>
+<td>显示配置文件位置</td>
+</tr>
+<tr class="even">
+<td><code>list</code></td>
+<td>显示所有当前设置</td>
+</tr>
+<tr class="odd">
+<td><code>get &lt;key&gt;</code></td>
+<td>获取特定值</td>
+</tr>
+<tr class="even">
+<td><code>set &lt;key&gt; &lt;value&gt;</code></td>
+<td>设置值</td>
+</tr>
+<tr class="odd">
+<td><code>unset &lt;key&gt;</code></td>
+<td>移除键</td>
+</tr>
+<tr class="even">
+<td><code>reset</code></td>
+<td>重置为默认值</td>
+</tr>
+<tr class="odd">
+<td><code>edit</code></td>
+<td>在编辑器中打开</td>
+</tr>
+<tr class="even">
+<td><code>profile [preset]</code></td>
+<td>交互式或通过预设配置工作流模式</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+</section>
+<section id="工作流" class="level2">
+<h2 class="anchored" data-anchor-id="工作流">工作流</h2>
+<section id="两种模式" class="level3">
+<h3 class="anchored" data-anchor-id="两种模式">两种模式</h3>
+<section id="默认快速路径core-模式" class="level4">
+<h4 class="anchored" data-anchor-id="默认快速路径core-模式">默认快速路径（core 模式）</h4>
+<p>新安装默认使用 <code>core</code>，提供：</p>
+<ul>
+<li><code>/opsx:propose</code></li>
+<li><code>/opsx:explore</code></li>
+<li><code>/opsx:apply</code></li>
+<li><code>/opsx:archive</code></li>
+</ul>
+<p>典型流程：</p>
+<pre><code>/opsx:propose ──► /opsx:apply ──► /opsx:archive</code></pre>
+</section>
+<section id="扩展完整工作流自定义选择" class="level4">
+<h4 class="anchored" data-anchor-id="扩展完整工作流自定义选择">扩展/完整工作流（自定义选择）</h4>
+<p>如果需要显式脚手架和构建命令，启用：</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> config profile</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> update</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="工作流模式" class="level3">
+<h3 class="anchored" data-anchor-id="工作流模式">工作流模式</h3>
+<section id="快速功能" class="level4">
+<h4 class="anchored" data-anchor-id="快速功能">快速功能</h4>
+<p>当你知道要构建什么，只需执行：</p>
+<pre><code>/opsx:new ──► /opsx:ff ──► /opsx:apply ──► /opsx:verify ──► /opsx:archive</code></pre>
+<p><strong>适用于：</strong> 小到中型功能、错误修复、直接的变更。</p>
+</section>
+<section id="探索性" class="level4">
+<h4 class="anchored" data-anchor-id="探索性">探索性</h4>
+<p>当需求不明确或需要先调查：</p>
+<pre><code>/opsx:explore ──► /opsx:new ──► /opsx:continue ──► ... ──► /opsx:apply</code></pre>
+<p><strong>适用于：</strong> 性能优化、调试、架构决策、需求不明确。</p>
+</section>
+<section id="并行变更" class="level4">
+<h4 class="anchored" data-anchor-id="并行变更">并行变更</h4>
+<p>同时处理多个变更：</p>
+<pre><code>变更 A: /opsx:new ──► /opsx:ff ──► /opsx:apply (进行中)
+                                      │
+                                 上下文切换
+                                      │
+变更 B: /opsx:new ──► /opsx:ff ──────► /opsx:apply</code></pre>
+<p><strong>适用于：</strong> 并行工作流、紧急中断、团队协作。</p>
+<p>当有多个已完成的变更，使用 <code>/opsx:bulk-archive</code>。</p>
+</section>
+<section id="完成变更" class="level4">
+<h4 class="anchored" data-anchor-id="完成变更">完成变更</h4>
+<p>推荐完成流程：</p>
+<pre><code>/opsx:apply ──► /opsx:verify ──► /opsx:archive
+                 │                 │
+            验证实现            提示同步（如需要）</code></pre>
+</section>
+</section>
+<section id="何时使用什么" class="level3">
+<h3 class="anchored" data-anchor-id="何时使用什么">何时使用什么</h3>
+<section id="opsxff-vs-opsxcontinue" class="level4">
+<h4 class="anchored" data-anchor-id="opsxff-vs-opsxcontinue"><code>/opsx:ff</code> vs <code>/opsx:continue</code></h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th>场景</th>
+<th>使用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>需求清晰，准备构建</td>
+<td><code>/opsx:ff</code></td>
+</tr>
+<tr class="even">
+<td>探索中，想审查每一步</td>
+<td><code>/opsx:continue</code></td>
+</tr>
+<tr class="odd">
+<td>想在规范前迭代提案</td>
+<td><code>/opsx:continue</code></td>
+</tr>
+<tr class="even">
+<td>时间压力，需要快速行动</td>
+<td><code>/opsx:ff</code></td>
+</tr>
+<tr class="odd">
+<td>复杂变更，想要控制</td>
+<td><code>/opsx:continue</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>经验法则：</strong> 如果你能提前描述完整范围，使用 <code>/opsx:ff</code>。如果你边做边摸索，使用 <code>/opsx:continue</code>。</p>
+</section>
+<section id="何时更新-vs-重新开始" class="level4">
+<h4 class="anchored" data-anchor-id="何时更新-vs-重新开始">何时更新 vs 重新开始</h4>
+<p><strong>更新现有变更：</strong></p>
+<ul>
+<li>相同意图，细化执行</li>
+<li>范围收窄（先做 MVP，其余后续）</li>
+<li>学习驱动的修正</li>
+<li>基于实现发现的方案调整</li>
+</ul>
+<p><strong>开始新变更：</strong></p>
+<ul>
+<li>意图从根本上改变</li>
+<li>范围爆炸成完全不同的工作</li>
+<li>原始变更可以独立标记为”完成”</li>
+<li>补丁会混淆而非澄清</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="自定义配置" class="level2">
+<h2 class="anchored" data-anchor-id="自定义配置">自定义配置</h2>
+<section id="项目配置" class="level3">
+<h3 class="anchored" data-anchor-id="项目配置">项目配置</h3>
+<p><code>openspec/config.yaml</code> 文件是自定义 OpenSpec 的最简单方式。</p>
+<section id="快速设置" class="level4">
+<h4 class="anchored" data-anchor-id="快速设置">快速设置</h4>
+<div class="sourceCode" id="cb61"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>或手动创建：</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="co"># openspec/config.yaml</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a><span class="fu">schema</span><span class="kw">:</span><span class="at"> spec-driven</span></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="fu">context</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a>  Tech stack: TypeScript, React, Node.js, PostgreSQL</span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a>  API style: RESTful, documented in docs/api.md</span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a>  Testing: Jest + React Testing Library</span>
+<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a>  We value backwards compatibility for all public APIs</span>
+<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-10"><a href="#cb62-10" aria-hidden="true" tabindex="-1"></a><span class="fu">rules</span><span class="kw">:</span></span>
+<span id="cb62-11"><a href="#cb62-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">proposal</span><span class="kw">:</span></span>
+<span id="cb62-12"><a href="#cb62-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> Include rollback plan</span></span>
+<span id="cb62-13"><a href="#cb62-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> Identify affected teams</span></span>
+<span id="cb62-14"><a href="#cb62-14" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">specs</span><span class="kw">:</span></span>
+<span id="cb62-15"><a href="#cb62-15" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> Use Given/When/Then format</span></span>
+<span id="cb62-16"><a href="#cb62-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> Reference existing patterns before inventing new ones</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="工作原理" class="level4">
+<h4 class="anchored" data-anchor-id="工作原理">工作原理</h4>
+<ul>
+<li><strong>默认模式：</strong> 无需在每个命令上使用 <code>--schema</code></li>
+<li><strong>上下文注入：</strong> AI 看到你的技术栈、约定等</li>
+<li><strong>每产出物规则：</strong> 特定产出物的自定义规则</li>
+</ul>
+</section>
+<section id="模式解析顺序" class="level4">
+<h4 class="anchored" data-anchor-id="模式解析顺序">模式解析顺序</h4>
+<ol type="1">
+<li>CLI 标志：<code>--schema &lt;name&gt;</code></li>
+<li>变更元数据（<code>.openspec.yaml</code>）</li>
+<li>项目配置（<code>openspec/config.yaml</code>）</li>
+<li>默认（<code>spec-driven</code>）</li>
+</ol>
+</section>
+</section>
+<section id="自定义模式-1" class="level3">
+<h3 class="anchored" data-anchor-id="自定义模式-1">自定义模式</h3>
+<p>当项目配置不够用时，创建完全自定义工作流的模式。</p>
+<section id="复制现有模式" class="level4">
+<h4 class="anchored" data-anchor-id="复制现有模式">复制现有模式</h4>
+<p>最快的方式是复制内置模式：</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schema fork spec-driven my-workflow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="从头创建模式" class="level4">
+<h4 class="anchored" data-anchor-id="从头创建模式">从头创建模式</h4>
+<div class="sourceCode" id="cb64"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 交互式</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schema init research-first</span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 非交互式</span></span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schema init rapid <span class="dt">\</span></span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">--description</span> <span class="st">"Rapid iteration workflow"</span> <span class="dt">\</span></span>
+<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">--artifacts</span> <span class="st">"proposal,tasks"</span> <span class="dt">\</span></span>
+<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">--default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="模式结构" class="level4">
+<h4 class="anchored" data-anchor-id="模式结构">模式结构</h4>
+<div class="sourceCode" id="cb65"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># openspec/schemas/my-workflow/schema.yaml</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> my-workflow</span></span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a><span class="fu">version</span><span class="kw">:</span><span class="at"> </span><span class="dv">1</span></span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a><span class="fu">description</span><span class="kw">:</span><span class="at"> My team's custom workflow</span></span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a><span class="fu">artifacts</span><span class="kw">:</span></span>
+<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> proposal</span></span>
+<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">generates</span><span class="kw">:</span><span class="at"> proposal.md</span></span>
+<span id="cb65-9"><a href="#cb65-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> Initial proposal document</span></span>
+<span id="cb65-10"><a href="#cb65-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">template</span><span class="kw">:</span><span class="at"> proposal.md</span></span>
+<span id="cb65-11"><a href="#cb65-11" aria-hidden="true" tabindex="-1"></a><span class="fu">    instruction</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb65-12"><a href="#cb65-12" aria-hidden="true" tabindex="-1"></a>      Create a proposal that explains WHY this change is needed.</span>
+<span id="cb65-13"><a href="#cb65-13" aria-hidden="true" tabindex="-1"></a>      Focus on the problem, not the solution.</span>
+<span id="cb65-14"><a href="#cb65-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">requires</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
+<span id="cb65-15"><a href="#cb65-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-16"><a href="#cb65-16" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> design</span></span>
+<span id="cb65-17"><a href="#cb65-17" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">generates</span><span class="kw">:</span><span class="at"> design.md</span></span>
+<span id="cb65-18"><a href="#cb65-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> Technical design</span></span>
+<span id="cb65-19"><a href="#cb65-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">template</span><span class="kw">:</span><span class="at"> design.md</span></span>
+<span id="cb65-20"><a href="#cb65-20" aria-hidden="true" tabindex="-1"></a><span class="fu">    instruction</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb65-21"><a href="#cb65-21" aria-hidden="true" tabindex="-1"></a>      Create a design document explaining HOW to implement.</span>
+<span id="cb65-22"><a href="#cb65-22" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">requires</span><span class="kw">:</span></span>
+<span id="cb65-23"><a href="#cb65-23" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> proposal</span></span>
+<span id="cb65-24"><a href="#cb65-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-25"><a href="#cb65-25" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">id</span><span class="kw">:</span><span class="at"> tasks</span></span>
+<span id="cb65-26"><a href="#cb65-26" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">generates</span><span class="kw">:</span><span class="at"> tasks.md</span></span>
+<span id="cb65-27"><a href="#cb65-27" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">description</span><span class="kw">:</span><span class="at"> Implementation checklist</span></span>
+<span id="cb65-28"><a href="#cb65-28" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">template</span><span class="kw">:</span><span class="at"> tasks.md</span></span>
+<span id="cb65-29"><a href="#cb65-29" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">requires</span><span class="kw">:</span></span>
+<span id="cb65-30"><a href="#cb65-30" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> design</span></span>
+<span id="cb65-31"><a href="#cb65-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-32"><a href="#cb65-32" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span><span class="kw">:</span></span>
+<span id="cb65-33"><a href="#cb65-33" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">requires</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">tasks</span><span class="kw">]</span></span>
+<span id="cb65-34"><a href="#cb65-34" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">tracks</span><span class="kw">:</span><span class="at"> tasks.md</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="模板" class="level4">
+<h4 class="anchored" data-anchor-id="模板">模板</h4>
+<p>模板是 AI 指导的 markdown 文件。</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- templates/proposal.md --&gt;</span></span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why</span></span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Explain the motivation for this change. What problem does this solve? --&gt;</span></span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## What Changes</span></span>
+<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Describe what will change. Be specific about new capabilities or modifications. --&gt;</span></span>
+<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-10"><a href="#cb66-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Impact</span></span>
+<span id="cb66-11"><a href="#cb66-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb66-12"><a href="#cb66-12" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Affected code, APIs, dependencies, systems --&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="验证模式" class="level4">
+<h4 class="anchored" data-anchor-id="验证模式">验证模式</h4>
+<div class="sourceCode" id="cb67"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> schema validate my-workflow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+</section>
+<section id="多语言支持" class="level2">
+<h2 class="anchored" data-anchor-id="多语言支持">多语言支持</h2>
+<section id="快速设置-1" class="level3">
+<h3 class="anchored" data-anchor-id="快速设置-1">快速设置</h3>
+<p>在 <code>openspec/config.yaml</code> 中添加语言指令：</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">schema</span><span class="kw">:</span><span class="at"> spec-driven</span></span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="fu">context</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>  Language: 中文（简体）</span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>  所有产出物必须用简体中文撰写。</span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a>  # 你的其他项目上下文...</span>
+<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a>  Tech stack: TypeScript, React, Node.js</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>所有生成的产出物现在将使用指定语言。</p>
+</section>
+<section id="语言示例" class="level3">
+<h3 class="anchored" data-anchor-id="语言示例">语言示例</h3>
+<p><strong>葡萄牙语（巴西）</strong></p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">context</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>  Language: Portuguese (pt-BR)</span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>  All artifacts must be written in Brazilian Portuguese.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>西班牙语</strong></p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">context</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>  Idioma: Español</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>  Todos los artefactos deben escribirse en español.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>简体中文</strong></p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">context</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>  语言：中文（简体）</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>  所有产出物必须用简体中文撰写。</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>日语</strong></p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">context</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>  言語：日本語</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>  すべての成果物は日本語で作成してください。</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>法语</strong></p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">context</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>  Langue : Français</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>  Tous les artefacts doivent être rédigés en français.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>德语</strong></p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">context</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>  Sprache: Deutsch</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>  Alle Artefakte müssen auf Deutsch verfasst werden.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="技术术语处理" class="level3">
+<h3 class="anchored" data-anchor-id="技术术语处理">技术术语处理</h3>
+<p>决定如何处理技术术语：</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">context</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>  Language: Japanese</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>  Write in Japanese, but:</span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>  - Keep technical terms like "API", "REST", "GraphQL" in English</span>
+<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a>  - Code examples and file paths remain in English</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="支持的工具" class="level2">
+<h2 class="anchored" data-anchor-id="支持的工具">支持的工具</h2>
+<p>OpenSpec 支持许多 AI 编码助手。</p>
+<section id="支持的工具列表" class="level3">
+<h3 class="anchored" data-anchor-id="支持的工具列表">支持的工具列表</h3>
+<table class="table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 44%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>工具</th>
+<th>Skills 路径模式</th>
+<th>命令路径模式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Claude Code (claude)</td>
+<td><code>.claude/skills/openspec-*/SKILL.md</code></td>
+<td><code>.claude/commands/opsx/&lt;id&gt;.md</code></td>
+</tr>
+<tr class="even">
+<td>Cursor (cursor)</td>
+<td><code>.cursor/skills/openspec-*/SKILL.md</code></td>
+<td><code>.cursor/commands/opsx-&lt;id&gt;.md</code></td>
+</tr>
+<tr class="odd">
+<td>Windsurf (windsurf)</td>
+<td><code>.windsurf/skills/openspec-*/SKILL.md</code></td>
+<td><code>.windsurf/workflows/opsx-&lt;id&gt;.md</code></td>
+</tr>
+<tr class="even">
+<td>Cline (cline)</td>
+<td><code>.cline/skills/openspec-*/SKILL.md</code></td>
+<td><code>.clinerules/workflows/opsx-&lt;id&gt;.md</code></td>
+</tr>
+<tr class="odd">
+<td>Continue (continue)</td>
+<td><code>.continue/skills/openspec-*/SKILL.md</code></td>
+<td><code>.continue/prompts/opsx-&lt;id&gt;.prompt</code></td>
+</tr>
+<tr class="even">
+<td>GitHub Copilot (github-copilot)</td>
+<td><code>.github/skills/openspec-*/SKILL.md</code></td>
+<td><code>.github/prompts/opsx-&lt;id&gt;.prompt.md</code></td>
+</tr>
+<tr class="odd">
+<td>Amazon Q Developer (amazon-q)</td>
+<td><code>.amazonq/skills/openspec-*/SKILL.md</code></td>
+<td><code>.amazonq/prompts/opsx-&lt;id&gt;.md</code></td>
+</tr>
+<tr class="even">
+<td>Gemini CLI (gemini)</td>
+<td><code>.gemini/skills/openspec-*/SKILL.md</code></td>
+<td><code>.gemini/commands/opsx-&lt;id&gt;.toml</code></td>
+</tr>
+<tr class="odd">
+<td>Trae (trae)</td>
+<td><code>.trae/skills/openspec-*/SKILL.md</code></td>
+<td>不生成（使用基于 skill 的调用）</td>
+</tr>
+<tr class="even">
+<td>OpenCode (opencode)</td>
+<td><code>.opencode/skills/openspec-*/SKILL.md</code></td>
+<td><code>.opencode/command/opsx-&lt;id&gt;.md</code></td>
+</tr>
+<tr class="odd">
+<td>以及更多…</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="工具语法差异" class="level3">
+<h3 class="anchored" data-anchor-id="工具语法差异">工具语法差异</h3>
+<p>不同 AI 工具使用略有不同的命令语法：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>工具</th>
+<th>语法示例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Claude Code</td>
+<td><code>/opsx:propose</code>, <code>/opsx:apply</code></td>
+</tr>
+<tr class="even">
+<td>Cursor</td>
+<td><code>/opsx-propose</code>, <code>/opsx-apply</code></td>
+</tr>
+<tr class="odd">
+<td>Windsurf</td>
+<td><code>/opsx-propose</code>, <code>/opsx-apply</code></td>
+</tr>
+<tr class="even">
+<td>Copilot (IDE)</td>
+<td><code>/opsx-propose</code>, <code>/opsx-apply</code></td>
+</tr>
+<tr class="odd">
+<td>Trae</td>
+<td>基于 skill 的调用如 <code>/openspec-propose</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="非交互式设置" class="level3">
+<h3 class="anchored" data-anchor-id="非交互式设置">非交互式设置</h3>
+<div class="sourceCode" id="cb76"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 配置特定工具</span></span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init <span class="at">--tools</span> claude,cursor</span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 配置所有支持的工具</span></span>
+<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init <span class="at">--tools</span> all</span>
+<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 跳过工具配置</span></span>
+<span id="cb76-8"><a href="#cb76-8" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init <span class="at">--tools</span> none</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+</section>
+<section id="迁移指南" class="level2">
+<h2 class="anchored" data-anchor-id="迁移指南">迁移指南</h2>
+<section id="发生了什么变化" class="level3">
+<h3 class="anchored" data-anchor-id="发生了什么变化">发生了什么变化？</h3>
+<p>OPSX 用灵活的、基于行动的方法取代了旧的阶段锁定工作流。</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>方面</th>
+<th>旧版</th>
+<th>OPSX</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>命令</strong></td>
+<td><code>/openspec:proposal</code>, <code>/openspec:apply</code>, <code>/openspec:archive</code></td>
+<td>默认：<code>/opsx:propose</code>, <code>/opsx:apply</code>, <code>/opsx:archive</code></td>
+</tr>
+<tr class="even">
+<td><strong>工作流</strong></td>
+<td>一次性创建所有产出物</td>
+<td>增量或一次性创建——任选</td>
+</tr>
+<tr class="odd">
+<td><strong>返回</strong></td>
+<td>尴尬的阶段门限</td>
+<td>自然——随时更新任何产出物</td>
+</tr>
+<tr class="even">
+<td><strong>自定义</strong></td>
+<td>固定结构</td>
+<td>模式驱动，完全可定制</td>
+</tr>
+<tr class="odd">
+<td><strong>配置</strong></td>
+<td><code>CLAUDE.md</code> 标记 + <code>project.md</code></td>
+<td>干净的 <code>openspec/config.yaml</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="运行迁移" class="level3">
+<h3 class="anchored" data-anchor-id="运行迁移">运行迁移</h3>
+<div class="sourceCode" id="cb77"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 新安装或添加新工具</span></span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> init</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 只想迁移和刷新现有工具</span></span>
+<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a><span class="ex">openspec</span> update</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="迁移-project.md-到-config.yaml" class="level3">
+<h3 class="anchored" data-anchor-id="迁移-project.md-到-config.yaml">迁移 project.md 到 config.yaml</h3>
+<p><strong>旧版（project.md）：</strong></p>
+<div class="sourceCode" id="cb78"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Project Context</span></span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>This is a TypeScript monorepo using React and Node.js.</span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>We use Jest for testing and follow strict ESLint rules.</span>
+<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a>Our API is RESTful and documented in docs/api.md.</span>
+<span id="cb78-6"><a href="#cb78-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-7"><a href="#cb78-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conventions</span></span>
+<span id="cb78-8"><a href="#cb78-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-9"><a href="#cb78-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>All public APIs must maintain backwards compatibility</span>
+<span id="cb78-10"><a href="#cb78-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>New features should include tests</span>
+<span id="cb78-11"><a href="#cb78-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use Given/When/Then format for specifications</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>新版（config.yaml）：</strong></p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">schema</span><span class="kw">:</span><span class="at"> spec-driven</span></span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a><span class="fu">context</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a>  Tech stack: TypeScript, React, Node.js</span>
+<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>  Testing: Jest with React Testing Library</span>
+<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a>  API: RESTful, documented in docs/api.md</span>
+<span id="cb79-7"><a href="#cb79-7" aria-hidden="true" tabindex="-1"></a>  We maintain backwards compatibility for all public APIs</span>
+<span id="cb79-8"><a href="#cb79-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-9"><a href="#cb79-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rules</span><span class="kw">:</span></span>
+<span id="cb79-10"><a href="#cb79-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">proposal</span><span class="kw">:</span></span>
+<span id="cb79-11"><a href="#cb79-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> Include rollback plan for risky changes</span></span>
+<span id="cb79-12"><a href="#cb79-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">specs</span><span class="kw">:</span></span>
+<span id="cb79-13"><a href="#cb79-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> Use Given/When/Then format for scenarios</span></span>
+<span id="cb79-14"><a href="#cb79-14" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> Reference existing patterns before inventing new ones</span></span>
+<span id="cb79-15"><a href="#cb79-15" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">design</span><span class="kw">:</span></span>
+<span id="cb79-16"><a href="#cb79-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> Include sequence diagrams for complex flows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="关键差异" class="level3">
+<h3 class="anchored" data-anchor-id="关键差异">关键差异</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>project.md</th>
+<th>config.yaml</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>自由格式 markdown</td>
+<td>结构化 YAML</td>
+</tr>
+<tr class="even">
+<td>一段文本</td>
+<td>分离上下文和每产出物规则</td>
+</tr>
+<tr class="odd">
+<td>何时使用不明确</td>
+<td>上下文出现在所有产出物；规则只出现在匹配的产出物中</td>
+</tr>
+<tr class="even">
+<td>无模式选择</td>
+<td>显式 <code>schema:</code> 字段设置默认工作流</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="继续现有变更" class="level3">
+<h3 class="anchored" data-anchor-id="继续现有变更">继续现有变更</h3>
+<p>你的进行中的变更与 OPSX 命令无缝协作。</p>
+<p><strong>从遗留工作流有活动变更？</strong></p>
+<pre><code>/opsx:apply add-my-feature</code></pre>
+<p>OPSX 读取现有产出物并从中断处继续。</p>
+<hr>
+</section>
+</section>
+<section id="最佳实践" class="level2">
+<h2 class="anchored" data-anchor-id="最佳实践">最佳实践</h2>
+<section id="保持变更聚焦" class="level3">
+<h3 class="anchored" data-anchor-id="保持变更聚焦">保持变更聚焦</h3>
+<p>每个变更一个逻辑工作单元。如果你在做”添加功能 X 并重构 Y”，考虑分成两个单独的变更。</p>
+</section>
+<section id="不清晰需求时使用-opsxexplore" class="level3">
+<h3 class="anchored" data-anchor-id="不清晰需求时使用-opsxexplore">不清晰需求时使用 <code>/opsx:explore</code></h3>
+<p>在承诺变更之前，探索问题空间：</p>
+<pre><code>你: /opsx:explore
+
+AI:  What would you like to explore?
+
+你: How should we handle rate limiting for our API?
+
+AI:  Let me investigate your current setup and options...
+     [Researches codebase, considers patterns]
+
+     I see three approaches we could take:
+     1. Middleware-based (simple, per-endpoint)
+     2. Redis-backed (scalable, shared state)
+     3. Token bucket per user (fair, complex)
+
+     Your current stack suggests #1 or #2. What's your scale?</code></pre>
+</section>
+<section id="归档前验证" class="level3">
+<h3 class="anchored" data-anchor-id="归档前验证">归档前验证</h3>
+<p>使用 <code>/opsx:verify</code> 检查实现是否匹配产出物：</p>
+<pre><code>你: /opsx:verify
+
+AI:  Verifying add-dark-mode...
+
+     ✓ All tasks in tasks.md are checked
+     ✓ Requirements in specs have corresponding code
+     ✓ Design decisions are reflected in implementation
+
+     Ready to archive!</code></pre>
+</section>
+<section id="清晰命名变更" class="level3">
+<h3 class="anchored" data-anchor-id="清晰命名变更">清晰命名变更</h3>
+<p>好名字让 <code>openspec list</code> 有用：</p>
+<pre><code>好:                          避免:
+add-dark-mode                feature-1
+fix-login-redirect           update
+optimize-product-query       changes
+implement-2fa                wip</code></pre>
+<hr>
+</section>
+</section>
+<section id="获取帮助" class="level2">
+<h2 class="anchored" data-anchor-id="获取帮助">获取帮助</h2>
+<ul>
+<li><strong>Discord</strong>: <a href="https://discord.gg/YctCnvvshC">discord.gg/YctCnvvshC</a></li>
+<li><strong>GitHub Issues</strong>: <a href="https://github.com/Fission-AI/OpenSpec/issues">github.com/Fission-AI/OpenSpec/issues</a></li>
+<li><strong>文档</strong>: 查看各 docs/ 目录下的详细文档</li>
+</ul>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="jdragonnudt/inspiraHub" data-repo-id="R_kgDOMGN2Lg" data-category="General" data-category-id="DIC_kwDOMGN2Ls4Cf8Yq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2024, by jdragon. 本网站所有内容采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA许可，知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
