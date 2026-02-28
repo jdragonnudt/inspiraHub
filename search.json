@@ -1234,7 +1234,7 @@
     "href": "myblog/index.html",
     "title": "我的blog",
     "section": "",
-    "text": "Title\n\n\nAuthor\n\n\nReading Time\n\n\nDate\n\n\n\n\n\n\nOpenSpec 中文使用指南\n\n\njdragon \n\n\n17 min\n\n\nFeb 27, 2026\n\n\n\n\n2026年AI编程趋势预测与开发者生存指南\n\n\njdragon \n\n\n3 min\n\n\nFeb 7, 2026\n\n\n\n\n2026年AI编程工具全景图谱\n\n\njdragon \n\n\n6 min\n\n\nFeb 7, 2026\n\n\n\n\nopencode学习路径\n\n\njdragon \n\n\n20 min\n\n\nFeb 2, 2026\n\n\n\n\nclaude code学习路径\n\n\njdragon \n\n\n15 min\n\n\nFeb 2, 2026\n\n\n\n\n主管工程师成长之道\n\n\njdragon \n\n\n8 min\n\n\nDec 19, 2025\n\n\n\n\n编程能力提升概述\n\n\njdragon \n\n\n104 min\n\n\nDec 19, 2025\n\n\n\n\n团队作风\n\n\njdragon \n\n\n1 min\n\n\nDec 19, 2025\n\n\n\n\n大学毕业生中的编码萌新如何快速成长\n\n\njdragon \n\n\n9 min\n\n\nDec 28, 2024\n\n\n\n\n大学期间如何学好计算机专业\n\n\njdragon \n\n\n7 min\n\n\nOct 13, 2024\n\n\n\n\n产品经理须知\n\n\njdragon \n\n\n10 min\n\n\nOct 5, 2024\n\n\n\n\n新手软件工程师须知\n\n\njdragon \n\n\n6 min\n\n\nSep 28, 2024\n\n\n\n\n\nNo matching items\n\n Back to top",
+    "text": "Title\n\n\nAuthor\n\n\nReading Time\n\n\nDate\n\n\n\n\n\n\nSuperpowers Skill 配套使用指南：完整工作流全解析\n\n\njdragon \n\n\n3 min\n\n\nFeb 28, 2026\n\n\n\n\nOpenSpec 中文使用指南\n\n\njdragon \n\n\n17 min\n\n\nFeb 27, 2026\n\n\n\n\n2026年AI编程趋势预测与开发者生存指南\n\n\njdragon \n\n\n3 min\n\n\nFeb 7, 2026\n\n\n\n\n2026年AI编程工具全景图谱\n\n\njdragon \n\n\n6 min\n\n\nFeb 7, 2026\n\n\n\n\nopencode学习路径\n\n\njdragon \n\n\n20 min\n\n\nFeb 2, 2026\n\n\n\n\nclaude code学习路径\n\n\njdragon \n\n\n15 min\n\n\nFeb 2, 2026\n\n\n\n\n主管工程师成长之道\n\n\njdragon \n\n\n8 min\n\n\nDec 19, 2025\n\n\n\n\n编程能力提升概述\n\n\njdragon \n\n\n104 min\n\n\nDec 19, 2025\n\n\n\n\n团队作风\n\n\njdragon \n\n\n1 min\n\n\nDec 19, 2025\n\n\n\n\n大学毕业生中的编码萌新如何快速成长\n\n\njdragon \n\n\n9 min\n\n\nDec 28, 2024\n\n\n\n\n大学期间如何学好计算机专业\n\n\njdragon \n\n\n7 min\n\n\nOct 13, 2024\n\n\n\n\n产品经理须知\n\n\njdragon \n\n\n10 min\n\n\nOct 5, 2024\n\n\n\n\n新手软件工程师须知\n\n\njdragon \n\n\n6 min\n\n\nSep 28, 2024\n\n\n\n\n\nNo matching items\n\n Back to top",
     "crumbs": [
       "Blogs",
       "我的blog"
@@ -2381,5 +2381,75 @@
     "title": "OpenSpec 中文使用指南",
     "section": "获取帮助",
     "text": "获取帮助\n\nDiscord: discord.gg/YctCnvvshC\nGitHub Issues: github.com/Fission-AI/OpenSpec/issues\n文档: 查看各 docs/ 目录下的详细文档"
+  },
+  {
+    "objectID": "myblog/posts/superpower_skills/index.html",
+    "href": "myblog/posts/superpower_skills/index.html",
+    "title": "Superpowers Skill 配套使用指南：完整工作流全解析",
+    "section": "",
+    "text": "superpowers 是 Vercel Labs 推出的 AI Agent 技能集合，包含 12 个协同工作的技能，覆盖从需求分析到代码审查的完整开发流程。正确掌握使用顺序，能显著提升开发效率与代码质量。"
+  },
+  {
+    "objectID": "myblog/posts/superpower_skills/index.html#概述",
+    "href": "myblog/posts/superpower_skills/index.html#概述",
+    "title": "Superpowers Skill 配套使用指南：完整工作流全解析",
+    "section": "概述",
+    "text": "概述\nsuperpowers 是由 Vercel Labs 维护的一套 AI Agent 技能体系，旨在为 AI 编程助手提供结构化、可复用的工作方法论。该技能集目前包含 12 个独立技能，累计安装量超过 200K，展现了其在开发者社区中的广泛认可度。\n这些技能并非孤立存在，而是构成了一个完整的开发工作流。理解它们之间的协作关系和使用顺序，是充分发挥 superpowers 威力的关键。"
+  },
+  {
+    "objectID": "myblog/posts/superpower_skills/index.html#技能总览与职责划分",
+    "href": "myblog/posts/superpower_skills/index.html#技能总览与职责划分",
+    "title": "Superpowers Skill 配套使用指南：完整工作流全解析",
+    "section": "技能总览与职责划分",
+    "text": "技能总览与职责划分\n在深入使用顺序之前，先理解每个技能的职责定位：\n\n\n\n技能\n安装量\n核心职责\n\n\n\n\nbrainstorming\n34.4K\n需求分析、设计探索\n\n\nwriting-plans\n17.0K\n任务规划、计划编写\n\n\ntest-driven-development\n15.4K\n测试驱动开发\n\n\nexecuting-plans\n14.4K\n执行已完成的计划\n\n\nrequesting-code-review\n13.7K\n代码审查请求\n\n\nusing-superpowers\n12.9K\n技能查找与加载\n\n\nsubagent-driven-development\n11.6K\n子代理驱动的开发执行\n\n\nreceiving-code-review\n11.0K\n代码审查反馈处理\n\n\nverification-before-completion\n11.0K\n完成前验证\n\n\nusing-git-worktrees\n10.6K\nGit 工作树隔离\n\n\nwriting-skills\n10.6K\n技能编写与测试\n\n\ndispatching-parallel-agents\n10.0K\n并行子代理调度"
+  },
+  {
+    "objectID": "myblog/posts/superpower_skills/index.html#核心工作流五阶段开发模型",
+    "href": "myblog/posts/superpower_skills/index.html#核心工作流五阶段开发模型",
+    "title": "Superpowers Skill 配套使用指南：完整工作流全解析",
+    "section": "核心工作流：五阶段开发模型",
+    "text": "核心工作流：五阶段开发模型\nsuperpowers 的设计遵循一个清晰的五阶段开发模型，每个阶段由特定技能支撑，阶段之间存在明确的依赖关系。\n\n第一阶段：需求与设计（Brainstorming）\n使用技能： brainstorming → writing-plans\n当用户提出一个新的功能需求或开发任务时，首先触发的是 brainstorming 技能。这个技能的核心职责是通过结构化对话帮助 AI 理解需求、探索方案、形成设计。\nbrainstorming 技能的强制执行流程如下：\n\n探索项目上下文 — 检查现有文件、文档、最近的提交记录\n提出澄清问题 — 逐个提问，理解目的、约束、成功标准\n提出 2-3 种方案 — 附带权衡分析和建议方案\n展示设计 — 按复杂度分节展示，获取用户逐节确认\n编写设计文档 — 保存至 docs/plans/YYYY-MM-DD-&lt;topic&gt;-design.md\n过渡到实现阶段 — 调用 writing-plans 技能创建实施计划\n\n这一阶段的关键原则是「一次只问一个问题」，并优先使用选择题而非开放式问题。设计文档完成后，必须通过 writing-plans 技能创建实现计划，而非直接跳转到实现技能。\n\n\n第二阶段：任务规划（Planning）\n使用技能： writing-plans\nwriting-plans 技能负责将已批准的设计文档转化为可执行的实现计划。该技能的核心价值在于将大型、模糊的任务拆解为具体的、可操作的小任务，并为每个任务提供清晰的上下文。\n虽然该技能的详细文档在官方站点显示为「No SKILL.md available」，但根据其他技能的交叉引用，可以确定其核心功能：\n\n读取设计文档\n提取所有可执行任务\n为每个任务附加完整上下文\n创建结构化的任务列表\n\n输出结果是一个包含多个独立任务项的实施计划，每个任务项都有明确的交付标准和上下文信息。这些任务随后由 executing-plans 或 subagent-driven-development 技能执行。\n\n\n第三阶段：环境准备（Isolation）\n使用技能： using-git-worktrees\n在任何实现工作开始之前，必须先创建隔离的工作环境。using-git-worktrees 技能负责这一关键步骤，其核心原则是：「系统化的目录选择 + 安全验证 = 可靠的隔离」。\n该技能的完整执行流程：\n\n检测现有目录 — 按优先级检查 .worktrees 或 worktrees\n检查 CLAUDE.md — 如有明确偏好则直接使用\n询问用户 — 如无预设则让用户选择\n安全验证 — 确保目录已被 gitignore 忽略\n创建工作树 — 使用新分支创建 worktree\n运行项目初始化 — 自动检测并运行 npm install、cargo build 等\n验证基线 — 运行测试确保环境干净\n\n安全验证是至关重要的一步。对于项目本地的目录（.worktrees 或 worktrees），必须先使用 git check-ignore 确认目录已被忽略，再创建 worktree。这一步防止 worktree 内容被意外提交到仓库。\n\n\n第四阶段：执行与实现（Implementation）\n使用技能组合： subagent-driven-development / executing-plans + test-driven-development + verification-before-completion\n这是开发流程中最复杂的阶段，涉及多个技能的协同工作。\n\n子代理驱动开发（推荐）\nsubagent-driven-development 是执行实施计划的首选方式，特别适合在同一会话中连续执行多个任务。其核心工作模式是：\n\n读取计划文件 — 提取所有任务及完整上下文\n创建 TodoWrite — 跟踪所有任务状态\n逐个任务执行 — 每个任务经历以下循环：\n\n调度实现子代理\n实现子代理提问？→ 回答问题后重试\n实现子代理实现、测试、提交、自我审查\n调度规范合规审查\n规范审查通过？→ 否 → 返回修复 → 重新审查\n调度代码质量审查\n质量审查通过？→ 否 → 返回修复 → 重新审查\n标记任务完成\n\n所有任务完成后 — 调度最终代码审查\n完成开发分支 — 调用 finishing-a-development-branch 技能\n\n关键设计：每个任务经历两阶段审查。首先是规范合规审查（spec reviewer），确认代码实现了设计要求且没有添加额外功能。然后是代码质量审查（code quality reviewer），确保代码符合质量标准。\n为什么不是 executing-plans？ executing-plans 适用于需要跨会话执行或需要人类在任务之间做决策的场景。subagent-driven-development 在同一会话中连续执行，效率更高但需要更强的质量控制机制。\n\n\n测试驱动开发（TDD）\n在整个实现过程中，test-driven-development 技能贯穿始终。该技能强制执行 RED-GREEN-REFACTOR 循环：\n\nRED — 编写失败的测试\nGREEN — 编写最简代码使测试通过\nREFACTOR — 重构优化代码\n\n核心铁律：「没有先写失败测试的生产代码」。如果代码先于测试编写，必须删除并重新开始。这一规则看似严苛，但其核心逻辑是：只有亲眼看到测试失败，才能证明测试真正验证了所需功能。\n\n\n完成前验证\nverification-before-completion 技能要求在任何声称工作完成之前，必须独立运行验证命令并展示证据。该技能的核心理念是：「证据在断言之前」。\n执行流程：\n\n识别 — 确定什么命令能证明该断言\n运行 — 执行完整命令（全新、完整）\n读取 — 完整输出，检查退出码，统计失败数\n验证 — 输出是否确认了断言？\n然后 — 做出断言\n\n禁止使用「应该能工作」「看起来正确」「之前通过了」等模糊表述。必须展示实际的命令输出作为证据。\n\n\n\n第五阶段：审查与反馈（Review）\n使用技能组合： requesting-code-review + receiving-code-review\n代码审查是质量控制的最后一道防线，涉及两个互补的技能。\n\n请求代码审查\nrequesting-code-review 技能定义了何时以及如何请求代码审查：\n必须请求审查的时机：\n\nsubagent-driven-development 中每个任务完成后\n完成主要功能后\n合并到主分支前\n\n可选但有价值的时机：\n\n陷入困境时（寻求新视角）\n重构前（基线检查）\n复杂 bug 修复后\n\n审查流程使用专门的 code-reviewer 子代理，需要提供：实现内容、计划/需求、基准 SHA、头部 SHA、描述等信息。\n\n\n接收代码审查反馈\nreceiving-code-review 技能定义了如何处理审查反馈：\n\n阅读 — 完整阅读反馈，不立即反应\n理解 — 用自己的话复述需求（或提问）\n验证 — 对照代码库实际状况检查\n评估 — 对当前代码库在技术上是否合理？\n响应 — 技术性确认或有理有据地反对\n实现 — 逐项实现，每项测试\n\n关键原则：验证后再实现，而非盲目服从。对于外部审查者的建议，需要检查：技术上是否正确？是否破坏现有功能？是否理解当前实现的原因？"
+  },
+  {
+    "objectID": "myblog/posts/superpower_skills/index.html#并行任务处理",
+    "href": "myblog/posts/superpower_skills/index.html#并行任务处理",
+    "title": "Superpowers Skill 配套使用指南：完整工作流全解析",
+    "section": "并行任务处理",
+    "text": "并行任务处理\n使用技能： dispatching-parallel-agents\n当面临 2 个或更多相互独立、无共享状态、无顺序依赖的任务时，dispatching-parallel-agents 技能允许并行调度多个子代理。\n该技能的典型应用场景：\n\n并行读取多个不同模块的代码\n同时搜索多个不同的模式\n并行获取多个外部资源\n\n并行调用的优势在于显著节省时间，因为各子代理同时运行而非顺序执行。"
+  },
+  {
+    "objectID": "myblog/posts/superpower_skills/index.html#技能创建与扩展",
+    "href": "myblog/posts/superpower_skills/index.html#技能创建与扩展",
+    "title": "Superpowers Skill 配套使用指南：完整工作流全解析",
+    "section": "技能创建与扩展",
+    "text": "技能创建与扩展\n使用技能： writing-skills\n当需要将团队的开发实践或特定技术方案固化为可复用技能时，writing-skills 技能提供完整的方法论。\n该技能的核心洞见是：「编写技能即是将测试驱动开发应用于流程文档」。\n创建流程遵循 RED-GREEN-REFACTOR：\n\nRED — 不使用技能运行压力测试场景，记录基线行为\nGREEN — 编写解决具体问题的技能文档\nREFACTOR — 封闭漏洞，重新测试直到技能完备\n\n关键要求：必须先看到代理在没有技能时失败，才能编写技能。这确保了技能真正解决了实际问题，而非纸上谈兵。"
+  },
+  {
+    "objectID": "myblog/posts/superpower_skills/index.html#完整工作流示例",
+    "href": "myblog/posts/superpower_skills/index.html#完整工作流示例",
+    "title": "Superpowers Skill 配套使用指南：完整工作流全解析",
+    "section": "完整工作流示例",
+    "text": "完整工作流示例\n一个完整的功能开发流程如下：\n用户：添加用户认证功能\n\n↓\n\n[brainstorming]\n- 探索项目结构\n- 询问：认证方式？JWT 还是 Session？是否需要 OAuth？\n- 提出方案：方案 A（JWT + HttpOnly Cookie）、方案 B（Session）\n- 建议方案 A，说明权衡\n- 用户确认方案 A\n- 编写设计文档\n\n↓\n\n[writing-plans]\n- 读取设计文档\n- 拆解任务：1. 用户模型 + 注册登录接口 2. JWT 令牌生成验证 3. 认证中间件 4. 密码哈希\n- 创建包含 4 个任务项的计划\n\n↓\n\n[using-git-worktrees]\n- 检查 .worktrees 目录\n- 创建 feature/auth 分支的 worktree\n- 运行 npm install\n- 运行测试，确认基线通过\n\n↓\n\n[subagent-driven-development]\nTask 1: 用户模型 + 注册登录接口\n  - 调度实现子代理\n  - 子代理实现、测试、提交\n  - 规范审查通过\n  - 代码质量审查通过\n  - 标记完成\n\nTask 2: JWT 令牌生成验证\n  - [同上流程]\n\nTask 3: 认证中间件\n  - [同上流程]\n\nTask 4: 密码哈希\n  - [同上流程]\n\n所有任务完成\n  - 最终代码审查\n  - 调用 finishing-a-development-branch\n\n↓\n\n[verification-before-completion]\n- 运行完整测试套件\n- 运行构建命令\n- 展示输出证据\n\n↓\n\n[requesting-code-review]\n- 获取 git SHA\n- 调度 code-reviewer 子代理\n- 审查通过，准备合并"
+  },
+  {
+    "objectID": "myblog/posts/superpower_skills/index.html#技能依赖关系图",
+    "href": "myblog/posts/superpower_skills/index.html#技能依赖关系图",
+    "title": "Superpowers Skill 配套使用指南：完整工作流全解析",
+    "section": "技能依赖关系图",
+    "text": "技能依赖关系图\nbrainstorming\n    ↓\nwriting-plans\n    ↓\nusing-git-worktrees ←── required before implementation\n    ↓\nsubagent-driven-development\n    ├── test-driven-development (子代理使用)\n    ├── verification-before-completion (每任务使用)\n    └── requesting-code-review (每任务使用)\n            ↓\nreceiving-code-review (处理反馈)\ndispatching-parallel-agents 可在任何阶段并行调用，用于处理独立任务。\nwriting-skills 是独立的元技能，用于创建新技能，与主工作流正交。"
+  },
+  {
+    "objectID": "myblog/posts/superpower_skills/index.html#总结",
+    "href": "myblog/posts/superpower_skills/index.html#总结",
+    "title": "Superpowers Skill 配套使用指南：完整工作流全解析",
+    "section": "总结",
+    "text": "总结\nsuperpowers 技能体系的核心价值在于为 AI 编程助手提供了一套经过验证的开发方法论。理解并正确使用这些技能的配套关系，能显著提升开发效率、代码质量和团队协作效率。\n关键要点：\n\n从 brainstorming 开始 — 永远不要跳过需求分析阶段\n使用 writing-plans 转化设计 — 设计必须转化为可执行计划\n用 using-git-worktrees 隔离环境 — 实现前必须创建干净的工作空间\nsubagent-driven-development 是主力 — 推荐使用两阶段审查确保质量\nverification-before-completion 是纪律 — 证据在断言之前，永不跳过\n代码审查不可省略 — 早审查、常审查\ndispatching-parallel-agents 提升效率 — 独立任务并行处理\n\n掌握这套工作流，AI 编程助手能够像资深工程师一样进行结构化、高质量的软件开发。"
+  },
+  {
+    "objectID": "myblog/posts/superpower_skills/index.html#参考资源",
+    "href": "myblog/posts/superpower_skills/index.html#参考资源",
+    "title": "Superpowers Skill 配套使用指南：完整工作流全解析",
+    "section": "参考资源",
+    "text": "参考资源\n\nsuperpowers 官方技能库\nGitHub: obra/superpowers\nVercel Labs AI Agent Skills"
   }
 ]

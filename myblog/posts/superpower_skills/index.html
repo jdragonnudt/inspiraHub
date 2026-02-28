@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="jdragon">
+<meta name="dcterms.date" content="2026-02-28">
+
+<title>数智启思 - Superpowers Skill 配套使用指南：完整工作流全解析</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">数智启思</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../AIengineerBook/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../myblog/index.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/jdragonnudt/inspiraHub" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Superpowers Skill 配套使用指南：完整工作流全解析</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">软件工程师</div>
+                <div class="quarto-category">AI编程</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>jdragon </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 28, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#概述" id="toc-概述" class="nav-link active" data-scroll-target="#概述">概述</a></li>
+  <li><a href="#技能总览与职责划分" id="toc-技能总览与职责划分" class="nav-link" data-scroll-target="#技能总览与职责划分">技能总览与职责划分</a></li>
+  <li><a href="#核心工作流五阶段开发模型" id="toc-核心工作流五阶段开发模型" class="nav-link" data-scroll-target="#核心工作流五阶段开发模型">核心工作流：五阶段开发模型</a>
+  <ul>
+  <li><a href="#第一阶段需求与设计brainstorming" id="toc-第一阶段需求与设计brainstorming" class="nav-link" data-scroll-target="#第一阶段需求与设计brainstorming">第一阶段：需求与设计（Brainstorming）</a></li>
+  <li><a href="#第二阶段任务规划planning" id="toc-第二阶段任务规划planning" class="nav-link" data-scroll-target="#第二阶段任务规划planning">第二阶段：任务规划（Planning）</a></li>
+  <li><a href="#第三阶段环境准备isolation" id="toc-第三阶段环境准备isolation" class="nav-link" data-scroll-target="#第三阶段环境准备isolation">第三阶段：环境准备（Isolation）</a></li>
+  <li><a href="#第四阶段执行与实现implementation" id="toc-第四阶段执行与实现implementation" class="nav-link" data-scroll-target="#第四阶段执行与实现implementation">第四阶段：执行与实现（Implementation）</a>
+  <ul class="collapse">
+  <li><a href="#子代理驱动开发推荐" id="toc-子代理驱动开发推荐" class="nav-link" data-scroll-target="#子代理驱动开发推荐">子代理驱动开发（推荐）</a></li>
+  <li><a href="#测试驱动开发tdd" id="toc-测试驱动开发tdd" class="nav-link" data-scroll-target="#测试驱动开发tdd">测试驱动开发（TDD）</a></li>
+  <li><a href="#完成前验证" id="toc-完成前验证" class="nav-link" data-scroll-target="#完成前验证">完成前验证</a></li>
+  </ul></li>
+  <li><a href="#第五阶段审查与反馈review" id="toc-第五阶段审查与反馈review" class="nav-link" data-scroll-target="#第五阶段审查与反馈review">第五阶段：审查与反馈（Review）</a>
+  <ul class="collapse">
+  <li><a href="#请求代码审查" id="toc-请求代码审查" class="nav-link" data-scroll-target="#请求代码审查">请求代码审查</a></li>
+  <li><a href="#接收代码审查反馈" id="toc-接收代码审查反馈" class="nav-link" data-scroll-target="#接收代码审查反馈">接收代码审查反馈</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#并行任务处理" id="toc-并行任务处理" class="nav-link" data-scroll-target="#并行任务处理">并行任务处理</a></li>
+  <li><a href="#技能创建与扩展" id="toc-技能创建与扩展" class="nav-link" data-scroll-target="#技能创建与扩展">技能创建与扩展</a></li>
+  <li><a href="#完整工作流示例" id="toc-完整工作流示例" class="nav-link" data-scroll-target="#完整工作流示例">完整工作流示例</a></li>
+  <li><a href="#技能依赖关系图" id="toc-技能依赖关系图" class="nav-link" data-scroll-target="#技能依赖关系图">技能依赖关系图</a></li>
+  <li><a href="#总结" id="toc-总结" class="nav-link" data-scroll-target="#总结">总结</a></li>
+  <li><a href="#参考资源" id="toc-参考资源" class="nav-link" data-scroll-target="#参考资源">参考资源</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p>superpowers 是 Vercel Labs 推出的 AI Agent 技能集合，包含 12 个协同工作的技能，覆盖从需求分析到代码审查的完整开发流程。正确掌握使用顺序，能显著提升开发效率与代码质量。</p>
+<section id="概述" class="level2">
+<h2 class="anchored" data-anchor-id="概述">概述</h2>
+<p>superpowers 是由 Vercel Labs 维护的一套 AI Agent 技能体系，旨在为 AI 编程助手提供结构化、可复用的工作方法论。该技能集目前包含 12 个独立技能，累计安装量超过 200K，展现了其在开发者社区中的广泛认可度。</p>
+<p>这些技能并非孤立存在，而是构成了一个完整的开发工作流。理解它们之间的协作关系和使用顺序，是充分发挥 superpowers 威力的关键。</p>
+</section>
+<section id="技能总览与职责划分" class="level2">
+<h2 class="anchored" data-anchor-id="技能总览与职责划分">技能总览与职责划分</h2>
+<p>在深入使用顺序之前，先理解每个技能的职责定位：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>技能</th>
+<th>安装量</th>
+<th>核心职责</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>brainstorming</td>
+<td>34.4K</td>
+<td>需求分析、设计探索</td>
+</tr>
+<tr class="even">
+<td>writing-plans</td>
+<td>17.0K</td>
+<td>任务规划、计划编写</td>
+</tr>
+<tr class="odd">
+<td>test-driven-development</td>
+<td>15.4K</td>
+<td>测试驱动开发</td>
+</tr>
+<tr class="even">
+<td>executing-plans</td>
+<td>14.4K</td>
+<td>执行已完成的计划</td>
+</tr>
+<tr class="odd">
+<td>requesting-code-review</td>
+<td>13.7K</td>
+<td>代码审查请求</td>
+</tr>
+<tr class="even">
+<td>using-superpowers</td>
+<td>12.9K</td>
+<td>技能查找与加载</td>
+</tr>
+<tr class="odd">
+<td>subagent-driven-development</td>
+<td>11.6K</td>
+<td>子代理驱动的开发执行</td>
+</tr>
+<tr class="even">
+<td>receiving-code-review</td>
+<td>11.0K</td>
+<td>代码审查反馈处理</td>
+</tr>
+<tr class="odd">
+<td>verification-before-completion</td>
+<td>11.0K</td>
+<td>完成前验证</td>
+</tr>
+<tr class="even">
+<td>using-git-worktrees</td>
+<td>10.6K</td>
+<td>Git 工作树隔离</td>
+</tr>
+<tr class="odd">
+<td>writing-skills</td>
+<td>10.6K</td>
+<td>技能编写与测试</td>
+</tr>
+<tr class="even">
+<td>dispatching-parallel-agents</td>
+<td>10.0K</td>
+<td>并行子代理调度</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="核心工作流五阶段开发模型" class="level2">
+<h2 class="anchored" data-anchor-id="核心工作流五阶段开发模型">核心工作流：五阶段开发模型</h2>
+<p>superpowers 的设计遵循一个清晰的五阶段开发模型，每个阶段由特定技能支撑，阶段之间存在明确的依赖关系。</p>
+<section id="第一阶段需求与设计brainstorming" class="level3">
+<h3 class="anchored" data-anchor-id="第一阶段需求与设计brainstorming">第一阶段：需求与设计（Brainstorming）</h3>
+<p><strong>使用技能：</strong> brainstorming → writing-plans</p>
+<p>当用户提出一个新的功能需求或开发任务时，首先触发的是 brainstorming 技能。这个技能的核心职责是通过结构化对话帮助 AI 理解需求、探索方案、形成设计。</p>
+<p>brainstorming 技能的强制执行流程如下：</p>
+<ol type="1">
+<li><strong>探索项目上下文</strong> — 检查现有文件、文档、最近的提交记录</li>
+<li><strong>提出澄清问题</strong> — 逐个提问，理解目的、约束、成功标准</li>
+<li><strong>提出 2-3 种方案</strong> — 附带权衡分析和建议方案</li>
+<li><strong>展示设计</strong> — 按复杂度分节展示，获取用户逐节确认</li>
+<li><strong>编写设计文档</strong> — 保存至 <code>docs/plans/YYYY-MM-DD-&lt;topic&gt;-design.md</code></li>
+<li><strong>过渡到实现阶段</strong> — 调用 writing-plans 技能创建实施计划</li>
+</ol>
+<p>这一阶段的关键原则是「一次只问一个问题」，并优先使用选择题而非开放式问题。设计文档完成后，必须通过 writing-plans 技能创建实现计划，而非直接跳转到实现技能。</p>
+</section>
+<section id="第二阶段任务规划planning" class="level3">
+<h3 class="anchored" data-anchor-id="第二阶段任务规划planning">第二阶段：任务规划（Planning）</h3>
+<p><strong>使用技能：</strong> writing-plans</p>
+<p>writing-plans 技能负责将已批准的设计文档转化为可执行的实现计划。该技能的核心价值在于将大型、模糊的任务拆解为具体的、可操作的小任务，并为每个任务提供清晰的上下文。</p>
+<p>虽然该技能的详细文档在官方站点显示为「No SKILL.md available」，但根据其他技能的交叉引用，可以确定其核心功能：</p>
+<ul>
+<li>读取设计文档</li>
+<li>提取所有可执行任务</li>
+<li>为每个任务附加完整上下文</li>
+<li>创建结构化的任务列表</li>
+</ul>
+<p>输出结果是一个包含多个独立任务项的实施计划，每个任务项都有明确的交付标准和上下文信息。这些任务随后由 executing-plans 或 subagent-driven-development 技能执行。</p>
+</section>
+<section id="第三阶段环境准备isolation" class="level3">
+<h3 class="anchored" data-anchor-id="第三阶段环境准备isolation">第三阶段：环境准备（Isolation）</h3>
+<p><strong>使用技能：</strong> using-git-worktrees</p>
+<p>在任何实现工作开始之前，必须先创建隔离的工作环境。using-git-worktrees 技能负责这一关键步骤，其核心原则是：「系统化的目录选择 + 安全验证 = 可靠的隔离」。</p>
+<p>该技能的完整执行流程：</p>
+<ol type="1">
+<li><strong>检测现有目录</strong> — 按优先级检查 <code>.worktrees</code> 或 <code>worktrees</code></li>
+<li><strong>检查 CLAUDE.md</strong> — 如有明确偏好则直接使用</li>
+<li><strong>询问用户</strong> — 如无预设则让用户选择</li>
+<li><strong>安全验证</strong> — 确保目录已被 gitignore 忽略</li>
+<li><strong>创建工作树</strong> — 使用新分支创建 worktree</li>
+<li><strong>运行项目初始化</strong> — 自动检测并运行 npm install、cargo build 等</li>
+<li><strong>验证基线</strong> — 运行测试确保环境干净</li>
+</ol>
+<p>安全验证是至关重要的一步。对于项目本地的目录（<code>.worktrees</code> 或 <code>worktrees</code>），必须先使用 <code>git check-ignore</code> 确认目录已被忽略，再创建 worktree。这一步防止 worktree 内容被意外提交到仓库。</p>
+</section>
+<section id="第四阶段执行与实现implementation" class="level3">
+<h3 class="anchored" data-anchor-id="第四阶段执行与实现implementation">第四阶段：执行与实现（Implementation）</h3>
+<p><strong>使用技能组合：</strong> subagent-driven-development / executing-plans + test-driven-development + verification-before-completion</p>
+<p>这是开发流程中最复杂的阶段，涉及多个技能的协同工作。</p>
+<section id="子代理驱动开发推荐" class="level4">
+<h4 class="anchored" data-anchor-id="子代理驱动开发推荐">子代理驱动开发（推荐）</h4>
+<p>subagent-driven-development 是执行实施计划的首选方式，特别适合在同一会话中连续执行多个任务。其核心工作模式是：</p>
+<ol type="1">
+<li><strong>读取计划文件</strong> — 提取所有任务及完整上下文</li>
+<li><strong>创建 TodoWrite</strong> — 跟踪所有任务状态</li>
+<li><strong>逐个任务执行</strong> — 每个任务经历以下循环：
+<ul>
+<li>调度实现子代理</li>
+<li>实现子代理提问？→ 回答问题后重试</li>
+<li>实现子代理实现、测试、提交、自我审查</li>
+<li>调度规范合规审查</li>
+<li>规范审查通过？→ 否 → 返回修复 → 重新审查</li>
+<li>调度代码质量审查</li>
+<li>质量审查通过？→ 否 → 返回修复 → 重新审查</li>
+<li>标记任务完成</li>
+</ul></li>
+<li><strong>所有任务完成后</strong> — 调度最终代码审查</li>
+<li><strong>完成开发分支</strong> — 调用 finishing-a-development-branch 技能</li>
+</ol>
+<p>关键设计：每个任务经历两阶段审查。首先是规范合规审查（spec reviewer），确认代码实现了设计要求且没有添加额外功能。然后是代码质量审查（code quality reviewer），确保代码符合质量标准。</p>
+<p><strong>为什么不是 executing-plans？</strong> executing-plans 适用于需要跨会话执行或需要人类在任务之间做决策的场景。subagent-driven-development 在同一会话中连续执行，效率更高但需要更强的质量控制机制。</p>
+</section>
+<section id="测试驱动开发tdd" class="level4">
+<h4 class="anchored" data-anchor-id="测试驱动开发tdd">测试驱动开发（TDD）</h4>
+<p>在整个实现过程中，test-driven-development 技能贯穿始终。该技能强制执行 RED-GREEN-REFACTOR 循环：</p>
+<ul>
+<li><strong>RED</strong> — 编写失败的测试</li>
+<li><strong>GREEN</strong> — 编写最简代码使测试通过</li>
+<li><strong>REFACTOR</strong> — 重构优化代码</li>
+</ul>
+<p>核心铁律：「没有先写失败测试的生产代码」。如果代码先于测试编写，必须删除并重新开始。这一规则看似严苛，但其核心逻辑是：只有亲眼看到测试失败，才能证明测试真正验证了所需功能。</p>
+</section>
+<section id="完成前验证" class="level4">
+<h4 class="anchored" data-anchor-id="完成前验证">完成前验证</h4>
+<p>verification-before-completion 技能要求在任何声称工作完成之前，必须独立运行验证命令并展示证据。该技能的核心理念是：「证据在断言之前」。</p>
+<p>执行流程：</p>
+<ol type="1">
+<li><strong>识别</strong> — 确定什么命令能证明该断言</li>
+<li><strong>运行</strong> — 执行完整命令（全新、完整）</li>
+<li><strong>读取</strong> — 完整输出，检查退出码，统计失败数</li>
+<li><strong>验证</strong> — 输出是否确认了断言？</li>
+<li><strong>然后</strong> — 做出断言</li>
+</ol>
+<p>禁止使用「应该能工作」「看起来正确」「之前通过了」等模糊表述。必须展示实际的命令输出作为证据。</p>
+</section>
+</section>
+<section id="第五阶段审查与反馈review" class="level3">
+<h3 class="anchored" data-anchor-id="第五阶段审查与反馈review">第五阶段：审查与反馈（Review）</h3>
+<p><strong>使用技能组合：</strong> requesting-code-review + receiving-code-review</p>
+<p>代码审查是质量控制的最后一道防线，涉及两个互补的技能。</p>
+<section id="请求代码审查" class="level4">
+<h4 class="anchored" data-anchor-id="请求代码审查">请求代码审查</h4>
+<p>requesting-code-review 技能定义了何时以及如何请求代码审查：</p>
+<p><strong>必须请求审查的时机：</strong></p>
+<ul>
+<li>subagent-driven-development 中每个任务完成后</li>
+<li>完成主要功能后</li>
+<li>合并到主分支前</li>
+</ul>
+<p><strong>可选但有价值的时机：</strong></p>
+<ul>
+<li>陷入困境时（寻求新视角）</li>
+<li>重构前（基线检查）</li>
+<li>复杂 bug 修复后</li>
+</ul>
+<p>审查流程使用专门的 code-reviewer 子代理，需要提供：实现内容、计划/需求、基准 SHA、头部 SHA、描述等信息。</p>
+</section>
+<section id="接收代码审查反馈" class="level4">
+<h4 class="anchored" data-anchor-id="接收代码审查反馈">接收代码审查反馈</h4>
+<p>receiving-code-review 技能定义了如何处理审查反馈：</p>
+<ol type="1">
+<li><strong>阅读</strong> — 完整阅读反馈，不立即反应</li>
+<li><strong>理解</strong> — 用自己的话复述需求（或提问）</li>
+<li><strong>验证</strong> — 对照代码库实际状况检查</li>
+<li><strong>评估</strong> — 对当前代码库在技术上是否合理？</li>
+<li><strong>响应</strong> — 技术性确认或有理有据地反对</li>
+<li><strong>实现</strong> — 逐项实现，每项测试</li>
+</ol>
+<p>关键原则：验证后再实现，而非盲目服从。对于外部审查者的建议，需要检查：技术上是否正确？是否破坏现有功能？是否理解当前实现的原因？</p>
+</section>
+</section>
+</section>
+<section id="并行任务处理" class="level2">
+<h2 class="anchored" data-anchor-id="并行任务处理">并行任务处理</h2>
+<p><strong>使用技能：</strong> dispatching-parallel-agents</p>
+<p>当面临 2 个或更多相互独立、无共享状态、无顺序依赖的任务时，dispatching-parallel-agents 技能允许并行调度多个子代理。</p>
+<p>该技能的典型应用场景：</p>
+<ul>
+<li>并行读取多个不同模块的代码</li>
+<li>同时搜索多个不同的模式</li>
+<li>并行获取多个外部资源</li>
+</ul>
+<p>并行调用的优势在于显著节省时间，因为各子代理同时运行而非顺序执行。</p>
+</section>
+<section id="技能创建与扩展" class="level2">
+<h2 class="anchored" data-anchor-id="技能创建与扩展">技能创建与扩展</h2>
+<p><strong>使用技能：</strong> writing-skills</p>
+<p>当需要将团队的开发实践或特定技术方案固化为可复用技能时，writing-skills 技能提供完整的方法论。</p>
+<p>该技能的核心洞见是：「编写技能即是将测试驱动开发应用于流程文档」。</p>
+<p>创建流程遵循 RED-GREEN-REFACTOR：</p>
+<ol type="1">
+<li><strong>RED</strong> — 不使用技能运行压力测试场景，记录基线行为</li>
+<li><strong>GREEN</strong> — 编写解决具体问题的技能文档</li>
+<li><strong>REFACTOR</strong> — 封闭漏洞，重新测试直到技能完备</li>
+</ol>
+<p>关键要求：必须先看到代理在没有技能时失败，才能编写技能。这确保了技能真正解决了实际问题，而非纸上谈兵。</p>
+</section>
+<section id="完整工作流示例" class="level2">
+<h2 class="anchored" data-anchor-id="完整工作流示例">完整工作流示例</h2>
+<p>一个完整的功能开发流程如下：</p>
+<pre><code>用户：添加用户认证功能
+
+↓
+
+[brainstorming]
+- 探索项目结构
+- 询问：认证方式？JWT 还是 Session？是否需要 OAuth？
+- 提出方案：方案 A（JWT + HttpOnly Cookie）、方案 B（Session）
+- 建议方案 A，说明权衡
+- 用户确认方案 A
+- 编写设计文档
+
+↓
+
+[writing-plans]
+- 读取设计文档
+- 拆解任务：1. 用户模型 + 注册登录接口 2. JWT 令牌生成验证 3. 认证中间件 4. 密码哈希
+- 创建包含 4 个任务项的计划
+
+↓
+
+[using-git-worktrees]
+- 检查 .worktrees 目录
+- 创建 feature/auth 分支的 worktree
+- 运行 npm install
+- 运行测试，确认基线通过
+
+↓
+
+[subagent-driven-development]
+Task 1: 用户模型 + 注册登录接口
+  - 调度实现子代理
+  - 子代理实现、测试、提交
+  - 规范审查通过
+  - 代码质量审查通过
+  - 标记完成
+
+Task 2: JWT 令牌生成验证
+  - [同上流程]
+
+Task 3: 认证中间件
+  - [同上流程]
+
+Task 4: 密码哈希
+  - [同上流程]
+
+所有任务完成
+  - 最终代码审查
+  - 调用 finishing-a-development-branch
+
+↓
+
+[verification-before-completion]
+- 运行完整测试套件
+- 运行构建命令
+- 展示输出证据
+
+↓
+
+[requesting-code-review]
+- 获取 git SHA
+- 调度 code-reviewer 子代理
+- 审查通过，准备合并</code></pre>
+</section>
+<section id="技能依赖关系图" class="level2">
+<h2 class="anchored" data-anchor-id="技能依赖关系图">技能依赖关系图</h2>
+<pre><code>brainstorming
+    ↓
+writing-plans
+    ↓
+using-git-worktrees ←── required before implementation
+    ↓
+subagent-driven-development
+    ├── test-driven-development (子代理使用)
+    ├── verification-before-completion (每任务使用)
+    └── requesting-code-review (每任务使用)
+            ↓
+receiving-code-review (处理反馈)</code></pre>
+<p>dispatching-parallel-agents 可在任何阶段并行调用，用于处理独立任务。</p>
+<p>writing-skills 是独立的元技能，用于创建新技能，与主工作流正交。</p>
+</section>
+<section id="总结" class="level2">
+<h2 class="anchored" data-anchor-id="总结">总结</h2>
+<p>superpowers 技能体系的核心价值在于为 AI 编程助手提供了一套经过验证的开发方法论。理解并正确使用这些技能的配套关系，能显著提升开发效率、代码质量和团队协作效率。</p>
+<p>关键要点：</p>
+<ol type="1">
+<li><strong>从 brainstorming 开始</strong> — 永远不要跳过需求分析阶段</li>
+<li><strong>使用 writing-plans 转化设计</strong> — 设计必须转化为可执行计划</li>
+<li><strong>用 using-git-worktrees 隔离环境</strong> — 实现前必须创建干净的工作空间</li>
+<li><strong>subagent-driven-development 是主力</strong> — 推荐使用两阶段审查确保质量</li>
+<li><strong>verification-before-completion 是纪律</strong> — 证据在断言之前，永不跳过</li>
+<li><strong>代码审查不可省略</strong> — 早审查、常审查</li>
+<li><strong>dispatching-parallel-agents 提升效率</strong> — 独立任务并行处理</li>
+</ol>
+<p>掌握这套工作流，AI 编程助手能够像资深工程师一样进行结构化、高质量的软件开发。</p>
+</section>
+<section id="参考资源" class="level2">
+<h2 class="anchored" data-anchor-id="参考资源">参考资源</h2>
+<ul>
+<li><a href="https://skills.sh/obra/superpowers">superpowers 官方技能库</a></li>
+<li><a href="https://github.com/obra/superpowers">GitHub: obra/superpowers</a></li>
+<li>Vercel Labs AI Agent Skills</li>
+</ul>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="jdragonnudt/inspiraHub" data-repo-id="R_kgDOMGN2Lg" data-category="General" data-category-id="DIC_kwDOMGN2Ls4Cf8Yq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2024, by jdragon. 本网站所有内容采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA许可，知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
