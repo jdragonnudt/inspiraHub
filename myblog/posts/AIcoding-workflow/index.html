@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="jdragon">
+<meta name="dcterms.date" content="2026-03-12">
+
+<title>数智启思 - AI 编程工作流深度解析</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">数智启思</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../AIengineerBook/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../myblog/index.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/jdragonnudt/inspiraHub" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">AI 编程工作流深度解析</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">软件工程师</div>
+                <div class="quarto-category">AI编程</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>jdragon </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 12, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ai-编程工作流深度解析从-vibe-coding-到规范驱动的演进之路" id="toc-ai-编程工作流深度解析从-vibe-coding-到规范驱动的演进之路" class="nav-link active" data-scroll-target="#ai-编程工作流深度解析从-vibe-coding-到规范驱动的演进之路">AI 编程工作流深度解析：从 Vibe Coding 到规范驱动的演进之路</a>
+  <ul>
+  <li><a href="#前言" id="toc-前言" class="nav-link" data-scroll-target="#前言">前言</a></li>
+  <li><a href="#一核心问题为什么需要工作流" id="toc-一核心问题为什么需要工作流" class="nav-link" data-scroll-target="#一核心问题为什么需要工作流">一、核心问题：为什么需要工作流？</a>
+  <ul class="collapse">
+  <li><a href="#未被驯服的-ai-编程现状" id="toc-未被驯服的-ai-编程现状" class="nav-link" data-scroll-target="#未被驯服的-ai-编程现状">1.1 未被驯服的 AI 编程现状</a></li>
+  <li><a href="#工作流的核心价值" id="toc-工作流的核心价值" class="nav-link" data-scroll-target="#工作流的核心价值">1.2 工作流的核心价值</a></li>
+  </ul></li>
+  <li><a href="#二工作流共性提炼核心原则与统一思路" id="toc-二工作流共性提炼核心原则与统一思路" class="nav-link" data-scroll-target="#二工作流共性提炼核心原则与统一思路">二、工作流共性提炼：核心原则与统一思路</a>
+  <ul class="collapse">
+  <li><a href="#统一工作流模型" id="toc-统一工作流模型" class="nav-link" data-scroll-target="#统一工作流模型">2.1 统一工作流模型</a></li>
+  <li><a href="#六大核心原则" id="toc-六大核心原则" class="nav-link" data-scroll-target="#六大核心原则">2.2 六大核心原则</a>
+  <ul class="collapse">
+  <li><a href="#原则一规划优先plan-before-code" id="toc-原则一规划优先plan-before-code" class="nav-link" data-scroll-target="#原则一规划优先plan-before-code">原则一：规划优先（Plan Before Code）</a></li>
+  <li><a href="#原则二证据驱动evidence-before-assertion" id="toc-原则二证据驱动evidence-before-assertion" class="nav-link" data-scroll-target="#原则二证据驱动evidence-before-assertion">原则二：证据驱动（Evidence Before Assertion）</a></li>
+  <li><a href="#原则三上下文管理context-is-expensive" id="toc-原则三上下文管理context-is-expensive" class="nav-link" data-scroll-target="#原则三上下文管理context-is-expensive">原则三：上下文管理（Context Is Expensive）</a></li>
+  <li><a href="#原则四批注优于聊天annotation-over-chat" id="toc-原则四批注优于聊天annotation-over-chat" class="nav-link" data-scroll-target="#原则四批注优于聊天annotation-over-chat">原则四：批注优于聊天（Annotation Over Chat）</a></li>
+  <li><a href="#原则五技能化消灭重复skill-the-repetition" id="toc-原则五技能化消灭重复skill-the-repetition" class="nav-link" data-scroll-target="#原则五技能化消灭重复skill-the-repetition">原则五：技能化消灭重复（Skill The Repetition）</a></li>
+  <li><a href="#原则六并行是效率杠杆parallelism-is-leverage" id="toc-原则六并行是效率杠杆parallelism-is-leverage" class="nav-link" data-scroll-target="#原则六并行是效率杠杆parallelism-is-leverage">原则六：并行是效率杠杆（Parallelism Is Leverage）</a></li>
+  </ul></li>
+  <li><a href="#工作流成熟度模型" id="toc-工作流成熟度模型" class="nav-link" data-scroll-target="#工作流成熟度模型">2.3 工作流成熟度模型</a></li>
+  <li><a href="#人类与-ai-的分工" id="toc-人类与-ai-的分工" class="nav-link" data-scroll-target="#人类与-ai-的分工">2.4 人类与 AI 的分工</a></li>
+  </ul></li>
+  <li><a href="#三典型工作流模型详解" id="toc-三典型工作流模型详解" class="nav-link" data-scroll-target="#三典型工作流模型详解">三、典型工作流模型详解</a>
+  <ul class="collapse">
+  <li><a href="#boris-tane-工作流claude-code-之父" id="toc-boris-tane-工作流claude-code-之父" class="nav-link" data-scroll-target="#boris-tane-工作流claude-code-之父">3.1 Boris Tane 工作流（Claude Code 之父）</a>
+  <ul class="collapse">
+  <li><a href="#背景与起源" id="toc-背景与起源" class="nav-link" data-scroll-target="#背景与起源">背景与起源</a></li>
+  <li><a href="#完整流程" id="toc-完整流程" class="nav-link" data-scroll-target="#完整流程">完整流程</a></li>
+  <li><a href="#第一步research-让-ai-先读懂代码" id="toc-第一步research-让-ai-先读懂代码" class="nav-link" data-scroll-target="#第一步research-让-ai-先读懂代码">第一步：Research — 让 AI 先读懂代码</a></li>
+  <li><a href="#第二步plan-让-ai-出计划不是出代码" id="toc-第二步plan-让-ai-出计划不是出代码" class="nav-link" data-scroll-target="#第二步plan-让-ai-出计划不是出代码">第二步：Plan — 让 AI 出计划，不是出代码</a></li>
+  <li><a href="#第三步annotate-整个工作流最值钱的环节" id="toc-第三步annotate-整个工作流最值钱的环节" class="nav-link" data-scroll-target="#第三步annotate-整个工作流最值钱的环节">第三步：Annotate — 整个工作流最值钱的环节</a></li>
+  <li><a href="#第四步生成-todo-list" id="toc-第四步生成-todo-list" class="nav-link" data-scroll-target="#第四步生成-todo-list">第四步：生成 Todo List</a></li>
+  <li><a href="#第五步implement-计划确认后才写代码" id="toc-第五步implement-计划确认后才写代码" class="nav-link" data-scroll-target="#第五步implement-计划确认后才写代码">第五步：Implement — 计划确认后才写代码</a></li>
+  <li><a href="#实现过程中的反馈" id="toc-实现过程中的反馈" class="nav-link" data-scroll-target="#实现过程中的反馈">实现过程中的反馈</a></li>
+  <li><a href="#保持控制权" id="toc-保持控制权" class="nav-link" data-scroll-target="#保持控制权">保持控制权</a></li>
+  </ul></li>
+  <li><a href="#superpowers-五阶段开发模型" id="toc-superpowers-五阶段开发模型" class="nav-link" data-scroll-target="#superpowers-五阶段开发模型">3.2 Superpowers 五阶段开发模型</a>
+  <ul class="collapse">
+  <li><a href="#背景与起源-1" id="toc-背景与起源-1" class="nav-link" data-scroll-target="#背景与起源-1">背景与起源</a></li>
+  <li><a href="#技能总览与职责划分" id="toc-技能总览与职责划分" class="nav-link" data-scroll-target="#技能总览与职责划分">技能总览与职责划分</a></li>
+  <li><a href="#完整工作流" id="toc-完整工作流" class="nav-link" data-scroll-target="#完整工作流">完整工作流</a></li>
+  <li><a href="#第一阶段需求与设计brainstorming" id="toc-第一阶段需求与设计brainstorming" class="nav-link" data-scroll-target="#第一阶段需求与设计brainstorming">第一阶段：需求与设计（Brainstorming）</a></li>
+  <li><a href="#第二阶段任务规划planning" id="toc-第二阶段任务规划planning" class="nav-link" data-scroll-target="#第二阶段任务规划planning">第二阶段：任务规划（Planning）</a></li>
+  <li><a href="#第三阶段环境准备isolation" id="toc-第三阶段环境准备isolation" class="nav-link" data-scroll-target="#第三阶段环境准备isolation">第三阶段：环境准备（Isolation）</a></li>
+  <li><a href="#第四阶段执行与实现implementation" id="toc-第四阶段执行与实现implementation" class="nav-link" data-scroll-target="#第四阶段执行与实现implementation">第四阶段：执行与实现（Implementation）</a></li>
+  <li><a href="#第五阶段审查与反馈review" id="toc-第五阶段审查与反馈review" class="nav-link" data-scroll-target="#第五阶段审查与反馈review">第五阶段：审查与反馈（Review）</a></li>
+  </ul></li>
+  <li><a href="#openspec-轻量级规范框架" id="toc-openspec-轻量级规范框架" class="nav-link" data-scroll-target="#openspec-轻量级规范框架">3.3 OpenSpec 轻量级规范框架</a>
+  <ul class="collapse">
+  <li><a href="#背景与起源-2" id="toc-背景与起源-2" class="nav-link" data-scroll-target="#背景与起源-2">背景与起源</a></li>
+  <li><a href="#工作流程概览" id="toc-工作流程概览" class="nav-link" data-scroll-target="#工作流程概览">工作流程概览</a></li>
+  <li><a href="#核心概念" id="toc-核心概念" class="nav-link" data-scroll-target="#核心概念">核心概念</a></li>
+  <li><a href="#两种工作流模式" id="toc-两种工作流模式" class="nav-link" data-scroll-target="#两种工作流模式">两种工作流模式</a></li>
+  </ul></li>
+  <li><a href="#opencode-实战工作流" id="toc-opencode-实战工作流" class="nav-link" data-scroll-target="#opencode-实战工作流">3.4 OpenCode 实战工作流</a>
+  <ul class="collapse">
+  <li><a href="#背景与起源-3" id="toc-背景与起源-3" class="nav-link" data-scroll-target="#背景与起源-3">背景与起源</a></li>
+  <li><a href="#完整开发流程golang-vue-示例" id="toc-完整开发流程golang-vue-示例" class="nav-link" data-scroll-target="#完整开发流程golang-vue-示例">完整开发流程（Golang + Vue 示例）</a></li>
+  <li><a href="#skill-速查表" id="toc-skill-速查表" class="nav-link" data-scroll-target="#skill-速查表">SKILL 速查表</a></li>
+  </ul></li>
+  <li><a href="#按开发阶段的-skills-组合拳" id="toc-按开发阶段的-skills-组合拳" class="nav-link" data-scroll-target="#按开发阶段的-skills-组合拳">3.5 按开发阶段的 Skills 组合拳</a>
+  <ul class="collapse">
+  <li><a href="#阶段一原型阶段" id="toc-阶段一原型阶段" class="nav-link" data-scroll-target="#阶段一原型阶段">阶段一：原型阶段</a></li>
+  <li><a href="#阶段二ui-阶段" id="toc-阶段二ui-阶段" class="nav-link" data-scroll-target="#阶段二ui-阶段">阶段二：UI 阶段</a></li>
+  <li><a href="#阶段三开发阶段" id="toc-阶段三开发阶段" class="nav-link" data-scroll-target="#阶段三开发阶段">阶段三：开发阶段</a></li>
+  <li><a href="#阶段四沉淀阶段" id="toc-阶段四沉淀阶段" class="nav-link" data-scroll-target="#阶段四沉淀阶段">阶段四：沉淀阶段</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#四工具对比与选型指南" id="toc-四工具对比与选型指南" class="nav-link" data-scroll-target="#四工具对比与选型指南">四、工具对比与选型指南</a>
+  <ul class="collapse">
+  <li><a href="#三剑客核心定位" id="toc-三剑客核心定位" class="nav-link" data-scroll-target="#三剑客核心定位">4.1 三剑客核心定位</a></li>
+  <li><a href="#关键维度对比" id="toc-关键维度对比" class="nav-link" data-scroll-target="#关键维度对比">4.2 关键维度对比</a></li>
+  <li><a href="#选型指南" id="toc-选型指南" class="nav-link" data-scroll-target="#选型指南">4.3 选型指南</a></li>
+  <li><a href="#常见失误与解决方案" id="toc-常见失误与解决方案" class="nav-link" data-scroll-target="#常见失误与解决方案">4.4 常见失误与解决方案</a></li>
+  </ul></li>
+  <li><a href="#五总结与展望" id="toc-五总结与展望" class="nav-link" data-scroll-target="#五总结与展望">五、总结与展望</a>
+  <ul class="collapse">
+  <li><a href="#核心要点" id="toc-核心要点" class="nav-link" data-scroll-target="#核心要点">5.1 核心要点</a></li>
+  <li><a href="#工作流核心原则" id="toc-工作流核心原则" class="nav-link" data-scroll-target="#工作流核心原则">5.2 工作流核心原则</a></li>
+  <li><a href="#最佳实践清单" id="toc-最佳实践清单" class="nav-link" data-scroll-target="#最佳实践清单">5.3 最佳实践清单</a></li>
+  <li><a href="#工作流成熟度演进建议" id="toc-工作流成熟度演进建议" class="nav-link" data-scroll-target="#工作流成熟度演进建议">5.4 工作流成熟度演进建议</a></li>
+  </ul></li>
+  <li><a href="#附录一些技巧" id="toc-附录一些技巧" class="nav-link" data-scroll-target="#附录一些技巧">附录：一些技巧</a>
+  <ul class="collapse">
+  <li><a href="#背景说明" id="toc-背景说明" class="nav-link" data-scroll-target="#背景说明">背景说明</a></li>
+  <li><a href="#十大核心技巧" id="toc-十大核心技巧" class="nav-link" data-scroll-target="#十大核心技巧">十大核心技巧</a></li>
+  </ul></li>
+  <li><a href="#参考资源" id="toc-参考资源" class="nav-link" data-scroll-target="#参考资源">参考资源</a></li>
+  <li><a href="#引用信息" id="toc-引用信息" class="nav-link" data-scroll-target="#引用信息">引用信息</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="ai-编程工作流深度解析从-vibe-coding-到规范驱动的演进之路" class="level1">
+<h1>AI 编程工作流深度解析：从 Vibe Coding 到规范驱动的演进之路</h1>
+<section id="前言" class="level2">
+<h2 class="anchored" data-anchor-id="前言">前言</h2>
+<p>AI 编程正在经历一场范式转移——从「凭感觉写」的 Vibe Coding，走向规范驱动开发（SDD）。本文基于多篇一线实践文章，深度解析当前最主流的 AI 编程工作流、工具和方法论，帮助你构建高效、可控、可规模化的 AI 编程体系。</p>
+<hr>
+</section>
+<section id="一核心问题为什么需要工作流" class="level2">
+<h2 class="anchored" data-anchor-id="一核心问题为什么需要工作流">一、核心问题：为什么需要工作流？</h2>
+<section id="未被驯服的-ai-编程现状" class="level3">
+<h3 class="anchored" data-anchor-id="未被驯服的-ai-编程现状">1.1 未被驯服的 AI 编程现状</h3>
+<p>大部分人使用 AI 编程工具的流程是这样的：</p>
+<pre><code>打 prompt → 等 AI 吐代码 → 看一眼不太对 → 改 prompt → 再等 → 再看
+→ 循环几轮，代码勉强能跑
+→ 但说不清它为什么这么写，也不确定改了会不会炸</code></pre>
+<p>这种模式的核心问题：</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>问题</th>
+<th>症状</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>上下文污染</strong></td>
+<td>话题飘到五个方向</td>
+<td>AI 忘记早期指令，开始出错</td>
+</tr>
+<tr class="even">
+<td><strong>缺乏规划</strong></td>
+<td>AI 直接开写，15 分钟后发现解决的是另一个问题</td>
+<td>大量返工</td>
+</tr>
+<tr class="odd">
+<td><strong>无验证标准</strong></td>
+<td>你成了唯一的质检员</td>
+<td>每个错误都得你来抓</td>
+</tr>
+<tr class="even">
+<td><strong>知识不沉淀</strong></td>
+<td>同样的错误反复犯</td>
+<td>团队效率无法提升</td>
+</tr>
+<tr class="odd">
+<td><strong>变更失控</strong></td>
+<td>AI 乱改代码，改一处错一片</td>
+<td>线上问题频发</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="工作流的核心价值" class="level3">
+<h3 class="anchored" data-anchor-id="工作流的核心价值">1.2 工作流的核心价值</h3>
+<p><strong>一句话总结：把思考和打字分开。</strong></p>
+<ul>
+<li><strong>Research</strong> 防止 AI 在不理解的情况下乱改</li>
+<li><strong>Plan</strong> 防止它做错误的修改</li>
+<li><strong>Annotate</strong> 注入你的判断和领域知识</li>
+<li><strong>Implement</strong> 让执行变成机械性的、可预测的</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="二工作流共性提炼核心原则与统一思路" class="level2">
+<h2 class="anchored" data-anchor-id="二工作流共性提炼核心原则与统一思路">二、工作流共性提炼：核心原则与统一思路</h2>
+<p>在深入各种具体工作流之前，我们先提炼它们的共性。无论是 Boris Tane 的 Claude Code 工作流、Superpowers 技能体系，还是 OpenSpec 规范框架，背后都遵循一套统一的核心原则。</p>
+<section id="统一工作流模型" class="level3">
+<h3 class="anchored" data-anchor-id="统一工作流模型">2.1 统一工作流模型</h3>
+<p>所有主流工作流都可以映射到以下五个阶段：</p>
+<pre><code>┌─────────────┐
+│  1. 理解    │  让 AI 读懂代码和上下文
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│  2. 规划    │  制定书面计划，人类审核
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│  3. 迭代    │  批注 - 修改循环，注入人类判断
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│  4. 执行    │  按计划机械性实现，持续验证
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│  5. 验证    │  证据驱动，完成前必须验证
+└─────────────┘</code></pre>
+<p>不同工作流只是在这五个阶段上做了不同的封装和自动化。</p>
+</section>
+<section id="六大核心原则" class="level3">
+<h3 class="anchored" data-anchor-id="六大核心原则">2.2 六大核心原则</h3>
+<section id="原则一规划优先plan-before-code" class="level4">
+<h4 class="anchored" data-anchor-id="原则一规划优先plan-before-code">原则一：规划优先（Plan Before Code）</h4>
+<p><strong>核心思想：</strong> 永远不要让 AI 写代码，直到你审核并批准了一份书面计划。</p>
+<p><strong>为什么有效：</strong></p>
+<ul>
+<li>规划阶段的 token 成本远低于返工成本</li>
+<li>书面计划是人类和 AI 之间的「共享可变状态」</li>
+<li>计划文档持久存在，可审查、可批注、可追溯</li>
+</ul>
+<p><strong>反模式：</strong></p>
+<ul>
+<li>❌ 直接进入实现模式</li>
+<li>❌ 在聊天里口头描述计划</li>
+<li>❌ 没有书面产出物就开始编码</li>
+</ul>
+</section>
+<section id="原则二证据驱动evidence-before-assertion" class="level4">
+<h4 class="anchored" data-anchor-id="原则二证据驱动evidence-before-assertion">原则二：证据驱动（Evidence Before Assertion）</h4>
+<p><strong>核心思想：</strong> 任何声称工作完成之前，必须独立运行验证命令并展示证据。</p>
+<p><strong>为什么有效：</strong></p>
+<ul>
+<li>防止「应该能工作」「看起来正确」等模糊断言</li>
+<li>强制 AI 自我验证，减少人工质检负担</li>
+<li>形成可追溯的验证记录</li>
+</ul>
+<p><strong>反模式：</strong></p>
+<ul>
+<li>❌ 「测试应该通过了」</li>
+<li>❌ 「代码看起来没问题」</li>
+<li>❌ 不运行验证就声称完成</li>
+</ul>
+</section>
+<section id="原则三上下文管理context-is-expensive" class="level4">
+<h4 class="anchored" data-anchor-id="原则三上下文管理context-is-expensive">原则三：上下文管理（Context Is Expensive）</h4>
+<p><strong>核心思想：</strong> 上下文窗口是你最贵的资源，必须高效使用。</p>
+<p><strong>为什么有效：</strong></p>
+<ul>
+<li>上下文越满，AI 表现越差</li>
+<li>子智能体隔离调查，保持主对话干净</li>
+<li>定期清理污染，保持会话聚焦</li>
+</ul>
+<p><strong>反模式：</strong></p>
+<ul>
+<li>❌ 一个 session 聊五个话题</li>
+<li>❌ 调查类任务占用主上下文</li>
+<li>❌ 同一个错误纠正三次以上不重置</li>
+</ul>
+</section>
+<section id="原则四批注优于聊天annotation-over-chat" class="level4">
+<h4 class="anchored" data-anchor-id="原则四批注优于聊天annotation-over-chat">原则四：批注优于聊天（Annotation Over Chat）</h4>
+<p><strong>核心思想：</strong> 在计划文档里直接批注，而不是在聊天里解释。</p>
+<p><strong>为什么有效：</strong></p>
+<ul>
+<li>批注位置精确，AI 不会误解</li>
+<li>文档结构化，可整体审查</li>
+<li>聊天记录需要翻找，计划文档每次都赢</li>
+</ul>
+<p><strong>反模式：</strong></p>
+<ul>
+<li>❌ 在聊天消息里逐条解释修改</li>
+<li>❌ 没有批注就直接说「开始写吧」</li>
+<li>❌ 批注循环少于 1 次就进入实现</li>
+</ul>
+</section>
+<section id="原则五技能化消灭重复skill-the-repetition" class="level4">
+<h4 class="anchored" data-anchor-id="原则五技能化消灭重复skill-the-repetition">原则五：技能化消灭重复（Skill The Repetition）</h4>
+<p><strong>核心思想：</strong> 一天做了两次的事，就变成一个 skill。</p>
+<p><strong>为什么有效：</strong></p>
+<ul>
+<li>消灭重复劳动，减少上下文切换</li>
+<li>团队知识沉淀为可复用资产</li>
+<li>一个命令完成复杂工作流</li>
+</ul>
+<p><strong>反模式：</strong></p>
+<ul>
+<li>❌ 每次都手动输入相同的长 prompt</li>
+<li>❌ 同样的流程反复解释</li>
+<li>❌ 团队知识停留在聊天记录里</li>
+</ul>
+</section>
+<section id="原则六并行是效率杠杆parallelism-is-leverage" class="level4">
+<h4 class="anchored" data-anchor-id="原则六并行是效率杠杆parallelism-is-leverage">原则六：并行是效率杠杆（Parallelism Is Leverage）</h4>
+<p><strong>核心思想：</strong> 能并行的任务全部并行，同时跑 3-5 个 session。</p>
+<p><strong>为什么有效：</strong></p>
+<ul>
+<li>独立任务并行显著节省时间</li>
+<li>一个 session 写，一个 session 审，质量更高</li>
+<li>子智能体并行调查，主会话不受影响</li>
+</ul>
+<p><strong>反模式：</strong></p>
+<ul>
+<li>❌ 所有任务顺序执行</li>
+<li>❌ 调查任务占用主会话上下文</li>
+<li>❌ 没有代码审查就合并</li>
+</ul>
+</section>
+</section>
+<section id="工作流成熟度模型" class="level3">
+<h3 class="anchored" data-anchor-id="工作流成熟度模型">2.3 工作流成熟度模型</h3>
+<p>根据团队和项目特点，可以选择不同成熟度的工作流：</p>
+<pre><code>Level 1: 基础规范
+├── 书面计划（plan.md）
+├── 批注循环（至少 1 次）
+└── 完成前验证
+
+Level 2: 工程化
+├── Research 文档（research.md）
+├── Todo List 追踪
+├── CLAUDE.md 规则沉淀
+└── 子智能体隔离
+
+Level 3: 自动化
+├── 自定义 Skills
+├── 并行 Session
+├── 自动代码审查
+└── CI/CD 集成
+
+Level 4: 规范驱动
+├── Spec-Kit 全流程
+├── OpenSpec 变更管理
+├── Superpowers TDD
+└── 增量规范归档</code></pre>
+<p><strong>建议：</strong> 从 Level 1 开始，跑通三遍后再升级。不要一开始就上 Level 4。</p>
+</section>
+<section id="人类与-ai-的分工" class="level3">
+<h3 class="anchored" data-anchor-id="人类与-ai-的分工">2.4 人类与 AI 的分工</h3>
+<p>工作流的核心是重新定义人类和 AI 的分工：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>阶段</th>
+<th>人类角色</th>
+<th>AI 角色</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>理解</strong></td>
+<td>指定范围、审查研究结果</td>
+<td>深读代码、撰写研究报告</td>
+</tr>
+<tr class="even">
+<td><strong>规划</strong></td>
+<td>批注、否决、添加约束</td>
+<td>提出方案、写计划文档</td>
+</tr>
+<tr class="odd">
+<td><strong>迭代</strong></td>
+<td>注入领域知识、做判断</td>
+<td>理解批注、更新计划</td>
+</tr>
+<tr class="even">
+<td><strong>执行</strong></td>
+<td>监工、简短纠正</td>
+<td>机械性实现、持续验证</td>
+</tr>
+<tr class="odd">
+<td><strong>验证</strong></td>
+<td>审查证据、批准完成</td>
+<td>运行验证、展示输出</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键洞察：</strong> 创造性的工作发生在批注循环里，实现阶段应该是无聊的。</p>
+<hr>
+</section>
+</section>
+<section id="三典型工作流模型详解" class="level2">
+<h2 class="anchored" data-anchor-id="三典型工作流模型详解">三、典型工作流模型详解</h2>
+<section id="boris-tane-工作流claude-code-之父" class="level3">
+<h3 class="anchored" data-anchor-id="boris-tane-工作流claude-code-之父">3.1 Boris Tane 工作流（Claude Code 之父）</h3>
+<section id="背景与起源" class="level4">
+<h4 class="anchored" data-anchor-id="背景与起源">背景与起源</h4>
+<p>Boris Tane 是 Cloudflare 工程负责人，也是 Claude Code 的早期核心用户。他用 Claude Code 做主力开发工具 9 个月，在真实生产项目中打磨出这套工作流。</p>
+<p>这套工作流的最大特点是<strong>经过长时间实战验证</strong>，不是理论设计，而是从数千小时的实际开发中提炼出来的。Boris 在个人博客公开发布后，被大量开发者采用并验证有效。</p>
+<p><strong>适用场景：</strong> - 中大型功能开发 - 复杂系统修改 - 需要人类深度参与架构决策的场景</p>
+<p><strong>核心理念：</strong> 把规划和执行分开，防止浪费精力，让你始终掌控架构决策，并且用更少的 token 产出明显更好的结果。</p>
+</section>
+<section id="完整流程" class="level4">
+<h4 class="anchored" data-anchor-id="完整流程">完整流程</h4>
+<pre><code>Research → Plan → Annotate（循环 1-6 次）→ Todo List → Implement → Feedback &amp; Iterate</code></pre>
+</section>
+<section id="第一步research-让-ai-先读懂代码" class="level4">
+<h4 class="anchored" data-anchor-id="第一步research-让-ai-先读懂代码">第一步：Research — 让 AI 先读懂代码</h4>
+<p><strong>核心原则：</strong> 每次开始一个有意义的任务，第一件事不是让 AI 写代码，而是让它<strong>深读</strong>相关代码，而且必须把研究结果写进一个持久化的 markdown 文件里。</p>
+<p><strong>推荐 Prompt：</strong></p>
+<pre><code>read this folder in depth, understand how it works deeply, what it does and 
+all its specificities. when that's done, write a detailed report of your 
+learnings and findings in research.md</code></pre>
+<p><strong>关键词：</strong> “deeply”、“in great details”、“intricacies”、“go through everything”</p>
+<p><strong>为什么要写成文件？</strong> <code>research.md</code> 是你的审查面。你可以打开它，验证 AI 是不是真的理解了系统，在任何规划发生之前纠正误解。如果研究阶段就错了，后面的计划会错，实现会更错——Garbage in, garbage out。</p>
+<p>这一步防的是 AI 编程中<strong>最昂贵的失败模式</strong>——不是语法错误，不是逻辑 bug，而是<strong>写出来的代码在隔离环境下能跑，但放进真实系统就炸</strong>。一个忽略了现有缓存层的函数，一个没考虑 ORM 约定的数据库迁移，一个重复造轮子的 API 端点。Research 阶段就是为了防这些。</p>
+</section>
+<section id="第二步plan-让-ai-出计划不是出代码" class="level4">
+<h4 class="anchored" data-anchor-id="第二步plan-让-ai-出计划不是出代码">第二步：Plan — 让 AI 出计划，不是出代码</h4>
+<p>Research 审核通过后，让 AI 写一份详细的实现计划，输出到单独的 plan.md 文件：</p>
+<p><strong>推荐 Prompt：</strong></p>
+<pre><code>I want to build a new feature &lt;name and description&gt; that extends the system 
+to perform &lt;business outcome&gt;. write a detailed plan.md document outlining 
+how to implement this. include code snippets.</code></pre>
+<p><strong>计划文档应包含：</strong> - 方法的详细说明 - 展示实际修改的代码片段 - 要修改的文件路径 - 权衡和注意事项</p>
+<p><strong>为什么不用工具自带的 plan mode？</strong> 内置的 plan mode 很烂。自己的 markdown 文件给你完全的控制权——你可以在编辑器里打开它、加批注、它作为一个真实的文件留在项目里持久存在。</p>
+<p><strong>一个技巧：</strong> 如果你在开源项目里见过类似功能的好实现，把那段代码贴给 AI 当参考。AI 有具体参考实现时，表现会好得多——比让它从零设计强太多。</p>
+</section>
+<section id="第三步annotate-整个工作流最值钱的环节" class="level4">
+<h4 class="anchored" data-anchor-id="第三步annotate-整个工作流最值钱的环节">第三步：Annotate — 整个工作流最值钱的环节</h4>
+<p>这是 Boris 工作流里最独特的部分，也是人类价值最大的地方。</p>
+<p>拿到 plan.md 后，你不是直接说”开始写吧”，而是在编辑器里打开这个文件，<strong>直接在文档里加批注</strong>。这些批注用来纠正假设、否决方案、添加约束、或者提供 AI 不具备的领域知识。</p>
+<p><strong>真实批注示例：</strong> - <code>"use drizzle:generate for migrations, not raw SQL"</code> — AI 不知道的领域知识 - <code>"no — this should be a PATCH, not a PUT"</code> — 纠正错误假设 - <code>"remove this section entirely, we don't need caching here"</code> — 否决一个提议的方案 - <code>"the queue consumer already handles retries, so this retry logic is redundant. remove it and just let it fail"</code> — 解释为什么某个东西应该改</p>
+<p>然后把带批注的文件交回给 AI：</p>
+<pre><code>I added a few notes to the document, address all the notes and update the 
+document accordingly. don't implement yet.</code></pre>
+<p><strong>这个循环通常重复 1 到 6 次。</strong> 那句”don’t implement yet”的护栏至关重要，没有它，AI 一觉得计划差不多了就会跳去写代码。但”差不多”不够——什么时候够好，你说了算。</p>
+<p><strong>为什么这招这么好用：</strong></p>
+<p>plan.md 文件充当了你和 AI 之间的<strong>共享可变状态</strong>。你可以按自己的节奏思考，精确地在出问题的地方加批注，然后重新开始对话而不丢失上下文。你不是在聊天消息里试图解释所有事情——你是<strong>指着文档里的确切位置</strong>，把你的修正写在那里。</p>
+<p>这和试图通过聊天消息来引导实现有本质区别。计划是一份结构化的、完整的规格说明，你可以整体审查。聊天记录是你得翻来翻去才能重建决策的东西，计划每次都赢。</p>
+<p>三轮”我加了批注，更新计划”就能把一份通用的实现计划变成一份完美契合现有系统的方案。AI 擅长理解代码、提出方案、写实现，但它不知道你的产品优先级、用户痛点、或者你愿意做的工程权衡。<strong>批注循环就是你注入这些判断的过程</strong>。</p>
+</section>
+<section id="第四步生成-todo-list" class="level4">
+<h4 class="anchored" data-anchor-id="第四步生成-todo-list">第四步：生成 Todo List</h4>
+<p>在开始实现之前，要求生成一份细粒度的任务分解：</p>
+<pre><code>add a detailed todo list to the plan, with all the phases and individual 
+tasks necessary to complete the plan - don't implement yet.</code></pre>
+<p>这会创建一份清单，在实现过程中充当进度追踪器。AI 完成一项就标记一项，你随时可以扫一眼计划，看到进度到哪了。</p>
+</section>
+<section id="第五步implement-计划确认后才写代码" class="level4">
+<h4 class="anchored" data-anchor-id="第五步implement-计划确认后才写代码">第五步：Implement — 计划确认后才写代码</h4>
+<p>当计划准备好了，发出实现指令：</p>
+<pre><code>implement it all. when you're done with a task or phase, mark it as completed 
+in the plan document. do not stop until all tasks and phases are completed. 
+do not add unnecessary comments or jsdocs, do not use any or unknown types. 
+continuously run typecheck to make sure you're not introducing new issues.</code></pre>
+<p><strong>这一条 prompt 编码了所有重要的事：</strong> - <code>"implement it all"</code>：执行计划里的所有内容，不要挑着做 - <code>"mark it as completed in the plan document"</code>：计划是进度的唯一真相来源 - <code>"do not stop until all tasks and phases are completed"</code>：不要在中途暂停等确认 - <code>"do not add unnecessary comments or jsdocs"</code>：保持代码干净 - <code>"do not use any or unknown types"</code>：维持严格类型 - <code>"continuously run typecheck"</code>：尽早发现问题，不要等到最后</p>
+<p><strong>实现变成了机械性的，而不是创造性的</strong> ——这是刻意的。我们希望实现阶段是无聊的，创造性的工作发生在批注循环里。一旦计划对了，执行应该是直截了当的。</p>
+</section>
+<section id="实现过程中的反馈" class="level4">
+<h4 class="anchored" data-anchor-id="实现过程中的反馈">实现过程中的反馈</h4>
+<p>一旦 AI 开始执行计划，你的角色从架构师变成了监工，你的 prompt 会变得极短。</p>
+<p>规划阶段的批注可能是一整段话，但实现阶段的纠正往往只有一句话： - <code>"You didn't implement the deduplicateByTitle function."</code> - <code>"You built the settings page in the main app when it should be in the admin app, move it."</code></p>
+<p>AI 有计划的完整上下文和整个会话的记忆，所以简短的纠正就够了。</p>
+<p><strong>前端工作是最需要反复迭代的部分</strong>，在浏览器里测试，然后快速发出纠正： - <code>"wider"</code> - <code>"still cropped"</code> - <code>"there's a 2px gap"</code></p>
+<p>视觉问题有时候直接贴截图，一张表格没对齐的截图比文字描述快得多。</p>
+</section>
+<section id="保持控制权" class="level4">
+<h4 class="anchored" data-anchor-id="保持控制权">保持控制权</h4>
+<p>即使把执行委托给了 AI，也从不给它完全的自主权。绝大部分的主动引导在 plan.md 文档里完成。</p>
+<p>几个具体的引导方式：</p>
+<p><strong>从提议中挑选：</strong> 当 AI 识别出多个问题时，逐个过：「第一个，直接用 Promise.all，不要搞得太复杂；第三个，提取成单独的函数提高可读性；第四个和第五个忽略，不值得增加复杂度。」你在根据自己对当前优先级的了解做逐项决策。</p>
+<p><strong>砍范围：</strong> 当计划包含锦上添花的内容时，主动砍掉。「从计划里删掉下载功能，我现在不想实现这个。」防止范围蔓延。</p>
+<p><strong>保护现有接口：</strong> 当你知道某些东西不应该变时，设硬约束：「这三个函数的签名不能变，调用方去适配，不是库去改。」</p>
+<p><strong>覆盖技术选择：</strong> 有时候你有 AI 不知道的特定偏好：「用这个模型而不是那个」或者「用这个库的内置方法，不要自己写一个」。快速、直接的覆盖。</p>
+<p><strong>AI 处理机械性的执行，你做判断性的决策。</strong> 计划在前期捕获大决策，选择性的引导处理实现过程中冒出来的小决策。</p>
+</section>
+</section>
+<section id="superpowers-五阶段开发模型" class="level3">
+<h3 class="anchored" data-anchor-id="superpowers-五阶段开发模型">3.2 Superpowers 五阶段开发模型</h3>
+<section id="背景与起源-1" class="level4">
+<h4 class="anchored" data-anchor-id="背景与起源-1">背景与起源</h4>
+<p>Superpowers 是由 Vercel Labs 维护的一套 AI Agent 技能体系，包含 12 个协同工作的技能。该技能集在 GitHub 上累计安装量超过 200K，展现了其在开发者社区中的广泛认可度。</p>
+<p>与 Boris 工作流不同，Superpowers 是<strong>结构化、可安装的技能集合</strong>。它将最佳实践封装成可复用的技能，AI 助手可以按需加载。这种设计使得工作流可以跨项目、跨团队复用。</p>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>需要严格 TDD 的高可靠场景</li>
+<li>团队协作需要统一工作流</li>
+<li>希望将最佳实践固化为技能</li>
+</ul>
+<p><strong>核心理念：</strong> 为 AI 编程助手提供了一套经过验证的开发方法论，理解并正确使用这些技能的配套关系，能显著提升开发效率、代码质量和团队协作效率。</p>
+</section>
+<section id="技能总览与职责划分" class="level4">
+<h4 class="anchored" data-anchor-id="技能总览与职责划分">技能总览与职责划分</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th>技能</th>
+<th>安装量</th>
+<th>核心职责</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>brainstorming</td>
+<td>34.4K</td>
+<td>需求分析、设计探索</td>
+</tr>
+<tr class="even">
+<td>writing-plans</td>
+<td>17.0K</td>
+<td>任务规划、计划编写</td>
+</tr>
+<tr class="odd">
+<td>test-driven-development</td>
+<td>15.4K</td>
+<td>测试驱动开发</td>
+</tr>
+<tr class="even">
+<td>executing-plans</td>
+<td>14.4K</td>
+<td>执行已完成的计划</td>
+</tr>
+<tr class="odd">
+<td>requesting-code-review</td>
+<td>13.7K</td>
+<td>代码审查请求</td>
+</tr>
+<tr class="even">
+<td>using-superpowers</td>
+<td>12.9K</td>
+<td>技能查找与加载</td>
+</tr>
+<tr class="odd">
+<td>subagent-driven-development</td>
+<td>11.6K</td>
+<td>子代理驱动的开发执行</td>
+</tr>
+<tr class="even">
+<td>receiving-code-review</td>
+<td>11.0K</td>
+<td>代码审查反馈处理</td>
+</tr>
+<tr class="odd">
+<td>verification-before-completion</td>
+<td>11.0K</td>
+<td>完成前验证</td>
+</tr>
+<tr class="even">
+<td>using-git-worktrees</td>
+<td>10.6K</td>
+<td>Git 工作树隔离</td>
+</tr>
+<tr class="odd">
+<td>writing-skills</td>
+<td>10.6K</td>
+<td>技能编写与测试</td>
+</tr>
+<tr class="even">
+<td>dispatching-parallel-agents</td>
+<td>10.0K</td>
+<td>并行子代理调度</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="完整工作流" class="level4">
+<h4 class="anchored" data-anchor-id="完整工作流">完整工作流</h4>
+<pre><code>第一阶段：需求与设计（Brainstorming）
+    ↓
+第二阶段：任务规划（Planning）
+    ↓
+第三阶段：环境准备（Isolation）
+    ↓
+第四阶段：执行与实现（Implementation）
+    ↓
+第五阶段：审查与反馈（Review）</code></pre>
+</section>
+<section id="第一阶段需求与设计brainstorming" class="level4">
+<h4 class="anchored" data-anchor-id="第一阶段需求与设计brainstorming">第一阶段：需求与设计（Brainstorming）</h4>
+<p><strong>强制执行流程：</strong></p>
+<ol type="1">
+<li>探索项目上下文 — 检查现有文件、文档、最近的提交记录</li>
+<li>提出澄清问题 — 逐个提问，理解目的、约束、成功标准</li>
+<li>提出 2-3 种方案 — 附带权衡分析和建议方案</li>
+<li>展示设计 — 按复杂度分节展示，获取用户逐节确认</li>
+<li>编写设计文档 — 保存至 <code>docs/plans/YYYY-MM-DD-&lt;topic&gt;-design.md</code></li>
+<li>过渡到实现阶段 — 调用 writing-plans 技能创建实施计划</li>
+</ol>
+<p><strong>关键原则：</strong> 「一次只问一个问题」，优先使用选择题而非开放式问题。</p>
+</section>
+<section id="第二阶段任务规划planning" class="level4">
+<h4 class="anchored" data-anchor-id="第二阶段任务规划planning">第二阶段：任务规划（Planning）</h4>
+<p><strong>核心功能：</strong></p>
+<ul>
+<li>读取设计文档</li>
+<li>提取所有可执行任务</li>
+<li>为每个任务附加完整上下文</li>
+<li>创建结构化的任务列表</li>
+</ul>
+<p>输出结果是一个包含多个独立任务项的实施计划，每个任务项都有明确的交付标准和上下文信息。</p>
+</section>
+<section id="第三阶段环境准备isolation" class="level4">
+<h4 class="anchored" data-anchor-id="第三阶段环境准备isolation">第三阶段：环境准备（Isolation）</h4>
+<p><strong>使用技能：</strong> using-git-worktrees</p>
+<p>在任何实现工作开始之前，必须先创建隔离的工作环境。核心原则是：「系统化的目录选择 + 安全验证 = 可靠的隔离」。</p>
+<p><strong>完整执行流程：</strong></p>
+<ol type="1">
+<li>检测现有目录 — 按优先级检查 <code>.worktrees</code> 或 <code>worktrees</code></li>
+<li>检查 CLAUDE.md — 如有明确偏好则直接使用</li>
+<li>询问用户 — 如无预设则让用户选择</li>
+<li>安全验证 — 确保目录已被 gitignore 忽略</li>
+<li>创建工作树 — 使用新分支创建 worktree</li>
+<li>运行项目初始化 — 自动检测并运行 npm install、cargo build 等</li>
+<li>验证基线 — 运行测试确保环境干净</li>
+</ol>
+</section>
+<section id="第四阶段执行与实现implementation" class="level4">
+<h4 class="anchored" data-anchor-id="第四阶段执行与实现implementation">第四阶段：执行与实现（Implementation）</h4>
+<p><strong>使用技能组合：</strong> subagent-driven-development / executing-plans + test-driven-development + verification-before-completion</p>
+<p><strong>子代理驱动开发（推荐）：</strong></p>
+<p>每个任务经历两阶段审查：</p>
+<ol type="1">
+<li>调度实现子代理</li>
+<li>实现子代理实现、测试、提交、自我审查</li>
+<li>调度规范合规审查 — 确认代码实现了设计要求且没有添加额外功能</li>
+<li>调度代码质量审查 — 确保代码符合质量标准</li>
+<li>标记任务完成</li>
+</ol>
+<p><strong>测试驱动开发（TDD）：</strong></p>
+<p>强制执行 RED-GREEN-REFACTOR 循环：</p>
+<ul>
+<li><strong>RED</strong> — 编写失败的测试</li>
+<li><strong>GREEN</strong> — 编写最简代码使测试通过</li>
+<li><strong>REFACTOR</strong> — 重构优化代码</li>
+</ul>
+<p><strong>核心铁律：</strong> 「没有先写失败测试的生产代码」。如果代码先于测试编写，必须删除并重新开始。</p>
+<p><strong>完成前验证：</strong></p>
+<p>执行流程：</p>
+<ol type="1">
+<li><strong>识别</strong> — 确定什么命令能证明该断言</li>
+<li><strong>运行</strong> — 执行完整命令（全新、完整）</li>
+<li><strong>读取</strong> — 完整输出，检查退出码，统计失败数</li>
+<li><strong>验证</strong> — 输出是否确认了断言？</li>
+<li><strong>然后</strong> — 做出断言</li>
+</ol>
+<p>禁止使用「应该能工作」「看起来正确」「之前通过了」等模糊表述。必须展示实际的命令输出作为证据。</p>
+</section>
+<section id="第五阶段审查与反馈review" class="level4">
+<h4 class="anchored" data-anchor-id="第五阶段审查与反馈review">第五阶段：审查与反馈（Review）</h4>
+<p><strong>使用技能组合：</strong> requesting-code-review + receiving-code-review</p>
+<p><strong>必须请求审查的时机：</strong></p>
+<ul>
+<li>subagent-driven-development 中每个任务完成后</li>
+<li>完成主要功能后</li>
+<li>合并到主分支前</li>
+</ul>
+<p><strong>处理审查反馈：</strong></p>
+<ol type="1">
+<li>阅读 — 完整阅读反馈，不立即反应</li>
+<li>理解 — 用自己的话复述需求（或提问）</li>
+<li>验证 — 对照代码库实际状况检查</li>
+<li>评估 — 对当前代码库在技术上是否合理？</li>
+<li>响应 — 技术性确认或有理有据地反对</li>
+<li>实现 — 逐项实现，每项测试</li>
+</ol>
+</section>
+</section>
+<section id="openspec-轻量级规范框架" class="level3">
+<h3 class="anchored" data-anchor-id="openspec-轻量级规范框架">3.3 OpenSpec 轻量级规范框架</h3>
+<section id="背景与起源-2" class="level4">
+<h4 class="anchored" data-anchor-id="背景与起源-2">背景与起源</h4>
+<p>OpenSpec 是由 Fission AI 开发的轻量级规范框架，专为 AI 编码助手设计。与 Spec-Kit 和 Superpowers 不同，OpenSpec 的核心理念是<strong>灵活而非僵化</strong>，适合已有项目的快速迭代。</p>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>存量项目快速迭代</li>
+<li>需求频繁变更的场景</li>
+<li>需要轻量级变更管理</li>
+</ul>
+<p><strong>核心理念：</strong></p>
+<ul>
+<li>灵活而非僵化 — 无需阶段门限，按需工作</li>
+<li>迭代而非瀑布 — 边做边学，持续改进</li>
+<li>简单而非复杂 — 轻量设置，最小仪式感</li>
+<li>存量优先 — 支持现有代码库，不只是全新项目</li>
+</ul>
+</section>
+<section id="工作流程概览" class="level4">
+<h4 class="anchored" data-anchor-id="工作流程概览">工作流程概览</h4>
+<pre><code>     ┌────────────────┐
+     │  1. 开始变更   │  /opsx:propose 或 /opsx:new
+     └───────┬────────┘
+             │
+             ▼
+     ┌────────────────┐
+     │  2. 创建产出物 │  proposal → specs → design → tasks
+     └───────┬────────┘
+             │
+             ▼
+     ┌────────────────┐
+     │  3. 实现任务   │  /opsx:apply
+     └───────┬────────┘
+             │
+             ▼
+     ┌────────────────┐
+     │  4. 验证工作    │  /opsx:verify
+     └───────┬────────┘
+             │
+             ▼
+     ┌────────────────┐
+     │  5. 归档变更   │  增量规范合并到主规范
+     └────────────────┘</code></pre>
+</section>
+<section id="核心概念" class="level4">
+<h4 class="anchored" data-anchor-id="核心概念">核心概念</h4>
+<p><strong>1. 规范（Specs）</strong></p>
+<p>规范描述系统行为，使用结构化的需求和场景：</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Auth Specification</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Purpose</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>Authentication and session management for the application.</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Requirements</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">### Requirement: User Authentication</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>The system SHALL issue a JWT token upon successful login.</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Scenario: Valid credentials</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GIVEN a user with valid credentials</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>WHEN the user submits login form</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>THEN a JWT token is returned</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AND the user is redirected to dashboard</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>按领域组织规范——对你的系统有意义的逻辑分组。常见模式：</p>
+<ul>
+<li><strong>按功能区域</strong>：<code>auth/</code>、<code>payments/</code>、<code>search/</code></li>
+<li><strong>按组件</strong>：<code>api/</code>、<code>frontend/</code>、<code>workers/</code></li>
+<li><strong>按边界上下文</strong>：<code>ordering/</code>、<code>fulfillment/</code>、<code>inventory/</code></li>
+</ul>
+<p><strong>2. 变更（Changes）</strong></p>
+<p>变更是对系统提议的修改，封装在一个文件夹中：</p>
+<pre><code>openspec/changes/add-dark-mode/
+├── proposal.md           # 为什么以及是什么
+├── design.md             # 如何做（技术方案）
+├── tasks.md              # 实现清单
+└── specs/                # 增量规范（改变了什么）
+    └── ui/
+        └── spec.md</code></pre>
+<p><strong>3. 增量规范（Delta Specs）</strong></p>
+<p>增量规范描述相对于当前规范的<strong>变化</strong>，包含三个部分：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>部分</th>
+<th>含义</th>
+<th>归档时发生什么</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>## ADDED Requirements</code></td>
+<td>新行为</td>
+<td>追加到主规范</td>
+</tr>
+<tr class="even">
+<td><code>## MODIFIED Requirements</code></td>
+<td>更改的行为</td>
+<td>替换现有需求</td>
+</tr>
+<tr class="odd">
+<td><code>## REMOVED Requirements</code></td>
+<td>弃用的行为</td>
+<td>从主规范中删除</td>
+</tr>
+</tbody>
+</table>
+<p><strong>为什么用增量而非完整规范：</strong></p>
+<ul>
+<li><strong>清晰</strong> — 增量准确显示变化内容</li>
+<li><strong>避免冲突</strong> — 两个变更可以修改同一规范文件的不同需求</li>
+<li><strong>审查效率</strong> — 审查者只看变化</li>
+<li><strong>适配存量</strong> — 大多数工作是修改现有行为</li>
+</ul>
+</section>
+<section id="两种工作流模式" class="level4">
+<h4 class="anchored" data-anchor-id="两种工作流模式">两种工作流模式</h4>
+<p><strong>核心模式（core，默认）：</strong></p>
+<ul>
+<li><code>/opsx:propose</code></li>
+<li><code>/opsx:apply</code></li>
+<li><code>/opsx:archive</code></li>
+</ul>
+<p>典型流程：<code>/opsx:propose → /opsx:apply → /opsx:archive</code></p>
+<p><strong>扩展模式（custom）：</strong></p>
+<ul>
+<li><code>/opsx:new</code></li>
+<li><code>/opsx:continue</code></li>
+<li><code>/opsx:ff</code></li>
+<li><code>/opsx:verify</code></li>
+<li><code>/opsx:sync</code></li>
+<li><code>/opsx:bulk-archive</code></li>
+</ul>
+<p>典型流程：<code>/opsx:new → /opsx:ff → /opsx:apply → /opsx:verify → /opsx:archive</code></p>
+</section>
+</section>
+<section id="opencode-实战工作流" class="level3">
+<h3 class="anchored" data-anchor-id="opencode-实战工作流">3.4 OpenCode 实战工作流</h3>
+<section id="背景与起源-3" class="level4">
+<h4 class="anchored" data-anchor-id="背景与起源-3">背景与起源</h4>
+<p>OpenCode 是一个开源的 AI 编程 Agent，GitHub 100K+ stars，700+ 贡献者，每月 250 万开发者在用。它不是一个”好用的终端工具”——它有三种完整形态：<strong>桌面端、Web UI、终端 TUI</strong>，三种形态共享同一套会话和状态。</p>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>需要多端协同的开发场景</li>
+<li>希望有原生批注功能的团队</li>
+<li>需要手机监工的场景</li>
+</ul>
+<p><strong>核心优势：</strong></p>
+<ul>
+<li><strong>三种完整形态</strong>：桌面端、Web UI、终端 TUI，共享同一套会话和状态</li>
+<li><strong>自动加载 LSP</strong>：AI 在 Research 阶段读代码时能拿到类型信息和诊断结果</li>
+<li><strong>多会话并行</strong>：可以同时开多个 Agent</li>
+<li><strong>75+ 模型供应商</strong>：Anthropic、OpenAI、GitHub Copilot 等都支持</li>
+<li><strong>完全开源免费</strong>：没有订阅费，没有 vendor lock-in</li>
+</ul>
+</section>
+<section id="完整开发流程golang-vue-示例" class="level4">
+<h4 class="anchored" data-anchor-id="完整开发流程golang-vue-示例">完整开发流程（Golang + Vue 示例）</h4>
+<p><strong>准备阶段：先搭好骨架</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> myproject <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> myproject</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> wiki/guide docs/reports docs/plans</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>在 <code>wiki/guide</code> 目录下放几个常用文件：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>文件</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>agents.md</code></td>
+<td>代码规范、设计文档路径、项目约定</td>
+</tr>
+<tr class="even">
+<td><code>log.md</code></td>
+<td>日志系统、分布式追踪、统一 API 响应及错误码方案</td>
+</tr>
+<tr class="odd">
+<td><code>database.md</code></td>
+<td>GORM 多数据库支持配置</td>
+</tr>
+<tr class="even">
+<td><code>config.md</code></td>
+<td>系统配置方案（Viper 等）</td>
+</tr>
+<tr class="odd">
+<td><code>middleware.md</code></td>
+<td>中间件框架集成</td>
+</tr>
+<tr class="even">
+<td><code>redis.md</code></td>
+<td>Redis 客户端集成</td>
+</tr>
+</tbody>
+</table>
+<p><strong>项目骨架：先规划，再动手</strong></p>
+<pre><code>/technical-research-before-planning
+我需要完成一个用户权限管理系统，请帮我完成需求分析、技术选型、项目骨架创建方案的报告，
+写入 docs/reports/project_init.md。需求如下：
+- 支持 RBAC 权限模型
+- 支持 JWT Token 认证
+- 前端使用 Vue3 + Element Plus
+- 后端使用 Gin + GORM + PostgreSQL
+- 需要操作日志审计功能</code></pre>
+<p><code>technical-research-before-planning</code>只做研究不写代码。它会头脑风暴、查资料、评估方案，最后输出评估报告。</p>
+<p><strong>初始化项目</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/init</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/executing-plans-with-standards</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="ex">请根据@docs/reports/project_init.md</span> 的内容，创建项目骨架</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>基础能力建设</strong></p>
+<p>基础能力就像搭积木，一块一块往上摞。每块都遵循同样的模式：<strong>研究→计划→执行</strong>。</p>
+<pre><code>请依照@wiki/guide/log.md 的说明，为本项目集成日志系统
+请依照@wiki/guide/database.md 的说明，为本项目集成数据库框架
+请依照@wiki/guide/config.md 的说明，为本项目集成系统配置方案
+请依照@wiki/guide/middleware.md 的说明，为本项目集成中间件框架
+请依照@wiki/guide/redis.md 的说明，为本项目集成 redis</code></pre>
+<p><strong>遇到不熟悉的集成？</strong> 走完整的研究 - 计划 - 执行流程：</p>
+<pre><code>/technical-research-before-planning
+我需要集成 Casbin 以实现 RBAC 权限控制，请帮我评估并生成报告，写入 docs/reports/casbin.md
+
+/analyzing-code-then-planning
+请根据@docs/reports/casbin.md，帮我制定代码实现方案与实施计划，写入 docs/plans/casbin.md
+
+/subagent-driven-plan-execution
+执行计划@docs/plans/casbin.md</code></pre>
+</section>
+<section id="skill-速查表" class="level4">
+<h4 class="anchored" data-anchor-id="skill-速查表">SKILL 速查表</h4>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 26%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>SKILL</th>
+<th>用途</th>
+<th>核心原则</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>technical-research-before-planning</code></td>
+<td>技术方案研究</td>
+<td>只研究不写代码，做头脑风暴、设计评估、联网搜索</td>
+</tr>
+<tr class="even">
+<td><code>analyzing-code-then-planning</code></td>
+<td>代码分析 + 计划制定</td>
+<td>先分析代码、搜索复用、制定计划、等待确认后再实现</td>
+</tr>
+<tr class="odd">
+<td><code>executing-plans-with-standards</code></td>
+<td>标准化计划执行</td>
+<td>严格遵守 AGENTS.md 标准，串行执行，含业务审查和三方对齐</td>
+</tr>
+<tr class="even">
+<td><code>subagent-driven-plan-execution</code></td>
+<td>子代理驱动式执行</td>
+<td>每个任务派独立子代理，支持串/并行，Prompt 嵌入完整上下文</td>
+</tr>
+<tr class="odd">
+<td><code>code-chain-review</code></td>
+<td>代码链审查</td>
+<td>验证调用链数据正确性，确保实现与设计一致</td>
+</tr>
+<tr class="even">
+<td><code>triparty-alignment-assessment</code></td>
+<td>三方对齐评估</td>
+<td>评估计划 vs 设计 vs 代码对齐度，输出评估报告和修复建议</td>
+</tr>
+<tr class="odd">
+<td><code>finish-implementation</code></td>
+<td>完成开发收尾</td>
+<td>测试验证→合并/保留分支→工作区清理</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="按开发阶段的-skills-组合拳" class="level3">
+<h3 class="anchored" data-anchor-id="按开发阶段的-skills-组合拳">3.5 按开发阶段的 Skills 组合拳</h3>
+<p>基于真实微信小程序项目开发经验，按不同开发阶段整理出实用的 Skills 组合：</p>
+<section id="阶段一原型阶段" class="level4">
+<h4 class="anchored" data-anchor-id="阶段一原型阶段">阶段一：原型阶段</h4>
+<p><strong>核心技能：brainstorming</strong></p>
+<p>当需求模糊、产品形态不清晰时，使用 brainstorming 进行结构化探索。</p>
+<p><strong>使用方式：</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/obra/superpowers <span class="at">--skill</span> brainstorming</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键技巧：</strong></p>
+<ul>
+<li>让 AI 出选择题而非开放式问题</li>
+<li>从产品定位、目标用户、功能范围到技术栈偏好逐层细化</li>
+<li>通过选项逼自己做决策，产品形态自然浮现</li>
+</ul>
+</section>
+<section id="阶段二ui-阶段" class="level4">
+<h4 class="anchored" data-anchor-id="阶段二ui-阶段">阶段二：UI 阶段</h4>
+<p><strong>核心技能：ui-ux-pro-max + planning-with-files</strong></p>
+<p>确定产品方向后，先做 playground（实验环境），再写代码。</p>
+<p><strong>UI 设计技能：</strong></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/nextlevelbuilder/ui-ux-pro-max-skill <span class="at">--skill</span> ui-ux-pro-max</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>设计约束示例：</strong></p>
+<pre><code>这是一个游戏化的人生 RPG 小程序。核心交互是'资源分配'——用户像玩策略游戏一样，
+在多个目标之间分配资金。设计风格要：年轻、有游戏感、但不幼稚。用色要清新，
+避免传统理财软件那种'严肃的蓝绿色'。参考风格：Monument Valley 的极简几何 + 
+Duolingo 的激励感。</code></pre>
+<p><strong>规划技能：</strong></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/othmanadi/planning-with-files <span class="at">--skill</span> planning-with-files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>会创建 <code>task_plan.md</code>、<code>findings.md</code>、<code>progress.md</code> 三个文件，随时可以问”我现在做到哪了”。</p>
+</section>
+<section id="阶段三开发阶段" class="level4">
+<h4 class="anchored" data-anchor-id="阶段三开发阶段">阶段三：开发阶段</h4>
+<p><strong>核心技能：test-driven-development</strong></p>
+<p>先写测试用例，再写功能代码。</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills add https://github.com/obra/superpowers <span class="at">--skill</span> test-driven-development</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>微信小程序开发技巧：</strong></p>
+<ol type="1">
+<li>先让 AI 生成 HTML+CSS+JS 的 playground</li>
+<li>告诉 AI：「前端设计完全按照 playground 来不要自己改」</li>
+<li>用 PUA 话术：「你一定要以一个完整成熟的小程序产品的角度去修改代码，不要从简。有什么困难先自己上网搜解决，我相信你有这个能力。」</li>
+</ol>
+</section>
+<section id="阶段四沉淀阶段" class="level4">
+<h4 class="anchored" data-anchor-id="阶段四沉淀阶段">阶段四：沉淀阶段</h4>
+<p><strong>核心技能：自定义技能提炼</strong></p>
+<p>基于开发对话，提炼专属 skills：</p>
+<pre><code>基于我们刚才写小程序的对话，结合 insights 报告给我整理一下我以后可能需要生成的 skills</code></pre>
+<hr>
+</section>
+</section>
+</section>
+<section id="四工具对比与选型指南" class="level2">
+<h2 class="anchored" data-anchor-id="四工具对比与选型指南">四、工具对比与选型指南</h2>
+<section id="三剑客核心定位" class="level3">
+<h3 class="anchored" data-anchor-id="三剑客核心定位">4.1 三剑客核心定位</h3>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 31%">
+<col style="width: 18%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>工具</th>
+<th>核心解决</th>
+<th>类比</th>
+<th>最佳场景</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Spec-Kit</strong></td>
+<td>按什么规矩干</td>
+<td>AI 编程的”行为准则手册”</td>
+<td>企业级新建项目、多人协作</td>
+</tr>
+<tr class="even">
+<td><strong>OpenSpec</strong></td>
+<td>改了什么、怎么改</td>
+<td>AI 代码变更的”可控审批单”</td>
+<td>存量维护、中小型快速迭代</td>
+</tr>
+<tr class="odd">
+<td><strong>Superpowers</strong></td>
+<td>怎么干、干到什么程度</td>
+<td>AI 执行编码的”标准操作手册（SOP）”</td>
+<td>TDD、高可靠、强校验场景</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="关键维度对比" class="level3">
+<h3 class="anchored" data-anchor-id="关键维度对比">4.2 关键维度对比</h3>
+<table class="table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>维度</th>
+<th>Spec-Kit</th>
+<th>OpenSpec</th>
+<th>Superpowers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>出品方</td>
+<td>GitHub</td>
+<td>Fission AI</td>
+<td>社区开源（Vercel Labs）</td>
+</tr>
+<tr class="even">
+<td>流程重量</td>
+<td>重（全流程）</td>
+<td>轻（变更）</td>
+<td>中（强执行）</td>
+</tr>
+<tr class="odd">
+<td>学习成本</td>
+<td>⭐⭐⭐</td>
+<td>⭐</td>
+<td>⭐⭐</td>
+</tr>
+<tr class="even">
+<td>存量兼容</td>
+<td>一般</td>
+<td>极佳</td>
+<td>中等</td>
+</tr>
+<tr class="odd">
+<td>AI 兼容</td>
+<td>18+ 代理</td>
+<td>全主流</td>
+<td>全主流（Claude Code 最优）</td>
+</tr>
+<tr class="even">
+<td>约束强度</td>
+<td>高</td>
+<td>低</td>
+<td>极高</td>
+</tr>
+<tr class="odd">
+<td>最佳阶段</td>
+<td>新项目立项</td>
+<td>需求迭代/BUG 修复</td>
+<td>核心模块/高可靠</td>
+</tr>
+<tr class="even">
+<td>文档产出</td>
+<td>Constitution + Spec</td>
+<td>Proposal + Delta Spec</td>
+<td>Design + Plan</td>
+</tr>
+<tr class="odd">
+<td>验证机制</td>
+<td>内置测试生成</td>
+<td>CI 集成</td>
+<td>TDD 强制</td>
+</tr>
+<tr class="even">
+<td>变更管理</td>
+<td>完整版本控制</td>
+<td>增量规范归档</td>
+<td>Git Worktree 隔离</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="选型指南" class="level3">
+<h3 class="anchored" data-anchor-id="选型指南">4.3 选型指南</h3>
+<p>根据你的场景，直接选：</p>
+<ol type="1">
+<li><p><strong>新项目、需要团队协作、计划长期维护</strong> → 选 <strong>Spec-Kit</strong>，从一开始就定好规矩，避免后期混乱。</p></li>
+<li><p><strong>老项目、频繁改需求、需要快速上线</strong> → 选 <strong>OpenSpec</strong>，轻量不折腾，管住变更就够了。</p></li>
+<li><p><strong>金融/核心业务、必须做 TDD、怕 AI 瞎写</strong> → 选 <strong>Superpowers</strong>，用证据驱动，保证代码质量。</p></li>
+<li><p><strong>需要多端协同、原生批注体验</strong> → 选 <strong>OpenCode</strong>，桌面端 + Web UI + 手机监工。</p></li>
+<li><p><strong>微信小程序等特定平台开发</strong> → 按阶段组合 Skills，灵活应对平台特性。</p></li>
+</ol>
+<p><strong>推荐黄金组合：</strong></p>
+<ul>
+<li><strong>大型项目</strong>：<code>Spec-Kit（定规矩）+ OpenSpec（管变更）</code>，全流程覆盖，协作更顺畅。</li>
+<li><strong>中小项目</strong>：<code>OpenSpec（日常迭代）+ Superpowers（核心模块）</code>，灵活又能保质量。</li>
+<li><strong>个人开发</strong>：<code>Boris 工作流（核心）+ 自定义 Skills（提效）</code>，轻量高效。</li>
+</ul>
+</section>
+<section id="常见失误与解决方案" class="level3">
+<h3 class="anchored" data-anchor-id="常见失误与解决方案">4.4 常见失误与解决方案</h3>
+<table class="table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 23%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>失误模式</th>
+<th>症状</th>
+<th>解决方法</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>厨房水槽 session</strong></td>
+<td>话题飘到五个方向</td>
+<td>切任务就 /clear</td>
+</tr>
+<tr class="even">
+<td><strong>纠正死循环</strong></td>
+<td>同一个错误纠正 3 次 +</td>
+<td>清空上下文，重写 prompt</td>
+</tr>
+<tr class="odd">
+<td><strong>CLAUDE.md 膨胀</strong></td>
+<td>规则文件 500 行</td>
+<td>问自己”没这行会犯什么错”，删掉多余的</td>
+</tr>
+<tr class="even">
+<td><strong>无边界调查</strong></td>
+<td>Claude 读了几百个文件，上下文耗尽</td>
+<td>给调查划定范围，或用子智能体隔离</td>
+</tr>
+<tr class="odd">
+<td><strong>Skills 收集癖</strong></td>
+<td>装了 78 个 skills，真正用的没几个</td>
+<td>按开发阶段选择组合拳，而非全部安装</td>
+</tr>
+<tr class="even">
+<td><strong>跳过 Research</strong></td>
+<td>AI 不理解系统就开写</td>
+<td>强制先写 research.md</td>
+</tr>
+<tr class="odd">
+<td><strong>计划无批注</strong></td>
+<td>计划直接通过，无人类判断注入</td>
+<td>至少 1 轮批注循环</td>
+</tr>
+<tr class="even">
+<td><strong>验证不充分</strong></td>
+<td>声称完成但无证据</td>
+<td>强制运行验证命令展示输出</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="五总结与展望" class="level2">
+<h2 class="anchored" data-anchor-id="五总结与展望">五、总结与展望</h2>
+<section id="核心要点" class="level3">
+<h3 class="anchored" data-anchor-id="核心要点">5.1 核心要点</h3>
+<p><strong>AI 编程的未来，不是「让 AI 随便写」，而是用规范把 AI 变成可信赖的生产力。</strong></p>
+<ul>
+<li><strong>Spec-Kit</strong> 从源头定好规则，驯服 AI 的”随意性”</li>
+<li><strong>OpenSpec</strong> 管控变更，驯服 AI 的”破坏性”</li>
+<li><strong>Superpowers</strong> 强化验证，驯服 AI 的”不确定性”</li>
+</ul>
+<p>三者结合，就能让 AI 完全听从我们的指挥。</p>
+</section>
+<section id="工作流核心原则" class="level3">
+<h3 class="anchored" data-anchor-id="工作流核心原则">5.2 工作流核心原则</h3>
+<ol type="1">
+<li><strong>先规划，后执行</strong> — 永远不要让 AI 写代码，直到你审核并批准了一份书面计划</li>
+<li><strong>批注优于聊天</strong> — plan.md 文件充当了你和 AI 之间的共享可变状态</li>
+<li><strong>证据在断言之前</strong> — 任何声称工作完成之前，必须独立运行验证命令并展示证据</li>
+<li><strong>并行是效率杠杆</strong> — 同时跑 3-5 个 session，每个做不同的任务</li>
+<li><strong>技能化消灭重复</strong> — 一天做了两次的事，就变成一个 skill</li>
+<li><strong>上下文是稀缺资源</strong> — 用子智能体隔离调查，保持主对话干净</li>
+</ol>
+</section>
+<section id="最佳实践清单" class="level3">
+<h3 class="anchored" data-anchor-id="最佳实践清单">5.3 最佳实践清单</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">每次任务开始前，先做 Research 并写入 research.md</label></li>
+<li><label><input type="checkbox">实现前必须有书面计划 plan.md，且经过至少一轮批注</label></li>
+<li><label><input type="checkbox">使用 Todo List 追踪进度，完成一项标记一项</label></li>
+<li><label><input type="checkbox">实现过程中持续运行类型检查和测试</label></li>
+<li><label><input type="checkbox">代码审查在合并前必须完成</label></li>
+<li><label><input type="checkbox">CLAUDE.md 只保留真实防止错误的规则</label></li>
+<li><label><input type="checkbox">同一个错误纠正两次无效就清空上下文重来</label></li>
+<li><label><input type="checkbox">按开发阶段选择 Skills 组合，而非全部安装</label></li>
+</ul>
+</section>
+<section id="工作流成熟度演进建议" class="level3">
+<h3 class="anchored" data-anchor-id="工作流成熟度演进建议">5.4 工作流成熟度演进建议</h3>
+<pre><code>第 1-2 周：掌握 Boris 工作流
+├── 熟练使用 research.md + plan.md
+├── 完成至少 3 次完整的批注循环
+└── 建立 CLAUDE.md 基础规则
+
+第 3-4 周：引入 Superpowers 技能
+├── 安装 test-driven-development
+├── 安装 verification-before-completion
+└── 开始使用 subagent-driven-development
+
+第 5-8 周：工程化升级
+├── 引入 Spec-Kit 或 OpenSpec
+├── 建立团队规范文档
+├── 创建自定义 Skills
+└── 集成 CI/CD 验证
+
+第 8 周+：持续优化
+├── 根据项目特点调整工作流
+├── 沉淀团队专属最佳实践
+└── 分享和贡献社区</code></pre>
+<hr>
+</section>
+</section>
+<section id="附录一些技巧" class="level2">
+<h2 class="anchored" data-anchor-id="附录一些技巧">附录：一些技巧</h2>
+<section id="背景说明" class="level4">
+<h4 class="anchored" data-anchor-id="背景说明">背景说明</h4>
+<p>Claude Code 官方最佳实践来自 Claude Code 之父 Boris Cherny 的内部团队实践，以及官方文档。这些技巧经过 Anthropic 内部团队和大量外部用户验证。</p>
+</section>
+<section id="十大核心技巧" class="level4">
+<h4 class="anchored" data-anchor-id="十大核心技巧">十大核心技巧</h4>
+<p><strong>技巧一：让 Claude 自己验证自己的工作</strong></p>
+<p>把验证标准直接写进 prompt：</p>
+<pre><code>写一个验证邮箱的函数。测试用例：hello@gmail.com 应该通过，hello@ 应该失败，
+@domain.com 应该失败。写完后跑一遍测试告诉我结果。</code></pre>
+<p><strong>技巧二：先规划，再动手</strong></p>
+<p>标准流程： 1. 进入 Plan Mode，让 Claude 读相关文件，摸清项目结构 2. 让 Claude 写出完整的执行计划 3. 你自己读一遍计划，有问题直接改 4. 切回普通模式，按计划执行 5. 执行完让 Claude 写清晰的 commit message</p>
+<p><strong>技巧三：CLAUDE.md 是你最被低估的工具</strong></p>
+<p>CLAUDE.md 是 Claude 每次启动都会读的文件，放在项目根目录里。你写进去的规则，Claude 每次都会遵守，不用再一遍遍重申。</p>
+<p><strong>进化技巧：</strong> 每次 Claude 犯了某个错，纠正完之后在对话末尾加一句：</p>
+<pre><code>更新你的 CLAUDE.md，确保下次不再犯同样的错误。</code></pre>
+<p><strong>⚠️ 注意：</strong> 别让 CLAUDE.md 变成一个 500 行的怪兽。每一行都应该对应一个真实的错误。</p>
+<p><strong>技巧四：并行才是真正的效率杠杆</strong></p>
+<p>Claude Code 支持多个 session 同时运行，可以用 git worktrees 在同一个项目里开多个独立工作区。</p>
+<p><strong>典型并行用法：</strong> - <strong>Session A</strong>：写新功能 - <strong>Session B</strong>：审 Session A 写的代码，找边界情况和漏洞 - 把 B 的反馈喂给 A</p>
+<p><strong>技巧五：Bug 修复，直接扔原始数据给 Claude</strong></p>
+<p>把原始数据扔给 Claude，说”fix”。</p>
+<ul>
+<li>直接把 Slack 对话贴进去，一个字：“fix。”</li>
+<li>或者直接说：“去修一下 CI 上失败的测试。”</li>
+</ul>
+<p>关键是：给 Claude <strong>真实的信息</strong>——错误日志、Slack 线程、docker 输出——而不是你对这些信息的描述。</p>
+<p><strong>技巧六：子智能体——让主对话保持干净</strong></p>
+<p>当 Claude 需要深度调查一个问题时，让它读很多文件会占满上下文窗口。<strong>子智能体（Subagents）</strong> 解决这个问题：让一个独立的 Claude 实例去做调查工作，它有自己的独立上下文。</p>
+<p>用法：在任何调查类请求后面加一句：</p>
+<pre><code>用子智能体来……（后面接具体任务）</code></pre>
+<p><strong>技巧七：写 Skill（自定义命令），消灭重复劳动</strong></p>
+<p><strong>规则：一天做了两次的事，就变成一个 skill。</strong></p>
+<p>比如一个 <code>/fix-issue</code> 的 skill，你只需要说<code>/fix-issue 447</code>，Claude 自动：</p>
+<ol type="1">
+<li>读取 GitHub issue #447</li>
+<li>找到项目里相关的文件</li>
+<li>做修复</li>
+<li>写测试并运行</li>
+<li>创建 Pull Request</li>
+</ol>
+<p><strong>技巧八：提示词技巧</strong></p>
+<p><strong>① 让 Claude 审你</strong></p>
+<pre><code>用最挑剔的方式质问这些改动，直到我通过你的测试才能开 PR。</code></pre>
+<p><strong>② 让 Claude 重写一个更优雅的版本</strong></p>
+<pre><code>你现在知道所有背景了。把这个方案推翻重来，给我一个优雅的实现。</code></pre>
+<p><strong>③ 要求 Claude 证明</strong></p>
+<pre><code>证明给我看这个改动有效。把 main 分支和我的 feature 分支的行为差异展示出来。</code></pre>
+<p><strong>技巧九：用好 /clear 和 Checkpoint</strong></p>
+<p>当你在一个 session 里工作了很久，修了 bug、问了无关问题、聊到了另一个话题……这叫<strong>上下文污染</strong>。</p>
+<p><strong>解法：</strong></p>
+<ul>
+<li><strong>/clear</strong>：硬重置，清空上下文。然后用一个更清晰的 prompt 重新开始。</li>
+<li><strong>/compact</strong>：软重置，告诉 Claude 保留什么，清掉其他噪音。</li>
+</ul>
+<p><strong>建议：</strong> 如果你在 session 里对同一个问题纠正了两次，Claude 还是没改对——不要再纠正第三次了。清掉上下文，写一个更精准的起始 prompt，重头开始。</p>
+<p><strong>技巧十：把 Claude Code 当成学习工具</strong></p>
+<p>进入新项目时，你可以直接问：</p>
+<pre><code>这个项目的日志系统是怎么工作的？
+这个函数具体在做什么，为什么要调这个方法而不是那个？
+用户登录的完整流程是什么，从第一个请求到 session 建立？</code></pre>
+<hr>
+</section>
+</section>
+<section id="参考资源" class="level2">
+<h2 class="anchored" data-anchor-id="参考资源">参考资源</h2>
+<ol type="1">
+<li>Boris Tane. How I Use Claude Code. https://boristane.com/blog/how-i-use-claude-code/</li>
+<li>Claude Code 官方最佳实践文档。https://code.claude.com/docs/en/best-practices</li>
+<li>Superpowers 官方技能库。https://skills.sh/obra/superpowers</li>
+<li>OpenSpec 文档。https://github.com/Fission-AI/OpenSpec</li>
+<li>OpenCode 官网。https://opencode.ai</li>
+<li>数智启思 - Superpowers Skill 配套使用指南。https://jdragonnudt.github.io/inspiraHub/myblog/posts/superpower_skills/</li>
+<li>数智启思 - OpenSpec 中文使用指南。https://jdragonnudt.github.io/inspiraHub/myblog/posts/AIcoding_openspec/</li>
+<li>Spec-Kit 文档。https://github.com/github/spec-kit</li>
+</ol>
+<hr>
+</section>
+<section id="引用信息" class="level2">
+<h2 class="anchored" data-anchor-id="引用信息">引用信息</h2>
+<p>引用本文请注明以下信息。</p>
+<pre><code>@article{lj_AIcoding_workflow_2026,
+  author = {龙军},
+  title = {AI 编程工作流深度解析},
+  year = {2026},
+  url = {https://jdragonnudt.github.io/inspiraHub/myblog/posts/AIcoding-workflow},
+}</code></pre>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="jdragonnudt/inspiraHub" data-repo-id="R_kgDOMGN2Lg" data-category="General" data-category-id="DIC_kwDOMGN2Ls4Cf8Yq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2024, by jdragon. 本网站所有内容采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA许可，知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
