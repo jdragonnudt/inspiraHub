@@ -1,0 +1,3107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="jdragon">
+<meta name="dcterms.date" content="2026-07-23">
+
+<title>数智巧思 - Matt Pocock Skills 实战指南</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">数智巧思</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../AIengineerBook/index.html"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../myblog/index.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+    <a href="https://github.com/jdragonnudt/inspiraHub" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Matt Pocock Skills 实战指南</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">软件工程师</div>
+                <div class="quarto-category">AI编程</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>jdragon </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 23, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#matt-pocock-skills-实战指南让-ai-写出经得起工程审视的代码" id="toc-matt-pocock-skills-实战指南让-ai-写出经得起工程审视的代码" class="nav-link active" data-scroll-target="#matt-pocock-skills-实战指南让-ai-写出经得起工程审视的代码">Matt Pocock Skills 实战指南：让 AI 写出经得起工程审视的代码</a>
+  <ul>
+  <li><a href="#一为什么这个仓库值得你花-30-分钟读完" id="toc-一为什么这个仓库值得你花-30-分钟读完" class="nav-link" data-scroll-target="#一为什么这个仓库值得你花-30-分钟读完">一、为什么这个仓库值得你花 30 分钟读完</a>
+  <ul class="collapse">
+  <li><a href="#一组震撼的数字" id="toc-一组震撼的数字" class="nav-link" data-scroll-target="#一组震撼的数字">1.1 一组震撼的数字</a></li>
+  <li><a href="#它解决了什么" id="toc-它解决了什么" class="nav-link" data-scroll-target="#它解决了什么">1.2 它解决了什么</a></li>
+  </ul></li>
+  <li><a href="#二5-分钟快速上手" id="toc-二5-分钟快速上手" class="nav-link" data-scroll-target="#二5-分钟快速上手">二、5 分钟快速上手</a>
+  <ul class="collapse">
+  <li><a href="#安装30-秒" id="toc-安装30-秒" class="nav-link" data-scroll-target="#安装30-秒">2.1 安装（30 秒）</a></li>
+  <li><a href="#初始化每个仓库一次" id="toc-初始化每个仓库一次" class="nav-link" data-scroll-target="#初始化每个仓库一次">2.2 初始化（每个仓库一次）</a></li>
+  <li><a href="#第一个-skill和-ai-对齐需求" id="toc-第一个-skill和-ai-对齐需求" class="nav-link" data-scroll-target="#第一个-skill和-ai-对齐需求">2.3 第一个 Skill：和 AI 对齐需求</a></li>
+  </ul></li>
+  <li><a href="#三核心设计哲学" id="toc-三核心设计哲学" class="nav-link" data-scroll-target="#三核心设计哲学">三、核心设计哲学</a>
+  <ul class="collapse">
+  <li><a href="#仓库的二维分类" id="toc-仓库的二维分类" class="nav-link" data-scroll-target="#仓库的二维分类">3.1 仓库的二维分类</a></li>
+  <li><a href="#关键约束来自源码" id="toc-关键约束来自源码" class="nav-link" data-scroll-target="#关键约束来自源码">3.2 关键约束（来自源码）</a></li>
+  <li><a href="#不接管你的流程" id="toc-不接管你的流程" class="nav-link" data-scroll-target="#不接管你的流程">3.3 不接管你的流程</a></li>
+  </ul></li>
+  <li><a href="#四4-大痛点-对应-skill-详解" id="toc-四4-大痛点-对应-skill-详解" class="nav-link" data-scroll-target="#四4-大痛点-对应-skill-详解">四、4 大痛点 × 对应 Skill 详解</a>
+  <ul class="collapse">
+  <li><a href="#痛点-1agent-没做你想要的事-grill-me-grill-with-docs" id="toc-痛点-1agent-没做你想要的事-grill-me-grill-with-docs" class="nav-link" data-scroll-target="#痛点-1agent-没做你想要的事-grill-me-grill-with-docs">4.1 痛点 1：Agent 没做你想要的事 → <code>/grill-me</code> &amp; <code>/grill-with-docs</code></a>
+  <ul class="collapse">
+  <li><a href="#grill-meproductivity" id="toc-grill-meproductivity" class="nav-link" data-scroll-target="#grill-meproductivity"><code>/grill-me</code>（Productivity）</a></li>
+  <li><a href="#grill-with-docsengineering" id="toc-grill-with-docsengineering" class="nav-link" data-scroll-target="#grill-with-docsengineering"><code>/grill-with-docs</code>（Engineering）</a></li>
+  <li><a href="#共享语言的力量readme-例子" id="toc-共享语言的力量readme-例子" class="nav-link" data-scroll-target="#共享语言的力量readme-例子">共享语言的力量（README 例子）</a></li>
+  </ul></li>
+  <li><a href="#痛点-2agent-太啰嗦-context.md-adr" id="toc-痛点-2agent-太啰嗦-context.md-adr" class="nav-link" data-scroll-target="#痛点-2agent-太啰嗦-context.md-adr">4.2 痛点 2：Agent 太啰嗦 → <code>CONTEXT.md</code> + ADR</a></li>
+  <li><a href="#痛点-3代码不工作-tdd-diagnosing-bugs" id="toc-痛点-3代码不工作-tdd-diagnosing-bugs" class="nav-link" data-scroll-target="#痛点-3代码不工作-tdd-diagnosing-bugs">4.3 痛点 3：代码不工作 → <code>/tdd</code> + <code>/diagnosing-bugs</code></a>
+  <ul class="collapse">
+  <li><a href="#tddtdd-不是仪式是反馈循环" id="toc-tddtdd-不是仪式是反馈循环" class="nav-link" data-scroll-target="#tddtdd-不是仪式是反馈循环"><code>/tdd</code>：TDD 不是仪式，是反馈循环</a></li>
+  <li><a href="#diagnosing-bugs6-阶段硬核调试" id="toc-diagnosing-bugs6-阶段硬核调试" class="nav-link" data-scroll-target="#diagnosing-bugs6-阶段硬核调试"><code>/diagnosing-bugs</code>：6 阶段硬核调试</a></li>
+  </ul></li>
+  <li><a href="#痛点-4代码库变成一团乱麻-improve-codebase-architecture" id="toc-痛点-4代码库变成一团乱麻-improve-codebase-architecture" class="nav-link" data-scroll-target="#痛点-4代码库变成一团乱麻-improve-codebase-architecture">4.4 痛点 4：代码库变成一团乱麻 → <code>/improve-codebase-architecture</code></a></li>
+  </ul></li>
+  <li><a href="#五其他值得知道的-skill-速查" id="toc-五其他值得知道的-skill-速查" class="nav-link" data-scroll-target="#五其他值得知道的-skill-速查">五、其他值得知道的 Skill 速查</a>
+  <ul class="collapse">
+  <li><a href="#engineering17-个" id="toc-engineering17-个" class="nav-link" data-scroll-target="#engineering17-个">5.1 Engineering（17 个）</a></li>
+  <li><a href="#productivity5-个" id="toc-productivity5-个" class="nav-link" data-scroll-target="#productivity5-个">5.2 Productivity（5 个）</a></li>
+  </ul></li>
+  <li><a href="#六典型工作流逐个-skill-详解" id="toc-六典型工作流逐个-skill-详解" class="nav-link" data-scroll-target="#六典型工作流逐个-skill-详解">六、典型工作流：逐个 Skill 详解</a>
+  <ul class="collapse">
+  <li><a href="#工作流全景图来自-ask-matt" id="toc-工作流全景图来自-ask-matt" class="nav-link" data-scroll-target="#工作流全景图来自-ask-matt">6.1 工作流全景图（来自 <code>/ask-matt</code>）</a></li>
+  <li><a href="#preconditionsetup-matt-pocock-skills" id="toc-preconditionsetup-matt-pocock-skills" class="nav-link" data-scroll-target="#preconditionsetup-matt-pocock-skills">6.2 Precondition：<code>/setup-matt-pocock-skills</code></a></li>
+  <li><a href="#主流程入口grill-with-docs有-codebase-grill-me无-codebase" id="toc-主流程入口grill-with-docs有-codebase-grill-me无-codebase" class="nav-link" data-scroll-target="#主流程入口grill-with-docs有-codebase-grill-me无-codebase">6.3 主流程入口：<code>/grill-with-docs</code>（有 codebase）/ <code>/grill-me</code>（无 codebase）</a>
+  <ul class="collapse">
+  <li><a href="#选型决策" id="toc-选型决策" class="nav-link" data-scroll-target="#选型决策">选型决策</a></li>
+  <li><a href="#grill-with-docs-实际工作流" id="toc-grill-with-docs-实际工作流" class="nav-link" data-scroll-target="#grill-with-docs-实际工作流"><code>/grill-with-docs</code> 实际工作流</a></li>
+  <li><a href="#grilling-的核心循环追问机制" id="toc-grilling-的核心循环追问机制" class="nav-link" data-scroll-target="#grilling-的核心循环追问机制"><code>/grilling</code> 的核心循环（追问机制）</a></li>
+  <li><a href="#domain-modeling-的并行工作关键细节" id="toc-domain-modeling-的并行工作关键细节" class="nav-link" data-scroll-target="#domain-modeling-的并行工作关键细节"><code>/domain-modeling</code> 的并行工作（关键细节）</a></li>
+  <li><a href="#实际对话示例典型-8-15-轮" id="toc-实际对话示例典型-8-15-轮" class="nav-link" data-scroll-target="#实际对话示例典型-8-15-轮">实际对话示例（典型 8-15 轮）</a></li>
+  </ul></li>
+  <li><a href="#主流程第-2-步可选的-prototype-绕行" id="toc-主流程第-2-步可选的-prototype-绕行" class="nav-link" data-scroll-target="#主流程第-2-步可选的-prototype-绕行">6.4 主流程第 2 步：可选的 <code>/prototype</code> 绕行</a></li>
+  <li><a href="#跨会话桥梁handoff" id="toc-跨会话桥梁handoff" class="nav-link" data-scroll-target="#跨会话桥梁handoff">6.5 跨会话桥梁：<code>/handoff</code></a></li>
+  <li><a href="#主流程第-3-步to-spec对话-形式化-spec" id="toc-主流程第-3-步to-spec对话-形式化-spec" class="nav-link" data-scroll-target="#主流程第-3-步to-spec对话-形式化-spec">6.6 主流程第 3 步：<code>/to-spec</code>（对话 → 形式化 spec）</a></li>
+  <li><a href="#主流程第-4-步to-ticketsspec-可执行的小任务" id="toc-主流程第-4-步to-ticketsspec-可执行的小任务" class="nav-link" data-scroll-target="#主流程第-4-步to-ticketsspec-可执行的小任务">6.7 主流程第 4 步：<code>/to-tickets</code>（spec → 可执行的小任务）</a></li>
+  <li><a href="#主流程第-5-步implement驱动-tdd-code-review-commit" id="toc-主流程第-5-步implement驱动-tdd-code-review-commit" class="nav-link" data-scroll-target="#主流程第-5-步implement驱动-tdd-code-review-commit">6.8 主流程第 5 步：<code>/implement</code>（驱动 <code>/tdd</code> + <code>/code-review</code> + commit）</a></li>
+  <li><a href="#嵌入-implement-的子流程tdd" id="toc-嵌入-implement-的子流程tdd" class="nav-link" data-scroll-target="#嵌入-implement-的子流程tdd">6.9 嵌入 <code>/implement</code> 的子流程：<code>/tdd</code></a></li>
+  <li><a href="#嵌入-implement-的最后一步code-review" id="toc-嵌入-implement-的最后一步code-review" class="nav-link" data-scroll-target="#嵌入-implement-的最后一步code-review">6.10 嵌入 <code>/implement</code> 的最后一步：<code>/code-review</code></a></li>
+  <li><a href="#on-ramp-atriage堆积的-issue" id="toc-on-ramp-atriage堆积的-issue" class="nav-link" data-scroll-target="#on-ramp-atriage堆积的-issue">6.11 On-ramp A：<code>/triage</code>（堆积的 issue）</a></li>
+  <li><a href="#on-ramp-bdiagnosing-bugs修疑难-bug" id="toc-on-ramp-bdiagnosing-bugs修疑难-bug" class="nav-link" data-scroll-target="#on-ramp-bdiagnosing-bugs修疑难-bug">6.12 On-ramp B：<code>/diagnosing-bugs</code>（修疑难 bug）</a></li>
+  <li><a href="#on-ramp-cwayfinder超大任务" id="toc-on-ramp-cwayfinder超大任务" class="nav-link" data-scroll-target="#on-ramp-cwayfinder超大任务">6.13 On-ramp C：<code>/wayfinder</code>（超大任务）</a></li>
+  <li><a href="#健康通道improve-codebase-architecture独立运行" id="toc-健康通道improve-codebase-architecture独立运行" class="nav-link" data-scroll-target="#健康通道improve-codebase-architecture独立运行">6.14 健康通道：<code>/improve-codebase-architecture</code>（独立运行）</a></li>
+  <li><a href="#词汇层domain-modeling-codebase-design" id="toc-词汇层domain-modeling-codebase-design" class="nav-link" data-scroll-target="#词汇层domain-modeling-codebase-design">6.15 词汇层：<code>/domain-modeling</code> + <code>/codebase-design</code></a>
+  <ul class="collapse">
+  <li><a href="#domain-modeling领域语言维护者" id="toc-domain-modeling领域语言维护者" class="nav-link" data-scroll-target="#domain-modeling领域语言维护者"><code>/domain-modeling</code>：领域语言维护者</a></li>
+  <li><a href="#codebase-design深度模块词汇表" id="toc-codebase-design深度模块词汇表" class="nav-link" data-scroll-target="#codebase-design深度模块词汇表"><code>/codebase-design</code>：深度模块词汇表</a></li>
+  <li><a href="#这两个-skill-的关系" id="toc-这两个-skill-的关系" class="nav-link" data-scroll-target="#这两个-skill-的关系">这两个 skill 的关系</a></li>
+  </ul></li>
+  <li><a href="#standalone-skills独立使用" id="toc-standalone-skills独立使用" class="nav-link" data-scroll-target="#standalone-skills独立使用">6.16 Standalone Skills（独立使用）</a>
+  <ul class="collapse">
+  <li><a href="#grill-me无-codebase-时的对齐" id="toc-grill-me无-codebase-时的对齐" class="nav-link" data-scroll-target="#grill-me无-codebase-时的对齐"><code>/grill-me</code>：无 codebase 时的对齐</a></li>
+  <li><a href="#prototype设计验证" id="toc-prototype设计验证" class="nav-link" data-scroll-target="#prototype设计验证"><code>/prototype</code>：设计验证</a></li>
+  <li><a href="#research后台调研" id="toc-research后台调研" class="nav-link" data-scroll-target="#research后台调研"><code>/research</code>：后台调研</a></li>
+  <li><a href="#teach多会话教学" id="toc-teach多会话教学" class="nav-link" data-scroll-target="#teach多会话教学"><code>/teach</code>：多会话教学</a></li>
+  <li><a href="#writing-great-skills元技能" id="toc-writing-great-skills元技能" class="nav-link" data-scroll-target="#writing-great-skills元技能"><code>/writing-great-skills</code>：元技能</a></li>
+  </ul></li>
+  <li><a href="#完整工作流时间线端到端示例" id="toc-完整工作流时间线端到端示例" class="nav-link" data-scroll-target="#完整工作流时间线端到端示例">6.17 完整工作流时间线（端到端示例）</a></li>
+  <li><a href="#工作流经验总结" id="toc-工作流经验总结" class="nav-link" data-scroll-target="#工作流经验总结">6.18 工作流经验总结</a>
+  <ul class="collapse">
+  <li><a href="#关键时序约束来自-ask-matt-原文" id="toc-关键时序约束来自-ask-matt-原文" class="nav-link" data-scroll-target="#关键时序约束来自-ask-matt-原文">关键时序约束（来自 <code>/ask-matt</code> 原文）</a></li>
+  <li><a href="#smart-zone-限制原文" id="toc-smart-zone-限制原文" class="nav-link" data-scroll-target="#smart-zone-限制原文">Smart Zone 限制（原文）</a></li>
+  <li><a href="#不要做的事" id="toc-不要做的事" class="nav-link" data-scroll-target="#不要做的事">不要做的事</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#七5-个真实使用场景" id="toc-七5-个真实使用场景" class="nav-link" data-scroll-target="#七5-个真实使用场景">七、5 个真实使用场景</a>
+  <ul class="collapse">
+  <li><a href="#场景-1从零开发一个新功能" id="toc-场景-1从零开发一个新功能" class="nav-link" data-scroll-target="#场景-1从零开发一个新功能">场景 1：从零开发一个新功能</a></li>
+  <li><a href="#场景-2修一个诡异的-bug" id="toc-场景-2修一个诡异的-bug" class="nav-link" data-scroll-target="#场景-2修一个诡异的-bug">场景 2：修一个诡异的 bug</a></li>
+  <li><a href="#场景-3维护一个老项目定期做架构体检" id="toc-场景-3维护一个老项目定期做架构体检" class="nav-link" data-scroll-target="#场景-3维护一个老项目定期做架构体检">场景 3：维护一个老项目，定期做架构体检</a></li>
+  <li><a href="#场景-4交接给下一个会话的-agent" id="toc-场景-4交接给下一个会话的-agent" class="nav-link" data-scroll-target="#场景-4交接给下一个会话的-agent">场景 4：交接给下一个会话的 agent</a></li>
+  <li><a href="#场景-5跨会话教你一个复杂概念" id="toc-场景-5跨会话教你一个复杂概念" class="nav-link" data-scroll-target="#场景-5跨会话教你一个复杂概念">场景 5：跨会话教你一个复杂概念</a></li>
+  </ul></li>
+  <li><a href="#八元技能writing-great-skills" id="toc-八元技能writing-great-skills" class="nav-link" data-scroll-target="#八元技能writing-great-skills">八、元技能：<code>/writing-great-skills</code></a>
+  <ul class="collapse">
+  <li><a href="#核心词汇来自-skill.md-原文" id="toc-核心词汇来自-skill.md-原文" class="nav-link" data-scroll-target="#核心词汇来自-skill.md-原文">8.1 核心词汇（来自 SKILL.md 原文）</a></li>
+  <li><a href="#关键原则" id="toc-关键原则" class="nav-link" data-scroll-target="#关键原则">8.2 关键原则</a>
+  <ul class="collapse">
+  <li><a href="#原则-1description-是双重身份的" id="toc-原则-1description-是双重身份的" class="nav-link" data-scroll-target="#原则-1description-是双重身份的">原则 1：Description 是双重身份的</a></li>
+  <li><a href="#原则-2information-hierarchy-三级" id="toc-原则-2information-hierarchy-三级" class="nav-link" data-scroll-target="#原则-2information-hierarchy-三级">原则 2：Information Hierarchy 三级</a></li>
+  <li><a href="#原则-3用-leading-word-压缩" id="toc-原则-3用-leading-word-压缩" class="nav-link" data-scroll-target="#原则-3用-leading-word-压缩">原则 3：用 Leading Word 压缩</a></li>
+  <li><a href="#原则-4失败模式速查表" id="toc-原则-4失败模式速查表" class="nav-link" data-scroll-target="#原则-4失败模式速查表">原则 4：失败模式速查表</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#九和-trellis-等编排框架的对比" id="toc-九和-trellis-等编排框架的对比" class="nav-link" data-scroll-target="#九和-trellis-等编排框架的对比">九、和 Trellis 等编排框架的对比</a>
+  <ul class="collapse">
+  <li><a href="#三类项目定位" id="toc-三类项目定位" class="nav-link" data-scroll-target="#三类项目定位">9.1 三类项目定位</a></li>
+  <li><a href="#何时选哪个" id="toc-何时选哪个" class="nav-link" data-scroll-target="#何时选哪个">9.2 何时选哪个</a></li>
+  <li><a href="#可以混用吗" id="toc-可以混用吗" class="nav-link" data-scroll-target="#可以混用吗">9.3 可以混用吗？</a></li>
+  </ul></li>
+  <li><a href="#十决策清单" id="toc-十决策清单" class="nav-link" data-scroll-target="#十决策清单">十、决策清单</a>
+  <ul class="collapse">
+  <li><a href="#什么时候用-mattpocockskills" id="toc-什么时候用-mattpocockskills" class="nav-link" data-scroll-target="#什么时候用-mattpocockskills">10.1 什么时候用 mattpocock/skills</a></li>
+  <li><a href="#推荐试用路径" id="toc-推荐试用路径" class="nav-link" data-scroll-target="#推荐试用路径">10.2 推荐试用路径</a></li>
+  <li><a href="#不要犯的错" id="toc-不要犯的错" class="nav-link" data-scroll-target="#不要犯的错">10.3 不要犯的错</a></li>
+  </ul></li>
+  <li><a href="#十一5-分钟快速参考" id="toc-十一5-分钟快速参考" class="nav-link" data-scroll-target="#十一5-分钟快速参考">十一、5 分钟快速参考</a></li>
+  <li><a href="#参考资料" id="toc-参考资料" class="nav-link" data-scroll-target="#参考资料">参考资料</a>
+  <ul class="collapse">
+  <li><a href="#官方资源" id="toc-官方资源" class="nav-link" data-scroll-target="#官方资源">官方资源</a></li>
+  <li><a href="#学习资源" id="toc-学习资源" class="nav-link" data-scroll-target="#学习资源">学习资源</a></li>
+  </ul></li>
+  <li><a href="#引用信息" id="toc-引用信息" class="nav-link" data-scroll-target="#引用信息">引用信息</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="matt-pocock-skills-实战指南让-ai-写出经得起工程审视的代码" class="level1">
+<h1>Matt Pocock Skills 实战指南：让 AI 写出经得起工程审视的代码</h1>
+<blockquote class="blockquote">
+<p><strong>一句话定位</strong>：Matt Pocock 的 skills 仓库是一套装进 AI 代理 <code>.claude</code> 目录的工程纪律——把对齐、TDD、系统调试、架构护理这些”老派软件工程”做成可重复的技能，让 Claude Code / Codex / Cursor 等代理写出<strong>经得起工程师审视</strong>的代码，而不是 vibe coding 的产物。</p>
+</blockquote>
+<hr>
+<section id="一为什么这个仓库值得你花-30-分钟读完" class="level2">
+<h2 class="anchored" data-anchor-id="一为什么这个仓库值得你花-30-分钟读完">一、为什么这个仓库值得你花 30 分钟读完</h2>
+<section id="一组震撼的数字" class="level3">
+<h3 class="anchored" data-anchor-id="一组震撼的数字">1.1 一组震撼的数字</h3>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>指标</th>
+<th>数值</th>
+<th>对比</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>GitHub Stars</strong></td>
+<td><strong>166,818</strong></td>
+<td>比同类 SDD 框架 BMAD-METHOD（~12k）高 13 倍</td>
+</tr>
+<tr class="even">
+<td><strong>Forks</strong></td>
+<td>14,378</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><strong>License</strong></td>
+<td>MIT</td>
+<td>完全可 fork、可商用</td>
+</tr>
+<tr class="even">
+<td><strong>版本</strong></td>
+<td>v1.1.0（2026-07-08）</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><strong>首次提交</strong></td>
+<td>2026-02-03</td>
+<td>5 个月从 0 到 16.7 万 star</td>
+</tr>
+<tr class="even">
+<td><strong>Newsletter</strong></td>
+<td>~60,000 订阅者</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>这是什么概念？这是 2026 年 AI 编程领域增速最快、最受关注的工程类开源项目。它不是一个新框架、不是新 IDE、不是新模型——它<strong>只是一些 Markdown 文件</strong>，但凝结了 Matt Pocock 几十年工程经验。</p>
+</section>
+<section id="它解决了什么" class="level3">
+<h3 class="anchored" data-anchor-id="它解决了什么">1.2 它解决了什么</h3>
+<p>Matt Pocock 在 README 里总结了 4 个 AI Coding 的核心失败模式，并对应给出解决方案：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>#</th>
+<th>失败模式</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td>Agent 没做你想要的事</td>
+<td><code>/grill-me</code> &amp; <code>/grill-with-docs</code></td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>Agent 太啰嗦、术语不一致</td>
+<td>共享语言 + <code>CONTEXT.md</code></td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td>生成的代码不工作</td>
+<td><code>/tdd</code> + <code>/diagnosing-bugs</code></td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td>代码库变成一团乱麻</td>
+<td><code>/improve-codebase-architecture</code></td>
+</tr>
+</tbody>
+</table>
+<p>每一项都不靠”框架接管你的开发流程”实现——Matt 明确反对 GSD、BMAD、Spec-Kit 那种”代办一切”的做法。Skills 的哲学是：</p>
+<blockquote class="blockquote">
+<p><strong>小、易适配、可组合。适用于任何模型。把控制权留给你。</strong></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="二5-分钟快速上手" class="level2">
+<h2 class="anchored" data-anchor-id="二5-分钟快速上手">二、5 分钟快速上手</h2>
+<section id="安装30-秒" class="level3">
+<h3 class="anchored" data-anchor-id="安装30-秒">2.1 安装（30 秒）</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills@latest add mattpocock/skills</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>按交互提示选择：</p>
+<ol type="1">
+<li>你要安装哪些 skills（先全选也无妨，每个都是独立模块）</li>
+<li>装到哪个 AI 代理（Claude Code / Codex CLI / Cursor / Aider / Cline 等）</li>
+<li><strong>务必勾选 <code>/setup-matt-pocock-skills</code></strong>——这是初始化 skill，每个仓库跑一次</li>
+</ol>
+</section>
+<section id="初始化每个仓库一次" class="level3">
+<h3 class="anchored" data-anchor-id="初始化每个仓库一次">2.2 初始化（每个仓库一次）</h3>
+<p>打开你的 AI 代理（以 Claude Code 为例），运行：</p>
+<pre><code>/setup-matt-pocock-skills</code></pre>
+<p>它会问你 3 个问题：</p>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 39%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>问题</th>
+<th>默认选项</th>
+<th>何时改</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Issue tracker 用哪个？</strong></td>
+<td>GitHub Issues</td>
+<td>用 Linear / Jira / 本地 Markdown 时改</td>
+</tr>
+<tr class="even">
+<td><strong>Triage labels 用什么？</strong></td>
+<td><code>needs-triage</code> / <code>needs-info</code> / <code>ready-for-agent</code> / <code>ready-for-human</code> / <code>wontfix</code></td>
+<td>你已有约定俗成的标签时改</td>
+</tr>
+<tr class="odd">
+<td><strong>Domain docs 放哪？</strong></td>
+<td>单仓库布局（<code>CONTEXT.md</code> + <code>docs/adr/</code>）</td>
+<td>Monorepo 改多 context 布局</td>
+</tr>
+</tbody>
+</table>
+<p>完成后会自动创建：</p>
+<ul>
+<li><code>docs/agents/issue-tracker.md</code></li>
+<li><code>docs/agents/domain.md</code></li>
+<li><code>docs/agents/triage-labels.md</code>（如果装了 triage skill）</li>
+<li>在 <code>CLAUDE.md</code> 或 <code>AGENTS.md</code> 加 <code>## Agent skills</code> 块</li>
+</ul>
+</section>
+<section id="第一个-skill和-ai-对齐需求" class="level3">
+<h3 class="anchored" data-anchor-id="第一个-skill和-ai-对齐需求">2.3 第一个 Skill：和 AI 对齐需求</h3>
+<p>对齐是这套 skills 最核心、最受欢迎的入口。试试这个：</p>
+<pre><code>/grill-me "我想给项目加一个用户头像上传功能"</code></pre>
+<p>接下来 AI 会<strong>连续追问</strong>你——不接受含糊答案：</p>
+<pre><code>Q1: 这个功能的用户是谁？（普通用户 / 后台管理员 / 两者？）
+Q2: 文件大小上限是多少？为什么是这个数字？
+Q3: 支持哪些图片格式？是否需要 EXIF 处理？
+Q4: 上传后的存储位置？本地？S3？CDN？
+...</code></pre>
+<p>追问结束、AI 输出一份<strong>精炼的计划</strong>后，你的下一步才有意义。</p>
+<hr>
+</section>
+</section>
+<section id="三核心设计哲学" class="level2">
+<h2 class="anchored" data-anchor-id="三核心设计哲学">三、核心设计哲学</h2>
+<section id="仓库的二维分类" class="level3">
+<h3 class="anchored" data-anchor-id="仓库的二维分类">3.1 仓库的二维分类</h3>
+<p>Matt Pocock 把 skills 按<strong>两个维度</strong>分类：</p>
+<p><strong>维度 1：调用方</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 28%">
+<col style="width: 25%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>类型</th>
+<th>YAML 标记</th>
+<th>触发方式</th>
+<th>上下文代价</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>User-invoked（用户触发）</strong></td>
+<td><code>disable-model-invocation: true</code></td>
+<td>你输入 <code>/skill-name</code> 才触发</td>
+<td>0（description 不进上下文）</td>
+</tr>
+<tr class="even">
+<td><strong>Model-invoked（模型触发）</strong></td>
+<td>默认</td>
+<td>AI 自动判断何时该用</td>
+<td>占用上下文（description 一直在）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>维度 2：领域</strong></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>分类</th>
+<th>数量</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Engineering</strong></td>
+<td>17 个</td>
+<td>代码工作专用</td>
+</tr>
+<tr class="even">
+<td><strong>Productivity</strong></td>
+<td>5 个</td>
+<td>通用工作流（非编码）</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="关键约束来自源码" class="level3">
+<h3 class="anchored" data-anchor-id="关键约束来自源码">3.2 关键约束（来自源码）</h3>
+<p>User-invoked skill 可以调用 Model-invoked skill，但<strong>不能调用另一个 User-invoked skill</strong>。这个约束保证：</p>
+<ul>
+<li>用户不会因级联触发失控</li>
+<li>模型每次只被一个”菜单”指挥</li>
+</ul>
+</section>
+<section id="不接管你的流程" class="level3">
+<h3 class="anchored" data-anchor-id="不接管你的流程">3.3 不接管你的流程</h3>
+<p>README 里的原话：</p>
+<blockquote class="blockquote">
+<p>“Approaches like GSD, BMAD, and Spec-Kit try to help by owning the process. But while doing so, they take away your control and make bugs in the process hard to resolve.”</p>
+</blockquote>
+<p>对比：</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>项目</th>
+<th>哲学</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Trellis</strong></td>
+<td>AI 是新成员，spec 是入职手册（<strong>框架驱动</strong>）</td>
+</tr>
+<tr class="even">
+<td><strong>BMAD / GSD / Spec-Kit</strong></td>
+<td>多角色代办一切（<strong>框架代办</strong>）</td>
+</tr>
+<tr class="odd">
+<td><strong>mattpocock/skills</strong></td>
+<td>提供工程纪律工具，你保留所有控制权（<strong>技能库</strong>）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="四4-大痛点-对应-skill-详解" class="level2">
+<h2 class="anchored" data-anchor-id="四4-大痛点-对应-skill-详解">四、4 大痛点 × 对应 Skill 详解</h2>
+<section id="痛点-1agent-没做你想要的事-grill-me-grill-with-docs" class="level3">
+<h3 class="anchored" data-anchor-id="痛点-1agent-没做你想要的事-grill-me-grill-with-docs">4.1 痛点 1：Agent 没做你想要的事 → <code>/grill-me</code> &amp; <code>/grill-with-docs</code></h3>
+<section id="grill-meproductivity" class="level4">
+<h4 class="anchored" data-anchor-id="grill-meproductivity"><code>/grill-me</code>（Productivity）</h4>
+<p><strong>SKILL.md 全文（就是这么简洁）：</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> grill-me</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> A relentless interview to sharpen a plan or design.</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="an">disable-model-invocation:</span><span class="co"> true</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>Run a <span class="in">`/grilling`</span> session.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>它本身只是个”开关”，真正工作的是底层的 <code>/grilling</code> 模型触发 skill——会<strong>不依不饶地追问</strong>，直到计划里每个决策分支都被覆盖。</p>
+</section>
+<section id="grill-with-docsengineering" class="level4">
+<h4 class="anchored" data-anchor-id="grill-with-docsengineering"><code>/grill-with-docs</code>（Engineering）</h4>
+<p>跟 <code>/grill-me</code> 的区别：在追问过程中<strong>顺便维护项目领域模型</strong>：</p>
+<ul>
+<li>精炼术语</li>
+<li>更新 <code>CONTEXT.md</code>（共享语言词典）</li>
+<li>把难以解释的决策记录成 ADR（Architecture Decision Records）</li>
+</ul>
+</section>
+<section id="共享语言的力量readme-例子" class="level4">
+<h4 class="anchored" data-anchor-id="共享语言的力量readme-例子">共享语言的力量（README 例子）</h4>
+<blockquote class="blockquote">
+<p>BEFORE: “There’s a problem when a lesson inside a section of a course is made ‘real’ (i.e.&nbsp;given a spot in the file system)”</p>
+<p>AFTER: “There’s a problem with the materialization cascade”</p>
+</blockquote>
+<p>22 个字 → 8 个字。每次会话、每次 prompt、每次回答都节省 token，<strong>而且让 AI 思考更准确</strong>——它不再用 20 个字描述 1 个概念。</p>
+</section>
+</section>
+<section id="痛点-2agent-太啰嗦-context.md-adr" class="level3">
+<h3 class="anchored" data-anchor-id="痛点-2agent-太啰嗦-context.md-adr">4.2 痛点 2：Agent 太啰嗦 → <code>CONTEXT.md</code> + ADR</h3>
+<p>Matt 的核心洞察：<strong>冗长不是因为 AI 笨，而是因为它不知道你们项目的”行话”</strong>。</p>
+<p><code>CONTEXT.md</code> 是项目的<strong>共享词典</strong>，长这样：</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># CONTEXT</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Materialization Cascade</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>The chain of side effects when a lesson moves from "scheduled"</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>to "real" (gets a slot in the file system, becomes streamable,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>notifies enrolled students).</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## ADR-0007: We Do Not Auto-Generate Lesson Transcripts</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>Decision: ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>AI 读到这个文件后，会<strong>自动用这些术语</strong>。每次都省 token，且前后一致。</p>
+</section>
+<section id="痛点-3代码不工作-tdd-diagnosing-bugs" class="level3">
+<h3 class="anchored" data-anchor-id="痛点-3代码不工作-tdd-diagnosing-bugs">4.3 痛点 3：代码不工作 → <code>/tdd</code> + <code>/diagnosing-bugs</code></h3>
+<section id="tddtdd-不是仪式是反馈循环" class="level4">
+<h4 class="anchored" data-anchor-id="tddtdd-不是仪式是反馈循环"><code>/tdd</code>：TDD 不是仪式，是反馈循环</h4>
+<p><strong>核心规则（来自 SKILL.md 原文）：</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rules of the loop</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Red before green.** Write the failing test first, then only enough code to pass it.</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**One slice at a time.** One seam, one test, one minimal implementation per cycle.</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Refactoring is not part of the loop.** It belongs to the review stage.</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Seams — where tests go</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>A seam is the public boundary you test at: the interface where</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>you observe behavior without reaching inside.</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>**Test only at pre-agreed seams.** Before writing any test, write</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>down the seams under test and confirm them with the user.</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Anti-patterns</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Implementation-coupled — mocks internal collaborators, tests</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  private methods, or verifies through a side channel</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tautological — the assertion recomputes the expected value the</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  way the code does</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Horizontal slicing — writing all tests first, then all</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  implementation. Work in vertical slices instead.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键概念”接缝（Seam）“</strong>——测试只在公共边界写，<strong>不针对内部实现</strong>。这样代码重构时测试不会大面积红。</p>
+</section>
+<section id="diagnosing-bugs6-阶段硬核调试" class="level4">
+<h4 class="anchored" data-anchor-id="diagnosing-bugs6-阶段硬核调试"><code>/diagnosing-bugs</code>：6 阶段硬核调试</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="an">Phase 1:</span><span class="co"> Build a feedback loop   ← 整个 skill 的灵魂</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="an">Phase 2:</span><span class="co"> Reproduce + minimise</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="an">Phase 3:</span><span class="co"> Hypothesise            ← 3-5 个排序假设，不是 1 个</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="an">Phase 4:</span><span class="co"> Instrument             ← 每个 probe 对应 1 个假设</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="an">Phase 5:</span><span class="co"> Fix + regression test</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="an">Phase 6:</span><span class="co"> Cleanup + post-mortem</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Phase 1 是关键</strong>：如果有一条<strong>紧的、能复现 bug 的反馈回路</strong>，剩下都是机械工作。原文：</p>
+<blockquote class="blockquote">
+<p>“Build the right feedback loop, and the bug is 90% fixed.”</p>
+</blockquote>
+<p>它列了 10 种构造反馈回路的方法（按推荐顺序）：</p>
+<ol type="1">
+<li><strong>失败的测试</strong>（最佳）</li>
+<li>curl / HTTP 脚本</li>
+<li>CLI + fixture</li>
+<li>Playwright / Puppeteer</li>
+<li>重放捕获的 trace</li>
+<li>一次性 harness</li>
+<li>Property / fuzz 循环</li>
+<li>Bisection harness（<code>git bisect run</code>）</li>
+<li>Differential loop（新旧版本对比）</li>
+<li>HITL bash 脚本（最后手段）</li>
+</ol>
+</section>
+</section>
+<section id="痛点-4代码库变成一团乱麻-improve-codebase-architecture" class="level3">
+<h3 class="anchored" data-anchor-id="痛点-4代码库变成一团乱麻-improve-codebase-architecture">4.4 痛点 4：代码库变成一团乱麻 → <code>/improve-codebase-architecture</code></h3>
+<p><strong>这个 skill 是最有”视觉冲击力”的</strong>——它会：</p>
+<ol type="1">
+<li>派出 Explore 子代理扫描代码库</li>
+<li>找出<strong>深度机会（deepening opportunities）</strong>——把浅模块变深的重构</li>
+<li>生成一份<strong>自包含 HTML 报告</strong>（带 before/after 对比图）</li>
+<li>在临时目录打开（不会污染仓库）</li>
+<li>你选一个感兴趣的，进入 <code>/grilling</code> 循环深挖</li>
+</ol>
+<p>报告样式（来自 SKILL.md 原文描述）：</p>
+<ul>
+<li><strong>Tailwind via CDN</strong> + <strong>Mermaid via CDN</strong></li>
+<li>每个候选机会一张卡片，包含：Files / Problem / Solution / Benefits / Before-After 图 / 推荐强度（Strong / Worth exploring / Speculative）</li>
+<li>推荐强度用 badge 标识</li>
+<li>末尾有 <strong>Top recommendation</strong></li>
+</ul>
+<p><strong>核心理念：深度模块</strong>——来自 John Ousterhout《A Philosophy of Software Design》：</p>
+<blockquote class="blockquote">
+<p>“The best modules are deep. They allow a lot of functionality to be accessed through a simple interface.”</p>
+</blockquote>
+<p>Matt 把它翻译成 AI 代理可以执行的具体词汇：<strong>模块、接口、深度、接缝、适配器、杠杆、本地性</strong>。这些词在仓库的 <code>/codebase-design</code> skill 中有完整定义。</p>
+<hr>
+</section>
+</section>
+<section id="五其他值得知道的-skill-速查" class="level2">
+<h2 class="anchored" data-anchor-id="五其他值得知道的-skill-速查">五、其他值得知道的 Skill 速查</h2>
+<section id="engineering17-个" class="level3">
+<h3 class="anchored" data-anchor-id="engineering17-个">5.1 Engineering（17 个）</h3>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 34%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>调用方</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/grill-with-docs</code></td>
+<td>用户</td>
+<td>追问 + 维护领域模型</td>
+</tr>
+<tr class="even">
+<td><code>/triage</code></td>
+<td>用户</td>
+<td>状态机式分类 GitHub Issues</td>
+</tr>
+<tr class="odd">
+<td><code>/to-spec</code></td>
+<td>用户</td>
+<td>把对话合成 spec 发到 issue tracker</td>
+</tr>
+<tr class="even">
+<td><code>/to-tickets</code></td>
+<td>用户</td>
+<td>把 spec 拆成有依赖关系的 tracer-bullet tickets</td>
+</tr>
+<tr class="odd">
+<td><code>/implement</code></td>
+<td>用户</td>
+<td>按 spec/tickets 实现，自动套 <code>/tdd</code> + <code>/code-review</code></td>
+</tr>
+<tr class="even">
+<td><code>/wayfinder</code></td>
+<td>用户</td>
+<td>规划超大任务（一个会话装不下）</td>
+</tr>
+<tr class="odd">
+<td><code>/ask-matt</code></td>
+<td>用户</td>
+<td>路由——不知道用哪个时问它</td>
+</tr>
+<tr class="even">
+<td><code>/setup-matt-pocock-skills</code></td>
+<td>用户</td>
+<td>每个仓库跑一次的初始化</td>
+</tr>
+<tr class="odd">
+<td><code>/tdd</code></td>
+<td>模型</td>
+<td>TDD 红绿重构</td>
+</tr>
+<tr class="even">
+<td><code>/diagnosing-bugs</code></td>
+<td>模型</td>
+<td>6 阶段调试</td>
+</tr>
+<tr class="odd">
+<td><code>/prototype</code></td>
+<td>模型</td>
+<td>一次性原型</td>
+</tr>
+<tr class="even">
+<td><code>/research</code></td>
+<td>模型</td>
+<td>调研（带引用）</td>
+</tr>
+<tr class="odd">
+<td><code>/domain-modeling</code></td>
+<td>模型</td>
+<td>维护领域模型</td>
+</tr>
+<tr class="even">
+<td><code>/codebase-design</code></td>
+<td>模型</td>
+<td>深度模块设计词汇</td>
+</tr>
+<tr class="odd">
+<td><code>/code-review</code></td>
+<td>模型</td>
+<td>双轴审查（Standards + Spec）</td>
+</tr>
+<tr class="even">
+<td><code>/improve-codebase-architecture</code></td>
+<td>用户</td>
+<td>HTML 报告 + 接缝深化</td>
+</tr>
+<tr class="odd">
+<td><code>/resolving-merge-conflicts</code></td>
+<td>模型</td>
+<td>解决合并冲突</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="productivity5-个" class="level3">
+<h3 class="anchored" data-anchor-id="productivity5-个">5.2 Productivity（5 个）</h3>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 34%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>调用方</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/grill-me</code></td>
+<td>用户</td>
+<td>追问直到想清楚</td>
+</tr>
+<tr class="even">
+<td><code>/grilling</code></td>
+<td>模型</td>
+<td>追问的底层实现（被 grill-me 和 grill-with-docs 调用）</td>
+</tr>
+<tr class="odd">
+<td><code>/handoff</code></td>
+<td>用户</td>
+<td>上下文交接——把当前对话压缩给下一个 agent</td>
+</tr>
+<tr class="even">
+<td><code>/teach</code></td>
+<td>用户</td>
+<td>教你一个新技能（多会话状态化教学）</td>
+</tr>
+<tr class="odd">
+<td><code>/writing-great-skills</code></td>
+<td>用户</td>
+<td>元技能——教你<strong>怎么写好的 skill</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="六典型工作流逐个-skill-详解" class="level2">
+<h2 class="anchored" data-anchor-id="六典型工作流逐个-skill-详解">六、典型工作流：逐个 Skill 详解</h2>
+<p>这部分是仓库里最实用、却最少人讲透的内容。Matt 自己在 <code>/ask-matt</code> skill 里画出了完整的”路由地图”——22 个 skill 不是平铺的，而是一条<strong>主流程 + 2 个 on-ramp + 1 个健康通道 + 1 个词汇层</strong>的有向图。我按这条工作流逐一展开。</p>
+<section id="工作流全景图来自-ask-matt" class="level3">
+<h3 class="anchored" data-anchor-id="工作流全景图来自-ask-matt">6.1 工作流全景图（来自 <code>/ask-matt</code>）</h3>
+<pre class="text"><code>                    ┌─────────────────────────────────────────────┐
+                    │  Precondition（每个仓库跑一次）              │
+                    │  /setup-matt-pocock-skills                   │
+                    └────────────────────┬────────────────────────┘
+                                         │
+            ┌────────────────────────────┼────────────────────────────┐
+            │                            │                            │
+            ▼                            ▼                            ▼
+   ┌─────────────────┐         ┌──────────────────┐         ┌──────────────────┐
+   │  On-ramp A      │         │  On-ramp B       │         │  On-ramp C       │
+   │  /triage        │         │  /diagnosing-bugs│         │  /wayfinder      │
+   │ (堆积的 issue)  │         │  (修 bug)        │         │ (超大任务)       │
+   └────────┬────────┘         └─────────┬────────┘         └─────────┬────────┘
+            │                            │                            │
+            └────────────────────────────┼────────────────────────────┘
+                                         │
+                                         ▼
+                          ┌──────────────────────────┐
+                          │  主流程：idea → ship     │
+                          │                          │
+                          │  /grill-with-docs  ★入口 │
+                          │     ↓                   │
+                          │  [可选]/prototype 绕行   │
+                          │     ↓                   │
+                          │  /to-spec               │
+                          │     ↓                   │
+                          │  /to-tickets            │
+                          │     ↓                   │
+                          │  /implement             │
+                          │    ├─ /tdd 循环         │
+                          │    └─ /code-review      │
+                          │     ↓                   │
+                          │   commit                │
+                          └──────────────────────────┘
+
+  健康通道（独立运行）/improve-codebase-architecture（每周）
+  词汇层（被上层调用）/domain-modeling  /codebase-design
+  跨会话桥接（任意时刻）  /handoff
+  Standalone  /grill-me /prototype /research /teach /writing-great-skills</code></pre>
+<blockquote class="blockquote">
+<p>★ 入口选择：有 codebase 用 <code>/grill-with-docs</code>，无 codebase 用 <code>/grill-me</code>。 ※ 上层流程会<strong>自动调用</strong>下层词汇 skill（如 <code>/grill-with-docs</code> 会同时跑 <code>/grilling</code> + <code>/domain-modeling</code>），所以你不用手动逐个触发。</p>
+</blockquote>
+</section>
+<section id="preconditionsetup-matt-pocock-skills" class="level3">
+<h3 class="anchored" data-anchor-id="preconditionsetup-matt-pocock-skills">6.2 Precondition：<code>/setup-matt-pocock-skills</code></h3>
+<p><strong>何时用</strong>：每个仓库<strong>第一次</strong>用 engineering skills 之前。</p>
+<p><strong>它做什么</strong>（来自 SKILL.md 原文）：</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Process</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Explore</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>git remote -v → 是不是 GitHub 仓库？</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>AGENTS.md / CLAUDE.md → 有没有？</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CONTEXT.md → 有没有？</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>docs/adr/ → 有没有？</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>.scratch/ → 有没有？</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. 引导 3 个配置决策</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>Section A — Issue tracker  GitHub / GitLab / Local / Other</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>Section B — Triage labels    默认 5 个角色标签</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>Section C — Domain docs      单 context 或多 context（monorepo）</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Confirm and edit</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>展示草稿，确认后再写。</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. Write</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>写 ## Agent skills 块到 CLAUDE.md 或 AGENTS.md</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>创建 docs/agents/issue-tracker.md</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>创建 docs/agents/domain.md</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>创建 docs/agents/triage-labels.md（如装 triage）</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5. Done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>实际产出</strong>（写完后你的仓库多出这些）：</p>
+<pre><code>your-repo/
+├── CLAUDE.md（新增 ## Agent skills 块）
+├── docs/
+│   └── agents/
+│       ├── issue-tracker.md    ← GitHub/GitLab/Local 行为说明
+│       ├── domain.md           ← CONTEXT.md 消费者规则
+│       └── triage-labels.md    ← 标签映射（如果装了 triage）</code></pre>
+<p><strong>关键原则（来自 SKILL.md 原文）</strong>：</p>
+<blockquote class="blockquote">
+<p>“Never create <code>AGENTS.md</code> when <code>CLAUDE.md</code> already exists (or vice versa) — always edit the one that’s already there.”</p>
+</blockquote>
+<p>——不擅自创建文件，不破坏用户已有结构。</p>
+<p><strong>实际对话示例</strong>：</p>
+<pre><code>你：/setup-matt-pocock-skills
+
+AI：我探测了一下这个仓库
+   ✓ git remote 指向 GitHub
+   ✓ 没有 CLAUDE.md / AGENTS.md
+   ✗ 没有 CONTEXT.md
+   ✗ 没有 docs/adr/
+   ✗ 没有 .scratch/
+
+Section A — Issue tracker
+  推荐 GitHub（默认）：用 gh CLI 创建 issue
+  接受吗？(yes/no)
+
+你：yes
+
+AI：Section B — Triage labels
+  默认 5 个：needs-triage / needs-info / ready-for-agent / ready-for-human / wontfix
+  接受默认吗？(yes/no)
+
+你：yes
+
+AI：Section C — Domain docs
+  默认单 context：CONTEXT.md + docs/adr/ 在仓库根
+  接受默认吗？(yes/no)
+
+你：yes
+
+AI：正在写入...
+   ✓ docs/agents/issue-tracker.md
+   ✓ docs/agents/domain.md
+   ✓ docs/agents/triage-labels.md
+   ✓ CLAUDE.md（新增 ## Agent skills 块）
+
+完成！从此：
+  /to-spec /to-tickets /triage 会自动用 GitHub
+  /grill-with-docs /domain-modeling 会读写 CONTEXT.md</code></pre>
+<hr>
+</section>
+<section id="主流程入口grill-with-docs有-codebase-grill-me无-codebase" class="level3">
+<h3 class="anchored" data-anchor-id="主流程入口grill-with-docs有-codebase-grill-me无-codebase">6.3 主流程入口：<code>/grill-with-docs</code>（有 codebase）/ <code>/grill-me</code>（无 codebase）</h3>
+<section id="选型决策" class="level4">
+<h4 class="anchored" data-anchor-id="选型决策">选型决策</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th>场景</th>
+<th>用哪个</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>你<strong>已经有代码仓库</strong>（最常见）</td>
+<td><code>/grill-with-docs</code></td>
+</tr>
+<tr class="even">
+<td>你在做一个非代码的设计/计划（PPT、书、产品决策）</td>
+<td><code>/grill-me</code></td>
+</tr>
+<tr class="odd">
+<td>你想让 AI 把成果写进 <code>CONTEXT.md</code> / ADR</td>
+<td>必须是 <code>/grill-with-docs</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="grill-with-docs-实际工作流" class="level4">
+<h4 class="anchored" data-anchor-id="grill-with-docs-实际工作流"><code>/grill-with-docs</code> 实际工作流</h4>
+<p><strong>SKILL.md 全文</strong>（就是这么简洁）：</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> grill-with-docs</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> A relentless interview to sharpen a plan or design,</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">  which also creates docs (ADR's and glossary) as we go.</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="an">disable-model-invocation:</span><span class="co"> true</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>Run a <span class="in">`/grilling`</span> session, using the <span class="in">`/domain-modeling`</span> skill.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>它做的事 = <code>/grilling</code>（不依不饶地追问）+ <code>/domain-modeling</code>（追问时维护领域模型）。</p>
+</section>
+<section id="grilling-的核心循环追问机制" class="level4">
+<h4 class="anchored" data-anchor-id="grilling-的核心循环追问机制"><code>/grilling</code> 的核心循环（追问机制）</h4>
+<p>虽然 SKILL.md 极简，但 <code>/grilling</code> 作为 Model-invoked skill，它的 description 决定了行为模式：</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Interview the user relentlessly about a plan or design</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>until every branch of the decision tree is resolved. The reusable</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>loop behind grill-me and grill-with-docs.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>关键短语： - <strong>relentlessly</strong>（不依不饶）—— <code>writing-great-skills</code> 里说这是 “leading word”，利用模型预训练中已有概念，触发更强的追问行为 - <strong>every branch</strong>（每个分支）—— 不接受”差不多就行” - <strong>decision tree</strong>（决策树）—— 显式要求遍历所有决策节点</p>
+</section>
+<section id="domain-modeling-的并行工作关键细节" class="level4">
+<h4 class="anchored" data-anchor-id="domain-modeling-的并行工作关键细节"><code>/domain-modeling</code> 的并行工作（关键细节）</h4>
+<p><code>/grill-with-docs</code> 在追问时<strong>同时</strong>触发 <code>/domain-modeling</code>（Model-invoked），它做的事（来自 SKILL.md 原文）：</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Challenge against the glossary</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>当用户用词和 CONTEXT.md 冲突时立即指出：</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>"你的 glossary 把 cancellation 定义为 X，但你似乎是说 Y"</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">### Sharpen fuzzy language</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>当用户用模糊词时提议精确术语：</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>"你说 account — 是 Customer 还是 User？它们是两个不同概念。"</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### Discuss concrete scenarios</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>对模糊的领域关系构造具体场景探测边界</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="fu">### Cross-reference with code</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>用户说"X 工作是这样"——检查代码是否一致。</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>"你的代码取消整个 Order，但你刚说允许部分取消——哪个对？"</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### Update CONTEXT.md inline</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>术语一解决立刻更新。不批量延后。</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### Offer ADRs sparingly</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>只在三个条件都满足时提议 ADR：</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Hard to reverse（难以撤销）</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Surprising without context（不解释会奇怪）</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>The result of a real trade-off（真的有取舍）</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>ADR 的”三条件”是核心约束</strong>——不是所有决策都需要 ADR，只记录<strong>真正的、难以撤销的、有取舍的</strong>决策。这避免 CONTEXT.md 变成杂物堆。</p>
+</section>
+<section id="实际对话示例典型-8-15-轮" class="level4">
+<h4 class="anchored" data-anchor-id="实际对话示例典型-8-15-轮">实际对话示例（典型 8-15 轮）</h4>
+<pre><code>你：/grill-with-docs "我要做一个 webhook 重试队列，指数退避"
+
+AI：
+  Q1: 这个功能的服务对象是谁？是你自己的内部服务，还是客户的 webhook？
+  Q2: 重试触发条件是什么？HTTP 5xx？timeout？connection error？全部？
+  Q3: 重试间隔怎么算？固定 / 线性 / 指数 / 带 jitter？jitter 的分布？
+  Q4: 最大重试次数？超过后是死信队列还是丢弃？
+  Q5: 重试状态持久化在哪里？数据库？Redis？文件？
+  Q6: 多实例部署时如何避免同一事件被多次重试？
+  Q7: 用户能手动触发重试吗？怎么暴露这个操作？
+  Q8: 监控指标要哪些？队列长度？失败率？平均重试次数？
+
+你：（逐一回答）
+
+AI：（最后输出）
+  ## Plan: Webhook Retry Queue
+  
+  ### Behavior
+  - 用 exponential backoff with full jitter
+  - 最大 5 次重试
+  - 失败后写入 dead_letter_webhooks 表
+  - 状态持久化在 PostgreSQL（用 SELECT ... FOR UPDATE SKIP LOCKED）
+  
+  ### Out of Scope
+  - 多区域灾备
+  - 跨账号 webhook
+  - Webhook 签名验证
+  
+  ### Open Questions
+  - 重试时间窗口？仅工作时间？24/7？
+  
+  ### Glossary Updates
+  - 新增 "Retry Attempt" 概念（一次具体的重试）
+  - 新增 "Dead Letter Webhook" 概念（5 次失败后的状态）
+  
+  ### ADR Suggestions
+  - ADR-0012: Why exponential backoff with full jitter
+    ✓ Hard to reverse（换退避策略要重新部署）
+    ✓ Surprising without context（为什么不是线性？）
+    ✓ Real trade-off（simple exponential vs full jitter 的取舍）</code></pre>
+<p>——这就是”在同一个会话里，把计划想清楚 + 维护好 CONTEXT.md”的完整闭环。</p>
+<hr>
+</section>
+</section>
+<section id="主流程第-2-步可选的-prototype-绕行" class="level3">
+<h3 class="anchored" data-anchor-id="主流程第-2-步可选的-prototype-绕行">6.4 主流程第 2 步：可选的 <code>/prototype</code> 绕行</h3>
+<p><strong>何时用</strong>：决策需要”跑起来才能验证”时。</p>
+<p><strong>SKILL.md 原文（两个分支）</strong>：</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pick a branch</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"Does this logic / state model feel right?"</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  → LOGIC.md. Build a tiny interactive terminal app that pushes</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    the state machine through cases that are hard to reason about on paper.</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>"What should this look like?"</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  → UI.md. Generate several radically different UI variations on</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    a single route, switchable via a URL search param and a floating</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    bottom bar.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键规则</strong>：</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Throwaway from day one, and clearly marked as such.</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>   一次性，从第一天起就明确标注。放在会被用到的地方（模块旁边），</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>   但命名让人一看就知道是 prototype。</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>One command to run.   一条命令能跑起来。</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>No persistence by default.   默认不持久化。</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>   状态在内存里。持久化是被验证的对象，不是依赖。</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Skip the polish.   跳过修饰。</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>   不要测试、不要错误处理、不要抽象。</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Surface the state.   暴露状态。</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>   每次动作后打印完整状态。</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Capture it when done.   完成后捕获决策（不是代码）。</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>   验证过的决策合并到正式代码，prototype 本体提交到临时分支，</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>   在实现 issue 上留 context pointer 指向那个分支。</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>核心哲学</strong>（来自 SKILL.md）：</p>
+<blockquote class="blockquote">
+<p>“A prototype is throwaway code that answers a question.”</p>
+</blockquote>
+<p><strong>典型使用场景</strong>：</p>
+<pre><code>场景 A：状态机对不对？
+/prototype "我想验证订单取消的 5 种状态转移"
+
+  → AI 在 src/orders/ 下创建 prototype-state-machine.ts
+  → 一个交互式终端脚本，让你按数字键触发不同转换
+  → 每次按都打印完整 state
+  → 你说 "Q3 在 PENDING → CANCELLED 这条不对，PENDING 应该不能直接取消"
+  → 把这条 insight 写进 CONTEXT.md
+  → 删除 prototype 文件（或保留在临时分支）
+  → /handoff 把验证结果带回主流程
+
+场景 B：UI 长什么样？
+/prototype "我想看课程详情页的 4 种 layout"
+
+  → AI 在 /course/[id] 下生成 4 个变体
+  → URL 加 ?variant=1|2|3|4 切换
+  → 底部浮动 bar 切换
+  → 你说 "variant 2 的信息密度刚好"
+  → 把 variant 2 的设计记入 ADR
+  → /handoff 回主流程</code></pre>
+<hr>
+</section>
+<section id="跨会话桥梁handoff" class="level3">
+<h3 class="anchored" data-anchor-id="跨会话桥梁handoff">6.5 跨会话桥梁：<code>/handoff</code></h3>
+<p><strong>何时用</strong>： - 当前会话上下文快满了 - 需要开个新会话但保留上下文 - prototype 绕行后需要回到主流程</p>
+<p><strong>SKILL.md 全文（极简）</strong>：</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> handoff</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Compact the current conversation into a handoff document</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">for another agent to pick up.</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="an">argument-hint:</span><span class="co"> "What will the next session be used for?"</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="an">disable-model-invocation:</span><span class="co"> true</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>Write a handoff document summarising the current conversation so a</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>fresh agent can continue the work. Save to the temporary directory</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>of the user's OS - not the current workspace.</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>Include a "suggested skills" section in the document, which suggests</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>skills that the agent should invoke.</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>Do not duplicate content already captured in other artifacts</span>
+<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>(specs, plans, ADRs, issues, commits, diffs). Reference them by path</span>
+<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>or URL instead.</span>
+<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>Redact any sensitive information, such as API keys, passwords,</span>
+<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a>or personally identifiable information.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键约束</strong>：</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>写到 OS 临时目录（macOS $TMPDIR，Linux /tmp，Windows %TEMP%）—— 不污染工作区</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>不重复已存在 artifact（spec/plan/ADR/issue/commit/diff）—— 用路径引用</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>自动脱敏（API key、密码、PII）</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>自动生成 "suggested skills" 段，提示下个 agent 该用哪些 skill</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>实际输出示例</strong>（handoff 文档结构）：</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Handoff — Webhook Retry Queue Implementation</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## TL;DR</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>Design phase complete. PRD + 2 ADRs + 1 prototype variant validated.</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>Next session should start with /to-spec on the PRD, then /to-tickets.</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## What's Done</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/grill-with-docs: 8 questions answered, plan finalized</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/prototype: state machine validated for 5 cases (PROTO-001)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CONTEXT.md updated with Retry Attempt + Dead Letter Webhook</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ADR-0011: Exponential backoff with full jitter</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## What's Next</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>/to-spec (formalize the plan into a structured spec)</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>/to-tickets (break into tracer-bullet tickets)</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>/implement per ticket</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="fu">## Key References</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CONTEXT.md lines 45-78 (Retry Attempt definition)</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ADR-0011 (backoff strategy rationale)</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>PROTO-001 (state machine validation, branch: prototype/001)</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Issue #42 (original request)</span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Suggested Skills for Next Session</span></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/to-spec → /to-tickets → /implement (each ticket clears context)</span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/tdd during /implement (at the pre-agreed seams)</span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>/code-review at the end</span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Redacted</span></span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Customer API keys (3 occurrences)</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Internal service URLs (replaced with placeholder.com)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="主流程第-3-步to-spec对话-形式化-spec" class="level3">
+<h3 class="anchored" data-anchor-id="主流程第-3-步to-spec对话-形式化-spec">6.6 主流程第 3 步：<code>/to-spec</code>（对话 → 形式化 spec）</h3>
+<p><strong>何时用</strong>：在 <code>/grill-with-docs</code> 之后，想把对话”沉淀”成可发布的规格。</p>
+<p><strong>SKILL.md 全文</strong>（核心逻辑）：</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>This skill takes the current conversation context and codebase</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>understanding and produces a spec. Do NOT interview the user —</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>just synthesize what you already know.</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Process</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Explore the repo to understand the current state</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Sketch out the seams at which you're going to test the feature</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>优先用现有 seam</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>最高层 seam 优先</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>seam 越少越好（理想是 1 个）</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="ss">   - </span>Check with the user that these seams match their expectations</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Write the spec using the template below, then publish it to</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>   the project issue tracker. Apply the ready-for-agent triage label.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Spec 模板（来自 SKILL.md 原文）</strong>：</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Problem Statement</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>The problem that the user is facing, from the user's perspective.</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Solution</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>The solution to the problem, from the user's perspective.</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## User Stories</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>A LONG, numbered list of user stories:</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>As a &lt;actor&gt;, I want a &lt;feature&gt;, so that &lt;benefit&gt;</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Implementation Decisions</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The modules that will be built/modified</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The interfaces of those modules that will be modified</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Technical clarifications from the developer</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Architectural decisions</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Schema changes</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>API contracts</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Specific interactions</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>（不要包含具体文件路径或代码片段——容易过时）</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Testing Decisions</span></span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>What makes a good test (only test external behavior)</span>
+<span id="cb24-23"><a href="#cb24-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Which modules will be tested</span>
+<span id="cb24-24"><a href="#cb24-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prior art for similar tests</span>
+<span id="cb24-25"><a href="#cb24-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-26"><a href="#cb24-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Out of Scope</span></span>
+<span id="cb24-27"><a href="#cb24-27" aria-hidden="true" tabindex="-1"></a>A description of the things that are out of scope.</span>
+<span id="cb24-28"><a href="#cb24-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-29"><a href="#cb24-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Further Notes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键约束</strong>：</p>
+<blockquote class="blockquote">
+<p>“Do NOT include specific file paths or code snippets. They may end up being outdated very quickly.” “Exception: if a prototype produced a snippet that encodes a decision more precisely than prose can (state machine, reducer, schema, type shape), inline it within the relevant decision and note briefly that it came from a prototype.”</p>
+</blockquote>
+<p><strong>seam 选择是这个 skill 最关键的工作</strong>——它决定后续 <code>/tdd</code> 测什么、<code>/code-review</code> 怎么验。</p>
+<hr>
+</section>
+<section id="主流程第-4-步to-ticketsspec-可执行的小任务" class="level3">
+<h3 class="anchored" data-anchor-id="主流程第-4-步to-ticketsspec-可执行的小任务">6.7 主流程第 4 步：<code>/to-tickets</code>（spec → 可执行的小任务）</h3>
+<p><strong>SKILL.md 核心规则（垂直切片）</strong>：</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## 3. Draft vertical slices</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>Break the work into tracer bullet tickets.</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Each slice cuts a narrow but COMPLETE path through every layer</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  (schema, API, UI, tests) — vertical, NOT a horizontal slice</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  of one layer</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A completed slice is demoable or verifiable on its own</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Each slice is sized to fit in a single fresh context window</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Any prefactoring should be done first</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键概念：tracer bullet</strong>（来自 writing-great-skills 引用）—— 像子弹一样先打穿一条窄路径，每个切片都端到端可演示。</p>
+<p><strong>Wide refactor 例外</strong>（来自 SKILL.md 原文）：</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Wide refactors are the exception to vertical slicing</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>A wide refactor is one mechanical change — rename a column,</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>retype a shared symbol — whose blast radius fans across the</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>whole codebase.</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>Don't force it into a tracer bullet; sequence it as expand-contract:</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Expand: add the new form beside the old so nothing breaks</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Migrate the call sites over in batches (per package, per directory)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Contract: delete the old form once no caller remains</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>When even the batches can't stay green alone, let them share an</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>integration branch that all block a final integrate-and-verify</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>ticket — green is promised only there.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>给每个 ticket 标注 blocking edges</strong>（这是与单纯 todo 的本质区别）：</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 03 — Add exponential backoff calculation</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>**What to build:** End-to-end working exponential backoff with</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>full jitter, verifiable via CLI test.</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>**Blocked by:** None — can start immediately.</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>**Status:** ready-for-agent</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Backoff calculator unit tests pass</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> CLI demo shows 100 random backoff values within expected bounds</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> README updated with formula</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>实际发布</strong>（取决于 <code>/setup-matt-pocock-skills</code> 配置）：</p>
+<table class="table">
+<colgroup>
+<col style="width: 56%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Issue tracker</th>
+<th>Ticket 形式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Local</strong></td>
+<td>每个 ticket 一个文件 <code>.scratch/&lt;feature&gt;/issues/&lt;NN&gt;-&lt;slug&gt;.md</code>，按依赖顺序编号</td>
+</tr>
+<tr class="even">
+<td><strong>GitHub Issues</strong></td>
+<td>每个 ticket 一个 issue，用 native blocking 链接关联</td>
+</tr>
+<tr class="odd">
+<td><strong>GitLab Issues</strong></td>
+<td>同 GitHub，用 <code>glab</code> CLI</td>
+</tr>
+<tr class="even">
+<td><strong>Linear</strong></td>
+<td>每个 ticket 一个 issue，用 native dependency</td>
+</tr>
+</tbody>
+</table>
+<p><strong>关键词</strong>：<strong>work the frontier</strong>——任何”blockers 都完成”的 ticket 都可立即开始。</p>
+<hr>
+</section>
+<section id="主流程第-5-步implement驱动-tdd-code-review-commit" class="level3">
+<h3 class="anchored" data-anchor-id="主流程第-5-步implement驱动-tdd-code-review-commit">6.8 主流程第 5 步：<code>/implement</code>（驱动 <code>/tdd</code> + <code>/code-review</code> + commit）</h3>
+<p><strong>SKILL.md 全文</strong>（就是这么简洁）：</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="an">name:</span><span class="co"> implement</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "Implement a piece of work based on a spec or set of tickets."</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="an">disable-model-invocation:</span><span class="co"> true</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>Implement the work described by the user in the spec or tickets.</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>Use /tdd where possible, at pre-agreed seams.</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>Run typechecking regularly, single test files regularly, and the</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>full test suite once at the end.</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>Once done, use /code-review to review the work.</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>Commit your work to the current branch.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键行为约束</strong>：</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use /tdd where possible, at pre-agreed seams</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  → 不是"全部用 TDD"，而是"在 spec 里约定的 seam 上用 TDD"</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Run typechecking regularly</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Run single test files regularly</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Run full test suite ONCE AT THE END</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  → 不要每写一个文件都跑全套</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Once done, use /code-review</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Commit your work to the current branch</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>  → 默认 commit 到当前分支，不开新分支（除非 ticket 特别指定）</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>典型调用模式</strong>：</p>
+<pre><code>你：/implement .scratch/webhook-retry/issues/01-create-retry-attempt.md
+
+AI：
+  1. 读 ticket + spec + ADR + CONTEXT.md（按 to-tickets 列的）
+  2. 读 .scratch/webhook-retry/issues/01-create-retry-attempt.md
+  3. （自动）触发 /tdd
+     - Red: 写失败测试
+     - Green: 写最小通过代码
+     - Repeat for next slice
+     - Refactor: NO（refactor 属于 review 阶段）
+  4. 定期跑 typecheck
+  5. 完成后自动触发 /code-review
+  6. /code-review 完成后 commit 到当前分支
+
+你：（clear context）下一个 ticket
+你：/implement .scratch/webhook-retry/issues/02-add-dead-letter-table.md</code></pre>
+<p><strong>关键经验</strong>：</p>
+<blockquote class="blockquote">
+<p>“Keep steps 1–3 (grilling, spec, tickets) in <strong>one unbroken context window</strong> — don’t compact or clear until after /to-tickets — so the grilling, spec, and tickets all build on the same thinking.” —— <code>/ask-matt</code> 原文</p>
+</blockquote>
+<p>但每个 <code>/implement</code> 都<strong>开新会话</strong>——避免上下文污染。</p>
+<hr>
+</section>
+<section id="嵌入-implement-的子流程tdd" class="level3">
+<h3 class="anchored" data-anchor-id="嵌入-implement-的子流程tdd">6.9 嵌入 <code>/implement</code> 的子流程：<code>/tdd</code></h3>
+<p><strong>SKILL.md 核心规则</strong>（精简版，原文在前文第四章）：</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Rules of the loop</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Red before green</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>One slice at a time</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Refactoring is not part of the loop</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Seams — where tests go</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Test only at pre-agreed seams</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Before writing any test, write down the seams under test and confirm</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Anti-patterns</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Implementation-coupled</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tautological</span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Horizontal slicing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键设计：seam 是 spec 阶段决定的，不在这里决定</strong>——这也是为什么 <code>/to-spec</code> 要先和用户确认 seams。</p>
+<p><strong>一个红绿循环的完整示例</strong>：</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 1. RED - Write failing test at the agreed seam</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">describe</span>(<span class="st">'calculateRetryDelay'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">it</span>(<span class="st">'returns ~baseDelay on first attempt with full jitter'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> delays <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({ length<span class="op">:</span> <span class="dv">100</span> }<span class="op">,</span> () <span class="kw">=&gt;</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">calculateRetryDelay</span>({ attempt<span class="op">:</span> <span class="dv">1</span><span class="op">,</span> baseDelayMs<span class="op">:</span> <span class="dv">1000</span> })</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>    delays<span class="op">.</span><span class="fu">forEach</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">expect</span>(d)<span class="op">.</span><span class="fu">toBeGreaterThanOrEqual</span>(<span class="dv">0</span>)</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">expect</span>(d)<span class="op">.</span><span class="fu">toBeLessThanOrEqual</span>(<span class="dv">1000</span>)</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a><span class="co">// Run: FAIL (calculateRetryDelay is undefined)</span></span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="co">// 2. GREEN - Minimal implementation</span></span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">function</span> <span class="fu">calculateRetryDelay</span>({</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>  attempt<span class="op">,</span> baseDelayMs</span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>}<span class="op">:</span> { attempt<span class="op">:</span> <span class="dt">number</span><span class="op">;</span> baseDelayMs<span class="op">:</span> <span class="dt">number</span> })<span class="op">:</span> <span class="dt">number</span> {</span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> ceiling <span class="op">=</span> baseDelayMs <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(<span class="dv">2</span><span class="op">,</span> attempt <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> ceiling</span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a><span class="co">// Run: PASS</span></span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a><span class="co">// 3. Next slice: another test, another minimal impl...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="嵌入-implement-的最后一步code-review" class="level3">
+<h3 class="anchored" data-anchor-id="嵌入-implement-的最后一步code-review">6.10 嵌入 <code>/implement</code> 的最后一步：<code>/code-review</code></h3>
+<p><strong>双轴审查模型</strong>（来自 SKILL.md 原文）：</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="an">Two-axis review of the diff between HEAD and a fixed point:</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Standards — does the code conform to this repo's documented</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  coding standards?</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spec — does the code faithfully implement the originating</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  issue / PRD / spec?</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>Both axes run as parallel sub-agents so they don't pollute</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>each other's context, then this skill aggregates their findings.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>5 步流程</strong>（精简）：</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Pin the fixed point</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>git diff &lt;fixed-point&gt;...HEAD   (three-dot → merge-base)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Identify the spec source</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Issue references in commit messages (#123, Closes #45)</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>A path the user passed</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>PRD under docs/, specs/, .scratch/</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Identify the standards sources</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CODING_STANDARDS.md / CONTRIBUTING.md</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fowler smell baseline (always applies — 12 个代码味道)</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a><span class="fu">### 4. Spawn both sub-agents in parallel</span></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Standards sub-agent: 检查代码规范 + 12 个 Fowler smell</span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spec sub-agent: 检查是否忠实实现 spec</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### 5. Aggregate</span></span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>不要合并或 rerank findings（两个轴故意分开）</span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>最后一行：每个轴的总发现数 + 最严重的问题</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Fowler smell baseline</strong>（来自 SKILL.md 原文，12 个）：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Smell</th>
+<th>简述</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mysterious Name</td>
+<td>名字不揭示意图</td>
+</tr>
+<tr class="even">
+<td>Duplicated Code</td>
+<td>同样逻辑多处出现</td>
+</tr>
+<tr class="odd">
+<td>Feature Envy</td>
+<td>方法更关心别人的数据</td>
+</tr>
+<tr class="even">
+<td>Data Clumps</td>
+<td>几个字段总是一起出现</td>
+</tr>
+<tr class="odd">
+<td>Primitive Obsession</td>
+<td>用基本类型表达领域概念</td>
+</tr>
+<tr class="even">
+<td>Repeated Switches</td>
+<td>同样的 switch 多处重复</td>
+</tr>
+<tr class="odd">
+<td>Shotgun Surgery</td>
+<td>一个改动散落在多处</td>
+</tr>
+<tr class="even">
+<td>Divergent Change</td>
+<td>一个文件因多个原因被改</td>
+</tr>
+<tr class="odd">
+<td>Speculative Generality</td>
+<td>为不存在的需求加抽象</td>
+</tr>
+<tr class="even">
+<td>Message Chains</td>
+<td><code>a.b().c().d()</code> 长链</td>
+</tr>
+<tr class="odd">
+<td>Middle Man</td>
+<td>类或函数只是 delegate</td>
+</tr>
+<tr class="even">
+<td>Refused Bequest</td>
+<td>子类忽略大部分父类继承</td>
+</tr>
+</tbody>
+</table>
+<p><strong>双轴故意分开的原因</strong>（原文）：</p>
+<blockquote class="blockquote">
+<p>“Reporting them separately stops one axis from masking the other.” “Code that does exactly what the issue asked but breaks the project’s conventions → Spec pass, Standards fail.”</p>
+</blockquote>
+<p><strong>典型输出</strong>：</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Standards (3 findings)</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>docs/api/error-handling.md#errors-must-use-toApiError →</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>   src/webhooks/retry.ts:42 throws raw Error instead of toApiError.</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>   Hard violation.</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Fowler "Data Clumps" →</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>   src/webhooks/retry.ts:23 has (attempt, baseDelayMs, maxDelayMs, jitter)</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>   travelling together across 4 functions. Bundle into RetryPolicy.</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Fowler "Mysterious Name" →</span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>   src/webhooks/retry.ts:67 <span class="in">`dlq`</span> should be <span class="in">`deadLetterWebhooks`</span>.</span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Spec (1 finding)</span></span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>spec requires: "最大 5 次重试后写入 dead letter queue"</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>   impl: src/webhooks/retry.ts:88 uses MAX_RETRIES = 3 (spec said 5).</span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>   Implementation looks wrong.</span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Standards: 3 findings, worst: Data Clumps</span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Spec: 1 finding, worst: wrong MAX_RETRIES constant</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="on-ramp-atriage堆积的-issue" class="level3">
+<h3 class="anchored" data-anchor-id="on-ramp-atriage堆积的-issue">6.11 On-ramp A：<code>/triage</code>（堆积的 issue）</h3>
+<p><strong>何时用</strong>：作为维护者，面对一批还没处理的 GitHub Issues / GitLab Issues。</p>
+<p><strong>SKILL.md 原文状态机</strong>：</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Roles</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>Two category roles:</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>bug — something is broken</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>enhancement — new feature or improvement</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>Five state roles:</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>needs-triage       — maintainer needs to evaluate</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>needs-info         — waiting on reporter for more information</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ready-for-agent    — fully specified, ready for an AFK agent</span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>ready-for-human    — needs human implementation</span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>wontfix            — will not be actioned</span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a>Every triaged issue should carry exactly one category role</span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a>and one state role.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>典型调用模式</strong>：</p>
+<pre><code>你：/triage "show me anything that needs my attention"
+
+AI：（扫描 issue tracker，按最老排序分 3 个桶）
+  Bucket 1: Unlabeled
+    #42 "login fails on mobile" — 2026-06-20
+    #43 "add dark mode" — 2026-06-21
+
+  Bucket 2: needs-triage
+    #44 "feature request: API rate limiting" — 2026-06-22
+
+  Bucket 3: needs-info with reporter activity
+    #41 "upload bug" — reporter replied 2026-07-10
+
+Pick one.
+
+你：/triage "#42"
+
+AI：流程：
+  1. Gather context（读 issue 全貌、评论、labels、codebase 探索）
+  2. Recommend（category + state + 理由）
+  3. Verify the claim（先复现 bug 确认它真的存在）
+  4. Grill（如果需要，跑 /grilling + /domain-modeling 补充需求）
+  5. Apply outcome
+     - ready-for-agent → 发 agent brief
+     - ready-for-human → 发 human brief
+     - needs-info → 发追问
+     - wontfix → 关闭 + 写入 .out-of-scope/ 或解释</code></pre>
+<p><strong>关键约束</strong>：</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="an">Every comment posted during triage MUST start with:</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *This was generated by AI during triage.*</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>→ 让 reporter 知道这是 AI 生成的评论，保持透明</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>对 PR 同样适用</strong>：</p>
+<blockquote class="blockquote">
+<p>“a PR is an issue with attached code — same roles, same states, same machine”</p>
+</blockquote>
+<hr>
+</section>
+<section id="on-ramp-bdiagnosing-bugs修疑难-bug" class="level3">
+<h3 class="anchored" data-anchor-id="on-ramp-bdiagnosing-bugs修疑难-bug">6.12 On-ramp B：<code>/diagnosing-bugs</code>（修疑难 bug）</h3>
+<p><strong>何时用</strong>：bug 抵抗第一眼判断——间歇性、性能回退、依赖多。</p>
+<p><strong>6 阶段流程</strong>（精简，原文已在前文）：</p>
+<pre class="text"><code>Phase 1: Build a feedback loop     ← 关键
+Phase 2: Reproduce + minimise
+Phase 3: Hypothesise              ← 3-5 个排序假设
+Phase 4: Instrument               ← 每个 probe 对应 1 个假设
+Phase 5: Fix + regression test
+Phase 6: Cleanup + post-mortem    ← 决定要不要 /improve-codebase-architecture</code></pre>
+<p><strong>关键纪律</strong>（Phase 1 原文）：</p>
+<blockquote class="blockquote">
+<p>“If you have a tight pass/fail signal for the bug — one that goes red on this bug — you will find the cause.” “If you don’t have one, no amount of staring at code will save you.”</p>
+</blockquote>
+<p><strong>Phase 1 完成标准</strong>（4 个 checkbox，原文）：</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Red-capable — drives the actual bug code path and asserts</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  the user's exact symptom</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Deterministic — same verdict every run</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Fast — seconds, not minutes</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="va">[ ]</span> Agent-runnable — can run unattended</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>10 种构造回路的方法</strong>（按推荐顺序，原文已在前文）。</p>
+<p><strong>Phase 5 的 seam 判断</strong>（原文）：</p>
+<blockquote class="blockquote">
+<p>“If no correct seam exists, that itself is the finding. The codebase architecture is preventing the bug from being locked down. Flag this for the next phase.”</p>
+</blockquote>
+<p>——<strong>找不到测试 seam</strong>本身就是发现，意味着代码架构有问题，应转给 <code>/improve-codebase-architecture</code>。</p>
+<p><strong>Phase 6 post-mortem</strong>：</p>
+<blockquote class="blockquote">
+<p>“What would have prevented this bug? If the answer involves architectural change… hand off to the /improve-codebase-architecture skill with the specifics.”</p>
+</blockquote>
+<hr>
+</section>
+<section id="on-ramp-cwayfinder超大任务" class="level3">
+<h3 class="anchored" data-anchor-id="on-ramp-cwayfinder超大任务">6.13 On-ramp C：<code>/wayfinder</code>（超大任务）</h3>
+<p><strong>何时用</strong>：任务规模超过一个 agent 会话能装下的。</p>
+<p><strong>SKILL.md 核心</strong>：</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>A loose idea has arrived — too big for one agent session, and</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>wrapped in fog: the way from here to the destination isn't</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>visible yet.</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>Wayfinding is about finding that way, not charging at the</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>destination. This skill charts the way as a shared map on the</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>repo's issue tracker, then works its tickets one at a time</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>until the route is clear.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键概念</strong>：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>概念</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Map</strong></td>
+<td>一个 <code>wayfinder:map</code> 标签的 issue，是 index，不是 store</td>
+</tr>
+<tr class="even">
+<td><strong>Tickets</strong></td>
+<td>map 的子 issue，每张票问一个决策</td>
+</tr>
+<tr class="odd">
+<td><strong>Destination</strong></td>
+<td>这张地图最终要到达什么</td>
+</tr>
+<tr class="even">
+<td><strong>Fog of war</strong></td>
+<td>你知道有但还没法精确描述的决策</td>
+</tr>
+<tr class="odd">
+<td><strong>Frontier</strong></td>
+<td>已开、未阻塞、未被认领的票——地图的”活边缘”</td>
+</tr>
+<tr class="even">
+<td><strong>Not yet specified</strong></td>
+<td>雾里你能模糊看到的，写在这里</td>
+</tr>
+<tr class="odd">
+<td><strong>Out of scope</strong></td>
+<td>在 destination 之外的工作，写在这里</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ticket 类型</strong>（4 种）：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>谁驱动</th>
+<th>用例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Research</strong> (AFK)</td>
+<td>Agent 后台读</td>
+<td>调研 API、读文档</td>
+</tr>
+<tr class="even">
+<td><strong>Prototype</strong> (HITL)</td>
+<td>人类</td>
+<td>验证”应该长什么样”</td>
+</tr>
+<tr class="odd">
+<td><strong>Grilling</strong> (HITL)</td>
+<td>人类对话</td>
+<td>决策类问题</td>
+</tr>
+<tr class="even">
+<td><strong>Task</strong> (HITL or AFK)</td>
+<td>任方</td>
+<td>必须做某事才能继续决策</td>
+</tr>
+</tbody>
+</table>
+<p><strong>两种调用模式</strong>：</p>
+<pre><code>模式 1: Chart the map（开新地图）
+你：/wayfinder "我想把整个 monolith 拆成微服务"
+AI：
+  1. /grilling 锁定 destination
+  2. /grilling 广度优先——扫一遍所有开放决策
+  3. 创建 map issue（wayfinder:map）
+  4. 创建能精确化的 tickets，剩余进 fog
+
+模式 2: Work through the map（走地图）
+你：/wayfinder https://github.com/.../issues/100
+AI：
+  1. 读 map 全文（低分辨率）
+  2. 选最前面的 frontier ticket
+  3. Claim it（assignee = 你）
+  4. Resolve it（用 ticket 类型对应的 skill）
+  5. 关 ticket，在 map 加 decision pointer
+  6. 新浮现的 ticket 创建 + 连线</code></pre>
+<p><strong>关键约束</strong>：</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>**Never resolve more than one ticket per session.**</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>→ 一个会话一张票，保持推理质量</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>wayfinder 的产物是决策，不是代码</strong>：</p>
+<blockquote class="blockquote">
+<p>“Wayfinder is planning by default: each ticket resolves a decision, and the map is done when the way is clear — nothing left to decide before someone goes and does the thing.”</p>
+</blockquote>
+<hr>
+</section>
+<section id="健康通道improve-codebase-architecture独立运行" class="level3">
+<h3 class="anchored" data-anchor-id="健康通道improve-codebase-architecture独立运行">6.14 健康通道：<code>/improve-codebase-architecture</code>（独立运行）</h3>
+<p><strong>何时用</strong>：每周/每两周做一次架构体检。</p>
+<p><strong>完整流程</strong>（来自 SKILL.md 原文）：</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Process</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### 1. Explore</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>用 Agent tool 派 Explore 子代理扫描代码库。</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>不要硬性启发——自然探索，记下哪里感到 friction：</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>理解一个概念要在多少模块之间跳转？</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>哪些模块是 shallow（接口复杂度 ≈ 实现复杂度）？</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>哪些 pure function 是为 testability 抽出来但 bug 藏在调用处？</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>哪些模块跨 seam 漏实现？</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>哪些代码难测？</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>应用 deletion test：</span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>"如果删掉这个模块，复杂度消失还是转移？"</span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>'消失' = 浅模块（pass-through）= 候选删除</span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a>'转移' = 浅模块但有意义（仍可删）</span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### 2. Present candidates as an HTML report</span></span>
+<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a>写到 OS 临时目录（不污染仓库）：</span>
+<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>macOS: $TMPDIR/architecture-review-&lt;timestamp&gt;.html</span>
+<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Linux: /tmp/architecture-review-&lt;timestamp&gt;.html</span>
+<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Windows: %TEMP%/architecture-review-&lt;timestamp&gt;.html</span>
+<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a>打开它：</span>
+<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Linux: xdg-open</span>
+<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>macOS: open</span>
+<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Windows: start</span>
+<span id="cb44-27"><a href="#cb44-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-28"><a href="#cb44-28" aria-hidden="true" tabindex="-1"></a>报告样式：</span>
+<span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tailwind via CDN + Mermaid via CDN</span>
+<span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>每个候选一张卡片：Files / Problem / Solution / Benefits /</span>
+<span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a>  Before-After 图 / 推荐强度 badge</span>
+<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>推荐强度：Strong / Worth exploring / Speculative</span>
+<span id="cb44-33"><a href="#cb44-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>末尾 Top recommendation</span>
+<span id="cb44-34"><a href="#cb44-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-35"><a href="#cb44-35" aria-hidden="true" tabindex="-1"></a><span class="fu">### 3. Grilling loop</span></span>
+<span id="cb44-36"><a href="#cb44-36" aria-hidden="true" tabindex="-1"></a>用户选一个后，跑 /grilling 走设计树——</span>
+<span id="cb44-37"><a href="#cb44-37" aria-hidden="true" tabindex="-1"></a>约束、依赖、深化模块形状、seam 后是什么、测试如何存活。</span>
+<span id="cb44-38"><a href="#cb44-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-39"><a href="#cb44-39" aria-hidden="true" tabindex="-1"></a>副作用 inline：</span>
+<span id="cb44-40"><a href="#cb44-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>新模块名不在 CONTEXT.md？加进去</span>
+<span id="cb44-41"><a href="#cb44-41" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>模糊术语被 sharpen？立刻更新 CONTEXT.md</span>
+<span id="cb44-42"><a href="#cb44-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>用户拒绝的 load-bearing 理由？记录成 ADR</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Before / After 报告样例</strong>：</p>
+<p>每张卡片长这样：</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Opportunity: Bundle order validation into one module</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="fu">### Files</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>src/orders/validate.ts</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>src/orders/checkout.ts</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>src/orders/cancel.ts</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a><span class="fu">### Problem</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>Three functions, each ~150 lines, each implements part of the</span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>order validation. Callers reach into all three. Tests cover each</span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>independently — but no test covers "validate → checkout → cancel"</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>together. Bugs hide in the seams.</span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a><span class="fu">### Solution</span></span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a>Bundle the three into one <span class="in">`order-policy`</span> module behind a small</span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a>interface: <span class="in">`validate(order, intent): Result`</span>. The three callers</span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a>each pass a different <span class="in">`intent`</span> and get back the same shape.</span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### Benefits</span></span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Locality: all order-validation logic in one place</span>
+<span id="cb45-21"><a href="#cb45-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Leverage: callers testable through one interface</span>
+<span id="cb45-22"><a href="#cb45-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Tests: one integration test covers the previously-untested seam</span>
+<span id="cb45-23"><a href="#cb45-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-24"><a href="#cb45-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### Before / After</span></span>
+<span id="cb45-25"><a href="#cb45-25" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Visual diagram: 3 disjoint modules with overlapping logic</span><span class="co">]</span></span>
+<span id="cb45-26"><a href="#cb45-26" aria-hidden="true" tabindex="-1"></a>               ↓</span>
+<span id="cb45-27"><a href="#cb45-27" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Visual diagram: 1 small interface, deep implementation behind</span><span class="co">]</span></span>
+<span id="cb45-28"><a href="#cb45-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-29"><a href="#cb45-29" aria-hidden="true" tabindex="-1"></a><span class="fu">### Recommendation</span></span>
+<span id="cb45-30"><a href="#cb45-30" aria-hidden="true" tabindex="-1"></a>**Strong**</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键纪律</strong>：</p>
+<blockquote class="blockquote">
+<p>“If CONTEXT.md defines ‘Order,’ talk about ‘the Order intake module’ — not ‘the FooBarHandler,’ and not ‘the Order service.’”</p>
+</blockquote>
+<p>——<strong>严格使用仓库词汇</strong>，不用”组件”、“服务”、“API”这类泛词。</p>
+<hr>
+</section>
+<section id="词汇层domain-modeling-codebase-design" class="level3">
+<h3 class="anchored" data-anchor-id="词汇层domain-modeling-codebase-design">6.15 词汇层：<code>/domain-modeling</code> + <code>/codebase-design</code></h3>
+<p>这两个是<strong>被上层 skill 自动调用</strong>的 model-invoked references，本身不常被用户手动触发。</p>
+<section id="domain-modeling领域语言维护者" class="level4">
+<h4 class="anchored" data-anchor-id="domain-modeling领域语言维护者"><code>/domain-modeling</code>：领域语言维护者</h4>
+<p><strong>关键纪律</strong>（已在 6.3 节展开）：</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CONTEXT.md 应该完全没有实现细节</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>不要把 CONTEXT.md 当作 spec、scratch pad、implementation decision 仓库</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>它就是 glossary，仅此而已</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>Offer ADR 仅在三条件都满足时：</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Hard to reverse（难以撤销）</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Surprising without context（不解释会奇怪）</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Real trade-off（真的有取舍）</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="codebase-design深度模块词汇表" class="level4">
+<h4 class="anchored" data-anchor-id="codebase-design深度模块词汇表"><code>/codebase-design</code>：深度模块词汇表</h4>
+<p><strong>强制使用的术语</strong>（来自 SKILL.md 原文）：</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>用这个词</th>
+<th>不用这些</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Module</strong></td>
+<td>component / service / unit</td>
+</tr>
+<tr class="even">
+<td><strong>Interface</strong></td>
+<td>API / signature</td>
+</tr>
+<tr class="odd">
+<td><strong>Implementation</strong></td>
+<td>(用 adapter 替代)</td>
+</tr>
+<tr class="even">
+<td><strong>Depth</strong></td>
+<td>(不替代)</td>
+</tr>
+<tr class="odd">
+<td><strong>Seam</strong></td>
+<td>boundary</td>
+</tr>
+<tr class="even">
+<td><strong>Adapter</strong></td>
+<td>(用 role 含义)</td>
+</tr>
+<tr class="odd">
+<td><strong>Leverage</strong></td>
+<td>(不替代)</td>
+</tr>
+<tr class="even">
+<td><strong>Locality</strong></td>
+<td>(不替代)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>深度 vs 浅度（来自 SKILL.md 原文 ASCII 图）</strong>：</p>
+<pre class="text"><code>Deep module (good):
+┌─────────────────────┐
+│   Small Interface   │  ← Few methods, simple params
+├─────────────────────┤
+│                     │
+│  Deep Implementation│  ← Complex logic hidden
+│                     │
+└─────────────────────┘
+
+Shallow module (avoid):
+┌─────────────────────────────────┐
+│       Large Interface           │  ← Many methods, complex params
+├─────────────────────────────────┤
+│  Thin Implementation            │  ← Just passes through
+└─────────────────────────────────┘</code></pre>
+<p><strong>4 条原则</strong>：</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Depth is a property of the interface, not the implementation.</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>   一个 deep module 内部可以有可 mock 的小零件，但它们不进 interface。</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>The deletion test.</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>   想象删掉这个模块——复杂度消失还是转移？</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>   消失 = pass-through = 删</span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>   转移 = 还在干活 = 留</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>The interface is the test surface.</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>   调用者和测试穿过同一个 seam。</span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a>   想"穿过 interface 测"？那模块形状大概率错了。</span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>One adapter means a hypothetical seam. Two adapters means a real one.</span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>   不要引入只有一个 adapter 的 seam。</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>设计 for testability</strong>（来自 SKILL.md）：</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode typescript code-with-copy"><code class="sourceCode typescript"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Testable</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">processOrder</span>(order<span class="op">,</span> paymentGateway) {}</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Hard to test</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">processOrder</span>(order) {</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> gateway <span class="op">=</span> <span class="kw">new</span> <span class="fu">StripeGateway</span>()<span class="op">;</span></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="这两个-skill-的关系" class="level4">
+<h4 class="anchored" data-anchor-id="这两个-skill-的关系">这两个 skill 的关系</h4>
+<pre><code>/grill-with-docs  → 自动调用 /domain-modeling（维护 CONTEXT.md）
+/improve-codebase-architecture → 自动调用 /codebase-design（用深度模块词汇）
+/tdd → 隐含调用 /codebase-design（接缝 = seam）</code></pre>
+<hr>
+</section>
+</section>
+<section id="standalone-skills独立使用" class="level3">
+<h3 class="anchored" data-anchor-id="standalone-skills独立使用">6.16 Standalone Skills（独立使用）</h3>
+<section id="grill-me无-codebase-时的对齐" class="level4">
+<h4 class="anchored" data-anchor-id="grill-me无-codebase-时的对齐"><code>/grill-me</code>：无 codebase 时的对齐</h4>
+<ul>
+<li>和 <code>/grill-with-docs</code> 跑同一个 <code>/grilling</code> 原语</li>
+<li><strong>不维护 CONTEXT.md，不创建 ADR</strong></li>
+<li>用于：PPT 设计、书稿大纲、产品决策、招聘问题</li>
+</ul>
+</section>
+<section id="prototype设计验证" class="level4">
+<h4 class="anchored" data-anchor-id="prototype设计验证"><code>/prototype</code>：设计验证</h4>
+<p>已在 6.4 节详述。</p>
+</section>
+<section id="research后台调研" class="level4">
+<h4 class="anchored" data-anchor-id="research后台调研"><code>/research</code>：后台调研</h4>
+<p><strong>SKILL.md 全文</strong>（极简）：</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>Spin up a background agent to do the research, so you keep working</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>while it reads.</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>Its job:</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Investigate the question against primary sources — official docs,</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>   source code, specs, first-party APIs — not a secondary write-up.</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Write the findings to a single Markdown file, citing each claim.</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Save it where the repo already keeps such notes; match the existing</span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>   convention.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>关键约束</strong>：</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Primary sources only（官方文档、源代码、spec、first-party API）</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>不信二手 write-up</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>写到仓库已有的同类笔记位置</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>后台跑，你继续干别的</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="teach多会话教学" class="level4">
+<h4 class="anchored" data-anchor-id="teach多会话教学"><code>/teach</code>：多会话教学</h4>
+<p><strong>SKILL.md 全文摘要</strong>：</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>The user has asked you to teach them something. This is a stateful</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>request - they intend to learn the topic over multiple sessions.</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="fu">## Teaching Workspace</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>MISSION.md          ← 用户为什么想学这个</span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>./reference/*.html  ← 学习成果的速查表</span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>RESOURCES.md        ← 高质量资源列表</span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>./learning-records/*.md  ← 类似 ADR 的学习记录</span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>./lessons/*.html    ← 课程（HTML 格式，美观可打印）</span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>./assets/*          ← 复用组件</span>
+<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NOTES.md            ← 用户偏好</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>核心理念</strong>（原文）：</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>To learn at a deep level, the user needs three things:</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Knowledge   (高质量资源中获得)</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Skills      (交互式课程中获得)</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Wisdom      (与同伴/专家互动中获得)</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>Fluency ≠ Storage strength.</span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>设计课程要建立长期记忆（retrieval practice + spacing + interleaving）。</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="writing-great-skills元技能" class="level4">
+<h4 class="anchored" data-anchor-id="writing-great-skills元技能"><code>/writing-great-skills</code>：元技能</h4>
+<p>已在第七章详述。</p>
+<hr>
+</section>
+</section>
+<section id="完整工作流时间线端到端示例" class="level3">
+<h3 class="anchored" data-anchor-id="完整工作流时间线端到端示例">6.17 完整工作流时间线（端到端示例）</h3>
+<p>把以上所有 skill 串成一条真实的项目时间线——从”我有个想法”到”代码上线”：</p>
+<pre class="text"><code>Day 1 ─────────────────────────────────────────────────────────
+10:00  /setup-matt-pocock-skills         ← 每个仓库一次
+10:05  /grill-with-docs "实现 webhook 重试队列"
+        → 8 轮追问 + 维护 CONTEXT.md + 提议 ADR-0011
+10:30  /prototype "验证退避算法的 jitter 分布"
+        → 交互式终端脚本，看到 100 次随机值分布正确
+10:45  /handoff                          ← prototype 绕行结束
+        → 写到临时目录，包含 suggested skills
+
+Day 2 ─────────────────────────────────────────────────────────
+09:00  新会话，读 handoff 文档
+09:05  /to-spec                          ← 对话 → spec，发到 GitHub Issue #42
+09:15  /to-tickets                       ← spec → 6 张 tracer-bullet tickets
+        → 写到 .scratch/webhook-retry/issues/
+        → 标注 blocking edges
+09:30  /implement .scratch/.../01-create-retry-attempt.md
+        → 内部触发 /tdd（在约定的 seam）
+        → 完成后触发 /code-review
+        → commit 到当前分支
+
+09:55  清空 context
+10:00  /implement .scratch/.../02-add-dead-letter-table.md
+        ...（每张 ticket 一个新会话）
+
+Day 3 ─────────────────────────────────────────────────────────
+持续 /implement 每张 ticket
+
+Day 5 ─────────────────────────────────────────────────────────
+所有 ticket 完成，merge 到 main
+
+Day 6 ─────────────────────────────────────────────────────────
+/diagnosing-bugs "新版本的连接池在高并发下偶发超时"
+        → 6 阶段：构造回路 → 复现 → 假设 → 验证 → 修复 → 复盘
+        → 复盘发现没有好的 seam
+        → 转给 /improve-codebase-architecture
+
+Day 7 ─────────────────────────────────────────────────────────
+/improve-codebase-architecture
+        → HTML 报告（4 个 deepening opportunities）
+        → 用户选 "Bundling connection pool under one interface"
+        → /grilling 设计深化后的接口
+        → 决定写 ADR-0013
+
+Day 8 ─────────────────────────────────────────────────────────
+用户写了一封邮件给客户——要解释这个新功能
+        → /grill-me "我想跟客户解释 webhook 重试机制"
+        → 不写 CONTEXT.md（不是 codebase 任务）
+        → 输出精炼的解释段落</code></pre>
+<hr>
+</section>
+<section id="工作流经验总结" class="level3">
+<h3 class="anchored" data-anchor-id="工作流经验总结">6.18 工作流经验总结</h3>
+<section id="关键时序约束来自-ask-matt-原文" class="level4">
+<h4 class="anchored" data-anchor-id="关键时序约束来自-ask-matt-原文">关键时序约束（来自 <code>/ask-matt</code> 原文）</h4>
+<div class="sourceCode" id="cb56"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>Keep steps 1–3 (grilling, spec, tickets) in ONE UNBROKEN CONTEXT</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>WINDOW — don't compact or clear until after /to-tickets — so the</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>grilling, spec, and tickets all build on the same thinking.</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>Each /implement then starts FRESH, working from the ticket.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>grilling → to-spec → to-tickets 必须同一个会话</strong>（思维连续）</li>
+<li><strong>每个 implement 开新会话</strong>（避免上下文污染）</li>
+</ul>
+</section>
+<section id="smart-zone-限制原文" class="level4">
+<h4 class="anchored" data-anchor-id="smart-zone-限制原文">Smart Zone 限制（原文）</h4>
+<div class="sourceCode" id="cb57"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="an">The limit on this is the smart zone:</span><span class="co"> the window (~120k tokens on</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>state-of-the-art models) within which the model still reasons</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>sharply.</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>If a session approaches it before /to-tickets, don't push on</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>degraded — /handoff and continue in a fresh thread.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>接近 12 万 token 还没到 <code>/to-tickets</code> 阶段？<code>/handoff</code> + 开新线程。</p>
+</section>
+<section id="不要做的事" class="level4">
+<h4 class="anchored" data-anchor-id="不要做的事">不要做的事</h4>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>❌ 不要</th>
+<th>✅ 改用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>中间 compact 上下文</td>
+<td><code>/handoff</code> + 开新会话</td>
+</tr>
+<tr class="even">
+<td>让一个 /implement 处理多张 ticket</td>
+<td>每张 ticket 开新会话</td>
+</tr>
+<tr class="odd">
+<td>跳过 <code>/setup-matt-pocock-skills</code> 直接用其他 skill</td>
+<td>先跑 setup</td>
+</tr>
+<tr class="even">
+<td>把 <code>/grill-me</code> 用在已有 codebase 的项目</td>
+<td>改用 <code>/grill-with-docs</code></td>
+</tr>
+<tr class="odd">
+<td>把 triage 应用在 <code>/to-tickets</code> 生成的 ticket 上</td>
+<td>它们已经 agent-ready</td>
+</tr>
+<tr class="even">
+<td>跨 4 种触发器混用 user-invoked skill</td>
+<td>user → model 单向</td>
+</tr>
+<tr class="odd">
+<td>给所有决策都写 ADR</td>
+<td>只在”三条件满足”时写</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+</section>
+<section id="七5-个真实使用场景" class="level2">
+<h2 class="anchored" data-anchor-id="七5-个真实使用场景">七、5 个真实使用场景</h2>
+<section id="场景-1从零开发一个新功能" class="level3">
+<h3 class="anchored" data-anchor-id="场景-1从零开发一个新功能">场景 1：从零开发一个新功能</h3>
+<pre class="text"><code>你：/grill-me "我要做一个 webhook 重试队列，指数退避"
+
+AI：（8-15 个连续问题）
+  - 失败后多久重试？
+  - 最多重试几次？
+  - 死信队列怎么处理？
+  - 重试状态怎么追踪？
+  - ...
+
+输出：精炼的计划 + 边界条件清单
+
+你：/to-spec
+AI：把上述计划转成结构化 spec，发到 GitHub Issues
+
+你：/implement
+AI：按 spec 实现，循环用 /tdd，最后跑 /code-review
+
+你：（review 通过后）/commit</code></pre>
+</section>
+<section id="场景-2修一个诡异的-bug" class="level3">
+<h3 class="anchored" data-anchor-id="场景-2修一个诡异的-bug">场景 2：修一个诡异的 bug</h3>
+<pre><code>你：/diagnosing-bugs "用户上传图片后偶发性 500"
+
+AI：
+  Phase 1: 构造反馈回路
+    "我能写一个 Playwright 脚本模拟上传吗？"
+    "我能捕获 HAR 文件吗？"
+    → 构造：失败测试 fixture + 反复跑 100 次统计失败率
+
+  Phase 2: 缩小复现范围
+    "失败发生在哪些图片？→ 只有 &gt;5MB 的 PNG"
+
+  Phase 3: 3 个排序假设
+    1. 内存溢出（最可能）
+    2. multipart 解析超时
+    3. S3 SDK 重试策略触发
+
+  Phase 4: 逐个验证
+    "加 instrumentation 后，是 #1：流式处理没启用"
+
+  Phase 5: 修复 + regression test
+    "改成 stream-based upload"
+
+  Phase 6: 清理 + post-mortem
+    "/improve-codebase-architecture 给个建议：所有上传走同一个 stream adapter"</code></pre>
+</section>
+<section id="场景-3维护一个老项目定期做架构体检" class="level3">
+<h3 class="anchored" data-anchor-id="场景-3维护一个老项目定期做架构体检">场景 3：维护一个老项目，定期做架构体检</h3>
+<div class="sourceCode" id="cb60"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 每周跑一次</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="ex">/improve-codebase-architecture</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>它会扫描整个代码库，输出一个 HTML 报告——你能直观看到哪些模块”浅”（接口复杂度 ≈ 实现复杂度）、哪些有”深化机会”。</p>
+</section>
+<section id="场景-4交接给下一个会话的-agent" class="level3">
+<h3 class="anchored" data-anchor-id="场景-4交接给下一个会话的-agent">场景 4：交接给下一个会话的 agent</h3>
+<pre class="text"><code>你：/handoff
+
+AI：扫描整个对话，把上下文压缩成一份交接文档
+    → 写到 HANDOFF.md 或指定的 issue
+    → 下个 agent 读这个文件就能 100% 接管</code></pre>
+</section>
+<section id="场景-5跨会话教你一个复杂概念" class="level3">
+<h3 class="anchored" data-anchor-id="场景-5跨会话教你一个复杂概念">场景 5：跨会话教你一个复杂概念</h3>
+<pre class="text"><code>你：/teach "我想学会 Rust 的所有权系统"
+
+AI：（多会话教学）
+  第 1 课：栈 vs 堆
+  第 2 课：move 语义
+  第 3 课：借用检查
+  → 用当前目录作为状态化教学空间
+  → 你说 /teach-continue 推进</code></pre>
+<hr>
+</section>
+</section>
+<section id="八元技能writing-great-skills" class="level2">
+<h2 class="anchored" data-anchor-id="八元技能writing-great-skills">八、元技能：<code>/writing-great-skills</code></h2>
+<p>这是仓库里<strong>最被低估</strong>的一个 skill——它教你<strong>怎么写好的 AI agent skill</strong>。</p>
+<section id="核心词汇来自-skill.md-原文" class="level3">
+<h3 class="anchored" data-anchor-id="核心词汇来自-skill.md-原文">8.1 核心词汇（来自 SKILL.md 原文）</h3>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>词汇</th>
+<th>定义</th>
+<th>何时用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Predictability</strong></td>
+<td>Agent 每次走相同<strong>流程</strong>（不是产生相同输出）</td>
+<td>写所有 skill 的根本目标</td>
+</tr>
+<tr class="even">
+<td><strong>Context load</strong></td>
+<td>description 进上下文窗口的代价</td>
+<td>决定 model-invoked vs user-invoked</td>
+</tr>
+<tr class="odd">
+<td><strong>Cognitive load</strong></td>
+<td>你必须记得这个 skill 存在的代价</td>
+<td>决定要不要建 router skill</td>
+</tr>
+<tr class="even">
+<td><strong>Legwork</strong></td>
+<td>Agent 在工作内做的挖掘</td>
+<td>取决于 completion criterion 是否严格</td>
+</tr>
+<tr class="odd">
+<td><strong>Premature completion</strong></td>
+<td>提前宣称完成</td>
+<td>严格 completion criterion 防住</td>
+</tr>
+<tr class="even">
+<td><strong>Leading word</strong></td>
+<td>模型预训练中已有概念的紧凑词</td>
+<td>用 <em>tight</em>、<em>relentless</em>、<em>tracer bullets</em> 这种</td>
+</tr>
+<tr class="odd">
+<td><strong>Branch</strong></td>
+<td>skill 内不同的运行路径</td>
+<td>决定哪些放 inline、哪些放 pointer 后面</td>
+</tr>
+<tr class="even">
+<td><strong>Context pointer</strong></td>
+<td>触发 agent 加载外部文件的提示语</td>
+<td>progressive disclosure 的载体</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="关键原则" class="level3">
+<h3 class="anchored" data-anchor-id="关键原则">8.2 关键原则</h3>
+<section id="原则-1description-是双重身份的" class="level4">
+<h4 class="anchored" data-anchor-id="原则-1description-是双重身份的">原则 1：Description 是双重身份的</h4>
+<p>Model-invoked 的 description 同时承担<strong>触发条件 + 内容索引</strong>两个角色。每个字都进上下文，所以要极简：</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Good — 触发分支清晰</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>description: Diagnosis loop for hard bugs and performance regressions.</span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>  Use when the user says "diagnose"/"debug this", or reports</span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>  something broken/throwing/failing/slow.</span>
+<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># Bad — 重复同一个分支</span></span>
+<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a>description: Test-driven development. Use when the user wants to</span>
+<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a>  build features test-first, mentions test-first development,</span>
+<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a>  or wants integration tests.  # ← "test-first" 重复了</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="原则-2information-hierarchy-三级" class="level4">
+<h4 class="anchored" data-anchor-id="原则-2information-hierarchy-三级">原则 2：Information Hierarchy 三级</h4>
+<pre><code>1. In-skill step (SKILL.md 内的步骤) ← 默认
+2. In-skill reference (SKILL.md 内的定义/规则)
+3. External reference (用 context pointer 加载的外部文件)</code></pre>
+<p><strong>push 太少</strong> → SKILL.md 臃肿；<strong>push 太多</strong> → agent 该读的没读到。</p>
+<p>判断标准：<strong>branching</strong>。如果某段材料只有部分分支需要，它就该被 pointer 推出去。</p>
+</section>
+<section id="原则-3用-leading-word-压缩" class="level4">
+<h4 class="anchored" data-anchor-id="原则-3用-leading-word-压缩">原则 3：用 Leading Word 压缩</h4>
+<div class="sourceCode" id="cb65"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># 三处 restate</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>"fast, deterministic, low-overhead"  ×3 处</span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a><span class="fu"># 一个词替代</span></span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>_tight_ loop  ← 模型已经知道"tight"意味着什么</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>好处</strong>：token 更少 + 模型有更准确的 hook。</p>
+</section>
+<section id="原则-4失败模式速查表" class="level4">
+<h4 class="anchored" data-anchor-id="原则-4失败模式速查表">原则 4：失败模式速查表</h4>
+<table class="table">
+<colgroup>
+<col style="width: 60%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>失败模式</th>
+<th>防御</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Premature completion</td>
+<td>严格 completion criterion；把后面的 step 拆出去</td>
+</tr>
+<tr class="even">
+<td>Duplication</td>
+<td>Single source of truth</td>
+</tr>
+<tr class="odd">
+<td>Sediment（陈旧层）</td>
+<td>定期修剪</td>
+</tr>
+<tr class="even">
+<td>Sprawl（过度膨胀）</td>
+<td>Progressive disclosure + branch 拆分</td>
+</tr>
+<tr class="odd">
+<td>No-op（说了等于没说）</td>
+<td>逐句 no-op test；果断删</td>
+</tr>
+<tr class="even">
+<td>Negation（否定式指令）</td>
+<td>改写为正向目标</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+</section>
+<section id="九和-trellis-等编排框架的对比" class="level2">
+<h2 class="anchored" data-anchor-id="九和-trellis-等编排框架的对比">九、和 Trellis 等编排框架的对比</h2>
+<p>kbase 已有 <a href="./Trellis实战：AI Coding编排框架从入门到项目落地.md">Trellis 实战文章</a>，这里重点对比定位差异。</p>
+<section id="三类项目定位" class="level3">
+<h3 class="anchored" data-anchor-id="三类项目定位">9.1 三类项目定位</h3>
+<table class="table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 37%">
+<col style="width: 17%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>维度</th>
+<th>mattpocock/skills</th>
+<th>Trellis</th>
+<th>BMAD / Spec-Kit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>形态</strong></td>
+<td>Skills 库（Markdown 指令）</td>
+<td>编排框架（CLI + hooks + spec）</td>
+<td>多角色代办</td>
+</tr>
+<tr class="even">
+<td><strong>Stars</strong></td>
+<td>167k</td>
+<td>~12k</td>
+<td>9k-12k</td>
+</tr>
+<tr class="odd">
+<td><strong>谁主导流程</strong></td>
+<td>你（保留控制权）</td>
+<td>框架 hooks 自动驱动</td>
+<td>框架自动驱动</td>
+</tr>
+<tr class="even">
+<td><strong>核心抽象</strong></td>
+<td>Skill（行为指令）</td>
+<td>Spec + Task + Journal + Workflow</td>
+<td>Multi-agent role</td>
+</tr>
+<tr class="odd">
+<td><strong>强项</strong></td>
+<td>工程纪律、调试、TDD</td>
+<td>工作流强制、跨会话记忆、跨平台</td>
+<td>全流程代办</td>
+</tr>
+<tr class="even">
+<td><strong>起步时间</strong></td>
+<td>30 秒</td>
+<td>10 分钟</td>
+<td>30+ 分钟</td>
+</tr>
+<tr class="odd">
+<td><strong>License</strong></td>
+<td>MIT</td>
+<td>AGPL-3.0</td>
+<td>MIT</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="何时选哪个" class="level3">
+<h3 class="anchored" data-anchor-id="何时选哪个">9.2 何时选哪个</h3>
+<table class="table">
+<colgroup>
+<col style="width: 60%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>你的情况</th>
+<th>推荐</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>想要<strong>工程纪律</strong>，但保留对 AI 的完全控制</td>
+<td><strong>mattpocock/skills</strong></td>
+</tr>
+<tr class="even">
+<td>想要<strong>工作流强制 + 跨 AI 工具共享</strong></td>
+<td><strong>Trellis</strong></td>
+</tr>
+<tr class="odd">
+<td>想要<strong>多角色代办</strong>，AI 全包</td>
+<td><strong>BMAD / Spec-Kit</strong></td>
+</tr>
+<tr class="even">
+<td>已用 Claude Code，想立即获得方法论纪律</td>
+<td><strong>mattpocock/skills</strong>（最轻量）</td>
+</tr>
+<tr class="odd">
+<td>长期项目 + 多 AI 工具 + 团队规范</td>
+<td><strong>Trellis</strong>（spec + journal）</td>
+</tr>
+<tr class="even">
+<td>AI Coding 最大的痛点是”做出来的不对”</td>
+<td><strong>mattpocock/skills</strong>（grill-me 直接对症）</td>
+</tr>
+<tr class="odd">
+<td>AI Coding 最大的痛点是”团队规范不一致”</td>
+<td><strong>Trellis</strong>（共享 .trellis/）</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="可以混用吗" class="level3">
+<h3 class="anchored" data-anchor-id="可以混用吗">9.3 可以混用吗？</h3>
+<p><strong>可以。</strong> 三个项目是技能库的颗粒度——你可以在 Trellis 项目里 <code>trellis init --registry gh:myorg/specs</code> 拉取共享 spec，同时 <code>npx skills add mattpocock/skills</code> 安装工程纪律 skill。</p>
+<p><strong>实战推荐组合</strong>：</p>
+<pre><code>Trellis（工作流强制 + 跨会话记忆）
+  +
+Matt Pocock Skills（工程纪律 + 调试 + TDD）
+  +
+你团队自己的 CONTEXT.md（共享领域语言）</code></pre>
+<hr>
+</section>
+</section>
+<section id="十决策清单" class="level2">
+<h2 class="anchored" data-anchor-id="十决策清单">十、决策清单</h2>
+<section id="什么时候用-mattpocockskills" class="level3">
+<h3 class="anchored" data-anchor-id="什么时候用-mattpocockskills">10.1 什么时候用 mattpocock/skills</h3>
+<p>✅ <strong>适合</strong>：</p>
+<ul>
+<li>你已经用 Claude Code / Codex / Cursor 等 AI 编程代理</li>
+<li>痛点是”AI 每次做出来的不对”、“代码不工作”、“项目越来越乱”</li>
+<li>想要<strong>轻量、不接管流程</strong>的方法论增强</li>
+<li>你认同”软件工程基本功 &gt; vibe coding”</li>
+</ul>
+<p>❌ <strong>不适合</strong>：</p>
+<ul>
+<li>你想要全自动 AI 团队（用 BMAD / Spec-Kit）</li>
+<li>你想要强工作流约束 + 跨会话记忆（用 Trellis）</li>
+<li>你只用 IDE 自带的 AI 补全，不跟 agent 深度协作</li>
+</ul>
+</section>
+<section id="推荐试用路径" class="level3">
+<h3 class="anchored" data-anchor-id="推荐试用路径">10.2 推荐试用路径</h3>
+<ol type="1">
+<li><strong>第 1 天</strong>：装上 <code>/grill-me</code> 和 <code>/tdd</code>，在一个真实小功能上体验</li>
+<li><strong>第 3 天</strong>：加 <code>/diagnosing-bugs</code>，下次遇到诡异 bug 时用</li>
+<li><strong>第 1 周</strong>：跑 <code>/improve-codebase-architecture</code> 看 HTML 报告</li>
+<li><strong>第 2 周</strong>：运行 <code>/setup-matt-pocock-skills</code> 完成项目配置</li>
+<li><strong>持续</strong>：积累 <code>CONTEXT.md</code>，让 AI 越用越懂你的项目</li>
+</ol>
+</section>
+<section id="不要犯的错" class="level3">
+<h3 class="anchored" data-anchor-id="不要犯的错">10.3 不要犯的错</h3>
+<p>❌ <strong>贪多</strong>：一次性全装 22 个 skill，但只用了 2 个——context load 是真实成本</p>
+<p>❌ <strong>跳过 setup</strong>：不跑 <code>/setup-matt-pocock-skills</code> 直接用——triage 等 skill 会找不到配置</p>
+<p>❌ <strong>把 skills 当框架</strong>：它们不是工作流引擎，是工具集。用哪些、什么时候用，<strong>你来定</strong></p>
+<p>❌ <strong>不维护 CONTEXT.md</strong>：共享语言是这套技能的”复利”，不维护等于浪费</p>
+<p>❌ <strong>忽视 completion criterion</strong>：如果 skill 说”完成标准：… red-capable test exists”，不要跳过这步</p>
+<hr>
+</section>
+</section>
+<section id="十一5-分钟快速参考" class="level2">
+<h2 class="anchored" data-anchor-id="十一5-分钟快速参考">十一、5 分钟快速参考</h2>
+<div class="sourceCode" id="cb67"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 安装</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills@latest add mattpocock/skills</span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 初始化（每个仓库一次）</span></span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a><span class="ex">/setup-matt-pocock-skills</span></span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 需求对齐</span></span>
+<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a><span class="ex">/grill-me</span> <span class="st">"你的想法"</span></span>
+<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a><span class="ex">/grill-with-docs</span> <span class="st">"你的想法（顺便维护领域模型）"</span></span>
+<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 落地实现</span></span>
+<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a><span class="ex">/to-spec</span>              <span class="co"># 对话 → spec（发到 GitHub Issues）</span></span>
+<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a><span class="ex">/to-tickets</span>           <span class="co"># spec → tracer-bullet tickets</span></span>
+<span id="cb67-14"><a href="#cb67-14" aria-hidden="true" tabindex="-1"></a><span class="ex">/implement</span>            <span class="co"># 按 tickets 实现，循环 /tdd + /code-review</span></span>
+<span id="cb67-15"><a href="#cb67-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-16"><a href="#cb67-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 调试</span></span>
+<span id="cb67-17"><a href="#cb67-17" aria-hidden="true" tabindex="-1"></a><span class="ex">/diagnosing-bugs</span> <span class="st">"bug 描述"</span></span>
+<span id="cb67-18"><a href="#cb67-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-19"><a href="#cb67-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 架构护理（每周）</span></span>
+<span id="cb67-20"><a href="#cb67-20" aria-hidden="true" tabindex="-1"></a><span class="ex">/improve-codebase-architecture</span></span>
+<span id="cb67-21"><a href="#cb67-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-22"><a href="#cb67-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 上下文交接</span></span>
+<span id="cb67-23"><a href="#cb67-23" aria-hidden="true" tabindex="-1"></a><span class="ex">/handoff</span></span>
+<span id="cb67-24"><a href="#cb67-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-25"><a href="#cb67-25" aria-hidden="true" tabindex="-1"></a><span class="co"># 元技能</span></span>
+<span id="cb67-26"><a href="#cb67-26" aria-hidden="true" tabindex="-1"></a><span class="ex">/writing-great-skills</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>最常用的 3 个组合</strong>：</p>
+<pre><code>对齐：/grill-me → /to-spec → /implement
+调试：/diagnosing-bugs
+体检：/improve-codebase-architecture（每周）</code></pre>
+<hr>
+</section>
+<section id="参考资料" class="level2">
+<h2 class="anchored" data-anchor-id="参考资料">参考资料</h2>
+<section id="官方资源" class="level3">
+<h3 class="anchored" data-anchor-id="官方资源">官方资源</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>类型</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GitHub 仓库</td>
+<td>https://github.com/mattpocock/skills</td>
+</tr>
+<tr class="even">
+<td>skills.sh 安装页</td>
+<td>https://skills.sh/mattpocock/skills</td>
+</tr>
+<tr class="odd">
+<td>Matt Pocock 官网</td>
+<td>https://www.mattpocock.com/</td>
+</tr>
+<tr class="even">
+<td>Total TypeScript</td>
+<td>https://www.totaltypescript.com/</td>
+</tr>
+<tr class="odd">
+<td>AI Hero</td>
+<td>https://www.aihero.dev/</td>
+</tr>
+<tr class="even">
+<td>Newsletter</td>
+<td>https://www.aihero.dev/s/skills-newsletter</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="学习资源" class="level3">
+<h3 class="anchored" data-anchor-id="学习资源">学习资源</h3>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>资源</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>和 Matt Pocock 学 AI Agent Skills</td>
+<td>https://tosea.ai/blog/matt-pocock-skills-claude-code-guide</td>
+</tr>
+<tr class="even">
+<td>Matt Pocock’s Skills Review</td>
+<td>https://andrew.ooo/posts/matt-pocock-skills-claude-code-review/</td>
+</tr>
+<tr class="odd">
+<td>仓库内置 docs/</td>
+<td>https://github.com/mattpocock/skills/tree/main/docs</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="引用信息" class="level2">
+<h2 class="anchored" data-anchor-id="引用信息">引用信息</h2>
+<p>引用本文请注明以下信息。</p>
+<pre><code>@article{mattpocock_skill_practice,
+  author = {龙军},
+  title = {Matt Pocock Skills 实战指南},
+  year = {2026},
+  url = {https://jdragonnudt.github.io/inspiraHub/myblog/posts/mattpocock-skill-practice/},
+}</code></pre>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="jdragonnudt/inspiraHub" data-repo-id="R_kgDOMGN2Lg" data-category="General" data-category-id="DIC_kwDOMGN2Ls4Cf8Yq" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2024, by jdragon. 本网站所有内容采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA许可，知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
